@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Apps | App Store</title>
+  <title>Random Mini Apps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -139,6 +139,24 @@
       content: '→';
     }
 
+    .app-card--coming-soon {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .app-card--coming-soon:hover {
+      transform: none;
+      border-color: var(--border);
+    }
+
+    .app-cta--soon {
+      color: var(--text-muted);
+    }
+
+    .app-cta--soon::after {
+      content: none;
+    }
+
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -170,41 +188,62 @@
 <body>
   <div class="page">
     <header>
-      <h1>My Apps</h1>
-      <p class="tagline">Apps available on the App Store</p>
+      <h1>Random Mini Apps</h1>
+      <p class="tagline">Handcrafted, individually perfected apps for your Apple devices.</p>
     </header>
 
     <section class="apps">
-      <!-- Example app card – duplicate and edit for each app -->
-      <a class="app-card" href="https://apps.apple.com/app/YOUR_APP_ID" target="_blank" rel="noopener">
+      <a class="app-card" href="https://apps.apple.com/us/app/natural-text/id1323616521" target="_blank" rel="noopener">
         <div class="app-icon">
-          <!-- Replace with your 512×512 or 1024×1024 app icon, or use emoji/placeholder -->
-          <span aria-hidden="true">📱</span>
+          <img src="natural-text-icon.png" alt="">
         </div>
         <div class="app-body">
-          <div class="app-name">App Name</div>
-          <p class="app-desc">Short description of what your app does and who it’s for.</p>
-          <div class="app-meta">iOS · Free / Paid</div>
+          <div class="app-name">Natural Text</div>
+          <p class="app-desc">Encrypt your text to natural text with your secret key—almost impossible to tell if it’s broken. Use in email, SMS, WhatsApp, Telegram and more. Supports 9 languages. Free with optional in‑app purchase for unlimited characters and no ads.</p>
+          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
         </div>
         <span class="app-cta">View on App Store</span>
       </a>
 
-      <!-- Add more app cards below -->
-      <!--
-      <a class="app-card" href="https://apps.apple.com/app/ANOTHER_APP_ID" target="_blank" rel="noopener">
-        <div class="app-icon"><img src="icon.png" alt=""></div>
+      <a class="app-card" href="https://apps.apple.com/us/app/car-hud-display/id6758107542" target="_blank" rel="noopener">
+        <div class="app-icon">
+          <img src="car-hud-icon.png" alt="">
+        </div>
         <div class="app-body">
-          <div class="app-name">Another App</div>
-          <p class="app-desc">Description.</p>
-          <div class="app-meta">iOS · Free</div>
+          <div class="app-name">Car HUD Display</div>
+          <p class="app-desc">Turn your iPhone into a professional heads-up display. Real-time GPS speed, 12 widgets (clock, temperature, compass, trip distance, average and max speed, and more), HUD mirror mode for your windshield, and smart brightness. Imperial and metric units. iPhone only.</p>
+          <div class="app-meta">iPhone · $9.99</div>
         </div>
         <span class="app-cta">View on App Store</span>
       </a>
-      -->
+
+      <div class="app-card app-card--coming-soon">
+        <div class="app-icon">
+          <img src="keepie-yuppie-icon.png" alt="">
+        </div>
+        <div class="app-body">
+          <div class="app-name">Keepie Yuppie</div>
+          <p class="app-desc">A fun take on keepy-uppy—juggle the ball, chase trophies, and beat your best. Coming soon to the App Store.</p>
+          <div class="app-meta">Coming soon</div>
+        </div>
+        <span class="app-cta app-cta--soon">Available soon</span>
+      </div>
+
+      <div class="app-card app-card--coming-soon">
+        <div class="app-icon">
+          <img src="lighting-check-icon.png" alt="">
+        </div>
+        <div class="app-body">
+          <div class="app-name">Lighting Check</div>
+          <p class="app-desc">Check light intensity with your device. Coming soon to the App Store.</p>
+          <div class="app-meta">Coming soon</div>
+        </div>
+        <span class="app-cta app-cta--soon">Available soon</span>
+      </div>
     </section>
 
     <footer>
-      <p><a href="https://github.com/YOUR_USERNAME">GitHub</a> · Built for GitHub Pages</p>
+      <p><a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/YOUR_USERNAME">GitHub</a> · Built for GitHub Pages</p>
     </footer>
   </div>
 </body>
