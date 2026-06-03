@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dyslexia Reading Lens - Read, Listen, Simplify Text</title>
+  <meta name="description" content="Dyslexia Reading Lens is a calm reading workspace for iPhone: dyslexia-friendly text, read-aloud with highlighting, document scanning, and AI simplify and summary tools.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dyslexia Reading Lens",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "iOS",
+  "description": "Dyslexia Reading Lens is a calm reading workspace for iPhone: dyslexia-friendly text, read-aloud with highlighting, document scanning, and AI simplify and summary tools.",
+  "url": "https://randomminiapps.github.io/apps/dyslexia-reading-lens/",
+  "image": "https://randomminiapps.github.io/dyslexia-reading-lens-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Random Mini Apps",
+    "url": "https://randomminiapps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Dyslexia Reading Lens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dyslexia Reading Lens is a personal reading and comprehension workspace that combines comfortable text presentation, text-to-speech, scanning, and AI tools in one app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Dyslexia Reading Lens cure or treat dyslexia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is not medical software. It supports reading comfort, listening, and comprehension but does not diagnose or treat dyslexia or any medical condition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is my data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Documents and reading preferences stay on your device. Selected text is sent to servers only when you use AI features. Subscriptions are handled by Apple."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Dyslexia Reading Lens for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is designed for students and adults who find text visually overwhelming or tiring, including people with dyslexia, ADHD-related reading fatigue, visual stress, or language-learning needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are AI responses always accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. AI simplify, summary, and word explanations may be wrong or incomplete. Verify important information, especially for coursework and work documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The free tier includes paste, basic reading, limited scanning, text-to-speech, and a small number of AI actions. Pro and AI Pro subscriptions unlock higher limits."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-hover: #222228;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.15);
+      --border: #27272a;
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-lede {
+      color: var(--text);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover { text-decoration: underline; }
+
+    .app-visual {
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
+      text-align: center;
+    }
+
+    .app-visual img {
+      width: min(220px, 60vw);
+      height: min(220px, 60vw);
+      border-radius: 48px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
+      object-fit: cover;
+    }
+
+    .app-visual strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-visual span {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: rgba(24, 24, 28, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .section h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+    }
+
+    .mini-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .mini-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: start;
+      color: var(--text-muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .page { padding: 1.25rem 1rem 3rem; }
+      .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.75rem;
+      }
+      .hero,
+      .grid,
+      .list { grid-template-columns: 1fr; }
+      .section { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../../">Random Mini Apps</a>
+      <a class="secondary-link" href="#faq">About the app</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Read, listen, simplify text</p>
+          <h1>Dyslexia Reading Lens: Your Calm Reading Workspace</h1>
+          <p class="hero-lede">Scan or paste any text, make it comfortable to read and listen to, and use AI to simplify what you do not understand — all in one private app.</p>
+          <p class="hero-copy">Everyone reads differently. Tune spacing, fonts, and themes, follow along with read-aloud highlighting, import PDFs and photos, and keep your library on device.</p>
+          <div class="cta-row">
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin: 0;">Coming soon on the App Store</p>
+            <a class="secondary-link" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+        <aside class="app-visual" aria-label="Dyslexia Reading Lens app summary">
+          <img src="../../dyslexia-reading-lens-icon.png" alt="Dyslexia Reading Lens app icon">
+          <strong>Dyslexia Reading Lens</strong>
+          <span>Comfortable reading, TTS, scan/OCR, AI simplify and summary.</span>
+        </aside>
+      </section>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">What Dyslexia Reading Lens does</h2>
+        <p>Dyslexia Reading Lens is a personal reading and comprehension workspace for people who find text visually overwhelming, tiring, or hard to understand. It is practical and respectful — designed to support reading comfort, not to claim a cure for dyslexia.</p><p>Paste text, scan printed pages, or import PDFs and images into a local library. Open any document in a dyslexia-friendly reader with focus tools, listen with text-to-speech highlighting, and use AI to simplify, summarise, or explain difficult words when you need help.</p>
+      </section>
+
+      <section class="section" aria-labelledby="audience-title">
+        <h2 id="audience-title">Who is Dyslexia Reading Lens for?</h2>
+        <p>The app is built for learners and adults who want scan, read, listen, and AI comprehension in one calm place instead of juggling several apps.</p>
+        <ul class="list">
+          <li>University and sixth-form students with dyslexia</li>
+          <li>Adults managing emails, PDFs, and work documents</li>
+          <li>Parents supporting children with reading difficulties</li>
+          <li>People with ADHD or reading fatigue</li>
+          <li>Non-native English readers working through dense text</li>
+          <li>Anyone who prefers listening while following highlighted text</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Key features</h2>
+        <div class="grid">
+          <article class="mini-card">
+            <h3>Comfortable reading view</h3>
+            <p>Adjust fonts, spacing, themes, focus line, and chunk mode. Reading profiles remember what works for you.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Listen with highlighting</h3>
+            <p>Text-to-speech follows the words on screen so you can read and listen at the same pace.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Scan and import documents</h3>
+            <p>Camera OCR for printed pages, plus PDF, text, and image import into your on-device library.</p>
+          </article>
+          <article class="mini-card">
+            <h3>AI comprehension tools</h3>
+            <p>Simplify dense passages, summarise long readings, and explain words you are stuck on.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How Dyslexia Reading Lens works</h2>
+        <ol class="steps">
+          <li>Add text by pasting, scanning a page, or importing a file.</li>
+          <li>Open the document and tune your reading style in one tap.</li>
+          <li>Read with focus tools or tap Listen to hear it aloud.</li>
+          <li>Use Simplify, Summarise, or Explain when comprehension gets hard.</li>
+          <li>Save progress in your library and pick up where you left off.</li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="practice-title">
+        <h2 id="practice-title">Useful for</h2>
+        <p>Dyslexia Reading Lens supports everyday reading tasks that usually need multiple separate tools.</p>
+        <ul class="list">
+          <li>Assignment briefs copied from the web</li>
+          <li>Printed worksheets and handouts</li>
+          <li>Lecture slides and PDF readings</li>
+          <li>Long emails and work documents</li>
+          <li>Letters, forms, and official paperwork</li>
+          <li>Revising with read-aloud and shorter summaries</li>
+          <li>Organising documents with folders and tags</li>
+          <li>Sharing text in through the iOS share sheet</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="benefits-title">
+        <h2 id="benefits-title">Why use Dyslexia Reading Lens?</h2>
+        <p>Many readers stitch together a scanner app, a customisable reader, a TTS app, and an AI tool. Dyslexia Reading Lens brings those steps into one focused iOS workspace with privacy-first defaults: your library stays local unless you choose cloud AI.</p><p>The free tier is genuinely useful for trying the core loop. Pro and AI Pro subscriptions unlock higher limits for scanning, listening, and AI when you need them every day.</p>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is Dyslexia Reading Lens?</summary>
+            <p>It is a personal reading and comprehension app that combines comfortable text presentation, text-to-speech, scanning, file import, and AI tools in one calm workspace.</p>
+          </details>
+          <details>
+            <summary>Does it cure or treat dyslexia?</summary>
+            <p>No. It is not medical software and does not diagnose or treat dyslexia or any condition. It offers tools for reading comfort, focus, listening, and comprehension.</p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>Documents, folders, tags, and reading preferences stay on your device. Text you select is sent to servers only when you start an AI action. Subscriptions and restore purchases are handled by Apple.</p>
+          </details>
+          <details>
+            <summary>What do the subscriptions include?</summary>
+            <p>Pro unlocks unlimited documents, full text-to-speech, OCR, PDF import, export, and folders. AI Pro adds unlimited AI simplify, summary, and related actions. See in-app plans for current pricing.</p>
+          </details>
+          <details>
+            <summary>Are AI answers always correct?</summary>
+            <p>No. Simplify, summary, and word explanations may be inaccurate. Verify important information and follow your school's academic integrity rules for coursework.</p>
+          </details>
+          <details>
+            <summary>Is there a free version?</summary>
+            <p>Yes. You can paste text, use basic reading settings, limited monthly scanning and listening, and a small number of AI actions before upgrading.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Important notes</h2>
+        <p>Dyslexia Reading Lens is designed to support reading comfort and comprehension. It does not guarantee specific educational outcomes. Fonts and display settings are personal preferences, not clinical treatments.</p><p>AI features require an internet connection and may send selected text to our servers. Analytics, if enabled, collects optional anonymous usage events without document contents. You can delete all app data from Profile → Privacy.</p>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="download-title">
+        <h2 id="download-title">App Store release</h2>
+        <p>Dyslexia Reading Lens is coming soon to the App Store for iPhone. Check back here for the download link when it is live.</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="secondary-link" href="../../">View all Random Mini Apps</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="../../dyslexia-reading-lens-privacy.html">Privacy Policy</a> · <a href="../../dyslexia-reading-lens-terms.html">Terms of Use</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
+    </footer>
+  </div>
+</body>
+</html>
