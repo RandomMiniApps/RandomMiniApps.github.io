@@ -7,6 +7,7 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [BoomColor](https://randomminiapps.github.io/apps/coloring-book/): relaxing coloring book app with 700+ pages, tap-to-fill painting, creative effects, daily challenges and photo imports for iPhone and iPad.
 - [Car HUD Display](https://randomminiapps.github.io/apps/car-hud-display/): iPhone heads-up display app with GPS speed, trip widgets, mirror mode and smart brightness.
 - [ClinSpeak OET](https://randomminiapps.github.io/apps/clinspeak-oet/): OET-style speaking practice app for nurses with timed clinical role plays, transcript replay and structured feedback.
+- [Dyslexia Reading Lens](https://randomminiapps.github.io/apps/dyslexia-reading-lens/): calm reading workspace for iPhone with dyslexia-friendly text, read-aloud highlighting, document scanning, and AI simplify and summary tools.
 - [Keepie Yuppie](https://randomminiapps.github.io/apps/keepie-yuppie/): physics-based ball juggling game with 99 levels, weather effects, obstacles, survival mode and Game Center.
 - [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based light intensity app for estimating lux and comparing readings with location standards.
 - [MedViva Coach](https://randomminiapps.github.io/apps/medviva-coach/): AI mock interview practice app for A-level students and UK medicine applicants preparing for medical school interviews.
@@ -19,12 +20,15 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [BoomColor App Page](https://randomminiapps.github.io/apps/coloring-book/)
 - [Car HUD Display App Page](https://randomminiapps.github.io/apps/car-hud-display/)
 - [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
+- [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
 - [Keepie Yuppie App Page](https://randomminiapps.github.io/apps/keepie-yuppie/)
 - [Lighting Check App Page](https://randomminiapps.github.io/apps/lighting-check/)
 - [MedViva Coach App Page](https://randomminiapps.github.io/apps/medviva-coach/)
 - [MsgSecret App Page](https://randomminiapps.github.io/apps/msgsecret/)
 - [NMC OSCE AI Coach App Page](https://randomminiapps.github.io/apps/nmc-osce-coach/)
 - [Natural Text App Page](https://randomminiapps.github.io/apps/natural-text/)
+- [Dyslexia Reading Lens App Store Listing](https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853)
+- [NMC OSCE AI Coach App Store Listing](https://apps.apple.com/us/app/nmc-osce-coach/id6770335559)
 - [MedViva Coach App Store Listing](https://apps.apple.com/us/app/medviva-coach/id6766191800)
 - [MedViva Coach Product Hunt Listing](https://www.producthunt.com/products/medviva-coach)
 - [ClinSpeak OET Product Hunt Listing](https://www.producthunt.com/products/clinspeakoet)
