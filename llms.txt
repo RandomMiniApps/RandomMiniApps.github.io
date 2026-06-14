@@ -18,6 +18,7 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 ## Important pages
 
 - [BoomColor App Page](https://randomminiapps.github.io/apps/coloring-book/)
+- [BoomColor App Store Listing](https://apps.apple.com/us/app/boomcolor/id6761337820)
 - [Car HUD Display App Page](https://randomminiapps.github.io/apps/car-hud-display/)
 - [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
 - [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
