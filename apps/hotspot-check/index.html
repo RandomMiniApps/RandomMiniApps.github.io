@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotspotCheck - Wi-Fi Safety Checks for iPhone</title>
+  <meta name="description" content="HotspotCheck helps you understand whether the Wi-Fi you are using looks safe, risky, or worth avoiding. Check visible network risks, gateway warnings, and public hotspot safety indicators before sensitive logins.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://randomminiapps.github.io/apps/hotspot-check/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HotspotCheck",
+  "alternateName": "HotspotCheck: Wi-Fi Safety",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS",
+  "description": "HotspotCheck is a privacy-first Wi-Fi safety advisor that checks visible risk indicators on the network you are connected to and explains what they mean in plain English.",
+  "url": "https://randomminiapps.github.io/apps/hotspot-check/",
+  "image": "https://randomminiapps.github.io/hotspot-check-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Random Mini Apps",
+    "url": "https://randomminiapps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is HotspotCheck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HotspotCheck is a defensive Wi-Fi safety advisor for iPhone. It performs user-initiated checks of visible safety indicators on the Wi-Fi network you are currently using."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does HotspotCheck guarantee my Wi-Fi is safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. HotspotCheck checks visible indicators only. It cannot guarantee that a network is safe and may not detect every device or risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What permissions does HotspotCheck need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local Network permission is requested only when you start a scan. Location (When In Use) may be needed so iOS can show the current Wi-Fi name and security details where the platform requires it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my scan data uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Scan data stays on your iPhone unless you choose to export a report. The app has no analytics SDK and no developer-operated backend for scan history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You receive three full scans for free, including the full report, export, recommendations, and local history. After that you can unlock unlimited scans with an annual subscription or lifetime purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is HotspotCheck for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HotspotCheck is for travellers, students, remote workers, families, and anyone who regularly connects to shared or public Wi-Fi and wants plain-English guidance before sensitive logins."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-hover: #222228;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.15);
+      --border: #27272a;
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-lede {
+      color: var(--text);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover { text-decoration: underline; }
+
+    .app-visual {
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
+      text-align: center;
+    }
+
+    .app-visual img {
+      width: min(220px, 60vw);
+      height: min(220px, 60vw);
+      border-radius: 48px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
+      object-fit: cover;
+    }
+
+    .app-visual strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-visual span {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: rgba(24, 24, 28, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .section h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+    }
+
+    .mini-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .mini-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: start;
+      color: var(--text-muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .page { padding: 1.25rem 1rem 3rem; }
+      .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.75rem;
+      }
+      .hero,
+      .grid,
+      .list { grid-template-columns: 1fr; }
+      .section { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../../">Random Mini Apps</a>
+      <a class="secondary-link" href="#faq">About the app</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Wi-Fi safety checks</p>
+          <h1>HotspotCheck: Know Before You Connect</h1>
+          <p class="hero-lede">HotspotCheck helps you understand whether the Wi-Fi you are using looks safe, risky, or worth avoiding — before you enter passwords, banking details, or work information.</p>
+          <p class="hero-copy">A privacy-first Wi-Fi safety companion for public hotspots, hotel networks, university Wi-Fi, shared offices, and home router hygiene. Scans stay on your iPhone.</p>
+          <div class="cta-row">
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin: 0;">Coming soon on the App Store</p>
+            <a class="secondary-link" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+        <aside class="app-visual" aria-label="HotspotCheck app summary">
+          <img src="../../hotspot-check-icon.png" alt="HotspotCheck app icon">
+          <strong>HotspotCheck</strong>
+          <span>Visible risk checks, device discovery, plain-English guidance.</span>
+        </aside>
+      </section>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">What HotspotCheck does</h2>
+        <p>HotspotCheck is a defensive Wi-Fi safety advisor. When you tap <strong>Check this Wi-Fi</strong>, it reviews visible safety indicators on the network you are currently using — gateway warnings, DNS behaviour, captive-portal clues, local device discovery, and other signals iOS allows — then scores risk for your context and explains what to do next.</p><p>It is calm, honest, and educational. HotspotCheck does not crack passwords, exploit routers, scan nearby networks in the background, or claim to guarantee safety.</p>
+      </section>
+
+      <section class="section" aria-labelledby="audience-title">
+        <h2 id="audience-title">Who is HotspotCheck for?</h2>
+        <p>HotspotCheck is built for anyone who connects to Wi-Fi outside a fully trusted home network and wants practical guidance before sensitive logins.</p>
+        <ul class="list">
+          <li>Travellers using cafe, hotel, and airport Wi-Fi</li>
+          <li>Students on university or shared accommodation networks</li>
+          <li>Remote workers checking work-from-anywhere hotspots</li>
+          <li>Families reviewing Airbnb or holiday-rental Wi-Fi</li>
+          <li>Anyone improving home router hygiene</li>
+          <li>People who want plain-English safety advice, not jargon</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Key features</h2>
+        <div class="grid">
+          <article class="mini-card">
+            <h3>Context-aware safety score</h3>
+            <p>Choose home, cafe, hotel, airport, or other contexts so risk scoring matches how you are using the network.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Visible risk indicators</h3>
+            <p>Review gateway, DNS, TLS, captive-portal, and connectivity checks with confidence levels and clear limitations.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Device discovery</h3>
+            <p>See visible devices and services on the Wi-Fi you are connected to when you grant Local Network permission at scan time.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Plain-English recommendations</h3>
+            <p>Get practical next steps such as switching to mobile data, using a VPN, or avoiding banking until conditions improve.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Local scan history and export</h3>
+            <p>Keep reports on your iPhone, export PDFs when you need them, and delete all scan data from Settings.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Privacy-first by design</h3>
+            <p>No analytics SDK, no developer backend, and no upload of SSIDs, device names, or scan history.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How HotspotCheck works</h2>
+        <ol class="steps">
+          <li>Choose where you are connecting — cafe, hotel, home, or another context.</li>
+          <li>Tap <strong>Check this Wi-Fi</strong> when you are ready. Permissions are requested only at scan time.</li>
+          <li>Review your safety score, findings, discovered devices, and limitations.</li>
+          <li>Follow recommendations for banking, work logins, VPN use, or mobile data.</li>
+          <li>Save or export the report locally, or delete history whenever you want.</li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="practice-title">
+        <h2 id="practice-title">Useful for</h2>
+        <p>HotspotCheck supports everyday Wi-Fi safety decisions that are hard to judge from the Wi-Fi name alone.</p>
+        <ul class="list">
+          <li>Checking cafe or restaurant Wi-Fi before online banking</li>
+          <li>Reviewing hotel or Airbnb networks on arrival</li>
+          <li>Understanding whether a captive portal looks suspicious</li>
+          <li>Spotting visible gateway or DNS warning signs</li>
+          <li>Seeing what devices are visible on a shared network</li>
+          <li>Improving home router exposure awareness</li>
+          <li>Keeping a local record of past checks while travelling</li>
+          <li>Learning Wi-Fi safety basics in the Learn tab</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="benefits-title">
+        <h2 id="benefits-title">Why use HotspotCheck?</h2>
+        <p>Many network tools feel technical, aggressive, or surveillance-oriented. HotspotCheck is different: user-initiated, educational, and honest about what iPhone apps can and cannot see.</p><p>You get three full scans for free — including export, recommendations, and local history. Unlock unlimited checks with an annual subscription or lifetime purchase when you need the app regularly.</p>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is HotspotCheck?</summary>
+            <p>HotspotCheck is a defensive Wi-Fi safety advisor for iPhone. It checks visible safety indicators on the network you are currently using and explains the results in plain English.</p>
+          </details>
+          <details>
+            <summary>Does it guarantee my Wi-Fi is safe?</summary>
+            <p>No. HotspotCheck is an educational tool. It checks visible indicators only and cannot guarantee that a network is safe or detect every device or risk.</p>
+          </details>
+          <details>
+            <summary>What permissions does it need?</summary>
+            <p>Local Network permission is requested only when you start a scan. Location (When In Use) may be needed so iOS can show the current Wi-Fi name and security details where required. Coordinates are not collected or stored.</p>
+          </details>
+          <details>
+            <summary>Is my scan data uploaded?</summary>
+            <p>No. Scan data stays on your iPhone unless you export or share a report yourself. The app has no analytics SDK and no developer-operated backend for scan history.</p>
+          </details>
+          <details>
+            <summary>Is there a free version?</summary>
+            <p>Yes. You receive three full scans for free. After that you can unlock unlimited scans with an annual subscription or a one-time lifetime purchase through Apple.</p>
+          </details>
+          <details>
+            <summary>Who is HotspotCheck for?</summary>
+            <p>It is designed for travellers, students, remote workers, families, and anyone who regularly uses shared or public Wi-Fi and wants practical guidance before sensitive logins.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Important notes</h2>
+        <p>HotspotCheck is an educational Wi-Fi safety advisor. It is not a security guarantee, penetration test, or professional audit service. Results reflect visible indicators on the network you are connected to and may be incomplete if permissions are denied or iOS withholds Wi-Fi details.</p><p>The app does not use private APIs, crack passwords, exploit routers, or run hidden background scans. Always use your own judgement for banking, work, and personal accounts.</p>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="download-title">
+        <h2 id="download-title">App Store release</h2>
+        <p>HotspotCheck is coming soon to the App Store for iPhone. Check back here for the download link when it is live.</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="secondary-link" href="../../">View all Random Mini Apps</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="../../hotspotcheck-privacy.html">Privacy Policy</a> · <a href="mailto:bleep.minted4c@icloud.com">Support</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
+    </footer>
+  </div>
+</body>
+</html>

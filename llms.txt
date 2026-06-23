@@ -8,6 +8,7 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [Car HUD Display](https://randomminiapps.github.io/apps/car-hud-display/): iPhone heads-up display app with GPS speed, trip widgets, mirror mode and smart brightness.
 - [ClinSpeak OET](https://randomminiapps.github.io/apps/clinspeak-oet/): OET-style speaking practice app for nurses with timed clinical role plays, transcript replay and structured feedback.
 - [Dyslexia Reading Lens](https://randomminiapps.github.io/apps/dyslexia-reading-lens/): calm reading workspace for iPhone with dyslexia-friendly text, read-aloud highlighting, document scanning, and AI simplify and summary tools.
+- [HotspotCheck](https://randomminiapps.github.io/apps/hotspot-check/): privacy-first Wi-Fi safety advisor for iPhone that checks visible risk indicators, scores networks by context, and gives plain-English guidance before sensitive logins.
 - [Keepie Yuppie](https://randomminiapps.github.io/apps/keepie-yuppie/): physics-based ball juggling game with 99 levels, weather effects, obstacles, survival mode and Game Center.
 - [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based light intensity app for estimating lux and comparing readings with location standards.
 - [MedViva Coach](https://randomminiapps.github.io/apps/medviva-coach/): AI mock interview practice app for A-level students and UK medicine applicants preparing for medical school interviews.
@@ -22,6 +23,8 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [Car HUD Display App Page](https://randomminiapps.github.io/apps/car-hud-display/)
 - [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
 - [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
+- [HotspotCheck App Page](https://randomminiapps.github.io/apps/hotspot-check/)
+- [HotspotCheck Privacy Policy](https://randomminiapps.github.io/hotspotcheck-privacy.html)
 - [Keepie Yuppie App Page](https://randomminiapps.github.io/apps/keepie-yuppie/)
 - [Lighting Check App Page](https://randomminiapps.github.io/apps/lighting-check/)
 - [MedViva Coach App Page](https://randomminiapps.github.io/apps/medviva-coach/)
@@ -43,3 +46,5 @@ MedViva Coach is an educational practice tool and is not affiliated with UCAS, a
 ClinSpeak OET is an independent preparation tool and is not endorsed by or affiliated with the official OET test. Its clinical scenarios are fictional practice examples and are not medical advice.
 
 NMC OSCE AI Coach is an independent educational practice tool and is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council. Scenarios and feedback are for exam communication practice only and are not clinical guidance.
+
+HotspotCheck is an educational Wi-Fi safety advisor. It checks visible indicators only, does not guarantee network safety, and is not a professional security audit or penetration test.
