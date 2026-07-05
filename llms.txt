@@ -24,6 +24,7 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
 - [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
 - [HotspotCheck App Page](https://randomminiapps.github.io/apps/hotspot-check/)
+- [HotspotCheck App Store Listing](https://apps.apple.com/gb/app/hotspotcheck/id6783085771)
 - [HotspotCheck Privacy Policy](https://randomminiapps.github.io/hotspotcheck-privacy.html)
 - [Keepie Yuppie App Page](https://randomminiapps.github.io/apps/keepie-yuppie/)
 - [Lighting Check App Page](https://randomminiapps.github.io/apps/lighting-check/)

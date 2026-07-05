@@ -20,6 +20,7 @@
   "operatingSystem": "iOS",
   "description": "HotspotCheck is a privacy-first Wi-Fi safety advisor that checks visible risk indicators on the network you are connected to and explains what they mean in plain English.",
   "url": "https://randomminiapps.github.io/apps/hotspot-check/",
+  "downloadUrl": "https://apps.apple.com/gb/app/hotspotcheck/id6783085771",
   "image": "https://randomminiapps.github.io/hotspot-check-icon.png",
   "publisher": {
     "@type": "Organization",
@@ -30,7 +31,8 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "GBP",
-    "availability": "https://schema.org/PreOrder"
+    "availability": "https://schema.org/InStock",
+    "url": "https://apps.apple.com/gb/app/hotspotcheck/id6783085771"
   }
 }
   </script>
@@ -198,6 +200,24 @@
     }
 
     .secondary-link:hover { text-decoration: underline; }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
 
     .app-visual {
       background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
@@ -390,7 +410,7 @@
   <div class="page">
     <nav class="site-nav" aria-label="Site navigation">
       <a href="../../">Random Mini Apps</a>
-      <a class="secondary-link" href="#faq">About the app</a>
+      <a href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">Download on the App Store</a>
     </nav>
 
     <main>
@@ -401,7 +421,7 @@
           <p class="hero-lede">HotspotCheck helps you understand whether the Wi-Fi you are using looks safe, risky, or worth avoiding — before you enter passwords, banking details, or work information.</p>
           <p class="hero-copy">A privacy-first Wi-Fi safety companion for public hotspots, hotel networks, university Wi-Fi, shared offices, and home router hygiene. Scans stay on your iPhone.</p>
           <div class="cta-row">
-            <p style="color: var(--text-muted); font-size: 1.05rem; margin: 0;">Coming soon on the App Store</p>
+            <a class="cta-btn" href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">Download HotspotCheck on the App Store</a>
             <a class="secondary-link" href="#faq">Read the FAQ</a>
           </div>
         </div>
@@ -527,9 +547,10 @@
       </section>
 
       <section class="section final-cta" aria-labelledby="download-title">
-        <h2 id="download-title">App Store release</h2>
-        <p>HotspotCheck is coming soon to the App Store for iPhone. Check back here for the download link when it is live.</p>
+        <h2 id="download-title">Download HotspotCheck</h2>
+        <p>HotspotCheck is available on the App Store for iPhone.</p>
         <div class="cta-row" style="justify-content: center;">
+          <a class="cta-btn" href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">Download HotspotCheck on the App Store</a>
           <a class="secondary-link" href="../../">View all Random Mini Apps</a>
         </div>
       </section>
