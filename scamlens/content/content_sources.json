@@ -1,0 +1,260 @@
+[
+  {
+    "id": "route.text_7726",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing"],
+    "note": "NCSC/GOV.UK reporting guidance for scam text messages."
+  },
+  {
+    "id": "route.ncsc_email",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing"],
+    "note": "NCSC suspicious email reporting address."
+  },
+  {
+    "id": "route.bank_159",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://stopscamsuk.org.uk/our-programmes/159-phone-number/"],
+    "note": "Stop Scams UK 159 programme."
+  },
+  {
+    "id": "route.report_fraud",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.reportfraud.police.uk/"],
+    "note": "Report Fraud official service for England, Wales and Northern Ireland."
+  },
+  {
+    "id": "route.police_scotland",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.scotland.police.uk/contact-us/"],
+    "note": "Police Scotland contact route."
+  },
+  {
+    "id": "route.hmrc_text_60599",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC suspicious text reporting route."
+  },
+  {
+    "id": "route.hmrc_email",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC suspicious email, WhatsApp and QR-code email route."
+  },
+  {
+    "id": "route.hmrc_social",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC fake social account reporting route."
+  },
+  {
+    "id": "route.fca_check",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.fca.org.uk/scamsmart"],
+    "note": "FCA register and warning-list advice."
+  },
+  {
+    "id": "route.app_reimbursement",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.psr.org.uk/information-for-consumers/app-fraud-reimbursement-protections/"],
+    "note": "Payment Systems Regulator APP fraud reimbursement protections."
+  },
+  {
+    "id": "pattern.delivery_redelivery_fee",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing", "https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Common UK phishing and smishing delivery-fee lures."
+  },
+  {
+    "id": "pattern.delivery_customs_fee",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing", "https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Common parcel customs and import-fee lures."
+  },
+  {
+    "id": "pattern.hmrc_refund",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC refund and rebate scam guidance."
+  },
+  {
+    "id": "pattern.hmrc_penalty_threat",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC threat, arrest and penalty impersonation guidance."
+  },
+  {
+    "id": "pattern.dvla_vehicle_tax",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/government/organisations/driver-and-vehicle-licensing-agency"],
+    "note": "DVLA/GOV.UK vehicle-tax route and impersonation context."
+  },
+  {
+    "id": "pattern.bank_suspicious_activity",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://stopscamsuk.org.uk/our-programmes/159-phone-number/", "https://www.ukfinance.org.uk/policy-and-guidance/reports-and-publications/annual-fraud-report-2026"],
+    "note": "Bank impersonation and suspicious-activity call/text lures."
+  },
+  {
+    "id": "pattern.bank_safe_account",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://stopscamsuk.org.uk/our-programmes/159-phone-number/", "https://www.psr.org.uk/information-for-consumers/app-fraud-reimbursement-protections/"],
+    "note": "Bank transfer APP fraud pattern."
+  },
+  {
+    "id": "pattern.otp_sharing",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/collection/phishing-scams", "https://stopscamsuk.org.uk/our-programmes/159-phone-number/"],
+    "note": "One-time passcode sharing and account takeover pattern."
+  },
+  {
+    "id": "pattern.remote_access",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Remote-access and tech-support scam pattern."
+  },
+  {
+    "id": "pattern.parking_qr",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/guidance/qr-codes"],
+    "note": "QR-code and parking payment impersonation guidance."
+  },
+  {
+    "id": "pattern.winter_fuel",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/winter-fuel-payment"],
+    "note": "Winter Fuel Payment route and eligibility context."
+  },
+  {
+    "id": "pattern.evisa_fee",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/guidance/online-immigration-status-evisa"],
+    "note": "Official eVisa guidance and free GOV.UK route."
+  },
+  {
+    "id": "pattern.marketplace_offplatform",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.getsafeonline.org/personal/articles/buying-and-selling-online/"],
+    "note": "Marketplace off-platform payment and fake courier lures."
+  },
+  {
+    "id": "pattern.family_emergency",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Family emergency, new-number and voice-cloning impersonation pattern."
+  },
+  {
+    "id": "pattern.investment_crypto",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.fca.org.uk/scamsmart"],
+    "note": "Investment, crypto and clone-firm scam warning signs."
+  },
+  {
+    "id": "pattern.recovery_fraud",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.reportfraud.police.uk/"],
+    "note": "Recovery fraud after previous scam loss."
+  },
+  {
+    "id": "pattern.courier_fraud",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.cityoflondon.police.uk/advice/advice-and-information/fa/fraud/personal-fraud/courier-fraud/"],
+    "note": "Courier fraud card, PIN and cash collection pattern."
+  },
+  {
+    "id": "pattern.ofcom_spoof_call",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/"],
+    "note": "Ofcom impersonation and scam-call advice."
+  },
+  {
+    "id": "pattern.job_fee",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.jobsaware.co.uk/jobseeker"],
+    "note": "Job fee, task scam and recruitment impersonation lures."
+  },
+  {
+    "id": "card.delivery_scams",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing", "https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Delivery phishing and smishing education."
+  },
+  {
+    "id": "card.hmrc_scams",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/report-suspicious-emails-websites-phishing/report-scam-HMRC-messages-calls-social-media"],
+    "note": "HMRC scam reporting and refund/penalty guidance."
+  },
+  {
+    "id": "card.bank_impersonation",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://stopscamsuk.org.uk/our-programmes/159-phone-number/", "https://www.psr.org.uk/information-for-consumers/app-fraud-reimbursement-protections/"],
+    "note": "Bank impersonation, 159 and reimbursement context."
+  },
+  {
+    "id": "card.parking_qr",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/guidance/qr-codes"],
+    "note": "QR-code payment and quishing education."
+  },
+  {
+    "id": "card.winter_fuel",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/winter-fuel-payment"],
+    "note": "Winter Fuel Payment official route."
+  },
+  {
+    "id": "card.evisa_scams",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.gov.uk/guidance/online-immigration-status-evisa"],
+    "note": "eVisa official route and fee context."
+  },
+  {
+    "id": "card.voice_cloning",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/collection/phishing-scams"],
+    "note": "Family emergency and voice-cloning impersonation education."
+  },
+  {
+    "id": "card.marketplace_scams",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.getsafeonline.org/personal/articles/buying-and-selling-online/"],
+    "note": "Marketplace buying and selling scam education."
+  },
+  {
+    "id": "card.investment_scams",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.fca.org.uk/scamsmart"],
+    "note": "Investment and crypto warning signs."
+  },
+  {
+    "id": "card.recovery_fraud",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.reportfraud.police.uk/"],
+    "note": "Recovery fraud education."
+  },
+  {
+    "id": "card.courier_fraud",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.cityoflondon.police.uk/advice/advice-and-information/fa/fraud/personal-fraud/courier-fraud/"],
+    "note": "Courier fraud education."
+  },
+  {
+    "id": "card.ofcom_spoof_calls",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/"],
+    "note": "Ofcom spoof call education."
+  },
+  {
+    "id": "card.if_you_clicked",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.ncsc.gov.uk/collection/phishing-scams", "https://stopscamsuk.org.uk/our-programmes/159-phone-number/"],
+    "note": "Post-click recovery guidance."
+  },
+  {
+    "id": "card.if_you_paid",
+    "last_verified": "2026-07-07",
+    "source_urls": ["https://www.psr.org.uk/information-for-consumers/app-fraud-reimbursement-protections/", "https://www.reportfraud.police.uk/"],
+    "note": "Post-payment bank and police reporting guidance."
+  }
+]

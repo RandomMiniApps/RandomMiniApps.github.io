@@ -534,5 +534,37 @@
     "is_regex": false,
     "weight": 15,
     "explanation": "It insists it is not a scam — genuine messages don't need to say this."
+  },
+  {
+    "id": "sens_card_collection",
+    "category": "sensitive_data",
+    "phrase": "collect your card",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Mentions collecting your bank card — banks and police do not collect cards from your home."
+  },
+  {
+    "id": "sens_cash_collection",
+    "category": "sensitive_data",
+    "phrase": "cash for collection",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Asks for cash to be collected, a serious courier-fraud warning sign."
+  },
+  {
+    "id": "threat_ofcom_disconnect",
+    "category": "threat",
+    "phrase": "will be disconnected",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Threatens disconnection to rush you into pressing buttons or sharing details."
+  },
+  {
+    "id": "urg_press_one",
+    "category": "urgency",
+    "phrase": "press 1",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Pushes you to press a number during a call instead of verifying independently."
   }
 ]

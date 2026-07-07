@@ -47,7 +47,9 @@
       "import fee",
       "clearance fee",
       "parcel is held by customs",
-      "customs declaration required"
+      "customs declaration required",
+      "pay duty before delivery",
+      "import VAT must be paid"
     ],
     "common_brand_ids": [
       "royal_mail",
@@ -127,7 +129,9 @@
       "latest vehicle tax payment",
       "dvla refund",
       "licence needs updating",
-      "driving licence has expired"
+      "driving licence has expired",
+      "vehicle tax refund pending",
+      "update your driving licence details"
     ],
     "common_brand_ids": [
       "dvla"
@@ -190,7 +194,9 @@
       "transfer your funds to a secure account",
       "protect your money by moving it",
       "your money is at risk, transfer",
-      "we have opened a new account for you"
+      "we have opened a new account for you",
+      "move the balance before it is stolen",
+      "transfer to the holding account"
     ],
     "common_brand_ids": [
       "barclays",
@@ -222,7 +228,8 @@
       "give us the otp",
       "confirm the 6-digit code",
       "send us the security code",
-      "the code you just received"
+      "the code you just received",
+      "read out the passcode"
     ],
     "common_brand_ids": [],
     "plain_explanation": "One-time passcodes exist so that only you can approve actions on your accounts. Anyone asking you to read one out — however official they sound — is trying to get into your account.",
@@ -297,7 +304,9 @@
       "energy support scheme",
       "heating subsidy",
       "check your eligibility",
-      "claim your winter fuel"
+      "claim your winter fuel",
+      "winter fuel allowance application",
+      "apply before the deadline"
     ],
     "common_brand_ids": [
       "dwp"
@@ -322,7 +331,9 @@
       "immigration status update required",
       "biometric residence permit has expired",
       "update your ukvi account",
-      "visa processing fee"
+      "visa processing fee",
+      "link your evisa now",
+      "prove your immigration status"
     ],
     "common_brand_ids": [
       "home_office_evisa"
@@ -373,7 +384,9 @@
       "i'm using a friend's phone",
       "can you send money",
       "i need you to pay a bill for me",
-      "save this number"
+      "save this number",
+      "please don't call my old phone",
+      "i need money urgently"
     ],
     "common_brand_ids": [],
     "plain_explanation": "The 'Hi Mum/Hi Dad' scam pretends a family member has a new number and urgently needs money. Voice-cloning versions of this scam now exist for calls too.",
@@ -422,13 +435,76 @@
       "your compensation is ready",
       "you have been identified as a victim",
       "pay a release fee",
-      "processing fee to release your refund"
+      "processing fee to release your refund",
+      "court fee to recover funds",
+      "tax must be paid before release"
     ],
     "common_brand_ids": [],
     "plain_explanation": "People who have already lost money are targeted again by fake 'recovery agents' — often the same criminals. Genuine recovery never requires an upfront fee.",
     "safe_action": "Do not pay anything to anyone promising recovery. Speak to your bank on 159 and Report Fraud.",
     "reporting_route_ids": [
       "bank_159",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "courier_fraud",
+    "title": "Courier fraud card or cash collection",
+    "category": "banking",
+    "risk_base": 85,
+    "trigger_phrases": [
+      "courier will collect your card",
+      "hand over your bank card",
+      "withdraw cash for evidence",
+      "package the cash for collection",
+      "police courier is on the way",
+      "bank courier will attend",
+      "your card has been cloned",
+      "confirm your pin for the courier",
+      "do not tell your bank",
+      "we need the card as evidence"
+    ],
+    "common_brand_ids": [
+      "barclays",
+      "hsbc",
+      "lloyds",
+      "natwest",
+      "santander",
+      "monzo",
+      "starling"
+    ],
+    "plain_explanation": "Courier fraud calls pretend to be your bank or the police, then send someone to collect cash, cards or a PIN. No bank or police force will ever collect your card or ask you to withdraw money for evidence.",
+    "safe_action": "Hang up. Do not hand over cards, cash or a PIN. Call 159 for your bank, then report the crime.",
+    "reporting_route_ids": [
+      "bank_159",
+      "report_fraud",
+      "police_scotland"
+    ],
+    "critical_on_match": true
+  },
+  {
+    "id": "ofcom_spoof_call",
+    "title": "Ofcom spoof call or message",
+    "category": "call",
+    "risk_base": 50,
+    "trigger_phrases": [
+      "this is ofcom",
+      "press 1 to speak to ofcom",
+      "your mobile number will be disconnected",
+      "your sim will be blocked",
+      "your internet will be cut off",
+      "number used in fraud",
+      "illegal activity on your number",
+      "verify your details with ofcom",
+      "phone service will be suspended"
+    ],
+    "common_brand_ids": [
+      "ofcom"
+    ],
+    "plain_explanation": "Scammers spoof Ofcom's name to make phone or internet threats sound official. Ofcom does not call people to disconnect numbers, investigate fraud on their line, or ask for passwords or bank details.",
+    "safe_action": "End the call or message. Do not press a number, share details or call back using a number you were given.",
+    "reporting_route_ids": [
       "report_fraud"
     ],
     "critical_on_match": false

@@ -6,7 +6,7 @@
     "impersonation_tokens": ["hmrc", "revenue", "taxrefund", "govuk", "gov-uk"],
     "common_hooks": ["tax refund", "tax rebate", "outstanding tax", "self assessment", "penalty notice", "national insurance", "unpaid tax"],
     "category": "government",
-    "reporting_route_ids": ["hmrc_text_60599", "hmrc_email", "report_fraud"],
+    "reporting_route_ids": ["hmrc_text_60599", "hmrc_email", "hmrc_social", "report_fraud"],
     "safe_action": "Use the HMRC app or type gov.uk into Safari yourself. HMRC never texts or emails about refunds."
   },
   {
@@ -58,6 +58,16 @@
     "category": "government",
     "reporting_route_ids": ["ncsc_email", "text_7726"],
     "safe_action": "Type tvlicensing.co.uk yourself to check your licence. Ignore refund or failed-payment links."
+  },
+  {
+    "id": "ofcom",
+    "display_name": "Ofcom",
+    "official_domains": ["ofcom.org.uk"],
+    "impersonation_tokens": ["ofcom", "telecomsregulator", "phoneservice"],
+    "common_hooks": ["phone number will be disconnected", "sim will be blocked", "number used in fraud", "press 1 to speak to ofcom", "internet will be cut off"],
+    "category": "utility",
+    "reporting_route_ids": ["report_fraud"],
+    "safe_action": "Do not press buttons or call numbers from the message. Type ofcom.org.uk yourself if you want to check current scam-call advice."
   },
   {
     "id": "royal_mail",

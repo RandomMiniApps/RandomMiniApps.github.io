@@ -200,6 +200,46 @@
     "share_summary": "If you've lost money to a scam and someone rings offering to recover it for a fee — it's the scammers again. Real recovery only happens through your bank (call 159) and Report Fraud, both free."
   },
   {
+    "id": "courier_fraud",
+    "title": "Courier fraud: card or cash collection",
+    "category": "common",
+    "symbol_name": "creditcard",
+    "trending": true,
+    "trending_rank": 5,
+    "body": "Courier fraud usually starts with a phone call, not a link. The caller claims to be from your bank, the police, or a fraud team. They may say your card has been cloned, staff at your branch are under investigation, or your money must be used as evidence. The next step is the giveaway: they send a courier or taxi to collect your bank card, cash, jewellery, or your PIN.\n\nNo bank or police force works like this. They will not collect your card from home, ask you to withdraw cash for an investigation, or tell you to keep the call secret from your bank. A genuine officer or bank employee will not object to you ending the call and checking independently.\n\nIf this happens, hang up. If a courier is expected, do not open the door or hand anything over. Call 159 to reach your bank safely, then report the crime. In Scotland, call Police Scotland on 101.",
+    "warning_signs": [
+      "A caller says your card has been cloned or your bank branch is corrupt",
+      "You are asked to withdraw cash or package valuables",
+      "A courier, taxi or officer will collect your card or money",
+      "They ask for a PIN, passcode or security answer",
+      "They tell you not to contact your bank or family"
+    ],
+    "safe_action": "Hang up. Do not hand over cash, cards or a PIN. Call 159, then report it to the police reporting route for your nation.",
+    "reporting_route_ids": ["bank_159", "report_fraud", "police_scotland"],
+    "related_pattern_ids": ["courier_fraud", "bank_safe_account"],
+    "share_summary": "A bank or police caller asking a courier to collect your card, cash or PIN is a scam. Hang up, do not hand anything over, call 159, then report it."
+  },
+  {
+    "id": "ofcom_spoof_calls",
+    "title": "Ofcom spoof calls",
+    "category": "trending",
+    "symbol_name": "phone.down",
+    "trending": true,
+    "trending_rank": 6,
+    "body": "Some scam calls and texts pretend to come from Ofcom, the UK communications regulator. The script is usually designed to make you press a number or speak to an agent quickly: your phone number will be disconnected, your SIM is linked to fraud, your internet will be cut off, or your account must be verified.\n\nThe name makes the threat sound official, but Ofcom does not call people to disconnect their phone, investigate fraud on their number, or ask for bank details, passwords or one-time codes. Caller ID is not proof either; numbers and names shown on a phone can be spoofed.\n\nThe safest response is boring and effective: end the call, do not press 1, and do not call back using a number from the message. If you want to check current advice, type ofcom.org.uk yourself. If money or personal details were lost, report it through Report Fraud, or Police Scotland on 101 if you are in Scotland.",
+    "warning_signs": [
+      "The caller claims to be Ofcom and threatens disconnection",
+      "You are told your number, SIM or broadband is linked to crime",
+      "The call asks you to press 1 or stay on the line",
+      "They ask for bank details, passwords or one-time codes",
+      "The caller ID looks official but the call was unexpected"
+    ],
+    "safe_action": "End the call or message. Do not press a number or share details. Type ofcom.org.uk yourself if you want to check advice.",
+    "reporting_route_ids": ["report_fraud", "police_scotland"],
+    "related_pattern_ids": ["ofcom_spoof_call"],
+    "share_summary": "Unexpected Ofcom call threatening disconnection or asking you to press 1? End it. Ofcom will not ask for passwords, bank details or codes by phone."
+  },
+  {
     "id": "if_you_clicked",
     "title": "What to do if you already clicked",
     "category": "emergency",
@@ -207,7 +247,12 @@
     "trending": false,
     "trending_rank": null,
     "body": "Clicking a scam link is rarely a disaster by itself — what matters is what happened next. Work through this calmly.\n\nIf you only opened the page and closed it: you are almost certainly fine. Modern iPhones do not get infected by simply viewing a page. Close the tab and clear anything the page downloaded.\n\nIf you entered a password: change that password now, starting with your email account, and anywhere else the same password is used. Turn on two-factor authentication where offered.\n\nIf you entered card details: contact your card provider straight away — dial 159 for your bank — and ask them to block the card and watch for charges. This is routine for them; there is no embarrassment in it.\n\nIf you entered bank login details: call your bank on 159 immediately so they can secure the account.\n\nIf you installed anything or gave remote access: turn off Wi-Fi and mobile data on the affected device, then get the app removed and passwords changed from a different device first.\n\nWhatever happened, report the message — it protects the next person.",
-    "warning_signs": [],
+    "warning_signs": [
+      "You entered a password, passcode or security answer",
+      "You entered card, bank or National Insurance details",
+      "You installed an app, profile or remote-access tool",
+      "You approved a payment, wallet connection or one-time code"
+    ],
     "safe_action": "Passwords entered? Change them now. Card or bank details? Call 159 straight away. Then report the message.",
     "reporting_route_ids": ["bank_159", "text_7726", "ncsc_email", "report_fraud"],
     "related_pattern_ids": [],
@@ -221,7 +266,12 @@
     "trending": false,
     "trending_rank": null,
     "body": "Money sent to a scammer is often recoverable — but speed matters more than anything else on this page.\n\nFirst, call your bank now. Dial 159, which connects you to your own bank's fraud team safely. They can try to stop or trace the payment, freeze further transactions and secure your account. Do this before anything else, even if the payment was days ago.\n\nSecond, know your rights. If you were tricked into transferring money (an authorised push payment scam), UK banks must generally reimburse victims — up to £85,000, usually within five business days — under rules in force since October 2024. It covers Faster Payments and CHAPS between UK accounts. Card payments have separate protections: chargeback, and Section 75 for credit card purchases over £100.\n\nThird, report it to Report Fraud (reportfraud.police.uk or 0300 123 2040) — or Police Scotland on 101 if you are in Scotland. A crime reference also supports your reimbursement case.\n\nFinally, expect follow-up scams. Anyone who contacts you offering to recover the money for a fee is a criminal. Recovery happens through your bank, free.",
-    "warning_signs": [],
+    "warning_signs": [
+      "You sent a bank transfer after a message, call or advert",
+      "You paid fees, taxes or release charges to recover money",
+      "You shared card details on a link from a message",
+      "Someone tells you not to contact your bank or the police"
+    ],
     "safe_action": "Call 159 now — your bank can act fastest in the first hours. Then report to Report Fraud. You may be entitled to reimbursement up to £85,000.",
     "reporting_route_ids": ["bank_159", "app_reimbursement", "report_fraud", "police_scotland"],
     "related_pattern_ids": ["bank_safe_account", "recovery_fraud"],

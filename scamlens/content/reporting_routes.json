@@ -70,6 +70,16 @@
     "contexts": ["email"]
   },
   {
+    "id": "hmrc_social",
+    "title": "Report a fake HMRC social account",
+    "action_label": "Email branddefence@hmrc.gov.uk",
+    "body": "Fake HMRC social media accounts can be reported to HMRC's brand protection team. Include the account link or screenshots if you have them.",
+    "action_kind": "mailto",
+    "action_value": "branddefence@hmrc.gov.uk",
+    "regions": ["uk"],
+    "contexts": ["general"]
+  },
+  {
     "id": "fca_check",
     "title": "Check an investment offer",
     "action_label": "Check the FCA register first",
