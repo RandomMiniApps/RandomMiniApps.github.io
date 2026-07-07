@@ -1,0 +1,29 @@
+{
+  "tlds": [
+    { "tld": "top", "weight": 15 },
+    { "tld": "xyz", "weight": 12 },
+    { "tld": "live", "weight": 10 },
+    { "tld": "icu", "weight": 15 },
+    { "tld": "cam", "weight": 12 },
+    { "tld": "rest", "weight": 12 },
+    { "tld": "zip", "weight": 15 },
+    { "tld": "mov", "weight": 15 },
+    { "tld": "click", "weight": 14 },
+    { "tld": "link", "weight": 10 },
+    { "tld": "cyou", "weight": 15 },
+    { "tld": "cfd", "weight": 15 },
+    { "tld": "sbs", "weight": 15 },
+    { "tld": "bond", "weight": 14 },
+    { "tld": "lol", "weight": 10 },
+    { "tld": "work", "weight": 10 },
+    { "tld": "loan", "weight": 15 },
+    { "tld": "vip", "weight": 12 },
+    { "tld": "gq", "weight": 14 },
+    { "tld": "ml", "weight": 14 },
+    { "tld": "tk", "weight": 14 },
+    { "tld": "cf", "weight": 14 },
+    { "tld": "ga", "weight": 14 },
+    { "tld": "info", "weight": 6 },
+    { "tld": "buzz", "weight": 12 }
+  ]
+}

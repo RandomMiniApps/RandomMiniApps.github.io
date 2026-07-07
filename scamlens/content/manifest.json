@@ -1,0 +1,38 @@
+{
+  "version": "1.1.0",
+  "generated": "2026-07-07",
+  "files": [
+    {
+      "name": "brands.json",
+      "sha256": "6897df0254b625586540054c5cc905eaba02dc7881ea2a128a4a7d9f3b8a01b4"
+    },
+    {
+      "name": "scam_patterns.json",
+      "sha256": "0ed6529e641dfdfb67cc23558eb03b50e00c05ef03f80fda4eaa023a2c84e61d"
+    },
+    {
+      "name": "red_flags.json",
+      "sha256": "6a91ff12123ea3d88530aa55617fa95a8657d379cedd73b83e14ba595d15e7e5"
+    },
+    {
+      "name": "reporting_routes.json",
+      "sha256": "87faf7ae2da2a57cacbdc3f32e59e6d91bc6b172dbc0766b87e0cb95036189c7"
+    },
+    {
+      "name": "official_domains.json",
+      "sha256": "14a5e5834881c811fd17c6316a37dfa109a7829c685c8b7378528178a89d4cf9"
+    },
+    {
+      "name": "learn_cards.json",
+      "sha256": "0b561dfada54ea1c0651218dd3debcd45ec5e7eb850e5f11aa2be319be9cb4d0"
+    },
+    {
+      "name": "url_shorteners.json",
+      "sha256": "8f69e9376e6f706e41598357ed8447f6cb7bbb6d468af1ac929353c6a51fa4be"
+    },
+    {
+      "name": "suspicious_tlds.json",
+      "sha256": "99cf830699a7d478313db5aac545e50f2b9f7b5bba768f1cc87ae283b2165f4a"
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+[
+  {
+    "id": "delivery_redelivery_fee",
+    "title": "Delivery redelivery fee scam",
+    "category": "delivery",
+    "risk_base": 35,
+    "trigger_phrases": [
+      "redelivery fee",
+      "delivery failed",
+      "could not be delivered",
+      "unpaid shipping fee",
+      "address information incomplete",
+      "address is incomplete",
+      "parcel is waiting",
+      "parcel held",
+      "held at our depot",
+      "reschedule your delivery",
+      "rearrange your delivery",
+      "unable to deliver your package",
+      "pay a small fee",
+      "outstanding delivery charge"
+    ],
+    "common_brand_ids": [
+      "royal_mail",
+      "evri",
+      "dpd",
+      "dhl",
+      "parcelforce"
+    ],
+    "plain_explanation": "This uses a common parcel-delivery scam pattern. The fee is kept small so paying feels harmless, but the real goal is capturing your card details on a fake courier page.",
+    "safe_action": "Do not use the link. Open the courier's official app or website and enter your tracking number yourself.",
+    "reporting_route_ids": [
+      "text_7726",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "delivery_customs_fee",
+    "title": "Parcel customs fee scam",
+    "category": "delivery",
+    "risk_base": 35,
+    "trigger_phrases": [
+      "customs fee",
+      "customs charge",
+      "customs duty",
+      "import fee",
+      "clearance fee",
+      "parcel is held by customs",
+      "customs declaration required"
+    ],
+    "common_brand_ids": [
+      "royal_mail",
+      "dhl",
+      "parcelforce"
+    ],
+    "plain_explanation": "Genuine customs charges are handled through official courier channels with a physical card or tracked notification. Message links demanding customs fees are a common way to capture card details.",
+    "safe_action": "Check your parcel through the courier's official app or website, typed yourself.",
+    "reporting_route_ids": [
+      "text_7726",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "hmrc_refund",
+    "title": "HMRC refund scam",
+    "category": "tax",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "tax refund",
+      "tax rebate",
+      "you are owed",
+      "eligible for a refund",
+      "claim your refund",
+      "outstanding refund",
+      "repayment pending",
+      "self assessment refund"
+    ],
+    "common_brand_ids": [
+      "hmrc"
+    ],
+    "plain_explanation": "HMRC never texts, emails or WhatsApps about refunds or rebates. Refund messages with links lead to fake GOV.UK-style pages built to capture bank and identity details.",
+    "safe_action": "Do not use the link. Check your tax position in the HMRC app or on gov.uk, typed yourself.",
+    "reporting_route_ids": [
+      "hmrc_text_60599",
+      "hmrc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "hmrc_penalty_threat",
+    "title": "HMRC penalty or arrest threat",
+    "category": "tax",
+    "risk_base": 50,
+    "trigger_phrases": [
+      "arrest warrant",
+      "legal action will be taken",
+      "lawsuit against you",
+      "tax fraud case",
+      "final warning from hmrc",
+      "penalty notice issued",
+      "warrant has been issued",
+      "case officer"
+    ],
+    "common_brand_ids": [
+      "hmrc"
+    ],
+    "plain_explanation": "HMRC does not threaten arrest or immediate legal action by phone, text or email. Threat and urgency are pressure tactics to make you pay or share details before you think.",
+    "safe_action": "Do not reply or pay. If you are worried about your tax, contact HMRC through gov.uk, typed yourself.",
+    "reporting_route_ids": [
+      "hmrc_text_60599",
+      "hmrc_email",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "dvla_vehicle_tax",
+    "title": "DVLA vehicle tax scam",
+    "category": "government",
+    "risk_base": 35,
+    "trigger_phrases": [
+      "vehicle tax payment failed",
+      "your vehicle is no longer taxed",
+      "tax your vehicle",
+      "latest vehicle tax payment",
+      "dvla refund",
+      "licence needs updating",
+      "driving licence has expired"
+    ],
+    "common_brand_ids": [
+      "dvla"
+    ],
+    "plain_explanation": "The DVLA does not send payment or refund links by text or email. These messages imitate GOV.UK payment pages to capture card details.",
+    "safe_action": "Check and pay vehicle tax only on gov.uk, typed yourself.",
+    "reporting_route_ids": [
+      "text_7726",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "bank_suspicious_activity",
+    "title": "Bank impersonation — suspicious activity",
+    "category": "banking",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "suspicious activity on your account",
+      "unusual activity detected",
+      "a new payee has been added",
+      "a new device has been registered",
+      "your card has been frozen",
+      "your account has been locked",
+      "verify this transaction",
+      "did you attempt this payment",
+      "security check required",
+      "confirm this payment",
+      "if you did not authorise",
+      "if you did not make this payment call",
+      "to cancel this transaction call",
+      "to dispute this charge call"
+    ],
+    "common_brand_ids": [
+      "barclays",
+      "hsbc",
+      "lloyds",
+      "natwest",
+      "santander",
+      "monzo",
+      "starling"
+    ],
+    "plain_explanation": "Scammers impersonate banks with alarming account alerts to make you tap a link or call their number. Your bank will never mind you hanging up and calling back through 159.",
+    "safe_action": "Do not use the link or number in the message. Call 159 or use the number on your card, or the app itself.",
+    "reporting_route_ids": [
+      "bank_159",
+      "text_7726",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "bank_safe_account",
+    "title": "Bank 'safe account' transfer scam",
+    "category": "banking",
+    "risk_base": 85,
+    "trigger_phrases": [
+      "safe account",
+      "move your money",
+      "transfer your funds to a secure account",
+      "protect your money by moving it",
+      "your money is at risk, transfer",
+      "we have opened a new account for you"
+    ],
+    "common_brand_ids": [
+      "barclays",
+      "hsbc",
+      "lloyds",
+      "natwest",
+      "santander",
+      "monzo",
+      "starling"
+    ],
+    "plain_explanation": "No bank, police force or government body will ever ask you to move money to a 'safe account'. This is always a scam, and the account belongs to the criminal.",
+    "safe_action": "Stop. Do not transfer anything. Hang up and call 159 to reach your real bank.",
+    "reporting_route_ids": [
+      "bank_159",
+      "app_reimbursement",
+      "report_fraud"
+    ],
+    "critical_on_match": true
+  },
+  {
+    "id": "otp_sharing",
+    "title": "One-time passcode sharing request",
+    "category": "banking",
+    "risk_base": 85,
+    "trigger_phrases": [
+      "read me the code",
+      "share the code we sent",
+      "tell us the one-time passcode",
+      "give us the otp",
+      "confirm the 6-digit code",
+      "send us the security code",
+      "the code you just received"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "One-time passcodes exist so that only you can approve actions on your accounts. Anyone asking you to read one out — however official they sound — is trying to get into your account.",
+    "safe_action": "Never share a security code with anyone. Hang up, then call 159 if it involved your bank.",
+    "reporting_route_ids": [
+      "bank_159",
+      "report_fraud"
+    ],
+    "critical_on_match": true
+  },
+  {
+    "id": "remote_access",
+    "title": "Remote access / tech support scam",
+    "category": "tech_support",
+    "risk_base": 80,
+    "trigger_phrases": [
+      "install anydesk",
+      "install teamviewer",
+      "remote access to your device",
+      "your computer is infected",
+      "your device has a virus",
+      "call our support line immediately",
+      "microsoft support has detected",
+      "your ip address has been compromised",
+      "allow us to connect to your device"
+    ],
+    "common_brand_ids": [
+      "microsoft",
+      "apple"
+    ],
+    "plain_explanation": "Genuine companies do not cold-contact people about viruses or ask to connect to your device. Remote-access tools give a stranger full control of your phone or computer and your banking.",
+    "safe_action": "Do not install anything or call the number. Close the page or hang up — nothing is wrong with your device.",
+    "reporting_route_ids": [
+      "report_fraud",
+      "ncsc_email"
+    ],
+    "critical_on_match": true
+  },
+  {
+    "id": "parking_qr",
+    "title": "Parking QR code scam",
+    "category": "parking",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "pay for parking",
+      "parking session",
+      "parking charge notice",
+      "pcn",
+      "penalty charge",
+      "parking fine",
+      "your vehicle was recorded",
+      "pay your parking"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "Fake QR stickers are placed over genuine ones on parking machines and signs, leading to convincing payment pages that capture card details. Councils increasingly avoid QR codes entirely.",
+    "safe_action": "Pay through the operator's own app (such as RingGo or PayByPhone) or a website you type yourself. Check whether the QR sticker looks added on.",
+    "reporting_route_ids": [
+      "report_fraud",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "winter_fuel",
+    "title": "Winter Fuel Payment scam",
+    "category": "government",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "winter fuel payment",
+      "winter heating allowance",
+      "cost of living payment",
+      "energy support scheme",
+      "heating subsidy",
+      "check your eligibility",
+      "claim your winter fuel"
+    ],
+    "common_brand_ids": [
+      "dwp"
+    ],
+    "plain_explanation": "Winter Fuel Payments and cost-of-living support are made automatically or claimed only through gov.uk. Texts inviting you to 'check eligibility' through a link imitate DWP pages to harvest bank details.",
+    "safe_action": "Do not use the link. Check any support payment on gov.uk, typed yourself.",
+    "reporting_route_ids": [
+      "text_7726",
+      "ncsc_email",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "evisa_fee",
+    "title": "eVisa scam",
+    "category": "government",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "evisa",
+      "your visa will be cancelled",
+      "immigration status update required",
+      "biometric residence permit has expired",
+      "update your ukvi account",
+      "visa processing fee"
+    ],
+    "common_brand_ids": [
+      "home_office_evisa"
+    ],
+    "plain_explanation": "Scammers exploit the move to eVisas with fake fee demands and account-update links. Official eVisa services are free to set up and only ever run through gov.uk.",
+    "safe_action": "Manage your eVisa only through gov.uk, typed yourself. Do not pay fees requested by message.",
+    "reporting_route_ids": [
+      "ncsc_email",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "marketplace_offplatform",
+    "title": "Marketplace off-platform payment scam",
+    "category": "marketplace",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "pay through this courier link",
+      "i have paid the courier",
+      "verify through the courier",
+      "payment is held until you confirm",
+      "insured delivery link",
+      "escrow",
+      "send your bank details to receive",
+      "pay outside the app",
+      "deal outside the platform",
+      "refund the difference"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "Buyers and sellers are pushed off the marketplace so its protections stop applying. Fake courier, escrow and 'overpayment refund' links are built to capture card or bank details.",
+    "safe_action": "Keep every payment and message inside the marketplace itself. Never 'verify' through an external courier link.",
+    "reporting_route_ids": [
+      "report_fraud",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "family_emergency",
+    "title": "Family emergency / new number scam",
+    "category": "impersonation",
+    "risk_base": 45,
+    "trigger_phrases": [
+      "this is my new number",
+      "i dropped my phone",
+      "my phone is broken",
+      "i'm using a friend's phone",
+      "can you send money",
+      "i need you to pay a bill for me",
+      "save this number"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "The 'Hi Mum/Hi Dad' scam pretends a family member has a new number and urgently needs money. Voice-cloning versions of this scam now exist for calls too.",
+    "safe_action": "Contact the family member on their usual number, or ask a question only they could answer, before sending anything.",
+    "reporting_route_ids": [
+      "text_7726",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "investment_crypto",
+    "title": "Investment or crypto scam",
+    "category": "investment",
+    "risk_base": 45,
+    "trigger_phrases": [
+      "guaranteed returns",
+      "risk-free investment",
+      "double your money",
+      "exclusive investment opportunity",
+      "crypto trading platform",
+      "connect your wallet",
+      "seed phrase",
+      "celebrity endorsed",
+      "limited investment slots",
+      "our senior broker will call you"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "Guaranteed high returns do not exist; that promise is itself the warning sign. Fake platforms show fake profits until you try to withdraw, and 'wallet connection' pages steal crypto directly.",
+    "safe_action": "Check any firm on the FCA register before investing, and never share a seed phrase with anyone.",
+    "reporting_route_ids": [
+      "fca_check",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "recovery_fraud",
+    "title": "Recovery fraud (follow-up scam)",
+    "category": "investment",
+    "risk_base": 50,
+    "trigger_phrases": [
+      "we can recover your money",
+      "recover your lost funds",
+      "fraud recovery team",
+      "your compensation is ready",
+      "you have been identified as a victim",
+      "pay a release fee",
+      "processing fee to release your refund"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "People who have already lost money are targeted again by fake 'recovery agents' — often the same criminals. Genuine recovery never requires an upfront fee.",
+    "safe_action": "Do not pay anything to anyone promising recovery. Speak to your bank on 159 and Report Fraud.",
+    "reporting_route_ids": [
+      "bank_159",
+      "report_fraud"
+    ],
+    "critical_on_match": false
+  },
+  {
+    "id": "job_fee",
+    "title": "Job offer fee scam",
+    "category": "employment",
+    "risk_base": 40,
+    "trigger_phrases": [
+      "work from home opportunity",
+      "earn £",
+      "flexible hours, no experience",
+      "registration fee",
+      "training fee required",
+      "pay for your dbs check through this link",
+      "complete tasks to earn commission",
+      "recruitment agent contacted you on whatsapp"
+    ],
+    "common_brand_ids": [],
+    "plain_explanation": "Real employers do not charge fees to start work or recruit through unsolicited WhatsApp messages. Task-based 'earning' schemes take deposits that cannot be withdrawn.",
+    "safe_action": "Never pay to get a job. Verify the employer independently through their official website.",
+    "reporting_route_ids": [
+      "report_fraud",
+      "ncsc_email"
+    ],
+    "critical_on_match": false
+  }
+]

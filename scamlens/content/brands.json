@@ -1,0 +1,222 @@
+[
+  {
+    "id": "hmrc",
+    "display_name": "HMRC",
+    "official_domains": ["gov.uk", "tax.service.gov.uk", "hmrc.gov.uk"],
+    "impersonation_tokens": ["hmrc", "revenue", "taxrefund", "govuk", "gov-uk"],
+    "common_hooks": ["tax refund", "tax rebate", "outstanding tax", "self assessment", "penalty notice", "national insurance", "unpaid tax"],
+    "category": "government",
+    "reporting_route_ids": ["hmrc_text_60599", "hmrc_email", "report_fraud"],
+    "safe_action": "Use the HMRC app or type gov.uk into Safari yourself. HMRC never texts or emails about refunds."
+  },
+  {
+    "id": "dvla",
+    "display_name": "DVLA",
+    "official_domains": ["gov.uk", "dvla.gov.uk"],
+    "impersonation_tokens": ["dvla", "vehicletax", "roadtax"],
+    "common_hooks": ["vehicle tax", "tax payment failed", "driving licence", "vehicle keeper", "tax refund"],
+    "category": "government",
+    "reporting_route_ids": ["text_7726", "ncsc_email", "report_fraud"],
+    "safe_action": "Go to gov.uk yourself to check your vehicle tax. The DVLA does not send payment links by text."
+  },
+  {
+    "id": "dwp",
+    "display_name": "DWP",
+    "official_domains": ["gov.uk", "dwp.gov.uk"],
+    "impersonation_tokens": ["dwp", "winterfuel", "costofliving", "universalcredit"],
+    "common_hooks": ["winter fuel payment", "cost of living payment", "energy support", "benefit payment", "eligibility check"],
+    "category": "government",
+    "reporting_route_ids": ["text_7726", "ncsc_email", "report_fraud"],
+    "safe_action": "Check any benefit or support payment on gov.uk yourself. The DWP does not ask you to claim through text links."
+  },
+  {
+    "id": "home_office_evisa",
+    "display_name": "Home Office (eVisa)",
+    "official_domains": ["gov.uk"],
+    "impersonation_tokens": ["evisa", "homeoffice", "ukvisa", "ukvi", "immigration"],
+    "common_hooks": ["evisa", "visa application", "immigration status", "biometric residence", "visa fee"],
+    "category": "government",
+    "reporting_route_ids": ["ncsc_email", "report_fraud"],
+    "safe_action": "Manage your visa or eVisa only through gov.uk, typed yourself. Official eVisa services do not charge through message links."
+  },
+  {
+    "id": "nhs",
+    "display_name": "NHS",
+    "official_domains": ["nhs.uk", "nhs.net"],
+    "impersonation_tokens": ["nhs", "gp", "prescription"],
+    "common_hooks": ["appointment", "prescription", "vaccination", "health record", "GP practice"],
+    "category": "health",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Use the NHS app or call your GP practice directly. The NHS never asks for payment for appointments or vaccinations."
+  },
+  {
+    "id": "tv_licensing",
+    "display_name": "TV Licensing",
+    "official_domains": ["tvlicensing.co.uk"],
+    "impersonation_tokens": ["tvlicence", "tvlicense", "tvlicensing"],
+    "common_hooks": ["tv licence", "licence expired", "payment could not be taken", "refund is pending", "direct debit failed"],
+    "category": "government",
+    "reporting_route_ids": ["ncsc_email", "text_7726"],
+    "safe_action": "Type tvlicensing.co.uk yourself to check your licence. Ignore refund or failed-payment links."
+  },
+  {
+    "id": "royal_mail",
+    "display_name": "Royal Mail",
+    "official_domains": ["royalmail.com"],
+    "impersonation_tokens": ["royalmail", "royal-mail", "roya1mail"],
+    "common_hooks": ["parcel", "redelivery", "delivery fee", "shipping fee", "held at our depot", "address incomplete", "customs charge"],
+    "category": "delivery",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Open the Royal Mail app or type royalmail.com and enter your tracking number yourself."
+  },
+  {
+    "id": "evri",
+    "display_name": "Evri",
+    "official_domains": ["evri.com"],
+    "impersonation_tokens": ["evri", "evrri", "hermes"],
+    "common_hooks": ["parcel", "delivery attempt", "redelivery", "delivery fee", "address issue", "reschedule your delivery"],
+    "category": "delivery",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Open the Evri app or type evri.com and track your parcel yourself."
+  },
+  {
+    "id": "dpd",
+    "display_name": "DPD",
+    "official_domains": ["dpd.co.uk", "dpdlocal.co.uk"],
+    "impersonation_tokens": ["dpd"],
+    "common_hooks": ["parcel", "delivery", "redelivery fee", "missed you", "rearrange delivery"],
+    "category": "delivery",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Use the DPD app or type dpd.co.uk yourself to rearrange any delivery."
+  },
+  {
+    "id": "dhl",
+    "display_name": "DHL",
+    "official_domains": ["dhl.com", "dhl.co.uk", "dhlparcel.co.uk"],
+    "impersonation_tokens": ["dhl"],
+    "common_hooks": ["shipment", "customs duty", "delivery fee", "parcel on hold"],
+    "category": "delivery",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Track shipments only on dhl.com, typed yourself."
+  },
+  {
+    "id": "parcelforce",
+    "display_name": "Parcelforce",
+    "official_domains": ["parcelforce.com"],
+    "impersonation_tokens": ["parcelforce"],
+    "common_hooks": ["parcel", "redelivery", "depot", "delivery fee"],
+    "category": "delivery",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "safe_action": "Type parcelforce.com yourself and use your tracking number."
+  },
+  {
+    "id": "amazon",
+    "display_name": "Amazon",
+    "official_domains": ["amazon.co.uk", "amazon.com"],
+    "impersonation_tokens": ["amazon", "amaz0n"],
+    "common_hooks": ["your order", "suspicious sign-in", "account locked", "prime membership", "refund", "gift card"],
+    "category": "retail",
+    "reporting_route_ids": ["ncsc_email", "text_7726"],
+    "safe_action": "Open the Amazon app or type amazon.co.uk yourself and check Your Orders. Amazon never asks for payment outside its own site."
+  },
+  {
+    "id": "paypal",
+    "display_name": "PayPal",
+    "official_domains": ["paypal.com", "paypal.co.uk"],
+    "impersonation_tokens": ["paypal", "paypa1"],
+    "common_hooks": ["unusual activity", "account limited", "confirm your identity", "invoice", "payment request"],
+    "category": "banking",
+    "reporting_route_ids": ["ncsc_email"],
+    "safe_action": "Open the PayPal app or type paypal.com yourself. Genuine problems appear in your account's message centre."
+  },
+  {
+    "id": "apple",
+    "display_name": "Apple",
+    "official_domains": ["apple.com", "icloud.com"],
+    "impersonation_tokens": ["apple", "icloud", "appleid"],
+    "common_hooks": ["apple id", "icloud storage", "payment method", "account locked", "subscription renewal"],
+    "category": "tech",
+    "reporting_route_ids": ["ncsc_email", "text_7726"],
+    "safe_action": "Check Settings on your iPhone or type apple.com yourself. Apple never asks for your password or codes by message."
+  },
+  {
+    "id": "microsoft",
+    "display_name": "Microsoft",
+    "official_domains": ["microsoft.com", "live.com", "outlook.com"],
+    "impersonation_tokens": ["microsoft", "office365", "outlook"],
+    "common_hooks": ["unusual sign-in", "account security", "verify your account", "your device is infected"],
+    "category": "tech",
+    "reporting_route_ids": ["ncsc_email"],
+    "safe_action": "Sign in only at microsoft.com, typed yourself. Microsoft does not phone people about viruses."
+  },
+  {
+    "id": "barclays",
+    "display_name": "Barclays",
+    "official_domains": ["barclays.co.uk"],
+    "impersonation_tokens": ["barclays"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "new payee", "card frozen"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Hang up and call 159, or use the number on your card or the Barclays app — never a number or link from the message."
+  },
+  {
+    "id": "hsbc",
+    "display_name": "HSBC",
+    "official_domains": ["hsbc.co.uk", "hsbc.com"],
+    "impersonation_tokens": ["hsbc"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "new payee", "security check"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Hang up and call 159, or use the number on your card or the HSBC app — never a number or link from the message."
+  },
+  {
+    "id": "lloyds",
+    "display_name": "Lloyds",
+    "official_domains": ["lloydsbank.com", "lloydsbank.co.uk"],
+    "impersonation_tokens": ["lloyds"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "new payee", "unusual payment"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Hang up and call 159, or use the number on your card or the Lloyds app — never a number or link from the message."
+  },
+  {
+    "id": "natwest",
+    "display_name": "NatWest",
+    "official_domains": ["natwest.com"],
+    "impersonation_tokens": ["natwest"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "new payee", "security team"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Hang up and call 159, or use the number on your card or the NatWest app — never a number or link from the message."
+  },
+  {
+    "id": "santander",
+    "display_name": "Santander",
+    "official_domains": ["santander.co.uk"],
+    "impersonation_tokens": ["santander"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "new payee"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Hang up and call 159, or use the number on your card or the Santander app — never a number or link from the message."
+  },
+  {
+    "id": "monzo",
+    "display_name": "Monzo",
+    "official_domains": ["monzo.com"],
+    "impersonation_tokens": ["monzo"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "card frozen"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Use the Monzo app's own chat, or call 159. Monzo never asks you to move money to keep it safe."
+  },
+  {
+    "id": "starling",
+    "display_name": "Starling",
+    "official_domains": ["starlingbank.com"],
+    "impersonation_tokens": ["starling"],
+    "common_hooks": ["suspicious activity", "your account", "verify", "card frozen"],
+    "category": "banking",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "safe_action": "Use the Starling app's own chat, or call 159. Starling never asks you to move money to keep it safe."
+  }
+]

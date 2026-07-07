@@ -1,0 +1,230 @@
+[
+  {
+    "id": "delivery_scams",
+    "title": "Delivery message scams",
+    "category": "common",
+    "symbol_name": "shippingbox",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Delivery scams are the most common scam texts in the UK. The message claims a parcel is waiting, delayed, or needs a small redelivery or customs fee. The amount is kept deliberately small — often under £3 — because paying feels harmless. The link leads to a convincing copy of a courier's website that captures your card details and personal information, which are then used for much larger fraud, sometimes weeks later.\n\nThe strongest tell is the link itself: it will not go to the courier's real website, however official the page looks once it opens. Genuine couriers handle redelivery through their apps and websites, and Royal Mail leaves a physical card rather than demanding fees by text.\n\nIf you are expecting a parcel, that is exactly what these messages count on. Check the courier's own app or website, typed by you, using your real tracking number. If there is no record of your parcel there, the message was not real.",
+    "warning_signs": [
+      "An unexpected fee, especially a small one",
+      "No tracking number, or one that is never shown on a real courier site",
+      "A link that is shortened or does not go to the courier's own domain",
+      "Urgent wording such as 'final notice' or 'today only'",
+      "A request for card details before showing any real parcel record"
+    ],
+    "safe_action": "Open the courier's official app or website yourself and enter your tracking number. Never pay a fee through a message link.",
+    "reporting_route_ids": ["text_7726", "ncsc_email"],
+    "related_pattern_ids": ["delivery_redelivery_fee", "delivery_customs_fee"],
+    "share_summary": "That parcel text asking for a small fee is a very common scam. Couriers never charge redelivery fees by text link. Check your parcel in the courier's own app instead, and forward the text free to 7726."
+  },
+  {
+    "id": "hmrc_scams",
+    "title": "HMRC and tax scams",
+    "category": "common",
+    "symbol_name": "building.columns",
+    "trending": false,
+    "trending_rank": null,
+    "body": "HMRC impersonation peaks around tax deadlines in January and July, but runs all year. The two main flavours are the pleasant one — a refund or rebate you can claim through a link — and the frightening one, which threatens penalties, court action or even arrest for unpaid tax.\n\nBoth work the same way: the link leads to a fake GOV.UK-style page that harvests your bank details, card numbers and National Insurance number. The scary version increasingly arrives as a phone call with a recorded message.\n\nHMRC's own rule makes this easy to cut through: HMRC never contacts anyone by text, email or WhatsApp about refunds or rebates, and never threatens arrest. Any such message is fake, every time, regardless of how plausible the details look.\n\nIf you think you might genuinely be owed money or owe tax, that is checkable in minutes in the HMRC app or on gov.uk — typed by you, not tapped from a message.",
+    "warning_signs": [
+      "A refund or rebate offered through a link",
+      "Threats of penalties, court action or arrest",
+      "Requests for bank, card, password or National Insurance details",
+      "A link that does not go to gov.uk",
+      "Pressure to act the same day"
+    ],
+    "safe_action": "Check your real tax position in the HMRC app or on gov.uk, typed yourself. Forward scam texts to 60599 and emails to phishing@hmrc.gov.uk.",
+    "reporting_route_ids": ["hmrc_text_60599", "hmrc_email", "report_fraud"],
+    "related_pattern_ids": ["hmrc_refund", "hmrc_penalty_threat"],
+    "share_summary": "HMRC never texts, emails or WhatsApps about tax refunds — those messages are always scams. If one arrives, don't tap the link. Check the HMRC app or gov.uk directly instead."
+  },
+  {
+    "id": "bank_impersonation",
+    "title": "Bank impersonation scams",
+    "category": "common",
+    "symbol_name": "banknote",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Bank impersonation is where scams do the most damage. A call or text claims there is suspicious activity on your account, a payment that must be stopped, or a security check. The caller sounds professional, may know some of your details, and caller ID may even show your bank's real number — numbers can be faked.\n\nThe endgame is always one of three things: getting you to read out a one-time passcode, getting card or login details through a link, or the most costly of all — persuading you to move your money to a 'safe account'. No bank, no police officer, and no government body will ever ask you to move money to keep it safe. That request is a scam, one hundred per cent of the time.\n\nThe UK has a purpose-built answer: hang up and dial 159. It connects you to your own bank's fraud team, works for over 99% of UK current accounts, and cannot be spoofed. A genuine bank will never object to you hanging up and calling back this way.",
+    "warning_signs": [
+      "'Move your money to a safe account'",
+      "'Read me the code we just sent you'",
+      "Pressure to act while you are on the phone",
+      "A link or phone number provided in the message itself",
+      "Being coached on what to tell your bank"
+    ],
+    "safe_action": "Hang up. Dial 159 or use the number on your card. Never share codes, and never move money because a caller told you to.",
+    "reporting_route_ids": ["bank_159", "app_reimbursement", "report_fraud"],
+    "related_pattern_ids": ["bank_suspicious_activity", "bank_safe_account", "otp_sharing"],
+    "share_summary": "If anyone rings claiming to be your bank and asks you to move money or read out a code — hang up. It's a scam. Call 159 instead: it connects you safely to your real bank's fraud team."
+  },
+  {
+    "id": "parking_qr",
+    "title": "Parking QR code scams",
+    "category": "trending",
+    "symbol_name": "qrcode.viewfinder",
+    "trending": true,
+    "trending_rank": 1,
+    "body": "QR codes hide where they lead until after you scan, and scammers exploit that by sticking fake codes over genuine ones on parking machines, signs, restaurant tables and EV chargers. Scan one at a car park and you land on a convincing payment page that takes your card details — and sometimes signs you up to recurring charges. Some victims also get a fake 'fine' later, because the scammers now know your car was parked there.\n\nThis scam, sometimes called quishing, has spread across UK cities to the point that several councils have removed QR codes from parking machines entirely.\n\nBefore paying for parking through any QR code, look at the sticker itself: is it laminated over another sticker, peeling, or slightly misaligned? Then look at where the code leads — ScamLens always shows you the destination before anything opens. The safest route is skipping the QR code entirely: use the operator's own app, such as RingGo or PayByPhone, or type the council's website yourself.",
+    "warning_signs": [
+      "A QR sticker placed on top of another sticker",
+      "A payment page whose address is not the council or operator",
+      "A shortened link behind the code",
+      "Requests for card details plus personal information beyond the payment",
+      "No signage mentioning the payment website"
+    ],
+    "safe_action": "Pay through the operator's own app or a website you type yourself. Preview any QR destination before opening it.",
+    "reporting_route_ids": ["report_fraud", "ncsc_email"],
+    "related_pattern_ids": ["parking_qr"],
+    "share_summary": "Fake QR stickers on parking machines are a growing scam — they lead to fake payment pages that steal card details. Pay with the parking app (like RingGo) or type the council's website instead of scanning."
+  },
+  {
+    "id": "winter_fuel",
+    "title": "Winter Fuel Payment texts",
+    "category": "trending",
+    "symbol_name": "thermometer.snowflake",
+    "trending": true,
+    "trending_rank": 2,
+    "body": "Since Winter Fuel Payments became means-tested, scammers have flooded phones each autumn and winter with texts inviting people to 'check eligibility' or 'claim' their payment through a link. The pages imitate GOV.UK convincingly and ask for bank details to 'pay the allowance into', capturing everything a fraudster needs.\n\nThe truth is simpler: Winter Fuel Payments are made automatically to those eligible, or claimed only through gov.uk or the official claim line. The DWP does not text links inviting claims or eligibility checks, and neither does any energy support scheme.\n\nThese texts target older people specifically, so this is a scam worth warning parents and grandparents about directly. The pattern applies to every 'cost of living', 'energy support' or 'heating allowance' message: real support arrives automatically or through gov.uk — never through a text link asking for your bank details.",
+    "warning_signs": [
+      "A link to 'check eligibility' or 'claim' a payment",
+      "Requests for bank details to receive the money",
+      "A page that looks like GOV.UK but whose address is not gov.uk",
+      "Deadlines pressuring you to claim quickly",
+      "Arriving by text at all — the DWP does not invite claims this way"
+    ],
+    "safe_action": "Check any benefit or support payment on gov.uk, typed yourself. Warn older relatives that these texts are circulating.",
+    "reporting_route_ids": ["text_7726", "ncsc_email", "report_fraud"],
+    "related_pattern_ids": ["winter_fuel"],
+    "share_summary": "Texts about claiming your Winter Fuel Payment through a link are scams — payments are automatic or claimed only via gov.uk. Don't enter bank details. Forward the text free to 7726."
+  },
+  {
+    "id": "evisa_scams",
+    "title": "eVisa and immigration scams",
+    "category": "trending",
+    "symbol_name": "airplane.departure",
+    "trending": true,
+    "trending_rank": 3,
+    "body": "The UK's move from physical immigration documents to eVisas created a wave of scams aimed at people anxious about their status. Emails and texts claim your visa will be cancelled, your BRP has expired, or your UKVI account needs urgent updating — usually with a fee attached.\n\nThe fear is the weapon here. Losing immigration status is frightening enough that people pay 'processing fees' and hand over passport details without the checks they would normally make. Some scams escalate to phone calls impersonating the Home Office, demanding payment to avoid deportation.\n\nThe facts: setting up and using an eVisa is free. The Home Office manages everything through gov.uk, and it does not demand payments by text, email or phone call to maintain your status. Anyone threatening your status and asking for money in the same breath is a criminal, not an official.\n\nIf you are ever unsure about your real status, check your UKVI account by typing gov.uk yourself, or get advice from a registered immigration adviser.",
+    "warning_signs": [
+      "Threats that your visa will be cancelled",
+      "Fees to update, process or protect your status",
+      "Links to update your UKVI account",
+      "Requests for passport photos or biometric details",
+      "Phone calls demanding immediate payment"
+    ],
+    "safe_action": "Manage your eVisa only through gov.uk, typed yourself. It is free — anyone charging you by message is a scammer.",
+    "reporting_route_ids": ["ncsc_email", "report_fraud"],
+    "related_pattern_ids": ["evisa_fee"],
+    "share_summary": "Messages threatening your visa status and asking for fees are scams — eVisas are free and managed only through gov.uk. Don't pay, don't share passport details, and report the message."
+  },
+  {
+    "id": "voice_cloning",
+    "title": "AI voice cloning calls",
+    "category": "trending",
+    "symbol_name": "waveform",
+    "trending": true,
+    "trending_rank": 4,
+    "body": "A few seconds of someone's voice from a video online is now enough to clone it. Scammers use this for a modern version of the family-emergency scam: a call that sounds exactly like your child or grandchild, distressed, asking for money urgently — a crashed car, trouble abroad, a broken phone explaining the unknown number.\n\nThe emotional pressure is the point. Hearing a loved one's voice in distress overrides the caution you would apply to any other request for money.\n\nTwo defences work well. First, verify through another channel: hang up and call the person's usual number, or message them where you normally would. A genuine emergency survives a two-minute delay. Second, agree a family code word in advance — a word a scammer could not know, that anyone genuinely in trouble would use. It sounds old-fashioned; it defeats cutting-edge fraud.\n\nText versions of this scam ('Hi Mum, this is my new number') remain extremely common and use identical pressure. The same rule applies: verify through the number you already have.",
+    "warning_signs": [
+      "Urgent requests for money from a new or unknown number",
+      "A voice that discourages you from hanging up or calling back",
+      "Reasons you cannot verify — broken phone, borrowed number",
+      "Pressure to pay by bank transfer or gift cards",
+      "Requests for secrecy from the rest of the family"
+    ],
+    "safe_action": "Hang up and contact the person on their usual number before sending anything. Agree a family code word for real emergencies.",
+    "reporting_route_ids": ["text_7726", "report_fraud"],
+    "related_pattern_ids": ["family_emergency"],
+    "share_summary": "Scammers can now clone voices from online videos and ring pretending to be family in trouble. If you get an urgent money request, hang up and call the person's usual number first. Consider agreeing a family code word."
+  },
+  {
+    "id": "marketplace_scams",
+    "title": "Marketplace scams",
+    "category": "common",
+    "symbol_name": "cart",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Facebook Marketplace, Vinted, Gumtree and eBay scams almost all share one move: getting you off the platform. The moment payment, delivery or 'verification' happens somewhere else, the platform's protections stop applying and the scammer controls the page you are looking at.\n\nSellers get fake courier links: a buyer claims to have paid through an 'insured delivery' service, and the seller must 'confirm' by entering card details to receive the money. Real payments never require the recipient's card details. Buyers get the mirror image: payment pages outside the platform, or pressure to pay by bank transfer to a stranger.\n\nOverpayment tricks add a twist — a cheque or transfer for more than the price, with a request to refund the difference before the original payment inevitably bounces.\n\nThe rule that defeats nearly all of it: keep everything inside the platform — chat, payment and delivery booking. Anyone who insists on moving off-platform, however plausible the reason, has told you what they are.",
+    "warning_signs": [
+      "Courier or escrow links sent by the other party",
+      "Being asked for card details to 'receive' money",
+      "Overpayment followed by a refund request",
+      "Pressure to pay by bank transfer outside the platform",
+      "Refusal to meet or use the platform's own systems"
+    ],
+    "safe_action": "Keep payment, chat and delivery inside the marketplace itself. Never enter card details to receive money.",
+    "reporting_route_ids": ["report_fraud", "ncsc_email"],
+    "related_pattern_ids": ["marketplace_offplatform"],
+    "share_summary": "Marketplace rule of thumb: the moment someone wants to pay or 'verify' outside the app — fake courier links, escrow pages, bank transfers — it's a scam. Keep everything inside the platform."
+  },
+  {
+    "id": "investment_scams",
+    "title": "Investment and crypto scams",
+    "category": "common",
+    "symbol_name": "chart.line.uptrend.xyaxis",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Investment scams cost UK victims more per person than any other fraud. They arrive as social media adverts with fake celebrity endorsements, WhatsApp 'investment groups', or a friendly stranger whose trading profits look effortless.\n\nThe mechanics are polished: a professional-looking platform, an account showing your money growing, even small early withdrawals that work — until the big withdrawal, which triggers fees, taxes and then silence. Crypto versions add 'wallet connection' pages that drain everything the moment you approve them, and any request for your seed phrase is theft in progress.\n\nOne phrase does most of the protective work: guaranteed returns do not exist. Every genuine investment carries risk, and every scammer promises otherwise.\n\nBefore investing anything, check the firm on the FCA register — unregistered firms have no UK protection and the FCA warning list names known scams. And be especially wary after losing money once: 'recovery agents' who promise to get it back for an upfront fee are usually the same criminals returning for more.",
+    "warning_signs": [
+      "Guaranteed, high or 'risk-free' returns",
+      "Celebrity endorsements in adverts",
+      "Pressure to invest quickly or recruit others",
+      "Requests to connect a wallet or share a seed phrase",
+      "Withdrawal fees that appear when you try to take money out"
+    ],
+    "safe_action": "Check any firm on the FCA register before investing. Never share a seed phrase. Treat 'guaranteed returns' as the scam signature it is.",
+    "reporting_route_ids": ["fca_check", "report_fraud"],
+    "related_pattern_ids": ["investment_crypto", "recovery_fraud"],
+    "share_summary": "Investment offers promising guaranteed returns are scams — guaranteed returns don't exist. Check any firm on the FCA register at register.fca.org.uk before putting money in, and never share a crypto seed phrase."
+  },
+  {
+    "id": "recovery_fraud",
+    "title": "Recovery fraud — being scammed twice",
+    "category": "common",
+    "symbol_name": "arrow.uturn.down.circle",
+    "trending": false,
+    "trending_rank": null,
+    "body": "The cruellest scam targets people who have already been scammed. Weeks or months after a loss, a call or email arrives from a 'fraud recovery service', 'international law firm' or even someone claiming to be from your bank or the police. They know details of what happened — because the original scammers sold your information, or are making the call themselves. They can recover your money; there is just a release fee, court cost or tax to pay first.\n\nThere is no recovery. The fee disappears, and paying it marks you as someone worth calling again.\n\nGenuine fraud recovery never works this way. Your bank does not charge fees to investigate fraud, the police never ask victims for money, and no legitimate body demands upfront payment to release funds. If money might genuinely be recoverable, that happens through your bank and Report Fraud — both free.\n\nIf you have lost money to any scam, tell your bank on 159 first, then Report Fraud. And treat every unexpected offer of recovery as round two of the same crime.",
+    "warning_signs": [
+      "Contact from a 'recovery service' you never approached",
+      "Detailed knowledge of your previous loss",
+      "Any upfront fee, tax or court cost",
+      "Claims to be police or your bank asking for payment",
+      "Pressure to keep the recovery confidential"
+    ],
+    "safe_action": "Never pay anyone offering to recover scam losses. Speak to your bank on 159 and Report Fraud — both free.",
+    "reporting_route_ids": ["bank_159", "report_fraud"],
+    "related_pattern_ids": ["recovery_fraud"],
+    "share_summary": "If you've lost money to a scam and someone rings offering to recover it for a fee — it's the scammers again. Real recovery only happens through your bank (call 159) and Report Fraud, both free."
+  },
+  {
+    "id": "if_you_clicked",
+    "title": "What to do if you already clicked",
+    "category": "emergency",
+    "symbol_name": "cross.case",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Clicking a scam link is rarely a disaster by itself — what matters is what happened next. Work through this calmly.\n\nIf you only opened the page and closed it: you are almost certainly fine. Modern iPhones do not get infected by simply viewing a page. Close the tab and clear anything the page downloaded.\n\nIf you entered a password: change that password now, starting with your email account, and anywhere else the same password is used. Turn on two-factor authentication where offered.\n\nIf you entered card details: contact your card provider straight away — dial 159 for your bank — and ask them to block the card and watch for charges. This is routine for them; there is no embarrassment in it.\n\nIf you entered bank login details: call your bank on 159 immediately so they can secure the account.\n\nIf you installed anything or gave remote access: turn off Wi-Fi and mobile data on the affected device, then get the app removed and passwords changed from a different device first.\n\nWhatever happened, report the message — it protects the next person.",
+    "warning_signs": [],
+    "safe_action": "Passwords entered? Change them now. Card or bank details? Call 159 straight away. Then report the message.",
+    "reporting_route_ids": ["bank_159", "text_7726", "ncsc_email", "report_fraud"],
+    "related_pattern_ids": [],
+    "share_summary": "Clicked a scam link? Don't panic. Just opening a page is usually harmless. If you entered a password, change it now. If you entered card or bank details, call your bank on 159 straight away."
+  },
+  {
+    "id": "if_you_paid",
+    "title": "What to do if you already paid",
+    "category": "emergency",
+    "symbol_name": "sterlingsign.circle",
+    "trending": false,
+    "trending_rank": null,
+    "body": "Money sent to a scammer is often recoverable — but speed matters more than anything else on this page.\n\nFirst, call your bank now. Dial 159, which connects you to your own bank's fraud team safely. They can try to stop or trace the payment, freeze further transactions and secure your account. Do this before anything else, even if the payment was days ago.\n\nSecond, know your rights. If you were tricked into transferring money (an authorised push payment scam), UK banks must generally reimburse victims — up to £85,000, usually within five business days — under rules in force since October 2024. It covers Faster Payments and CHAPS between UK accounts. Card payments have separate protections: chargeback, and Section 75 for credit card purchases over £100.\n\nThird, report it to Report Fraud (reportfraud.police.uk or 0300 123 2040) — or Police Scotland on 101 if you are in Scotland. A crime reference also supports your reimbursement case.\n\nFinally, expect follow-up scams. Anyone who contacts you offering to recover the money for a fee is a criminal. Recovery happens through your bank, free.",
+    "warning_signs": [],
+    "safe_action": "Call 159 now — your bank can act fastest in the first hours. Then report to Report Fraud. You may be entitled to reimbursement up to £85,000.",
+    "reporting_route_ids": ["bank_159", "app_reimbursement", "report_fraud", "police_scotland"],
+    "related_pattern_ids": ["bank_safe_account", "recovery_fraud"],
+    "share_summary": "Paid a scammer? Act fast: call your bank on 159 right now — they can often stop or reclaim the payment, and UK rules mean banks must usually reimburse transfer scams up to £85,000. Then report it at reportfraud.police.uk."
+  }
+]

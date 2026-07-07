@@ -1,0 +1,13 @@
+{
+  "domains": [
+    "royalmail.com", "evri.com", "dpd.co.uk", "dpdlocal.co.uk", "dhl.com",
+    "dhl.co.uk", "dhlparcel.co.uk", "parcelforce.com",
+    "amazon.co.uk", "amazon.com", "paypal.com", "paypal.co.uk",
+    "apple.com", "icloud.com", "microsoft.com", "live.com", "outlook.com",
+    "barclays.co.uk", "hsbc.co.uk", "hsbc.com", "lloydsbank.com",
+    "natwest.com", "santander.co.uk", "monzo.com", "starlingbank.com",
+    "tvlicensing.co.uk", "ringgo.co.uk", "paybyphone.co.uk",
+    "reportfraud.police.uk", "ncsc.gov.uk", "fca.org.uk"
+  ],
+  "trusted_suffixes": ["gov.uk", "nhs.uk", "police.uk", "mod.uk", "parliament.uk", "gov.scot", "gov.wales"]
+}

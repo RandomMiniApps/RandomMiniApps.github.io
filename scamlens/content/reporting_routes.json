@@ -1,0 +1,92 @@
+[
+  {
+    "id": "text_7726",
+    "title": "Report a scam text",
+    "action_label": "Forward the text to 7726",
+    "body": "All major UK networks let you report suspicious texts free by forwarding them to 7726. Your provider can investigate and block the sender.",
+    "action_kind": "sms",
+    "action_value": "7726",
+    "regions": ["uk"],
+    "contexts": ["text"]
+  },
+  {
+    "id": "ncsc_email",
+    "title": "Report a suspicious email",
+    "action_label": "Forward it to report@phishing.gov.uk",
+    "body": "The National Cyber Security Centre investigates reported emails and has removed hundreds of thousands of scam web pages. Screenshots are accepted too.",
+    "action_kind": "mailto",
+    "action_value": "report@phishing.gov.uk",
+    "regions": ["uk"],
+    "contexts": ["email"]
+  },
+  {
+    "id": "bank_159",
+    "title": "Speak to your bank safely",
+    "action_label": "Hang up and call 159",
+    "body": "159 connects you to your own bank's fraud team. It works for over 99% of UK current accounts and cannot be spoofed. Never use a number from the message itself.",
+    "action_kind": "phone",
+    "action_value": "159",
+    "regions": ["uk"],
+    "contexts": ["call", "payment_made"]
+  },
+  {
+    "id": "report_fraud",
+    "title": "Report fraud to the police",
+    "action_label": "Report at reportfraud.police.uk",
+    "body": "If you lost money or shared personal details, report it to Report Fraud (England, Wales and Northern Ireland) online or on 0300 123 2040.",
+    "action_kind": "url",
+    "action_value": "https://www.reportfraud.police.uk",
+    "regions": ["england_wales_ni"],
+    "contexts": ["payment_made", "general"]
+  },
+  {
+    "id": "police_scotland",
+    "title": "Report fraud in Scotland",
+    "action_label": "Call Police Scotland on 101",
+    "body": "In Scotland, fraud is reported to Police Scotland by calling 101.",
+    "action_kind": "phone",
+    "action_value": "101",
+    "regions": ["scotland"],
+    "contexts": ["payment_made", "general"]
+  },
+  {
+    "id": "hmrc_text_60599",
+    "title": "Report an HMRC scam text",
+    "action_label": "Forward the text to 60599",
+    "body": "HMRC scam texts can be forwarded to 60599. Network charges apply — 7726 remains the free general route.",
+    "action_kind": "sms",
+    "action_value": "60599",
+    "regions": ["uk"],
+    "contexts": ["text"]
+  },
+  {
+    "id": "hmrc_email",
+    "title": "Report an HMRC scam email or WhatsApp",
+    "action_label": "Forward it to phishing@hmrc.gov.uk",
+    "body": "HMRC investigates emails, WhatsApp messages and QR-code emails claiming to be from HMRC. HMRC never texts or emails about rebates or refunds.",
+    "action_kind": "mailto",
+    "action_value": "phishing@hmrc.gov.uk",
+    "regions": ["uk"],
+    "contexts": ["email"]
+  },
+  {
+    "id": "fca_check",
+    "title": "Check an investment offer",
+    "action_label": "Check the FCA register first",
+    "body": "Before investing, check the firm on the FCA register and warning list. Unregistered firms have no UK protection, and 'guaranteed returns' do not exist.",
+    "action_kind": "url",
+    "action_value": "https://register.fca.org.uk",
+    "regions": ["uk"],
+    "contexts": ["investment"]
+  },
+  {
+    "id": "app_reimbursement",
+    "title": "If you transferred money",
+    "action_label": "Contact your bank now — dial 159",
+    "body": "Banks must generally reimburse authorised push payment fraud on Faster Payments and CHAPS up to £85,000, usually within 5 business days. Contact your bank first, then Report Fraud.",
+    "action_kind": "phone",
+    "action_value": "159",
+    "regions": ["uk"],
+    "contexts": ["payment_made"]
+  }
+]

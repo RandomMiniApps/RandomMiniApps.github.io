@@ -1,0 +1,538 @@
+[
+  {
+    "id": "urg_today_only",
+    "category": "urgency",
+    "phrase": "today only",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "The message uses time pressure ('today only')."
+  },
+  {
+    "id": "urg_final_notice",
+    "category": "urgency",
+    "phrase": "final notice",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "The message claims this is a 'final notice' to rush you."
+  },
+  {
+    "id": "urg_final_reminder",
+    "category": "urgency",
+    "phrase": "final reminder",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "The message uses a 'final reminder' to rush you."
+  },
+  {
+    "id": "urg_24_hours",
+    "category": "urgency",
+    "phrase": "within 24 hours",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "The message sets a short deadline to stop you thinking it over."
+  },
+  {
+    "id": "urg_48_hours",
+    "category": "urgency",
+    "phrase": "within 48 hours",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "The message sets a short deadline to stop you thinking it over."
+  },
+  {
+    "id": "urg_immediately",
+    "category": "urgency",
+    "phrase": "act immediately",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "The message demands immediate action."
+  },
+  {
+    "id": "urg_expires_today",
+    "category": "urgency",
+    "phrase": "expires today",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "The message claims something expires today."
+  },
+  {
+    "id": "urg_last_chance",
+    "category": "urgency",
+    "phrase": "last chance",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "The message pressures you with a 'last chance'."
+  },
+  {
+    "id": "urg_avoid_penalty",
+    "category": "urgency",
+    "phrase": "to avoid a penalty",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "The message threatens a penalty for inaction."
+  },
+  {
+    "id": "urg_before_suspended",
+    "category": "urgency",
+    "phrase": "will be suspended",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "The message threatens suspension to rush you."
+  },
+  {
+    "id": "threat_account_locked",
+    "category": "threat",
+    "phrase": "account has been locked",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Claims your account is locked — a common pressure tactic."
+  },
+  {
+    "id": "threat_account_suspended",
+    "category": "threat",
+    "phrase": "account has been suspended",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Claims your account is suspended — a common pressure tactic."
+  },
+  {
+    "id": "threat_legal_action",
+    "category": "threat",
+    "phrase": "legal action",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Threatens legal action. Genuine organisations do not threaten by text."
+  },
+  {
+    "id": "threat_arrest",
+    "category": "threat",
+    "phrase": "arrest",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Mentions arrest. HMRC, police and courts never threaten arrest by message."
+  },
+  {
+    "id": "threat_court",
+    "category": "threat",
+    "phrase": "court proceedings",
+    "is_regex": false,
+    "weight": 14,
+    "explanation": "Threatens court proceedings to frighten you into acting."
+  },
+  {
+    "id": "threat_debt_collectors",
+    "category": "threat",
+    "phrase": "debt collectors",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Threatens debt collection to frighten you into paying."
+  },
+  {
+    "id": "pay_small_fee",
+    "category": "payment",
+    "phrase": "small fee",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks for a small fee — kept small so paying feels harmless."
+  },
+  {
+    "id": "pay_redelivery",
+    "category": "payment",
+    "phrase": "redelivery fee",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for a redelivery fee — couriers do not charge these by text link."
+  },
+  {
+    "id": "pay_shipping_fee",
+    "category": "payment",
+    "phrase": "shipping fee",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Asks for a shipping fee through a message link."
+  },
+  {
+    "id": "pay_customs",
+    "category": "payment",
+    "phrase": "customs fee",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks for a customs fee through a message link."
+  },
+  {
+    "id": "pay_processing_fee",
+    "category": "payment",
+    "phrase": "processing fee",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks for a processing fee — a classic advance-fee pattern."
+  },
+  {
+    "id": "pay_release_fee",
+    "category": "payment",
+    "phrase": "release fee",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for a fee to 'release' money or goods — an advance-fee scam pattern."
+  },
+  {
+    "id": "pay_admin_fee",
+    "category": "payment",
+    "phrase": "admin fee",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Asks for an admin fee through a message link."
+  },
+  {
+    "id": "pay_outstanding",
+    "category": "payment",
+    "phrase": "outstanding payment",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Claims you owe an outstanding payment."
+  },
+  {
+    "id": "pay_small_amount",
+    "category": "payment",
+    "phrase": "\\u00a3[0-9]\\.[0-9]{2}",
+    "is_regex": true,
+    "weight": 12,
+    "explanation": "Requests a very small amount — designed to feel too small to be a scam."
+  },
+  {
+    "id": "pay_gift_card",
+    "category": "payment",
+    "phrase": "gift card",
+    "is_regex": false,
+    "weight": 16,
+    "explanation": "Mentions paying with gift cards — no genuine organisation accepts them as payment."
+  },
+  {
+    "id": "pay_crypto_payment",
+    "category": "payment",
+    "phrase": "pay in bitcoin",
+    "is_regex": false,
+    "weight": 16,
+    "explanation": "Demands payment in cryptocurrency."
+  },
+  {
+    "id": "cred_verify_account",
+    "category": "credentials",
+    "phrase": "verify your account",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks you to 'verify your account' through a link — a phishing staple."
+  },
+  {
+    "id": "cred_confirm_identity",
+    "category": "credentials",
+    "phrase": "confirm your identity",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks you to confirm your identity through a link."
+  },
+  {
+    "id": "cred_update_details",
+    "category": "credentials",
+    "phrase": "update your details",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Asks you to update your details through a link."
+  },
+  {
+    "id": "cred_update_payment",
+    "category": "credentials",
+    "phrase": "update your payment information",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks you to update payment information through a link."
+  },
+  {
+    "id": "cred_reset_password",
+    "category": "credentials",
+    "phrase": "reset your password",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Unrequested password-reset links are a common phishing route."
+  },
+  {
+    "id": "cred_sign_in_link",
+    "category": "credentials",
+    "phrase": "sign in to your account",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Invites you to sign in through a provided link rather than the official app."
+  },
+  {
+    "id": "cred_reactivate",
+    "category": "credentials",
+    "phrase": "reactivate your account",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Asks you to reactivate an account through a link."
+  },
+  {
+    "id": "sens_otp",
+    "category": "sensitive_data",
+    "phrase": "one-time passcode",
+    "is_regex": false,
+    "weight": 20,
+    "explanation": "Involves a one-time passcode. Never share these with anyone."
+  },
+  {
+    "id": "sens_otp_abbr",
+    "category": "sensitive_data",
+    "phrase": "\\botp\\b",
+    "is_regex": true,
+    "weight": 18,
+    "explanation": "Mentions an OTP. Never share security codes with anyone."
+  },
+  {
+    "id": "sens_security_code",
+    "category": "sensitive_data",
+    "phrase": "security code",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "Asks about a security code. Never share codes with anyone."
+  },
+  {
+    "id": "sens_card_details",
+    "category": "sensitive_data",
+    "phrase": "card details",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for card details through a message or link."
+  },
+  {
+    "id": "sens_card_number",
+    "category": "sensitive_data",
+    "phrase": "card number",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for your card number."
+  },
+  {
+    "id": "sens_sort_code",
+    "category": "sensitive_data",
+    "phrase": "sort code",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for bank account details."
+  },
+  {
+    "id": "sens_pin",
+    "category": "sensitive_data",
+    "phrase": "your pin",
+    "is_regex": false,
+    "weight": 20,
+    "explanation": "Asks about your PIN. Banks never ask for your PIN."
+  },
+  {
+    "id": "sens_ni_number",
+    "category": "sensitive_data",
+    "phrase": "national insurance number",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for your National Insurance number — valuable for identity fraud."
+  },
+  {
+    "id": "sens_passport",
+    "category": "sensitive_data",
+    "phrase": "photo of your passport",
+    "is_regex": false,
+    "weight": 16,
+    "explanation": "Asks for identity documents — valuable for identity fraud."
+  },
+  {
+    "id": "sens_seed_phrase",
+    "category": "sensitive_data",
+    "phrase": "seed phrase",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Asks about a crypto seed phrase. Sharing it hands over everything in the wallet."
+  },
+  {
+    "id": "sens_recovery_phrase",
+    "category": "sensitive_data",
+    "phrase": "recovery phrase",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Asks about a wallet recovery phrase. Never share it with anyone."
+  },
+  {
+    "id": "sens_mothers_maiden",
+    "category": "sensitive_data",
+    "phrase": "mother's maiden name",
+    "is_regex": false,
+    "weight": 14,
+    "explanation": "Asks for common security-question answers."
+  },
+  {
+    "id": "sens_anydesk",
+    "category": "sensitive_data",
+    "phrase": "anydesk",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Mentions AnyDesk, a remote-access tool scammers use to control devices."
+  },
+  {
+    "id": "sens_teamviewer",
+    "category": "sensitive_data",
+    "phrase": "teamviewer",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Mentions TeamViewer, a remote-access tool scammers use to control devices."
+  },
+  {
+    "id": "sec_dont_tell",
+    "category": "secrecy",
+    "phrase": "do not tell anyone",
+    "is_regex": false,
+    "weight": 20,
+    "explanation": "Asks you to keep it secret — genuine organisations never do this."
+  },
+  {
+    "id": "sec_confidential",
+    "category": "secrecy",
+    "phrase": "keep this confidential",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Asks for secrecy — a strong manipulation sign."
+  },
+  {
+    "id": "sec_dont_tell_bank",
+    "category": "secrecy",
+    "phrase": "don't tell your bank",
+    "is_regex": false,
+    "weight": 25,
+    "explanation": "Tells you to hide something from your bank — always a scam sign."
+  },
+  {
+    "id": "sec_lie_to_bank",
+    "category": "secrecy",
+    "phrase": "if the bank asks",
+    "is_regex": false,
+    "weight": 22,
+    "explanation": "Coaches you on what to say to your bank — a strong scam sign."
+  },
+  {
+    "id": "good_guaranteed_returns",
+    "category": "too_good",
+    "phrase": "guaranteed returns",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Promises guaranteed returns — these do not exist."
+  },
+  {
+    "id": "good_risk_free",
+    "category": "too_good",
+    "phrase": "risk-free",
+    "is_regex": false,
+    "weight": 14,
+    "explanation": "Claims to be risk-free — a hallmark of investment scams."
+  },
+  {
+    "id": "good_double_money",
+    "category": "too_good",
+    "phrase": "double your money",
+    "is_regex": false,
+    "weight": 18,
+    "explanation": "Promises to multiply your money — a hallmark of investment scams."
+  },
+  {
+    "id": "good_you_have_won",
+    "category": "too_good",
+    "phrase": "you have won",
+    "is_regex": false,
+    "weight": 14,
+    "explanation": "Claims you have won something you did not enter."
+  },
+  {
+    "id": "good_claim_prize",
+    "category": "too_good",
+    "phrase": "claim your prize",
+    "is_regex": false,
+    "weight": 14,
+    "explanation": "Asks you to claim a prize through a link."
+  },
+  {
+    "id": "good_free_gift",
+    "category": "too_good",
+    "phrase": "free gift",
+    "is_regex": false,
+    "weight": 8,
+    "explanation": "Offers a free gift to draw you to a link."
+  },
+  {
+    "id": "del_missed_parcel",
+    "category": "delivery",
+    "phrase": "missed parcel",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Claims a missed parcel — check through the courier's own app instead."
+  },
+  {
+    "id": "del_missed_you",
+    "category": "delivery",
+    "phrase": "we missed you",
+    "is_regex": false,
+    "weight": 8,
+    "explanation": "Claims a missed delivery — check through the courier's own app instead."
+  },
+  {
+    "id": "del_track_link",
+    "category": "delivery",
+    "phrase": "track your parcel here",
+    "is_regex": false,
+    "weight": 8,
+    "explanation": "Pushes a tracking link — track through the courier's own app instead."
+  },
+  {
+    "id": "del_vague_tracking",
+    "category": "delivery",
+    "phrase": "your package",
+    "is_regex": false,
+    "weight": 4,
+    "explanation": "Refers to a vague 'package' without a real tracking number."
+  },
+  {
+    "id": "urg_act_now",
+    "category": "urgency",
+    "phrase": "act now",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Demands you act now rather than take your time."
+  },
+  {
+    "id": "cred_unusual_signin",
+    "category": "credentials",
+    "phrase": "unusual sign-in attempt",
+    "is_regex": false,
+    "weight": 12,
+    "explanation": "Claims an unusual sign-in to alarm you into using its link."
+  },
+  {
+    "id": "threat_data_leak",
+    "category": "threat",
+    "phrase": "your data will be deleted",
+    "is_regex": false,
+    "weight": 10,
+    "explanation": "Threatens data loss to rush you."
+  },
+  {
+    "id": "sens_wallet_connect",
+    "category": "sensitive_data",
+    "phrase": "connect your wallet",
+    "is_regex": false,
+    "weight": 20,
+    "explanation": "Asks to connect a crypto wallet — drainer pages empty wallets this way."
+  },
+  {
+    "id": "sec_not_a_scam",
+    "category": "secrecy",
+    "phrase": "this is not a scam",
+    "is_regex": false,
+    "weight": 15,
+    "explanation": "It insists it is not a scam — genuine messages don't need to say this."
+  }
+]
