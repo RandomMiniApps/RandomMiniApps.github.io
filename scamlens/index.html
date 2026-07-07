@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScamLens UK — Check Suspicious Links, QR Codes and Texts</title>
+  <meta name="description" content="ScamLens UK is a privacy-first iPhone scam checker built for the UK. Check links, QR codes, texts and screenshots on your device — nothing is ever uploaded.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://randomminiapps.github.io/scamlens/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ScamLens UK",
+  "alternateName": "ScamLens UK: Scam Checker",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS",
+  "description": "ScamLens UK gives you a calm second opinion on suspicious links, QR codes, texts, emails and screenshots — before you tap, pay, or reply. Checks run entirely on your iPhone.",
+  "url": "https://randomminiapps.github.io/scamlens/",
+  "image": "https://randomminiapps.github.io/scamlens-uk-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Random Mini Apps",
+    "url": "https://randomminiapps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/PreOrder",
+    "description": "Core safety features free daily; ScamLens Pro optional subscription or lifetime unlock."
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is ScamLens UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ScamLens UK is an on-device educational scam checker for iPhone. It reviews suspicious links, QR codes, messages and screenshots and explains warning signs in plain English."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ScamLens upload my messages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Checks run entirely on your iPhone. Messages, links, screenshots and results are never uploaded. The App Store privacy label is Data Not Collected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ScamLens guarantee a link is safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ScamLens is an educational safety tool. It helps you spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is free in ScamLens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The safety essentials are free every day: checks, QR previews, verdicts, safer next steps, UK reporting guidance and the full scam library. ScamLens Pro adds unlimited checks, screenshot checking, full history, PDF export, technical details and Helper mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ScamLens built for UK scams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ScamLens knows the scams Britons actually receive — parcel redelivery fees, HMRC refunds, bank impersonation, parking QR stickers, NHS and DVLA impersonation — with the correct UK reporting routes such as 7726, NCSC, 159 and Report Fraud."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-hover: #222228;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.15);
+      --border: #27272a;
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-lede {
+      color: var(--text);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover { text-decoration: underline; }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .cta-btn--muted {
+      background: var(--surface-hover);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .app-visual {
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
+      text-align: center;
+    }
+
+    .app-visual img {
+      width: min(220px, 60vw);
+      height: min(220px, 60vw);
+      border-radius: 48px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
+      object-fit: cover;
+    }
+
+    .app-visual strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-visual span {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: rgba(24, 24, 28, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .section h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+    }
+
+    .mini-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .mini-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: start;
+      color: var(--text-muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .page { padding: 1.25rem 1rem 3rem; }
+      .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.75rem;
+      }
+      .hero,
+      .grid,
+      .list { grid-template-columns: 1fr; }
+      .section { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../">Random Mini Apps</a>
+      <a href="mailto:support@randomminiapps.com?subject=ScamLens%20UK">Get launch updates</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">UK scam checker</p>
+          <h1>Before you tap, check it in plain English.</h1>
+          <p class="hero-lede">ScamLens UK checks suspicious links, QR codes, texts and screenshots — on your iPhone, never uploaded — and tells you what looks wrong and what to do instead.</p>
+          <p class="hero-copy">Got a delivery text asking for a fee? A QR code on a parking meter? A message claiming to be HMRC, your bank, Royal Mail, Evri, DVLA or the NHS? Check it in seconds.</p>
+          <div class="cta-row">
+            <span class="cta-btn cta-btn--muted">Coming soon to the App Store</span>
+            <a class="secondary-link" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+        <aside class="app-visual" aria-label="ScamLens UK app summary">
+          <img src="../scamlens-uk-icon.png" alt="ScamLens UK app icon">
+          <strong>ScamLens UK</strong>
+          <span>On-device checks, UK reporting routes, Data Not Collected.</span>
+        </aside>
+      </section>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">What ScamLens does</h2>
+        <p>ScamLens gives you a calm second opinion before you tap, pay, or reply. It reviews links, QR codes, pasted messages and screenshots using a rule engine and on-device intelligence, then shows a clear risk level with the reasons in plain English.</p>
+        <p>You see the real destination domain before anything opens, exactly why it looks suspicious, the safer next step, and one-tap UK reporting guidance. It is educational and honest — ScamLens cannot guarantee safety and never opens links by itself.</p>
+      </section>
+
+      <section class="section" aria-labelledby="check-title">
+        <h2 id="check-title">Four ways to check</h2>
+        <div class="grid">
+          <article class="mini-card">
+            <h3>Paste a link or message</h3>
+            <p>Delivery texts, HMRC "refunds", bank alerts and marketplace messages — get a clear risk level with reasons in plain English.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Scan a QR code safely</h3>
+            <p>See exactly where a QR code leads before anything opens. Built for parking meters, menus and mystery stickers.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Share from Safari or Messages</h3>
+            <p>Send a suspicious link straight from Safari, Mail, Messages or WhatsApp into ScamLens via the share extension.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Check a screenshot</h3>
+            <p>Import a screenshot of a dodgy text or email. ScamLens reads it on your device and highlights the red flags.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="results-title">
+        <h2 id="results-title">What you see</h2>
+        <ul class="list">
+          <li>A clear risk level: Low risk, Caution, High risk or Critical</li>
+          <li>The real destination domain, shown before anything opens</li>
+          <li>Why it looks suspicious — look-alike addresses, hidden destinations, urgent payment language</li>
+          <li>The safer next step, such as using the official app instead</li>
+          <li>One-tap UK reporting: 7726, NCSC, 159, Report Fraud and more</li>
+          <li>Plain-English guides to scams circulating in the UK right now</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="uk-title">
+        <h2 id="uk-title">Built for the UK</h2>
+        <p>ScamLens knows the scams Britons actually receive: parcel redelivery fees, HMRC "refunds", bank impersonation and safe-account fraud, parking QR stickers, Winter Fuel Payment texts, eVisa fee demands, marketplace courier tricks, and more — with the correct current UK reporting route for each.</p>
+        <p>Scam text? Forward it free to <strong>7726</strong>. Suspicious email? Send it to <strong>report@phishing.gov.uk</strong>. A call about your bank account? Hang up and dial <strong>159</strong>. Lost money? Report to <strong>Report Fraud</strong> (reportfraud.police.uk) — or Police Scotland on <strong>101</strong>.</p>
+      </section>
+
+      <section class="section" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Private by design</h2>
+        <ul class="list">
+          <li>Checks run entirely on your iPhone — messages and screenshots are never uploaded</li>
+          <li>No account, no ads, no analytics, no third-party SDKs</li>
+          <li>History stays on your device; delete it any time</li>
+          <li>App Store privacy label: Data Not Collected</li>
+          <li>On-device AI explanations on supported devices; fully functional without it</li>
+          <li>Only network use: optional scam-pattern content updates (no identifiers sent)</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">Free and Pro</h2>
+        <p>The safety essentials are free every day: five checks, QR previews, verdicts, safer steps, reporting guidance and the full scam library. Verdicts, reporting routes and educational content are never gated behind payment.</p>
+        <p><strong>ScamLens Pro</strong> adds unlimited checks, screenshot checking, full history with search and PDF export, technical details, and Helper mode — a simplified view for helping family members understand a result.</p>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How ScamLens works</h2>
+        <ol class="steps">
+          <li>Paste a message, scan a QR code, share a link, or import a screenshot.</li>
+          <li>ScamLens analyses it on your iPhone using UK scam patterns and URL rules.</li>
+          <li>Review your risk level, evidence, safer next step and reporting options.</li>
+          <li>Use Helper mode to explain a result clearly to someone else, if needed.</li>
+          <li>Browse the Learn tab for guides to current UK scams and how to report them.</li>
+        </ol>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is ScamLens UK?</summary>
+            <p>ScamLens UK is an on-device educational scam checker for iPhone. It reviews suspicious links, QR codes, messages and screenshots and explains warning signs in plain English before you tap, pay or reply.</p>
+          </details>
+          <details>
+            <summary>Does it upload my messages?</summary>
+            <p>No. Checks run entirely on your iPhone. Messages, links, screenshots and results are never uploaded, transmitted or logged. Our App Store privacy label is Data Not Collected.</p>
+          </details>
+          <details>
+            <summary>Can it guarantee a link is safe?</summary>
+            <p>No. ScamLens is an educational safety tool. A "Low risk" result means no obvious warning signs were found — it is not a promise of safety. Always verify through official channels before sharing personal or payment details.</p>
+          </details>
+          <details>
+            <summary>What is free?</summary>
+            <p>Five checks per day, QR destination previews, verdicts, safer next steps, UK reporting guidance and the full scam library are free. Pro adds convenience features like unlimited checks, screenshot analysis, full history and Helper mode.</p>
+          </details>
+          <details>
+            <summary>What permissions does it need?</summary>
+            <p>Camera is used only while you scan a QR code — nothing is recorded or uploaded. Photos access is via the system picker for screenshot checking; images are processed on-device and never stored unless you save a check to history.</p>
+          </details>
+          <details>
+            <summary>Who is ScamLens for?</summary>
+            <p>Anyone in the UK who receives suspicious texts, emails, QR codes or links — and anyone helping family members who need a calm, plain-English second opinion before they tap.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Important notes</h2>
+        <p>ScamLens is an educational safety tool. It helps you spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe. HMRC, Royal Mail, Evri, DVLA, NHS, bank names and other organisations mentioned are referenced for identification only — ScamLens is independent and not affiliated with them.</p>
+        <p>Reporting shortcuts connect you to third-party services we do not operate. You remain responsible for your own decisions, including any link you choose to open.</p>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="notify-title">
+        <h2 id="notify-title">Be first to try ScamLens UK</h2>
+        <p>ScamLens UK is coming soon to the App Store. Email us for TestFlight places and launch news.</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="cta-btn" href="mailto:support@randomminiapps.com?subject=ScamLens%20UK%20launch">support@randomminiapps.com</a>
+          <a class="secondary-link" href="../">View all Random Mini Apps</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="privacy/">Privacy Policy</a> · <a href="terms/">Terms of Use</a> · <a href="mailto:support@randomminiapps.com">Support</a> · <a href="../">All Apps</a> · Also by us: <a href="../apps/hotspot-check/">HotspotCheck</a> — check the Wi-Fi before you trust it.</p>
+    </footer>
+  </div>
+</body>
+</html>
