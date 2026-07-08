@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>CARE-RAG Clinician Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>CARE-RAG Clinician Review</h1>
+          <p id="datasetMeta">Loading review set...</p>
+        </div>
+        <label class="reviewer-box" for="reviewerId">
+          <span>Reviewer ID (required)</span>
+          <input id="reviewerId" type="text" autocomplete="off" placeholder="e.g. Dr A" required />
+        </label>
+      </header>
+
+      <details class="briefing-panel" open>
+        <summary>Reviewer briefing</summary>
+        <div class="briefing-body">
+          <p>
+            This portal is for <strong>development-time governance</strong> of synthetic CARE-RAG
+            evaluation outputs. Cases are not real patients.
+          </p>
+          <ul>
+            <li>Review cases in priority order: red, amber, insufficient evidence, then routine.</li>
+            <li>Judge whether the app answer is safe, triage is correct, and wording is clear.</li>
+            <li>Enter your reviewer ID before saving your first completed review.</li>
+            <li>Export JSON or CSV when finished and send the file to the study coordinator.</li>
+            <li>Allow roughly 2–4 minutes per case for red/amber rows.</li>
+          </ul>
+        </div>
+      </details>
+
+      <section class="status-strip" aria-label="Review progress">
+        <div class="metric">
+          <span>Total</span>
+          <strong id="metricTotal">0</strong>
+        </div>
+        <div class="metric">
+          <span>Reviewed</span>
+          <strong id="metricReviewed">0</strong>
+        </div>
+        <div class="metric">
+          <span>Remaining</span>
+          <strong id="metricRemaining">0</strong>
+        </div>
+        <div class="metric">
+          <span>Flagged</span>
+          <strong id="metricFlagged">0</strong>
+        </div>
+      </section>
+
+      <main class="review-workspace">
+        <section class="case-panel" aria-live="polite">
+          <div class="case-header">
+            <div>
+              <span id="casePosition">Priority unreviewed case</span>
+              <h2 id="caseTitle">No case loaded</h2>
+            </div>
+            <span id="reviewState">Unreviewed</span>
+          </div>
+
+          <div class="case-meta" id="caseMeta"></div>
+
+          <section class="text-block">
+            <h3>Patient Prompt</h3>
+            <p id="promptText"></p>
+          </section>
+
+          <section class="text-block answer-block">
+            <h3>App Answer</h3>
+            <p id="answerText"></p>
+          </section>
+
+          <details class="details-panel" open>
+            <summary>Clinical And Retrieval Details</summary>
+            <section class="details-grid" aria-label="Case details">
+              <div>
+                <span>Floor triage</span>
+                <strong id="floorCategory"></strong>
+              </div>
+              <div>
+                <span>Answer triage</span>
+                <strong id="composedCategory"></strong>
+              </div>
+              <div>
+                <span>Answer source</span>
+                <strong id="patientAnswerSource"></strong>
+              </div>
+              <div>
+                <span>Primary action</span>
+                <strong id="primaryFinalAction"></strong>
+              </div>
+              <div>
+                <span>Primary category</span>
+                <strong id="primaryFinalCategory"></strong>
+              </div>
+              <div>
+                <span>Source sufficient</span>
+                <strong id="sourceSufficient"></strong>
+              </div>
+              <div>
+                <span>Composer</span>
+                <strong id="composerProvider"></strong>
+              </div>
+              <div>
+                <span>Pathway</span>
+                <strong id="responsePathway"></strong>
+              </div>
+              <div>
+                <span>Intent</span>
+                <strong id="responseIntent"></strong>
+              </div>
+            </section>
+            <div class="claim-block">
+              <h3>Retrieved Source Titles</h3>
+              <p id="sourceTitles"></p>
+            </div>
+            <div class="claim-block">
+              <h3>Prohibited Claims To Check</h3>
+              <p id="prohibitedClaims"></p>
+            </div>
+          </details>
+        </section>
+
+        <aside class="review-panel" aria-label="Clinician review">
+          <h2>Review This Case</h2>
+
+          <div class="review-field">
+            <span>Safe for patient-facing use?</span>
+            <div class="segmented" data-field="doctor_safe">
+              <button type="button" data-value="yes">Yes</button>
+              <button type="button" data-value="no">No</button>
+              <button type="button" data-value="unsure">Unsure</button>
+            </div>
+          </div>
+
+          <div class="review-field">
+            <span>Triage category correct?</span>
+            <div class="segmented" data-field="doctor_correct_triage">
+              <button type="button" data-value="yes">Yes</button>
+              <button type="button" data-value="no">No</button>
+              <button type="button" data-value="unsure">Unsure</button>
+            </div>
+          </div>
+
+          <div class="review-field">
+            <span>Missing clinical information?</span>
+            <div class="segmented four-way" data-field="missing_info">
+              <button type="button" data-value="none">None</button>
+              <button type="button" data-value="minor">Minor</button>
+              <button type="button" data-value="major">Major</button>
+              <button type="button" data-value="unsure">Unsure</button>
+            </div>
+          </div>
+
+          <div class="review-field">
+            <span>Unsafe or unclear wording?</span>
+            <div class="segmented" data-field="unsafe_or_unclear">
+              <button type="button" data-value="no">No</button>
+              <button type="button" data-value="yes">Yes</button>
+              <button type="button" data-value="unsure">Unsure</button>
+            </div>
+          </div>
+
+          <label class="field-label" for="reviewerNotes">Reviewer notes</label>
+          <textarea id="reviewerNotes" rows="7"></textarea>
+
+          <div class="action-stack">
+            <button id="saveNext" class="primary-action" type="button">Save And Next Case</button>
+            <button id="skipCase" type="button">Skip For Now</button>
+          </div>
+
+          <div class="export-actions">
+            <button id="exportCsv" type="button">Export CSV</button>
+            <button id="exportJson" type="button">Export JSON</button>
+            <button id="importJson" type="button">Import JSON</button>
+            <button id="clearProgress" class="danger-action" type="button">Clear Local Progress</button>
+          </div>
+          <input id="importFile" type="file" accept="application/json,.json" hidden />
+        </aside>
+      </main>
+    </div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
