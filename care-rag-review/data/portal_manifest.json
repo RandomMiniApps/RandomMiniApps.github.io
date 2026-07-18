@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "by_role": {
+      "clinical_safety_officer": 201,
+      "clinician": 202,
+      "governance_panel": 2,
+      "technical_reviewer": 2
+    },
+    "clinician_by_scope": {
+      "clinical_mapping": 197,
+      "patient_wording": 1,
+      "pending_construct": 2,
+      "safety_net_policy": 2
+    },
+    "conditional_pending_policy": 201,
+    "decision_requirements": 407,
+    "mandatory_active": 206,
+    "policy_questions": 8,
+    "review_items": 204
+  },
+  "governance_package_id": "phase4_4_2a_pkg_1faf35962e662cfa",
+  "phase": "4.4.2a",
+  "portal_bundle_content_sha256": "d6f396d748ccf9251007f8150998a3bd7e2cff45af317bb8dde555ae48e982d0",
+  "portal_bundle_path": "data/portal_bundle.json",
+  "portal_bundle_sha256": "7325f2fdd803855139d24685743fda262dd33630323aad05d4c07449b1b4e4bb",
+  "safety": {
+    "human_review_package_readiness": "blocked",
+    "no_decisions_prepopulated": true,
+    "synthetic_only": true
+  },
+  "source_artefact_hashes": {
+    "clarification_depth_phase4_4_2a_decision_requirements.json": "e898500775704cdb2a83ecf338b75a1caef117e5f61cd90e14600e47b66b18c3",
+    "clarification_depth_phase4_4_2a_decision_schema.json": "cd0ef9ae4952e94bad2172921e2953fa90e66600d1a73a0c0b1a512bae7d462c",
+    "clarification_depth_phase4_4_2a_delivery_manifest.json": "ade5a0fbd659a67f59059b6123a454b63410549aeeb3c7a8e26715fb2231b58d",
+    "clarification_depth_phase4_4_2a_empty_clinical_decisions.json": "8b85a2414beb91c5ebbed80b038bca07b0297604e2887b1598cff2e15168d77e",
+    "clarification_depth_phase4_4_2a_empty_cso_decisions.json": "16a02590be3033eeaa32caec34bf050388c1055c05c3e8aa7f9c92f807ef2f34",
+    "clarification_depth_phase4_4_2a_empty_governance_confirmations.json": "5913f4b8e3c8024424967af189e2f41c3f0c735e959215ebfebcb1e8defa1f63",
+    "clarification_depth_phase4_4_2a_empty_technical_acknowledgements.json": "4e2a7c9ea1509e8d958d57a1c3c532b83511ac55c0157b5216ddcdfb6a50bce3",
+    "clarification_depth_phase4_4_2a_final_verification.json": "6a15734106c734657dc6172cf21df497f72e78970e4f5580cb4a26f362748576",
+    "clarification_depth_phase4_4_2a_finalisation_status.json": "04cef93fcbaefe2045c1f595aa759be9c77c4e44ea0f4944ef448259ef33ef89",
+    "clarification_depth_phase4_4_2a_governance_policy_register.json": "5dc0891a8af25e7284632bb652076dacff5c0feffdf02cddfb83d3d621c95647",
+    "clarification_depth_phase4_4_2a_release_readiness.json": "352c596fa4095c39ff9ea48fee75ffdf8b60fc100919214160c17ca9d33c65e7",
+    "clarification_depth_phase4_4_2a_review_queue.json": "d332d68bd1649de7e079fe45aec5409a0f69e995b95ee695a39c9b5e95fe2905",
+    "clarification_depth_phase4_4_2a_review_views.json": "406e0a4ea05c66db6dc81ba1bd62566fb1f350890b64cfc8fd1909ab03cb5ad9",
+    "clarification_depth_phase4_4_2a_terminal_delivery_verification.json": "134ed298df8cb0d44b55ed0ebe02044e4dbc187a94621222f20e29b7996ced3c"
+  }
+}
