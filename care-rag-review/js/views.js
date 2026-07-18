@@ -179,6 +179,43 @@
     return true;
   }
 
+  function filterMatchForRapid(item, req, decision) {
+    var filters = Object.assign({}, CareRagState.state.filters);
+    // Random review always targets unreviewed cases.
+    filters.decision_status = "unreviewed";
+    if (!filters.activation) filters.activation = "mandatory_active";
+    return itemMatchesFilters(item, req, filters, decision);
+  }
+
+  function startRandomReview() {
+    // Fast path is for clinicians; switch role if still on default admin.
+    if (CareRagState.state.sessionRole === "governance_administrator") {
+      CareRagState.state.sessionRole = "clinician";
+      CareRagState.state.filters.role = "clinician";
+      var roleSelect = document.getElementById("sessionRole");
+      if (roleSelect) roleSelect.value = "clinician";
+    }
+    CareRagState.state.rapidReview = true;
+    var next = CareRagState.pickRandomPending(null, filterMatchForRapid);
+    if (!next) {
+      CareRagState.state.rapidReview = false;
+      toast("No unreviewed cases left for this role/filters.");
+      return;
+    }
+    location.hash = "#/item/" + encodeURIComponent(next.decision_requirement_id);
+  }
+
+  function goNextRandom(excludeId) {
+    var next = CareRagState.pickRandomPending(excludeId, filterMatchForRapid);
+    if (!next) {
+      CareRagState.state.rapidReview = false;
+      toast("All done for now — no unreviewed cases left.");
+      location.hash = "#/queue";
+      return;
+    }
+    location.hash = "#/item/" + encodeURIComponent(next.decision_requirement_id);
+  }
+
   function renderQueue(root) {
     var b = CareRagState.state.bundle;
     var role = CareRagState.state.sessionRole;
@@ -196,8 +233,24 @@
       rows.push({ req: req, item: item, decision: decision });
     });
 
+    var pending = CareRagState.pendingRequirementsForRapid(filterMatchForRapid);
+
     root.innerHTML =
       "<h2>My review queue</h2>" +
+      '<div class="rapid-cta card" aria-label="Fast random review">' +
+      "<h3>Fast review</h3>" +
+      "<p>Open one unreviewed case at random. After you save a decision, the next case opens automatically.</p>" +
+      "<p><strong>" +
+      pending.length +
+      "</strong> unreviewed cases ready" +
+      (filters.role ? " for role <code>" + esc(filters.role) + "</code>" : "") +
+      ".</p>" +
+      '<div class="btn-row">' +
+      '<button type="button" class="primary btn-large" id="startRandomBtn"' +
+      (pending.length ? "" : " disabled") +
+      ">Review a random case</button>" +
+      "</div>" +
+      "</div>" +
       '<p class="notice info">Progress is calculated from decision requirements, not page visits. Drafts are not counted. Policy questions are listed under Policy decisions, not this clinical/technical queue.</p>' +
       filterForm(filters) +
       '<p><strong>' +
@@ -246,6 +299,10 @@
       "</tbody></table></div>";
 
     bindFilters();
+    var startBtn = document.getElementById("startRandomBtn");
+    if (startBtn) {
+      startBtn.addEventListener("click", startRandomReview);
+    }
   }
 
   function filterForm(f) {
@@ -353,8 +410,20 @@
         schema.scope_allowed_decision_values[req.decision_scope]) ||
       [];
     var d = draft || {};
+    var profile = CareRagState.state.reviewerProfile || {};
     var today = new Date().toISOString().slice(0, 10);
+    var rapid = CareRagState.state.rapidReview;
+    var pendingLeft = CareRagState.pendingRequirementsForRapid(filterMatchForRapid)
+      .length;
     return (
+      (rapid
+        ? '<div class="rapid-banner" role="status">' +
+          "<strong>Random review</strong> · " +
+          pendingLeft +
+          " unreviewed left · " +
+          '<button type="button" class="linkish" id="exitRapidBtn">Exit</button>' +
+          "</div>"
+        : "") +
       '<form id="decisionForm" class="form-grid" ' +
       (disabled ? 'aria-disabled="true"' : "") +
       ">" +
@@ -380,13 +449,13 @@
         })
         .join("") +
       "</select></label>" +
-      '<label for="rationale">Rationale<textarea id="rationale" name="rationale" rows="4" required ' +
+      '<label for="rationale">Rationale<textarea id="rationale" name="rationale" rows="3" required ' +
       (disabled ? "disabled" : "") +
       ">" +
       esc(d.rationale || "") +
       "</textarea></label>" +
       '<label for="reviewer_identifier">Reviewer identifier<input id="reviewer_identifier" name="reviewer_identifier" required value="' +
-      esc(d.reviewer_identifier || "") +
+      esc(d.reviewer_identifier || profile.reviewer_identifier || "") +
       '" ' +
       (disabled ? "disabled" : "") +
       " /></label>" +
@@ -401,23 +470,30 @@
       (disabled ? "disabled" : "") +
       " /></label>" +
       '<label for="signature">Signature or attestation (textual — not cryptographic)<input id="signature" name="signature" required value="' +
-      esc(d.signature || "") +
+      esc(d.signature || profile.signature || "") +
       '" ' +
       (disabled ? "disabled" : "") +
       " /></label>" +
-      '<label for="requested_changes">Requested changes (required if request_change)<textarea id="requested_changes" name="requested_changes" rows="3" ' +
+      '<label for="requested_changes">Requested changes (required if request_change)<textarea id="requested_changes" name="requested_changes" rows="2" ' +
       (disabled ? "disabled" : "") +
       ">" +
       esc(d.requested_changes || "") +
       "</textarea></label>" +
       '<div class="btn-row">' +
+      '<button type="submit" class="primary btn-large" id="prepareDecisionBtn" ' +
+      (disabled ? "disabled" : "") +
+      ">" +
+      (rapid ? "Save &amp; next random case" : "Validate &amp; prepare decision") +
+      "</button>" +
+      (rapid
+        ? '<button type="button" id="skipRandomBtn"' +
+          (disabled ? " disabled" : "") +
+          ">Skip — next random</button>"
+        : "") +
       '<button type="button" id="saveDraftBtn" ' +
       (disabled ? "disabled" : "") +
       ">Save draft</button>" +
       '<button type="button" id="clearDraftBtn">Delete draft</button>' +
-      '<button type="submit" class="primary" id="prepareDecisionBtn" ' +
-      (disabled ? "disabled" : "") +
-      ">Validate &amp; prepare decision</button>" +
       "</div>" +
       '<div id="formErrors" class="error-list" role="alert" hidden></div>' +
       "</form>"
@@ -546,6 +622,21 @@
     var saveBtn = document.getElementById("saveDraftBtn");
     var clearBtn = document.getElementById("clearDraftBtn");
     var form = document.getElementById("decisionForm");
+    var skipBtn = document.getElementById("skipRandomBtn");
+    var exitBtn = document.getElementById("exitRapidBtn");
+
+    if (exitBtn) {
+      exitBtn.addEventListener("click", function () {
+        CareRagState.state.rapidReview = false;
+        location.hash = "#/queue";
+      });
+    }
+    if (skipBtn) {
+      skipBtn.addEventListener("click", function () {
+        toast("Skipped — opening next random case.");
+        goNextRandom(req.decision_requirement_id);
+      });
+    }
     if (saveBtn) {
       saveBtn.addEventListener("click", function () {
         CareRagStorage.saveDraft(pkg, role, req.decision_requirement_id, readForm());
@@ -580,17 +671,25 @@
             .join("");
           return;
         }
+        var rapid = CareRagState.state.rapidReview;
         if (
+          !rapid &&
           !window.confirm(
             "Prepare this decision for export?\n\nIt will be stored locally as a prepared record for governance ingestion. It is NOT authoritative approval."
           )
         ) {
           return;
         }
+        CareRagState.saveReviewerProfile(formData);
         CareRagState.upsertDecision(decision);
         CareRagStorage.deleteDraft(pkg, role, req.decision_requirement_id);
-        toast("Decision prepared locally. Export from Export & validation.");
-        location.hash = "#/register";
+        if (rapid) {
+          toast("Saved — next random case.");
+          goNextRandom(req.decision_requirement_id);
+        } else {
+          toast("Decision prepared locally. Export from Export & validation.");
+          location.hash = "#/register";
+        }
       });
     }
   }

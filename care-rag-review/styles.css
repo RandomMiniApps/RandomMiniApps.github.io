@@ -369,11 +369,41 @@ button {
   cursor: pointer;
 }
 
-.btn-primary,
-button.primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+.btn-large {
+  font-size: 1.05rem;
+  padding: 0.7rem 1.15rem;
+}
+
+.rapid-cta {
+  background: linear-gradient(180deg, #e8f3ef 0%, #f7faf8 100%);
+  border-color: #b7d0c2;
+  margin-bottom: 1rem;
+}
+
+.rapid-cta h3 {
+  margin-top: 0;
+}
+
+.rapid-banner {
+  background: var(--accent-soft);
+  border: 1px solid #b7d0c2;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+button.linkish,
+.linkish {
+  background: none;
+  border: none;
+  color: var(--accent);
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-primary:disabled,

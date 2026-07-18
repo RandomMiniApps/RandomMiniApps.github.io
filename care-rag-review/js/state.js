@@ -9,6 +9,13 @@
     decisions: [],
     selectedRequirementId: null,
     selectedItemId: null,
+    /** When true, finishing a case opens another random unreviewed case. */
+    rapidReview: false,
+    /** Carry-forward identity so doctors do not retype every case. */
+    reviewerProfile: {
+      reviewer_identifier: "",
+      signature: "",
+    },
     filters: {
       role: "",
       domain: "",
@@ -25,10 +32,76 @@
     loadError: null,
   };
 
+  var PROFILE_KEY = "care_rag_gov_reviewer_profile_v1";
+
+  function loadReviewerProfile() {
+    try {
+      var raw = sessionStorage.getItem(PROFILE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        state.reviewerProfile.reviewer_identifier =
+          parsed.reviewer_identifier || "";
+        state.reviewerProfile.signature = parsed.signature || "";
+      }
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function saveReviewerProfile(form) {
+    state.reviewerProfile.reviewer_identifier = form.reviewer_identifier || "";
+    state.reviewerProfile.signature = form.signature || "";
+    try {
+      sessionStorage.setItem(
+        PROFILE_KEY,
+        JSON.stringify(state.reviewerProfile)
+      );
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
   function setBundle(bundle, manifest) {
     state.bundle = bundle;
     state.manifest = manifest;
     state.decisions = CareRagStorage.loadDecisions(bundle.governance_package_id);
+    loadReviewerProfile();
+  }
+
+  /**
+   * Unreviewed mandatory_active requirements eligible for random review.
+   * Respects current filters when provided via itemMatchesFilters callback.
+   */
+  function pendingRequirementsForRapid(matchFn) {
+    if (!state.bundle) return [];
+    var role = state.sessionRole;
+    return state.bundle.decision_requirements.requirements.filter(function (req) {
+      if (req.requirement_activation_status !== "mandatory_active") return false;
+      if (decisionForRequirement(req.decision_requirement_id)) return false;
+      // CSO conditional never eligible; also skip if role is CSO and still pending.
+      if (req.required_reviewer_role === "clinical_safety_officer") return false;
+      if (
+        role !== "governance_administrator" &&
+        req.required_reviewer_role !== role
+      ) {
+        return false;
+      }
+      if (typeof matchFn === "function") {
+        var item = req.review_item_id ? getItem(req.review_item_id) : null;
+        if (!matchFn(item, req, null)) return false;
+      }
+      return true;
+    });
+  }
+
+  function pickRandomPending(excludeId, matchFn) {
+    var pool = pendingRequirementsForRapid(matchFn).filter(function (req) {
+      return req.decision_requirement_id !== excludeId;
+    });
+    if (!pool.length) return null;
+    var idx = Math.floor(Math.random() * pool.length);
+    return pool[idx];
   }
 
   function getRequirement(id) {
@@ -173,5 +246,9 @@
     importDecisions: importDecisions,
     buildDecisionFromForm: buildDecisionFromForm,
     newDecisionId: newDecisionId,
+    pendingRequirementsForRapid: pendingRequirementsForRapid,
+    pickRandomPending: pickRandomPending,
+    saveReviewerProfile: saveReviewerProfile,
+    loadReviewerProfile: loadReviewerProfile,
   };
 })(window);

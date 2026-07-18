@@ -18,7 +18,17 @@ Prepare and export human governance decisions for Phase 4.4.2a Clarification Dep
 4. **Governance panel** — 2 confirmations + 8 policy questions.
 5. **Governance administrator** — provenance strategy + CSO participation policy (see admin guide).
 
-## How to complete a task
+## How to complete a task (fast path)
+
+1. Set **Working as** to **Clinician**.
+2. Open **My review queue**.
+3. Click **Review a random case**.
+4. Fill decision + rationale (your name/attestation carry forward to the next case).
+5. Click **Save & next random case** — the next unreviewed case opens automatically.
+6. Use **Skip — next random** to pass without deciding, or **Exit** to leave the loop.
+7. When finished for the session, open **Export & validation** and download your decisions.
+
+## How to complete a task (manual)
 
 1. Set **Working as** to your role.
 2. Open **My review queue**, filter as needed, open a requirement.
