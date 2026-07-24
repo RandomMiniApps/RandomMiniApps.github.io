@@ -196,16 +196,25 @@
       if (roleSelect) roleSelect.value = "clinician";
     }
     CareRagState.state.rapidReview = true;
+    CareRagState.state.wizardStep = 0;
+    if (global.CareRagWizard) {
+      CareRagWizard.start();
+      return;
+    }
     var next = CareRagState.pickRandomPending(null, filterMatchForRapid);
     if (!next) {
       CareRagState.state.rapidReview = false;
       toast("No unreviewed cases left for this role/filters.");
       return;
     }
-    location.hash = "#/item/" + encodeURIComponent(next.decision_requirement_id);
+    location.hash = "#/wizard/" + encodeURIComponent(next.decision_requirement_id);
   }
 
   function goNextRandom(excludeId) {
+    if (global.CareRagWizard) {
+      CareRagWizard.goNext(excludeId);
+      return;
+    }
     var next = CareRagState.pickRandomPending(excludeId, filterMatchForRapid);
     if (!next) {
       CareRagState.state.rapidReview = false;
@@ -213,7 +222,7 @@
       location.hash = "#/queue";
       return;
     }
-    location.hash = "#/item/" + encodeURIComponent(next.decision_requirement_id);
+    location.hash = "#/wizard/" + encodeURIComponent(next.decision_requirement_id);
   }
 
   function renderQueue(root) {
@@ -237,21 +246,23 @@
 
     root.innerHTML =
       "<h2>My review queue</h2>" +
-      '<div class="rapid-cta card" aria-label="Fast random review">' +
-      "<h3>Fast review</h3>" +
-      "<p>Open one unreviewed case at random. After you save a decision, the next case opens automatically.</p>" +
+      '<div class="rapid-cta card wizard-cta" aria-label="Phone-friendly random review">' +
+      "<h3>Quick review (phone-friendly)</h3>" +
+      "<p>Simple step-by-step wizard: case → chat → app answer → decide → confirm. One random unreviewed case at a time.</p>" +
       "<p><strong>" +
       pending.length +
       "</strong> unreviewed cases ready" +
-      (filters.role ? " for role <code>" + esc(filters.role) + "</code>" : "") +
+      (filters.role ? " for <code>" + esc(filters.role) + "</code>" : "") +
       ".</p>" +
       '<div class="btn-row">' +
       '<button type="button" class="primary btn-large" id="startRandomBtn"' +
       (pending.length ? "" : " disabled") +
-      ">Review a random case</button>" +
+      ">Start reviewing</button>" +
       "</div>" +
+      '<p class="hint-muted">Prepared decisions stay on this device until you export them. Not authoritative approval by themselves.</p>' +
       "</div>" +
-      '<p class="notice info">Progress is calculated from decision requirements, not page visits. Drafts are not counted. Policy questions are listed under Policy decisions, not this clinical/technical queue.</p>' +
+      '<details class="queue-advanced"><summary>Browse full queue &amp; filters</summary>' +
+      '<p class="notice info">Progress is calculated from decision requirements, not page visits. Drafts are not counted.</p>' +
       filterForm(filters) +
       '<p><strong>' +
       rows.length +
@@ -289,14 +300,16 @@
             "<td>" +
             esc(decLabel) +
             "</td>" +
-            '<td><a class="btn" href="#/item/' +
+            '<td><a class="btn" href="#/wizard/' +
             encodeURIComponent(row.req.decision_requirement_id) +
-            '">Open</a></td>' +
+            '">Review</a> <a class="btn" href="#/item/' +
+            encodeURIComponent(row.req.decision_requirement_id) +
+            '">Detail</a></td>' +
             "</tr>"
           );
         })
         .join("") +
-      "</tbody></table></div>";
+      "</tbody></table></div></details>";
 
     bindFilters();
     var startBtn = document.getElementById("startRandomBtn");
@@ -1387,5 +1400,6 @@
     renderRelease: renderRelease,
     toast: toast,
     safetyStrip: safetyStrip,
+    itemMatchesFilters: itemMatchesFilters,
   };
 })(window);

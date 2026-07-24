@@ -11,6 +11,8 @@
     selectedItemId: null,
     /** When true, finishing a case opens another random unreviewed case. */
     rapidReview: false,
+    /** Wizard step index for phone-friendly review flow. */
+    wizardStep: 0,
     /** Carry-forward identity so doctors do not retype every case. */
     reviewerProfile: {
       reviewer_identifier: "",

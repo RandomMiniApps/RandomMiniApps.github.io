@@ -26,13 +26,21 @@
   function render() {
     var route = parseRoute();
     var main = document.getElementById("main");
-    setNavCurrent(route.name === "item" ? "item" : route.name);
+    setNavCurrent(
+      route.name === "item" || route.name === "wizard" ? "queue" : route.name
+    );
+    if (route.name !== "wizard" && window.CareRagWizard) {
+      CareRagWizard.teardown();
+    }
     switch (route.name) {
       case "overview":
         CareRagViews.renderOverview(main);
         break;
       case "queue":
         CareRagViews.renderQueue(main);
+        break;
+      case "wizard":
+        CareRagWizard.render(main, route.param || null);
         break;
       case "item":
         CareRagViews.renderItem(main, route.param || CareRagState.state.selectedRequirementId);

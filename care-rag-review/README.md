@@ -45,8 +45,9 @@ This package is **not** described as approved, clinically safe, ready for pilot,
 | Route | Purpose |
 |-------|---------|
 | `#/overview` | Package status, blockers, counts, hashes |
-| `#/queue` | Filterable requirement queue |
-| `#/item/<requirement_id>` | Evidence + decision form |
+| `#/queue` | Queue home + **Start reviewing** (phone wizard) |
+| `#/wizard/<requirement_id>` | Phone-friendly 5-step review wizard |
+| `#/item/<requirement_id>` | Full evidence + decision form |
 | `#/admin` | Provenance strategy + CSO classification policy |
 | `#/cso` | Conditional CSO candidates (submission disabled) |
 | `#/technical` | Two technical acknowledgements |
