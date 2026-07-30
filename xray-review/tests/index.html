@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>X-ray review — unit tests</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #111;
+        color: #eee;
+        padding: 1rem;
+      }
+      .pass {
+        color: #3cbe8c;
+      }
+      .fail {
+        color: #e85d5d;
+      }
+      li {
+        margin: 0.35rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>X-ray review tests</h1>
+    <p>Uses the synthetic fixture only. Open via a local static server (not file://) if IndexedDB is blocked.</p>
+    <ol id="results"></ol>
+    <script src="../vendor/jszip.min.js"></script>
+    <script src="../js/expected_digests.js"></script>
+    <script src="../js/constants.js"></script>
+    <script src="../js/csv.js"></script>
+    <script src="../js/validate.js"></script>
+    <script src="../js/export.js"></script>
+    <script src="../js/progress-import.js"></script>
+    <script src="../js/zip-loader.js"></script>
+    <script>
+      const results = document.getElementById("results");
+      let passed = 0;
+      let failed = 0;
+
+      function assert(name, cond, detail) {
+        const li = document.createElement("li");
+        li.className = cond ? "pass" : "fail";
+        li.textContent = (cond ? "PASS — " : "FAIL — ") + name + (detail ? " (" + detail + ")" : "");
+        results.appendChild(li);
+        if (cond) passed += 1;
+        else failed += 1;
+      }
+
+      async function run() {
+        const V = XrayReviewValidate;
+        const C = XrayReviewConstants;
+        const Csv = XrayReviewCsv;
+        const Export = XrayReviewExport;
+        const Zip = XrayReviewZip;
+        const ProgressImport = XrayReviewProgressImport;
+
+        assert("allow doctor03 id", C.isAllowedReviewerId("doctor03") === true);
+        assert("reject doctor06 id", C.isAllowedReviewerId("doctor06") === false);
+        assert("reject doctor11 id", C.isAllowedReviewerId("doctor11") === false);
+        assert("suggest unreadable", V.suggestRouterAction("non_radiograph_or_unreadable") === "unreadable");
+        assert("none exclusive quality", !V.normalizeQualityFlags(["none", "underexposed"]).ok);
+        assert("quality ok", V.normalizeQualityFlags(["underexposed"]).ok);
+        assert("strict UTC accepts browser timestamp", V.isStrictUtcTimestamp(new Date().toISOString()));
+        assert("strict UTC rejects offset timestamp", !V.isStrictUtcTimestamp("2026-07-30T12:00:00+01:00"));
+
+        const csv = Csv.parseCsv("a,b\n1,2\n");
+        assert("csv headers", csv.headers[0] === "a" && csv.records[0].b === "2");
+
+        const badPath = V.isUnsafeZipPath("../x");
+        assert("reject path traversal", badPath === true);
+        assert("allow preview path", V.isUnsafeZipPath("previews/a.png") === false);
+        assert(
+          "duplicate raw member rejected",
+          Zip.validateZipMembers([{ name: "a.txt" }, { name: "a.txt" }]).some((e) =>
+            e.includes("Duplicate ZIP member")
+          )
+        );
+        assert(
+          "symlink member rejected",
+          Zip.validateZipMembers([{ name: "a.txt", isSymlink: true }]).some((e) =>
+            e.includes("symlink")
+          )
+        );
+
+        const fixtureResp = await fetch("../fixtures/phase8c_webapp_fixture_package.zip");
+        assert("fixture fetch", fixtureResp.ok, String(fixtureResp.status));
+        const blob = await fixtureResp.blob();
+        const file = new File([blob], "phase8c_webapp_fixture_package.zip", {
+          type: "application/zip",
+        });
+        const report = await Zip.loadAndValidatePackage(file);
+        assert("fixture validates", report.ok, (report.errors || []).join("; "));
+        if (report.ok) {
+          assert("fixture reviewer1", report.package.manifest.reviewer_id === "reviewer1");
+          assert("fixture 3 units", report.package.order.length === 3);
+          assert(
+            "fixture hash matches",
+            report.zipSha256 === C.EXPECTED_ZIP_SHA256.phase8c_webapp_fixture_v1,
+            report.zipSha256
+          );
+          assert(
+            "raw central-directory parser sees members",
+            Zip.rawCentralDirectoryEntries(await file.arrayBuffer()).length > 5
+          );
+        }
+
+        // Completion gate
+        const order = ["U1", "U2"];
+        const manifest = {
+          package_id: "test",
+          reviewer_id: "reviewer1",
+          n_review_units: 2,
+          cohort_freeze_sha256: "x",
+        };
+        const incomplete = [
+          V.emptyAnnotation("U1", 0, "reviewer1"),
+          V.emptyAnnotation("U2", 1, "reviewer1"),
+        ];
+        const blocked = await Export.buildExportZip({
+          annotations: incomplete,
+          manifest,
+          order,
+          zipSha256: "abc",
+          mode: "final",
+        });
+        assert("final export blocked when incomplete", blocked.ok === false);
+
+        const complete = order.map((id, i) => ({
+          anonymous_review_unit_id: id,
+          review_order_key: String(i),
+          router_target_status: "target_active_anatomy",
+          primary_anatomy_or_fov: "wrist",
+          recommended_router_action: "accept_active_class",
+          hardware_or_treatment_state: "none_visible",
+          image_quality_flags: "none",
+          reviewer_confidence: "high",
+          free_text_note: "",
+          unable_to_review_reason: "",
+          reviewer_id: "reviewer1",
+          timestamp_utc: new Date().toISOString(),
+          completion_status: "complete",
+        }));
+        const okExport = await Export.buildExportZip({
+          annotations: complete,
+          manifest,
+          order,
+          zipSha256: "abc",
+          mode: "final",
+        });
+        assert("final export ok when complete", okExport.ok === true);
+
+        if (report.ok) {
+          const fixtureRows = report.package.order.map((id, i) => ({
+            ...V.emptyAnnotation(id, i, "reviewer1"),
+            completion_status: i === 0 ? "complete" : "draft",
+            router_target_status: i === 0 ? "target_active_anatomy" : "",
+            primary_anatomy_or_fov: i === 0 ? "wrist" : "",
+            recommended_router_action: i === 0 ? "accept_active_class" : "",
+            hardware_or_treatment_state: i === 0 ? "none_visible" : "",
+            image_quality_flags: i === 0 ? "none" : "",
+            reviewer_confidence: i === 0 ? "high" : "",
+            timestamp_utc: new Date().toISOString(),
+          }));
+          const progress = await Export.buildExportZip({
+            annotations: fixtureRows,
+            manifest: report.package.manifest,
+            order: report.package.order,
+            zipSha256: report.package.zipSha256,
+            mode: "progress",
+          });
+          const progressFile = new File([progress.blob], progress.filename, {
+            type: "application/zip",
+          });
+          const restored = await ProgressImport.parseAndValidateProgressBackup(
+            progressFile,
+            report.package
+          );
+          assert("progress backup validates for restore", restored.ok, restored.errors.join("; "));
+          assert("progress backup retains completed count", restored.nComplete === 1);
+        }
+
+        const summary = document.createElement("p");
+        summary.textContent = `Done: ${passed} passed, ${failed} failed`;
+        summary.className = failed ? "fail" : "pass";
+        document.body.appendChild(summary);
+      }
+
+      run().catch((err) => {
+        assert("runner", false, err.message || String(err));
+      });
+    </script>
+  </body>
+</html>

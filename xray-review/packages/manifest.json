@@ -1,0 +1,111 @@
+{
+  "format": "ffenc1",
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 100000,
+  "cipher": "AES-256-GCM",
+  "assignment_version": "doctor_double_review_v3",
+  "reviews_per_unit": 2,
+  "note": "Convenience access barrier for public-source research radiographs. Passwords are not in this file and should be shared separately.",
+  "packages": [
+    {
+      "doctor_id": "doctor01",
+      "review_arm": "A",
+      "part_label": "Part A",
+      "package_id": "phase8c_doctor01_arm_a_portable_v3",
+      "file": "phase8c_doctor01_arm_a_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "8e351328eb173553bbeebc970ab2caeeda716418c9475abfef73aecd9493346c",
+      "encrypted_size_bytes": 45171556
+    },
+    {
+      "doctor_id": "doctor01",
+      "review_arm": "B",
+      "part_label": "Part B",
+      "package_id": "phase8c_doctor01_arm_b_portable_v3",
+      "file": "phase8c_doctor01_arm_b_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "b4e6ddae8c9ab568b1df722610f16780f8a00331e2e8669d7ed00bb72a7a5e03",
+      "encrypted_size_bytes": 41718345
+    },
+    {
+      "doctor_id": "doctor02",
+      "review_arm": "A",
+      "part_label": "Part A",
+      "package_id": "phase8c_doctor02_arm_a_portable_v3",
+      "file": "phase8c_doctor02_arm_a_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "63b553d26585e9a4dcf1f591a775335cb0c4c74b605a8eebff9aa76eb9ada32d",
+      "encrypted_size_bytes": 41582447
+    },
+    {
+      "doctor_id": "doctor02",
+      "review_arm": "B",
+      "part_label": "Part B",
+      "package_id": "phase8c_doctor02_arm_b_portable_v3",
+      "file": "phase8c_doctor02_arm_b_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "7bd9508e6e396903d1fc2f7dc1d6c231c72b4449d65313477f7ce8f11363669d",
+      "encrypted_size_bytes": 45171518
+    },
+    {
+      "doctor_id": "doctor03",
+      "review_arm": "A",
+      "part_label": "Part A",
+      "package_id": "phase8c_doctor03_arm_a_portable_v3",
+      "file": "phase8c_doctor03_arm_a_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "561ba8cf2beffead5d510adc9e013c604b75cccf318095e58664a43f99e70f47",
+      "encrypted_size_bytes": 43099907
+    },
+    {
+      "doctor_id": "doctor03",
+      "review_arm": "B",
+      "part_label": "Part B",
+      "package_id": "phase8c_doctor03_arm_b_portable_v3",
+      "file": "phase8c_doctor03_arm_b_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "00904c6fa7966a8c29bf738cbac36b8e82b95afd095abe037d6c9328c6b29d59",
+      "encrypted_size_bytes": 41582426
+    },
+    {
+      "doctor_id": "doctor04",
+      "review_arm": "A",
+      "part_label": "Part A",
+      "package_id": "phase8c_doctor04_arm_a_portable_v3",
+      "file": "phase8c_doctor04_arm_a_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "d220466c33fd78c3aa58a777c73682569b64c344c35b2aa0af8094b9a0759282",
+      "encrypted_size_bytes": 41181200
+    },
+    {
+      "doctor_id": "doctor04",
+      "review_arm": "B",
+      "part_label": "Part B",
+      "package_id": "phase8c_doctor04_arm_b_portable_v3",
+      "file": "phase8c_doctor04_arm_b_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "a206441846b45c90e34b2645212d7800b0f4359c478a17362356c5225e728025",
+      "encrypted_size_bytes": 43099881
+    },
+    {
+      "doctor_id": "doctor05",
+      "review_arm": "A",
+      "part_label": "Part A",
+      "package_id": "phase8c_doctor05_arm_a_portable_v3",
+      "file": "phase8c_doctor05_arm_a_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "67b7d9a5c350dec3a4a1129a9958d995f641562ae4e3d66d8ddd822f2649cb86",
+      "encrypted_size_bytes": 41718391
+    },
+    {
+      "doctor_id": "doctor05",
+      "review_arm": "B",
+      "part_label": "Part B",
+      "package_id": "phase8c_doctor05_arm_b_portable_v3",
+      "file": "phase8c_doctor05_arm_b_portable_v3.ffenc",
+      "n_review_units": 248,
+      "plaintext_sha256": "85f63041596cfa4775c0ebc1a4f20ee5e1b04990214d20dd065150673871fdad",
+      "encrypted_size_bytes": 41181254
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+window.XrayReviewExpectedDigests = {
+  "phase8c_webapp_fixture_v1": {
+    "sha256": "b81071488f09f714395b1469d069e2f4c0aba4446c746df107d83dbeab137df5",
+    "role": "fixture"
+  },
+  "phase8c_doctor01_arm_a_portable_v3": {
+    "sha256": "8e351328eb173553bbeebc970ab2caeeda716418c9475abfef73aecd9493346c",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor01",
+    "review_arm": "A",
+    "n_review_units": 248,
+    "unit_set_sha256": "6311e66aaf792ee5c08b013b6ee3458f17819266e97a33b75ab4154659c7dbe5",
+    "size_bytes": 45171506
+  },
+  "phase8c_doctor01_arm_b_portable_v3": {
+    "sha256": "b4e6ddae8c9ab568b1df722610f16780f8a00331e2e8669d7ed00bb72a7a5e03",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor01",
+    "review_arm": "B",
+    "n_review_units": 248,
+    "unit_set_sha256": "07e770b176ebc9251f7125c48e6953f211681bebc4179899e513fc0612f62f85",
+    "size_bytes": 41718295
+  },
+  "phase8c_doctor02_arm_a_portable_v3": {
+    "sha256": "63b553d26585e9a4dcf1f591a775335cb0c4c74b605a8eebff9aa76eb9ada32d",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor02",
+    "review_arm": "A",
+    "n_review_units": 248,
+    "unit_set_sha256": "fde85199b508baa5141aa52b7dd11c73b7bd7c9b2da7c3f3cac6f8d70350caec",
+    "size_bytes": 41582397
+  },
+  "phase8c_doctor02_arm_b_portable_v3": {
+    "sha256": "7bd9508e6e396903d1fc2f7dc1d6c231c72b4449d65313477f7ce8f11363669d",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor02",
+    "review_arm": "B",
+    "n_review_units": 248,
+    "unit_set_sha256": "6311e66aaf792ee5c08b013b6ee3458f17819266e97a33b75ab4154659c7dbe5",
+    "size_bytes": 45171468
+  },
+  "phase8c_doctor03_arm_a_portable_v3": {
+    "sha256": "561ba8cf2beffead5d510adc9e013c604b75cccf318095e58664a43f99e70f47",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor03",
+    "review_arm": "A",
+    "n_review_units": 248,
+    "unit_set_sha256": "b166f1df2290f4ed01bcc085a059580391f6a42cfeb54bdc367820ef814dcff2",
+    "size_bytes": 43099857
+  },
+  "phase8c_doctor03_arm_b_portable_v3": {
+    "sha256": "00904c6fa7966a8c29bf738cbac36b8e82b95afd095abe037d6c9328c6b29d59",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor03",
+    "review_arm": "B",
+    "n_review_units": 248,
+    "unit_set_sha256": "fde85199b508baa5141aa52b7dd11c73b7bd7c9b2da7c3f3cac6f8d70350caec",
+    "size_bytes": 41582376
+  },
+  "phase8c_doctor04_arm_a_portable_v3": {
+    "sha256": "d220466c33fd78c3aa58a777c73682569b64c344c35b2aa0af8094b9a0759282",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor04",
+    "review_arm": "A",
+    "n_review_units": 248,
+    "unit_set_sha256": "3b4f37756f6f68873325d980a6ac68271d83aa375b21a7ac73d7f92d434051d7",
+    "size_bytes": 41181150
+  },
+  "phase8c_doctor04_arm_b_portable_v3": {
+    "sha256": "a206441846b45c90e34b2645212d7800b0f4359c478a17362356c5225e728025",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor04",
+    "review_arm": "B",
+    "n_review_units": 248,
+    "unit_set_sha256": "b166f1df2290f4ed01bcc085a059580391f6a42cfeb54bdc367820ef814dcff2",
+    "size_bytes": 43099831
+  },
+  "phase8c_doctor05_arm_a_portable_v3": {
+    "sha256": "67b7d9a5c350dec3a4a1129a9958d995f641562ae4e3d66d8ddd822f2649cb86",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor05",
+    "review_arm": "A",
+    "n_review_units": 248,
+    "unit_set_sha256": "07e770b176ebc9251f7125c48e6953f211681bebc4179899e513fc0612f62f85",
+    "size_bytes": 41718341
+  },
+  "phase8c_doctor05_arm_b_portable_v3": {
+    "sha256": "85f63041596cfa4775c0ebc1a4f20ee5e1b04990214d20dd065150673871fdad",
+    "role": "doctor_double_review_shard",
+    "reviewer_id": "doctor05",
+    "review_arm": "B",
+    "n_review_units": 248,
+    "unit_set_sha256": "3b4f37756f6f68873325d980a6ac68271d83aa375b21a7ac73d7f92d434051d7",
+    "size_bytes": 41181204
+  }
+};

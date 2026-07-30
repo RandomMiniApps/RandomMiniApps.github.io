@@ -1,0 +1,18 @@
+# Secrets / local-only
+OWNER_PACKAGE_PASSWORDS.txt
+**/*PASSWORD*
+**/*password*.txt
+.env
+
+# Never commit plaintext review ZIPs (X-rays)
+*.zip
+!**/vendor/**
+!fixtures/phase8c_webapp_fixture_package.zip
+
+# Superseded single-review hosted packages. Keep locally only; the v3 manifest
+# references the two-arm files generated from the approved double-review design.
+packages/phase8c_doctor??_portable_v1.ffenc
+packages/phase8c_doctor??_arm_?_portable_v2.ffenc
+
+# macOS
+.DS_Store
