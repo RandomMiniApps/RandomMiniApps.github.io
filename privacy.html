@@ -167,7 +167,7 @@
     <a class="back" href="index.html">← Back to Random Mini Apps</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last updated:</strong> August 4, 2026</p>
+    <p class="updated"><strong>Last updated:</strong> August 7, 2026</p>
 
     <nav class="toc" aria-label="Policy contents">
       <h2>On this page</h2>
@@ -178,7 +178,7 @@
         <li><a href="#camera-photos">Camera and photos</a></li>
         <li><a href="#reports-sharing">Reports and user-initiated sharing</a></li>
         <li><a href="#google-ads">Google Mobile Ads and rewarded advertising</a></li>
-        <li><a href="#consent-att">Consent and App Tracking Transparency</a></li>
+        <li><a href="#consent-ads">Advertising consent and non-tracking policy</a></li>
         <li><a href="#storekit">Apple StoreKit purchases</a></li>
         <li><a href="#website-hosting">Website and hosting</a></li>
         <li><a href="#retention">Data retention</a></li>
@@ -196,7 +196,7 @@
       <p>This privacy policy describes how Random Mini Apps (“we”, “us”) handles information in connection with:</p>
       <ul>
         <li>the Random Mini Apps website hosted at <a href="https://randomminiapps.github.io/">randomminiapps.github.io</a>; and</li>
-        <li>the <strong>Lighting Check</strong> iOS app, including its current and planned production behavior for Google Mobile Ads, consent, App Tracking Transparency, local storage, and StoreKit purchases.</li>
+        <li>the <strong>Lighting Check</strong> iOS app, including its production behavior for Google Mobile Ads (non-personalized rewarded ads), UMP consent, local storage, and StoreKit purchases.</li>
       </ul>
       <p>Some other apps published under Random Mini Apps may have additional or different notices (for example dedicated app privacy pages linked from those apps). Where a separate notice exists for another app, that notice applies to that app.</p>
       <p>This policy does <strong>not</strong> claim that no information is ever processed by third parties. Lighting Check includes optional Google advertising, and third-party providers process information as described below.</p>
@@ -206,7 +206,7 @@
       <h2>Lighting Check</h2>
       <p>Lighting Check is an iPhone and iPad app that estimates ambient light levels using the device camera, compares readings with practical guidance, and helps you save audits, notes, photos, and exportable reports on your device.</p>
       <p>Lighting Check does <strong>not</strong> operate a developer-owned user account system, analytics server, or cloud database for your lighting audits. Core measurement and documentation features are designed to work with data stored on your device.</p>
-      <p>The sections that follow explain local data, camera and photos, sharing, Google Mobile Ads, consent and App Tracking Transparency, StoreKit purchases, and related choices for Lighting Check.</p>
+      <p>The sections that follow explain local data, camera and photos, sharing, Google Mobile Ads, advertising consent, StoreKit purchases, and related choices for Lighting Check.</p>
     </section>
 
     <section class="policy-section" id="local-data">
@@ -236,24 +236,25 @@
 
     <section class="policy-section" id="google-ads">
       <h2>Google Mobile Ads and rewarded advertising</h2>
-      <p>Lighting Check offers optional rewarded advertising through <strong>Google Mobile Ads</strong>. Watching an ad may grant in-app credits. You can avoid rewarded advertising by not selecting the Watch Ad option.</p>
-      <p>When ads are requested or shown, Google and its advertising partners may process information such as:</p>
+      <p>Lighting Check offers optional rewarded advertising through <strong>Google Mobile Ads</strong>. Watching an ad may grant in-app credits. You can avoid rewarded advertising by not selecting the Watch Ad option, or by unlocking Full Access.</p>
+      <p>Lighting Check is configured for <strong>non-personalized</strong> ads from the publisher side (including Google’s non-personalized ads signal). The app does <strong>not</strong> request App Tracking Transparency permission and does <strong>not</strong> include an App Tracking Transparency usage description.</p>
+      <p>When ads are requested or shown, Google and its advertising partners may still process information needed to deliver and measure ads, such as:</p>
       <ul>
         <li>IP-derived approximate location;</li>
-        <li>device identifiers;</li>
-        <li>advertising identifiers when permitted;</li>
+        <li>device and technical information;</li>
         <li>advertising interactions and product interactions;</li>
         <li>crash information, performance information, and other diagnostic information.</li>
       </ul>
-      <p>Possible purposes include providing ads, advertising measurement, fraud prevention, analytics, and improving advertising services.</p>
-      <p class="note">We do <strong>not</strong> promise that Google collects no information. Google’s processing is governed by Google’s own policies and your choices (including consent and App Tracking Transparency where applicable).</p>
+      <p>Possible purposes include providing ads, advertising measurement, fraud prevention, and related advertising services under Google’s policies.</p>
+      <p class="note">We do <strong>not</strong> promise that Google collects no information. Google’s processing is governed by Google’s own policies and your regional consent choices where UMP applies.</p>
     </section>
 
-    <section class="policy-section" id="consent-att">
-      <h2>Consent and App Tracking Transparency</h2>
-      <p>Lighting Check will use Google’s <strong>User Messaging Platform (UMP)</strong> to collect required privacy choices for advertising where those choices apply.</p>
-      <p>Where Apple’s <strong>App Tracking Transparency (ATT)</strong> framework applies, tracking or access to the Identifier for Advertisers (IDFA) occurs only after you grant permission.</p>
-      <p>You may decline consent prompts or ATT permission and continue using Lighting Check. Rewarded-ad availability or personalization may be limited if you decline.</p>
+    <section class="policy-section" id="consent-ads">
+      <h2>Advertising consent and non-tracking policy</h2>
+      <p>Lighting Check uses Google’s <strong>User Messaging Platform (UMP)</strong> to collect required privacy choices for advertising where those choices apply (for example in certain regions).</p>
+      <p>Where UMP reports that a privacy-options entry point is required, Lighting Check provides an in-app <strong>Privacy Choices</strong> control.</p>
+      <p>Under the current product policy, Lighting Check does <strong>not</strong> use Apple’s App Tracking Transparency prompt and does <strong>not</strong> enable publisher advertising personalization or first-party advertising ID features for tracking.</p>
+      <p>You may decline UMP consent prompts and continue using Lighting Check. Rewarded-ad availability may be limited if ads cannot be requested under your consent state.</p>
     </section>
 
     <section class="policy-section" id="storekit">
@@ -279,11 +280,11 @@
       <h2>User choices and controls</h2>
       <ul>
         <li>Decline or limit advertising consent choices presented through UMP where available.</li>
-        <li>Allow or deny ATT permission when iOS asks.</li>
-        <li>Skip Watch Ad to avoid rewarded advertising.</li>
+        <li>Open Privacy Choices in the app when that control is available.</li>
+        <li>Skip Watch Ad to avoid rewarded advertising, or unlock Full Access.</li>
         <li>Control camera and photo access in iOS Settings.</li>
         <li>Choose whether to add photos, export reports, or share files.</li>
-        <li>Manage App Store purchases, subscriptions (if any elsewhere), and Apple ID privacy settings through Apple.</li>
+        <li>Manage App Store purchases and Apple ID privacy settings through Apple.</li>
         <li>Delete the app to remove its local on-device storage (subject to iOS backup behavior you configure).</li>
       </ul>
     </section>

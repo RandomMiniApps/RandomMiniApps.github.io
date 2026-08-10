@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lighting Check - Measure Light Intensity with Your iPhone Camera</title>
-  <meta name="description" content="Lighting Check uses your iPhone camera to estimate light intensity in lux, compare readings with standards, and review averages, samples and charts.">
+  <meta name="description" content="Lighting Check estimates lux with your iPhone camera, compares practical guidance, calibrates against a trusted meter, saves on-device audits, and exports PDF or CSV reports.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://randomminiapps.github.io/apps/lighting-check/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   "name": "Lighting Check",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS",
-  "description": "Lighting Check uses your iPhone camera to estimate light intensity in lux, compare readings with standards, and review averages, samples and charts.",
+  "description": "Lighting Check estimates lux with your iPhone camera, compares practical guidance, calibrates against a trusted meter, saves on-device audits, and exports PDF or CSV reports.",
   "url": "https://randomminiapps.github.io/apps/lighting-check/",
   "downloadUrl": "https://apps.apple.com/us/app/lighting-check/id1317618609",
   "image": "https://randomminiapps.github.io/lighting-check-icon.png",
@@ -45,7 +45,7 @@
       "name": "What is Lighting Check?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lighting Check is an app that estimates light intensity in lux using your device camera."
+        "text": "Lighting Check is an iPhone and iPad app that estimates light intensity in lux using your device camera, compares practical guidance, and helps you document checks on device."
       }
     },
     {
@@ -53,7 +53,7 @@
       "name": "How do I measure light with Lighting Check?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Point the camera at the area, tap Start and hold the device steady during the measurement."
+        "text": "Choose an environment, point the camera at the area, tap Start, and hold the device steady during the measurement."
       }
     },
     {
@@ -69,7 +69,7 @@
       "name": "Are the readings as accurate as a professional lux meter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Readings depend on your device camera and should be treated as estimates, not certified measurements."
+        "text": "No. Readings depend on your device camera and should be treated as estimates, not certified measurements. You can run a one-point calibration if you already have a trusted meter."
       }
     },
     {
@@ -77,7 +77,7 @@
       "name": "Can Lighting Check compare readings with standards?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. It includes standards for different locations so you can compare each area against target lux values."
+        "text": "Yes. It includes bundled environment guidance and lets you create custom standards on device."
       }
     },
     {
@@ -85,7 +85,15 @@
       "name": "Is Lighting Check free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. It is free to download with in-app purchases."
+        "text": "Yes. It is free to download with measurement credits, optional non-personalized rewarded ads for more credits, and a one-time Full Access purchase for unlimited measurements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Lighting Check track me for ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lighting Check is configured for non-personalized rewarded ads and does not request App Tracking Transparency. Regional advertising consent may still appear through Google’s User Messaging Platform where required."
       }
     }
   ]
@@ -422,8 +430,8 @@
         <div>
           <p class="eyebrow">Light measurement utility</p>
           <h1>Lighting Check: Measure Light Intensity with Your iPhone Camera</h1>
-          <p class="hero-lede">Lighting Check helps you estimate light levels in a space using your iPhone camera and compare readings with useful standards.</p>
-          <p class="hero-copy">Point the camera at the area, run a measurement, and review average lux, samples, charts and environment guidance.</p>
+          <p class="hero-lede">Lighting Check helps you estimate light levels with your iPhone or iPad camera, compare practical guidance, and keep simple on-device audit records.</p>
+          <p class="hero-copy">Measure lux estimates, calibrate when you have a trusted meter, document sites and rooms with notes and photos, and export PDF or CSV reports when you need to share a check.</p>
           <div class="cta-row">
             <a class="cta-btn" href="https://apps.apple.com/us/app/lighting-check/id1317618609" target="_blank" rel="noopener">Download Lighting Check on the App Store</a>
             <a class="secondary-link" href="#faq">Read the FAQ</a>
@@ -438,18 +446,19 @@
 
       <section class="section" aria-labelledby="summary-title">
         <h2 id="summary-title">What Lighting Check does</h2>
-        <p>Lighting Check measures approximate light level in lux using your device camera. It is designed to help you understand whether a space is bright enough for common settings.</p><p>The app includes environment standards for different locations, including cattle farm contexts, so readings can be compared with a target range.</p>
+        <p>Lighting Check measures approximate light level in lux using your device camera. It is designed to help you understand whether a space is bright enough for common settings.</p>
+        <p>Choose bundled environment guidance or create custom standards, run a measurement, review the result, save audits on your device, and export PDF or CSV reports when you need to share or archive a check.</p>
       </section>
 
       <section class="section" aria-labelledby="audience-title">
         <h2 id="audience-title">Who is Lighting Check for?</h2>
-        <p>Lighting Check is for people who want a quick, camera-based light level estimate.</p>
+        <p>Lighting Check is for people who want a quick, camera-based light level estimate and light documentation workflow.</p>
         <ul class="list">
-          <li>People checking room lighting</li>
-          <li>Farm and cattle housing users</li>
-          <li>Workplace or facility checks</li>
+          <li>People checking room, workplace, or study lighting</li>
+          <li>Facility and farm location checks</li>
+          <li>People comparing spaces against practical lux guidance</li>
+          <li>Users who want on-device history, notes, and photos</li>
           <li>Students learning about light levels</li>
-          <li>People comparing spaces against lux standards</li>
           <li>iPhone and iPad users who need a simple light measurement tool</li>
         </ul>
       </section>
@@ -459,19 +468,19 @@
         <div class="grid">
           <article class="mini-card">
             <h3>Camera-based lux estimate</h3>
-            <p>Use your device camera to sample light and estimate lux.</p>
+            <p>Use your device camera to sample light and estimate lux over a chosen duration.</p>
           </article>
           <article class="mini-card">
-            <h3>Environment standards</h3>
-            <p>Compare readings against presets and target lux values.</p>
+            <h3>Guidance and custom standards</h3>
+            <p>Compare readings against bundled environments or standards you create on device.</p>
           </article>
           <article class="mini-card">
-            <h3>Measurement review</h3>
-            <p>See average lux, sample details and charts after a run.</p>
+            <h3>Calibration</h3>
+            <p>Run a one-point calibration against a trusted lux meter to improve consistency on your device.</p>
           </article>
           <article class="mini-card">
-            <h3>Guided measurement flow</h3>
-            <p>Tutorial copy explains how to point, start, hold steady and review results.</p>
+            <h3>History and exports</h3>
+            <p>Save sites, rooms, and audits with notes and photos, then export PDF or CSV reports.</p>
           </article>
         </div>
       </section>
@@ -479,32 +488,39 @@
       <section class="section" aria-labelledby="how-title">
         <h2 id="how-title">How Lighting Check works</h2>
         <ol class="steps">
-          <li>Choose the environment or location you want to compare against.</li>
+          <li>Choose the environment or custom standard you want to compare against.</li>
           <li>Point the rear camera at the area you want to measure.</li>
           <li>Tap Start and hold the device steady during sampling.</li>
-          <li>Review the average lux, verdict, samples and chart.</li>
-          <li>Measure again if the lighting changes or you want another comparison.</li>
+          <li>Review the estimated lux, guidance comparison, and result details.</li>
+          <li>Save the audit, add notes or photos, and export a PDF or CSV when needed.</li>
         </ol>
       </section>
 
       <section class="section" aria-labelledby="practice-title">
         <h2 id="practice-title">Useful for</h2>
-        <p>Lighting Check supports practical light checks across different spaces.</p>
+        <p>Lighting Check supports practical light checks and lightweight documentation.</p>
         <ul class="list">
           <li>Room light estimates</li>
-          <li>Farm location checks</li>
-          <li>Cattle housing lighting standards</li>
-          <li>Average lux measurement</li>
-          <li>Sample chart review</li>
+          <li>Workplace and facility checks</li>
+          <li>Farm or housing location checks</li>
           <li>Target lux comparison</li>
-          <li>Quick before-and-after checks</li>
+          <li>One-point calibration workflows</li>
+          <li>On-device audit history</li>
+          <li>PDF and CSV report sharing</li>
           <li>Learning about light intensity</li>
         </ul>
       </section>
 
       <section class="section" aria-labelledby="benefits-title">
         <h2 id="benefits-title">Why use Lighting Check?</h2>
-        <p>Lighting Check gives a quick way to estimate lighting without dedicated hardware, which can be useful for informal checks and comparisons.</p><p>Camera-based readings depend on device camera quality and conditions. Newer iPhones typically provide more consistent results.</p>
+        <p>Lighting Check gives a quick way to estimate lighting without dedicated hardware, which can be useful for informal checks, comparisons, and simple documentation.</p>
+        <p>Camera-based readings depend on device camera quality and conditions. Newer iPhones typically provide more consistent results. Calibration can improve consistency for your device, but it does not turn the phone into laboratory equipment.</p>
+      </section>
+
+      <section class="section" aria-labelledby="credits-title">
+        <h2 id="credits-title">Credits, ads, and Full Access</h2>
+        <p>You start with free measurement credits. When credits run out, you can watch an optional rewarded ad when one is available, or unlock Full Access with a one-time In-App Purchase for unlimited measurements while the entitlement is active.</p>
+        <p>Rewarded ads are configured as non-personalized from the publisher side. Ad availability can vary, so rewarded credits are not guaranteed. Full Access does not erase your remaining credit balance.</p>
       </section>
 
       <section class="section" id="faq" aria-labelledby="faq-title">
@@ -512,11 +528,11 @@
         <div class="faq">
           <details>
             <summary>What is Lighting Check?</summary>
-            <p>Lighting Check is an app that estimates light intensity in lux using your device camera.</p>
+            <p>Lighting Check is an iPhone and iPad app that estimates light intensity in lux using your device camera, compares practical guidance, and helps you document checks on device.</p>
           </details>
           <details>
             <summary>How do I measure light with Lighting Check?</summary>
-            <p>Point the camera at the area, tap Start and hold the device steady during the measurement.</p>
+            <p>Choose an environment, point the camera at the area, tap Start, and hold the device steady during the measurement.</p>
           </details>
           <details>
             <summary>Does Lighting Check use the rear camera?</summary>
@@ -524,15 +540,19 @@
           </details>
           <details>
             <summary>Are the readings as accurate as a professional lux meter?</summary>
-            <p>No. Readings depend on your device camera and should be treated as estimates, not certified measurements.</p>
+            <p>No. Readings depend on your device camera and should be treated as estimates, not certified measurements. You can run a one-point calibration if you already have a trusted meter.</p>
           </details>
           <details>
             <summary>Can Lighting Check compare readings with standards?</summary>
-            <p>Yes. It includes standards for different locations so you can compare each area against target lux values.</p>
+            <p>Yes. It includes bundled environment guidance and lets you create custom standards on device.</p>
           </details>
           <details>
             <summary>Is Lighting Check free?</summary>
-            <p>Yes. It is free to download with in-app purchases.</p>
+            <p>Yes. It is free to download with measurement credits, optional non-personalized rewarded ads for more credits, and a one-time Full Access purchase for unlimited measurements.</p>
+          </details>
+          <details>
+            <summary>Does Lighting Check track me for ads?</summary>
+            <p>Lighting Check is configured for non-personalized rewarded ads and does not request App Tracking Transparency. Regional advertising consent may still appear through Google’s User Messaging Platform where required. See the <a href="../../privacy.html">Privacy Policy</a>.</p>
           </details>
         </div>
       </section>
