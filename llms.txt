@@ -10,11 +10,12 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [Dyslexia Reading Lens](https://randomminiapps.github.io/apps/dyslexia-reading-lens/): calm reading workspace for iPhone with dyslexia-friendly text, read-aloud highlighting, document scanning, and AI simplify and summary tools.
 - [HotspotCheck](https://randomminiapps.github.io/apps/hotspot-check/): privacy-first Wi-Fi safety advisor for iPhone that checks visible risk indicators, scores networks by context, and gives plain-English guidance before sensitive logins.
 - [Keepie Yuppie](https://randomminiapps.github.io/apps/keepie-yuppie/): physics-based ball juggling game with 99 levels, weather effects, obstacles, survival mode and Game Center.
-- [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based light intensity app for estimating lux and comparing readings with location standards.
+- [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based lux estimates with guidance, calibration, on-device audits, PDF/CSV export, non-personalized rewarded ads, and one-time Full Access.
 - [MedViva Coach](https://randomminiapps.github.io/apps/medviva-coach/): AI mock interview practice app for A-level students and UK medicine applicants preparing for medical school interviews.
 - [MsgSecret](https://randomminiapps.github.io/apps/msgsecret/): message encoding and decoding app for sharing ciphertext through email, SMS, chat and social apps.
 - [NMC OSCE AI Coach](https://randomminiapps.github.io/apps/nmc-osce-coach/): OSCE-style voice practice for UK adult nursing students with timed stations, AI patient conversations, checklist feedback and exam plans.
 - [Natural Text](https://randomminiapps.github.io/apps/natural-text/): secret-key text transformation app that encrypts messages into natural-looking text.
+- [UCAT Sprint Coach](https://randomminiapps.github.io/apps/ucat-sprint-coach/): privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks and progress analytics for iPhone, iPad and Mac.
 
 ## Important pages
 
@@ -32,6 +33,8 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [MsgSecret App Page](https://randomminiapps.github.io/apps/msgsecret/)
 - [NMC OSCE AI Coach App Page](https://randomminiapps.github.io/apps/nmc-osce-coach/)
 - [Natural Text App Page](https://randomminiapps.github.io/apps/natural-text/)
+- [UCAT Sprint Coach App Page](https://randomminiapps.github.io/apps/ucat-sprint-coach/)
+- [UCAT Sprint Coach Privacy Policy](https://randomminiapps.github.io/ucat-sprint-coach-privacy.html)
 - [Dyslexia Reading Lens App Store Listing](https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853)
 - [NMC OSCE AI Coach App Store Listing](https://apps.apple.com/us/app/nmc-osce-coach/id6770335559)
 - [MedViva Coach App Store Listing](https://apps.apple.com/us/app/medviva-coach/id6766191800)
@@ -49,3 +52,5 @@ ClinSpeak OET is an independent preparation tool and is not endorsed by or affil
 NMC OSCE AI Coach is an independent educational practice tool and is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council. Scenarios and feedback are for exam communication practice only and are not clinical guidance.
 
 HotspotCheck is an educational Wi-Fi safety advisor. It checks visible indicators only, does not guarantee network safety, and is not a professional security audit or penetration test.
+
+UCAT Sprint Coach is an independent UCAT preparation tool and is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university. Practice questions are original; estimated scores are not official UCAT scores.

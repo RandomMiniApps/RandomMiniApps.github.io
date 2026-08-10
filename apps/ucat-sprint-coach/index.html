@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCAT Sprint Coach - Timed UCAT Practice &amp; Mocks</title>
+  <meta name="description" content="UCAT Sprint Coach is a privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks, progress analytics and study planning for iPhone, iPad and Mac.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://randomminiapps.github.io/apps/ucat-sprint-coach/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "UCAT Sprint Coach",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "iOS, macOS",
+  "description": "UCAT Sprint Coach is a privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks, progress analytics and study planning for iPhone, iPad and Mac.",
+  "url": "https://randomminiapps.github.io/apps/ucat-sprint-coach/",
+  "image": "https://randomminiapps.github.io/ucat-sprint-coach-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Random Mini Apps",
+    "url": "https://randomminiapps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is UCAT Sprint Coach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UCAT Sprint Coach is an independent UCAT preparation app with original practice questions, timed drills, full mocks and progress analytics for medicine and dentistry applicants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is UCAT Sprint Coach affiliated with the UCAT Consortium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the practice questions official UCAT questions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All practice questions are original UCAT-style items created for this app. They are not official UCAT questions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the app give official UCAT scores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Estimated scores and readiness metrics are for practice guidance only and are not official UCAT scores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an account required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Practice data stays on your device. No account is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The free tier includes 50 questions and one diagnostic mini-drill. Premium unlocks the full bank, mocks, analytics and study plan via subscription or lifetime purchase."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-hover: #222228;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.15);
+      --border: #27272a;
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-lede {
+      color: var(--text);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .product-hunt-btn {
+      background: rgb(255, 97, 84);
+      color: #fff;
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover { text-decoration: underline; }
+
+    .app-visual {
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
+      text-align: center;
+    }
+
+    .app-visual img {
+      width: min(220px, 60vw);
+      height: min(220px, 60vw);
+      border-radius: 48px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
+      object-fit: cover;
+    }
+
+    .app-visual strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-visual span {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: rgba(24, 24, 28, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .section h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+    }
+
+    .mini-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .mini-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: start;
+      color: var(--text-muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .page { padding: 1.25rem 1rem 3rem; }
+      .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.75rem;
+      }
+      .hero,
+      .grid,
+      .list { grid-template-columns: 1fr; }
+      .section { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../../">Random Mini Apps</a>
+      <a href="../../ucat-sprint-coach-privacy.html">Privacy Policy</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">UCAT practice for medicine &amp; dentistry</p>
+          <h1>UCAT Sprint Coach: Timed Practice &amp; Mocks</h1>
+          <p class="hero-lede">Prepare for the UCAT with original questions, official-style subtest timing, and clear progress analytics — on iPhone, iPad and Mac.</p>
+          <p class="hero-copy">Privacy-first practice with timed drills, full mocks, review tools and study planning. No account required.</p>
+          <div class="cta-row">
+            <span class="cta-btn" style="opacity:0.85;cursor:default;">Coming soon on the App Store</span>
+            <a class="secondary-link" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+        <aside class="app-visual" aria-label="UCAT Sprint Coach app summary">
+          <img src="../../ucat-sprint-coach-icon.png" alt="UCAT Sprint Coach app icon">
+          <strong>UCAT Sprint Coach</strong>
+          <span>1,444 original questions · timed drills · full mocks.</span>
+        </aside>
+      </section>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">What UCAT Sprint Coach does</h2>
+        <p>UCAT Sprint Coach is an independent preparation tool for medicine and dentistry applicants practising Verbal Reasoning, Decision Making, Quantitative Reasoning and Situational Judgement.</p>
+        <p>It includes original practice items, timed mini-drills, a full mock workflow with official-style subtest timing, explanations, a review notebook and local progress analytics. Estimated scores are practice guidance only.</p>
+      </section>
+
+      <section class="section" aria-labelledby="audience-title">
+        <h2 id="audience-title">Who is UCAT Sprint Coach for?</h2>
+        <p>UCAT Sprint Coach is designed for students who want focused, repeatable UCAT-style practice on Apple devices.</p>
+        <ul class="list">
+          <li>Medicine and dentistry applicants preparing for the UCAT</li>
+          <li>Students who want timed drills that fit short study sessions</li>
+          <li>Candidates practising full mock exam workflow</li>
+          <li>Learners who prefer privacy-first apps with no account</li>
+          <li>Users who want progress trends and study recommendations</li>
+          <li>Students who need dyslexia-friendly reading options</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Key features</h2>
+        <div class="grid">
+          <article class="mini-card">
+            <h3>1,444 original questions</h3>
+            <p>Practice across VR, DM, QR and SJT with explanations after each question.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Timed drills and full mocks</h3>
+            <p>Use untimed learning, timed mini-drills and full mock flow with flagging, navigator and calculator tools.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Progress and study planning</h3>
+            <p>Track accuracy trends, readiness guidance, subtest balance and next-practice recommendations.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Privacy-first by design</h3>
+            <p>Works offline after install. Practice data stays on your device. No account and no tracking SDKs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How UCAT Sprint Coach works</h2>
+        <ol class="steps">
+          <li>Choose a subtest and practice mode (untimed, timed drill or mock).</li>
+          <li>Answer questions with exam-style tools such as flagging, navigator and calculator where relevant.</li>
+          <li>Review explanations and save incorrect or flagged items to your notebook.</li>
+          <li>Check your dashboard for accuracy trends and readiness guidance.</li>
+          <li>Follow study recommendations and official UCAT cycle dates as you prepare.</li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="practice-title">
+        <h2 id="practice-title">Useful for</h2>
+        <p>UCAT Sprint Coach supports common preparation needs for medicine and dentistry applicants.</p>
+        <ul class="list">
+          <li>Verbal Reasoning passage practice</li>
+          <li>Decision Making logic and multi-statement items</li>
+          <li>Quantitative Reasoning tables and charts</li>
+          <li>Situational Judgement scenarios</li>
+          <li>Timed mini-drills under exam pressure</li>
+          <li>Full mock exam workflow</li>
+          <li>Review of incorrect and flagged questions</li>
+          <li>Local study planning and progress tracking</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="benefits-title">
+        <h2 id="benefits-title">Why use UCAT Sprint Coach?</h2>
+        <p>UCAT preparation benefits from repeated, timed practice with clear feedback — not just reading theory. UCAT Sprint Coach gives students a private, offline-friendly way to rehearse exam-style workflow on iPhone, iPad and Mac.</p>
+        <p>The app is a preparation tool and works best alongside official UCAT preparation resources and guidance from the UCAT Consortium.</p>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is UCAT Sprint Coach?</summary>
+            <p>UCAT Sprint Coach is an independent UCAT preparation app with original practice questions, timed drills, full mocks and progress analytics for medicine and dentistry applicants.</p>
+          </details>
+          <details>
+            <summary>Is UCAT Sprint Coach affiliated with the UCAT Consortium?</summary>
+            <p>No. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university.</p>
+          </details>
+          <details>
+            <summary>Are the practice questions official UCAT questions?</summary>
+            <p>No. All practice questions are original UCAT-style items created for this app. They are not official UCAT questions.</p>
+          </details>
+          <details>
+            <summary>Does the app give official UCAT scores?</summary>
+            <p>No. Estimated scores and readiness metrics are for practice guidance only and are not official UCAT scores.</p>
+          </details>
+          <details>
+            <summary>Is an account required?</summary>
+            <p>No. Practice data stays on your device. No account is required.</p>
+          </details>
+          <details>
+            <summary>Is there a free version?</summary>
+            <p>Yes. The free tier includes 50 questions and one diagnostic mini-drill. Premium unlocks the full bank, mocks, analytics and study plan via subscription or lifetime purchase.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Important notes</h2>
+        <p>UCAT Sprint Coach is an independent preparation tool. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the General Medical Council, the Medical Schools Council, Apple, or any university. UCAT is used only to describe the examination for which users may be preparing.</p>
+        <p>All practice questions in this app are original unless otherwise stated. Estimated scores are for practice guidance only and are not official UCAT scores. Always use official UCAT preparation materials when preparing for your exam.</p>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="download-title">
+        <h2 id="download-title">Get UCAT Sprint Coach</h2>
+        <p>UCAT Sprint Coach is coming soon to the App Store for iPhone, iPad and Mac.</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="cta-btn" href="../../ucat-sprint-coach-privacy.html">Read the Privacy Policy</a>
+          <a class="secondary-link" href="../../">View all Random Mini Apps</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="../../ucat-sprint-coach-privacy.html">Privacy Policy</a> · <a href="../../privacy.html">Site Privacy</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
+    </footer>
+  </div>
+</body>
+</html>
