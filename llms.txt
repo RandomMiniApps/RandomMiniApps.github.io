@@ -5,9 +5,11 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 ## Apps
 
 - [BoomColor](https://randomminiapps.github.io/apps/coloring-book/): relaxing coloring book app with 700+ pages, tap-to-fill painting, creative effects, daily challenges and photo imports for iPhone and iPad.
+- [Cardiac Aftercare](https://randomminiapps.github.io/apps/cardiac-aftercare/): invite-only cardiac recovery prototype with governed RAG, deterministic triage and on-device LLMs for cardiac specialists and junior doctors; not for patient or public distribution.
 - [Car HUD Display](https://randomminiapps.github.io/apps/car-hud-display/): iPhone heads-up display app with GPS speed, trip widgets, mirror mode and smart brightness.
 - [ClinSpeak OET](https://randomminiapps.github.io/apps/clinspeak-oet/): OET-style speaking practice app for nurses with timed clinical role plays, transcript replay and structured feedback.
 - [Dyslexia Reading Lens](https://randomminiapps.github.io/apps/dyslexia-reading-lens/): calm reading workspace for iPhone with dyslexia-friendly text, read-aloud highlighting, document scanning, and AI simplify and summary tools.
+- [FractureFlow AI](https://randomminiapps.github.io/apps/fractureflow-ai/): invite-only clinician research MVP for MIU/ED/VFC fracture workflows with safety-before-RAG retrieval, recommendation validation and X-ray detection research; not for patient or public distribution.
 - [HotspotCheck](https://randomminiapps.github.io/apps/hotspot-check/): privacy-first Wi-Fi safety advisor for iPhone that checks visible risk indicators, scores networks by context, and gives plain-English guidance before sensitive logins.
 - [Keepie Yuppie](https://randomminiapps.github.io/apps/keepie-yuppie/): physics-based ball juggling game with 99 levels, weather effects, obstacles, survival mode and Game Center.
 - [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based lux estimates with guidance, calibration, on-device audits, PDF/CSV export, non-personalized rewarded ads, and one-time Full Access.
@@ -21,9 +23,11 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 
 - [BoomColor App Page](https://randomminiapps.github.io/apps/coloring-book/)
 - [BoomColor App Store Listing](https://apps.apple.com/us/app/boomcolor/id6761337820)
+- [Cardiac Aftercare App Page](https://randomminiapps.github.io/apps/cardiac-aftercare/)
 - [Car HUD Display App Page](https://randomminiapps.github.io/apps/car-hud-display/)
 - [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
 - [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
+- [FractureFlow AI App Page](https://randomminiapps.github.io/apps/fractureflow-ai/)
 - [HotspotCheck App Page](https://randomminiapps.github.io/apps/hotspot-check/)
 - [HotspotCheck App Store Listing](https://apps.apple.com/gb/app/hotspotcheck/id6783085771)
 - [HotspotCheck Privacy Policy](https://randomminiapps.github.io/hotspotcheck-privacy.html)
@@ -44,6 +48,10 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [All Apps](https://randomminiapps.github.io/)
 
 ## Notes
+
+Cardiac Aftercare is an independent development prototype and is not affiliated with, endorsed by, or approved by the NHS, NICE, BHF, MHRA, or any hospital trust. It is invite-only for cardiac specialists and junior doctors and is not for patient or public use.
+
+FractureFlow AI is an independent research MVP and is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, MHRA, or any hospital trust. It is invite-only for clinicians and junior doctors and is not for patient self-triage or public use.
 
 MedViva Coach is an educational practice tool and is not affiliated with UCAS, any medical school, the NHS, or any official admissions body. It does not guarantee interview invitations, offers, or admission outcomes.
 

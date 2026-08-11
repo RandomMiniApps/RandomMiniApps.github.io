@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FractureFlow AI - Offline RAG &amp; Fracture Decision-Support Portfolio Project</title>
+  <meta name="description" content="FractureFlow AI is an invite-only research MVP for MIU, ED and Virtual Fracture Clinic clinicians: safety-before-RAG decision support, governed UK evidence retrieval, evaluation harnesses, and X-ray detection research. Not for patient or public distribution.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://randomminiapps.github.io/apps/fractureflow-ai/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FractureFlow AI",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, Android",
+  "description": "Invite-only clinician research MVP for MIU/ED/VFC fracture workflows with safety-before-RAG retrieval, recommendation validation and X-ray detection research. Not for patient or public distribution.",
+  "url": "https://randomminiapps.github.io/apps/fractureflow-ai/",
+  "image": "https://randomminiapps.github.io/fractureflow-ai-icon.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Random Mini Apps",
+    "url": "https://randomminiapps.github.io/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is FractureFlow AI available to patients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The app is not for patient self-triage or public distribution. Access is limited to invited clinicians and junior doctors evaluating the research MVP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI techniques does FractureFlow AI use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses deterministic red-flag escalation before retrieval, offline governed RAG over UK guidance chunks, recommendation validation, an optional LLM provider disabled by default, evaluation vignettes, and a separate X-ray detection research track with ensemble models and Grad-CAM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the app diagnose fractures autonomously?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FractureFlow AI is clinical decision support. It does not replace clinician judgement, local Trust pathways, or radiology reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can request access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MIU, ED, orthopaedic triage and Virtual Fracture Clinic clinicians, plus junior doctors interested in testing the safety-before-RAG and fracture-detection research prototype, may request invite-only access."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this affiliated with the NHS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FractureFlow AI is an independent research MVP. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, or any hospital trust."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0f0f12;
+      --surface: #18181c;
+      --surface-hover: #222228;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.15);
+      --warn: #fbbf24;
+      --warn-dim: rgba(251, 191, 36, 0.12);
+      --border: #27272a;
+      --radius: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-lede {
+      color: var(--text);
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 700;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .cta-btn--muted {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .secondary-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .secondary-link:hover { text-decoration: underline; }
+
+    .app-visual {
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
+      text-align: center;
+    }
+
+    .app-visual img {
+      width: min(220px, 60vw);
+      height: min(220px, 60vw);
+      border-radius: 48px;
+      display: block;
+      margin: 0 auto 1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
+      object-fit: cover;
+    }
+
+    .app-visual strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .app-visual span {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .notice {
+      margin: 0 0 2rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      background: var(--warn-dim);
+      border-radius: var(--radius-sm);
+      color: #fde68a;
+      font-size: 0.98rem;
+    }
+
+    .notice strong {
+      color: var(--warn);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      padding: 2rem;
+      background: rgba(24, 24, 28, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .section h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .mini-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+    }
+
+    .mini-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .mini-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .phase-label {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.65rem;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .list li {
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 2.25rem minmax(0, 1fr);
+      gap: 0.8rem;
+      align-items: start;
+      color: var(--text-muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      width: 2.25rem;
+      height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .pipeline {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1.1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+    }
+
+    .pipeline-step {
+      display: grid;
+      grid-template-columns: 7.5rem minmax(0, 1fr);
+      gap: 0.85rem;
+      align-items: start;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .pipeline-step strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .pipeline-step span {
+      color: var(--text-muted);
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .stack-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .stack-table th,
+    .stack-table td {
+      text-align: left;
+      padding: 0.7rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .stack-table th {
+      color: var(--text);
+      font-weight: 600;
+      width: 34%;
+    }
+
+    .stack-table td {
+      color: var(--text-muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    details p {
+      margin-top: 0.7rem;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .pipeline-step { grid-template-columns: 1fr; gap: 0.35rem; }
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 1.25rem 1rem 3rem; }
+      .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.75rem;
+      }
+      .hero,
+      .grid,
+      .list { grid-template-columns: 1fr; }
+      .section { padding: 1.4rem; }
+      .stack-table th,
+      .stack-table td {
+        display: block;
+        width: 100%;
+        padding: 0.45rem 0;
+      }
+      .stack-table th { border-bottom: none; padding-top: 0.85rem; }
+      .stack-table tr { border-bottom: 1px solid var(--border); }
+      .stack-table td { padding-bottom: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../../">Random Mini Apps</a>
+      <a href="../../privacy.html">Privacy Policy</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AI / RAG portfolio · invite-only clinician testing</p>
+          <h1>FractureFlow AI</h1>
+          <p class="hero-lede">A clinician-facing fracture decision-support research MVP built around safety-before-RAG retrieval, recommendation validation and X-ray detection modelling.</p>
+          <p class="hero-copy">Designed for UK MIU, ED, orthopaedic triage and Virtual Fracture Clinic workflows. Currently open only to invited clinicians and junior doctors evaluating the prototype — not for patients or public distribution.</p>
+          <div class="cta-row">
+            <a class="cta-btn" href="mailto:bleep.minted4c@icloud.com?subject=FractureFlow%20AI%20clinician%20testing%20request">Request clinician access</a>
+            <a class="secondary-link" href="#rag-phases">View RAG &amp; ML phases</a>
+          </div>
+        </div>
+        <aside class="app-visual" aria-label="FractureFlow AI summary">
+          <img src="../../fractureflow-ai-icon.png" alt="FractureFlow AI app icon">
+          <strong>FractureFlow AI</strong>
+          <span>Safety-before-RAG · offline CDS · X-ray research.</span>
+        </aside>
+      </section>
+
+      <aside class="notice" role="note">
+        <strong>Not for patients or live clinical use</strong>
+        This is a research MVP. It has not completed Trust-local pathway approval, clinical safety sign-off (DCB0129 / DCB0160), DTAC or MHRA assessment. It must not be used for live patient care or patient self-triage. Testing is invite-only for interested clinicians and junior doctors.
+      </aside>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">What FractureFlow AI is</h2>
+        <p>FractureFlow AI helps trained clinicians capture structured injury information, apply deterministic red-flag checks, retrieve source-linked UK guidance, and review immobilisation / referral / safety-netting suggestions before acting.</p>
+        <p>It is clinical decision support, not autonomous diagnosis. Local Trust guidance and senior clinical judgement always override the app. Routine recommendations must cite clinician-CDS-approved sources only.</p>
+        <ul class="list">
+          <li>MIU and urgent treatment centre workflows</li>
+          <li>ED musculoskeletal triage support</li>
+          <li>Orthopaedic triage and VFC referral</li>
+          <li>Deterministic red-flag escalation</li>
+          <li>Source-linked UK guidance retrieval</li>
+          <li>Immobilisation and discharge wording aids</li>
+          <li>Offline bundled knowledge pack</li>
+          <li>X-ray detection research track</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="access-title">
+        <h2 id="access-title">Who can test it now</h2>
+        <p>Distribution is intentionally narrow while clinical safety, Trust localisation and evidence governance continue.</p>
+        <div class="grid">
+          <article class="mini-card">
+            <h3>Invite-only testers</h3>
+            <p>MIU, ED, orthopaedic and VFC clinicians, plus junior doctors interested in reviewing safety-before-RAG behaviour, retrieval grounding and fracture-detection research.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Not available to</h3>
+            <p>Patients, carers, the general public, or any App Store / open distribution channel until governance sign-off and Trust-local pathways are in place.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="rag-phases" aria-labelledby="phases-title">
+        <h2 id="phases-title">RAG, safety &amp; modelling phases</h2>
+        <p>This page is written as an AI / modelling portfolio piece. The build order was deliberate: register evidence, lock red flags, gate CDS sources, then consider generation and imaging models.</p>
+
+        <div class="grid" style="margin-top:1.25rem;">
+          <article class="mini-card">
+            <span class="phase-label">Phase 1</span>
+            <h3>Evidence pipeline</h3>
+            <p>Source register, ingestion rounds, chunking and governance metadata across national guidance, VFC examples, red-flag packs and immobilisation material.</p>
+          </article>
+          <article class="mini-card">
+            <span class="phase-label">Phase 2</span>
+            <h3>Safety-before-RAG</h3>
+            <p>Deterministic red-flag rules run first. Escalation bypasses retrieval entirely so generation never softens an emergency pathway.</p>
+          </article>
+          <article class="mini-card">
+            <span class="phase-label">Phase 3</span>
+            <h3>Governed retrieval</h3>
+            <p>Token-overlap retrieval with authority weighting, priority boosts and a <code>cds_only</code> filter so routine clinician recommendations cite approved sources only.</p>
+          </article>
+          <article class="mini-card">
+            <span class="phase-label">Phase 4</span>
+            <h3>Recommendation validation</h3>
+            <p>A validator gates routine outputs and returns an insufficient-source fallback when evidence support is missing — the optional LLM cannot bypass this gate.</p>
+          </article>
+          <article class="mini-card">
+            <span class="phase-label">Phase 5</span>
+            <h3>Evaluation harness</h3>
+            <p>Shared vignette schema, Python/Flutter parity tests, RealCaseStudy de-identified cases, and clinician review workflows before any live deployment.</p>
+          </article>
+          <article class="mini-card">
+            <span class="phase-label">Phase 6</span>
+            <h3>X-ray detection research</h3>
+            <p>Separate ML track: ensemble screening (EfficientNet / SigLIP / ViT), Grad-CAM overlays, triage grading research, and double-review human labelling packages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="pipeline-title">
+        <h2 id="pipeline-title">Runtime recommendation pipeline</h2>
+        <p>Every case follows a fail-closed path. Escalation is deterministic; generation is optional and validator-gated.</p>
+        <div class="pipeline" aria-label="Recommendation pipeline steps">
+          <div class="pipeline-step"><strong>01 capture</strong><span>Structured injury data: body region, mechanism, neurovascular status, skin integrity and red-flag prompts.</span></div>
+          <div class="pipeline-step"><strong>02 screen</strong><span>Deterministic safety rules (open fracture, NV compromise, compartment, infection, safeguarding, major trauma, and more).</span></div>
+          <div class="pipeline-step"><strong>03 escalate</strong><span>Red-flag hits return escalation prompts and bypass retrieval / generation entirely.</span></div>
+          <div class="pipeline-step"><strong>04 retrieve</strong><span>Offline / engine retrieval over the governed chunk index with CDS-only filtering for routine recommendations.</span></div>
+          <div class="pipeline-step"><strong>05 compose</strong><span>Template or optional LLM draft from retrieved evidence — LLM disabled by default in research builds.</span></div>
+          <div class="pipeline-step"><strong>06 validate</strong><span>Recommendation validator blocks unsupported output and forces an insufficient-source fallback.</span></div>
+          <div class="pipeline-step"><strong>07 present</strong><span>Clinician reviews source-linked suggestions, immobilisation notes, referral checklist and safety-netting wording.</span></div>
+          <div class="pipeline-step"><strong>08 override</strong><span>Local Trust pathways and senior judgement remain authoritative; the app never claims autonomous diagnosis.</span></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="model-title">
+        <h2 id="model-title">Modelling choices that matter for hiring conversations</h2>
+        <p>The modelling story is about constraint, evaluation and clinical governance — not unconstrained chat or black-box imaging claims.</p>
+        <div class="grid-3">
+          <article class="mini-card">
+            <h3>Safety before retrieval</h3>
+            <p>Red flags are rule-based and run before RAG. Escalation cannot be softened by a generative model.</p>
+          </article>
+          <article class="mini-card">
+            <h3>CDS source gating</h3>
+            <p>Only a small approved subset may drive clinician disposition suggestions; patient-education material stays discharge/safety-netting only.</p>
+          </article>
+          <article class="mini-card">
+            <h3>LLM deferred by default</h3>
+            <p>The LLM provider exists but is off until tracing, approval and validation gates are strong enough for research demos.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Offline knowledge pack</h3>
+            <p>Flutter ships a bundled retrieval pack so MIU/ED evaluation can run without depending on a live networked model.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Parity evaluation</h3>
+            <p>Shared vignettes keep Python engine and Flutter safety logic aligned; RealCaseStudy adds de-identified ED/MIU cases.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Imaging as a separate track</h3>
+            <p>X-ray ensemble research and human double-review labelling are explicit modelling workstreams, not silent auto-diagnosis.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="stack-title">
+        <h2 id="stack-title">Technical stack snapshot</h2>
+        <table class="stack-table">
+          <tbody>
+            <tr>
+              <th>Client</th>
+              <td>Flutter (iOS + Android) — Assess, History, Sources, Settings</td>
+            </tr>
+            <tr>
+              <th>Safety engine</th>
+              <td>Python <code>RecommendationEngine</code> with deterministic red-flag screening before RAG</td>
+            </tr>
+            <tr>
+              <th>Retrieval</th>
+              <td>Token overlap + authority weight + priority boost; CDS-only filter for routine outputs</td>
+            </tr>
+            <tr>
+              <th>Corpus</th>
+              <td>~150 registered sources / ~845 chunks (runtime pack sync tracked separately)</td>
+            </tr>
+            <tr>
+              <th>LLM</th>
+              <td>Optional provider, disabled by default, cannot bypass recommendation validation</td>
+            </tr>
+            <tr>
+              <th>Evaluation</th>
+              <td>16 vignette harness (expanding), Flutter parity tests, 41 RealCaseStudy cases</td>
+            </tr>
+            <tr>
+              <th>X-ray ML research</th>
+              <td>Ensemble + Grad-CAM prototype; human double-review packages; review wizard at <a class="secondary-link" href="../../xray-review/">xray-review</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How invite-only testing works</h2>
+        <ol class="steps">
+          <li>A clinician or junior doctor requests access and confirms this is research-only, not live care.</li>
+          <li>Invited testers exercise red-flag screening, retrieval grounding, recommendation validation and optional imaging research tools on non-live scenarios.</li>
+          <li>Feedback feeds evaluation vignettes, source-approval decisions and Trust-localisation planning.</li>
+          <li>Patient, public or live clinical release remains blocked until governance sign-off and local pathway approval.</li>
+        </ol>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is FractureFlow AI available to patients?</summary>
+            <p>No. The app is not for patient self-triage or public distribution. Access is limited to invited clinicians and junior doctors evaluating the research MVP.</p>
+          </details>
+          <details>
+            <summary>What AI techniques does FractureFlow AI use?</summary>
+            <p>It uses deterministic red-flag escalation before retrieval, offline governed RAG over UK guidance chunks, recommendation validation, an optional LLM provider disabled by default, evaluation vignettes, and a separate X-ray detection research track with ensemble models and Grad-CAM.</p>
+          </details>
+          <details>
+            <summary>Does the app diagnose fractures autonomously?</summary>
+            <p>No. FractureFlow AI is clinical decision support. It does not replace clinician judgement, local Trust pathways, or radiology reporting.</p>
+          </details>
+          <details>
+            <summary>Who can request access?</summary>
+            <p>MIU, ED, orthopaedic triage and Virtual Fracture Clinic clinicians, plus junior doctors interested in testing the safety-before-RAG and fracture-detection research prototype, may request invite-only access.</p>
+          </details>
+          <details>
+            <summary>Is this affiliated with the NHS?</summary>
+            <p>No. FractureFlow AI is an independent research MVP. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, or any hospital trust.</p>
+          </details>
+          <details>
+            <summary>Why show this on a public website if it is invite-only?</summary>
+            <p>The public page documents the AI / RAG / modelling approach for portfolio and collaboration purposes. The product binary and clinical distribution remain closed.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="disclaimer-title">
+        <h2 id="disclaimer-title">Important notes</h2>
+        <p>FractureFlow AI is an independent research MVP by Random Mini Apps. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, MHRA, Apple, Google, or any hospital trust.</p>
+        <p>Example pathways are not Trust-local protocols. Do not use this prototype for live patient care or patient self-triage. In an emergency, follow local escalation pathways and call 999 when required.</p>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="download-title">
+        <h2 id="download-title">Request clinician testing access</h2>
+        <p>If you are a clinician or junior doctor interested in evaluating the safety-before-RAG / fracture-detection research prototype, get in touch. Patient and public distribution remain closed.</p>
+        <div class="cta-row" style="justify-content: center;">
+          <a class="cta-btn" href="mailto:bleep.minted4c@icloud.com?subject=FractureFlow%20AI%20clinician%20testing%20request">Email to request access</a>
+          <a class="cta-btn cta-btn--muted" href="../../">View all Random Mini Apps</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="../../privacy.html">Privacy Policy</a> · <a href="../../xray-review/">X-ray review</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
+    </footer>
+  </div>
+</body>
+</html>

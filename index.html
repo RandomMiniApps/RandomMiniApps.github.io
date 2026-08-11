@@ -43,7 +43,7 @@
 
     header {
       text-align: center;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
 
     .site-logo {
@@ -71,6 +71,29 @@
       color: var(--text-muted);
       font-size: 1.05rem;
       font-weight: 400;
+    }
+
+    .app-group {
+      margin-bottom: 2.75rem;
+    }
+
+    .app-group__header {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-group__title {
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .app-group__desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 46rem;
     }
 
     .apps {
@@ -180,7 +203,7 @@
     }
 
     footer {
-      margin-top: 3rem;
+      margin-top: 1.5rem;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.9rem;
@@ -242,7 +265,7 @@
       }
 
       header {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.25rem;
       }
 
       .apps {
@@ -261,199 +284,272 @@
       <p class="tagline">Handcrafted, individually perfected apps for your Apple devices.</p>
     </header>
 
-    <section class="apps" aria-label="Apps">
-      <!-- Apps listed in alphabetical order by name. -->
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="coloring-book-icon.png" alt="BoomColor app icon">
+    <section class="app-group" aria-labelledby="group-health-research">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-health-research">Health Research Apps</h2>
+        <p class="app-group__desc">Invite-only clinician research prototypes. Not for patients or public distribution.</p>
+      </div>
+      <div class="apps">
+        <div class="app-card app-card--coming-soon" aria-label="Cardiac Aftercare">
+          <div class="app-icon">
+            <img src="cardiac-aftercare-icon.png" alt="Cardiac Aftercare app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Cardiac Aftercare</div>
+            <div class="app-meta">iPhone, Android · Invite-only clinician testing</div>
+          </div>
+          <div class="app-card__ctas">
+            <span class="app-cta app-cta--soon">Not for patients · specialists only</span>
+            <a class="app-cta" href="apps/cardiac-aftercare/">Learn more</a>
+          </div>
         </div>
-        <div class="app-body">
-          <div class="app-name">BoomColor</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/coloring-book/">Learn more</a>
+
+        <div class="app-card app-card--coming-soon" aria-label="FractureFlow AI">
+          <div class="app-icon">
+            <img src="fractureflow-ai-icon.png" alt="FractureFlow AI app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">FractureFlow AI</div>
+            <div class="app-meta">iPhone, Android · Invite-only clinician testing</div>
+          </div>
+          <div class="app-card__ctas">
+            <span class="app-cta app-cta--soon">Not for patients · clinicians only</span>
+            <a class="app-cta" href="apps/fractureflow-ai/">Learn more</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="car-hud-icon.png" alt="">
+    <section class="app-group" aria-labelledby="group-security">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-security">Security &amp; Privacy</h2>
+        <p class="app-group__desc">Tools for safer messaging, Wi‑Fi checks and scam awareness.</p>
+      </div>
+      <div class="apps">
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="hotspot-check-icon.png" alt="HotspotCheck app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">HotspotCheck</div>
+            <div class="app-meta">iPhone · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/hotspot-check/">Learn more</a>
+          </div>
         </div>
-        <div class="app-body">
-          <div class="app-name">Car HUD Display</div>
-          <div class="app-meta">iPhone · $9.99</div>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="msgsecret-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">MsgSecret</div>
+            <div class="app-meta">iPhone · Free</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/msgsecret/id958618403" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/msgsecret/">Learn more</a>
+          </div>
         </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/car-hud-display/id6758107542" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/car-hud-display/">Learn more</a>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="natural-text-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Natural Text</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/natural-text/id1323616521" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/natural-text/">Learn more</a>
+          </div>
+        </div>
+
+        <div class="app-card app-card--coming-soon" aria-label="ScamLens UK">
+          <div class="app-icon">
+            <img src="scamlens-uk-icon.png" alt="ScamLens UK app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">ScamLens UK</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
+            <a class="app-cta" href="scamlens/">Learn more</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="clinspeek-oet-icon.png" alt="">
-        </div>
-        <div class="app-body">
-          <div class="app-name">ClinSpeak OET</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/clinspeak-oet/id6763942393" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/clinspeak-oet/">Learn more</a>
-        </div>
+    <section class="app-group" aria-labelledby="group-education">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-education">Education &amp; Exam Prep</h2>
+        <p class="app-group__desc">Practice tools for medicine, nursing and admissions pathways.</p>
       </div>
+      <div class="apps">
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="clinspeek-oet-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">ClinSpeak OET</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/clinspeak-oet/id6763942393" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/clinspeak-oet/">Learn more</a>
+          </div>
+        </div>
 
-      <!-- When Daily Bias is live: use a normal app-card div, App Store href, and app-card__cta-btn app-store-btn like the other apps. -->
-      <div class="app-card app-card--coming-soon" aria-label="Daily Bias">
-        <div class="app-icon">
-          <img src="daily-bias-icon.png" alt="Daily Bias icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">Daily Bias</div>
-          <div class="app-meta">iPhone, iPad, Apple Watch, Apple TV · Free · One-Time Purchase</div>
-        </div>
-        <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="dyslexia-reading-lens-icon.png" alt="Dyslexia Reading Lens app icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">Dyslexia Reading Lens</div>
-          <div class="app-meta">iPhone · Free · Subscription</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/dyslexia-reading-lens/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="hotspot-check-icon.png" alt="HotspotCheck app icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">HotspotCheck</div>
-          <div class="app-meta">iPhone · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/hotspot-check/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="keepie-yuppie-icon.png" alt="">
-        </div>
-        <div class="app-body">
-          <div class="app-name">Keepie Yuppie</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/keepie-yuppie/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="lighting-check-icon.png" alt="">
-        </div>
-        <div class="app-body">
-          <div class="app-name">Lighting Check</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/lighting-check/id1317618609" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/lighting-check/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="medviva-coach-icon.png" alt="MedViva Coach icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">MedViva Coach</div>
-          <div class="app-meta">iPhone, iPad · Free · Subscription</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/medviva-coach/id6766191800" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/medviva-coach/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="msgsecret-icon.png" alt="">
-        </div>
-        <div class="app-body">
-          <div class="app-name">MsgSecret</div>
-          <div class="app-meta">iPhone · Free</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/msgsecret/id958618403" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/msgsecret/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="nmc-osce-coach-icon.png" alt="NMC OSCE AI Coach icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">NMC OSCE AI Coach</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/nmc-osce-coach/id6770335559" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/nmc-osce-coach/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon">
-          <img src="natural-text-icon.png" alt="">
-        </div>
-        <div class="app-body">
-          <div class="app-name">Natural Text</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
-          <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/natural-text/id1323616521" target="_blank" rel="noopener">View on App Store →</a>
-          <a class="app-cta" href="apps/natural-text/">Learn more</a>
-        </div>
-      </div>
-
-      <div class="app-card app-card--coming-soon" aria-label="ScamLens UK">
-        <div class="app-icon">
-          <img src="scamlens-uk-icon.png" alt="ScamLens UK app icon">
-        </div>
-        <div class="app-body">
-          <div class="app-name">ScamLens UK</div>
-          <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-        </div>
-        <div class="app-card__ctas">
+        <!-- When Daily Bias is live: use a normal app-card div, App Store href, and app-card__cta-btn app-store-btn like the other apps. -->
+        <div class="app-card app-card--coming-soon" aria-label="Daily Bias">
+          <div class="app-icon">
+            <img src="daily-bias-icon.png" alt="Daily Bias icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Daily Bias</div>
+            <div class="app-meta">iPhone, iPad, Apple Watch, Apple TV · Free · One-Time Purchase</div>
+          </div>
           <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-          <a class="app-cta" href="scamlens/">Learn more</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="medviva-coach-icon.png" alt="MedViva Coach icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">MedViva Coach</div>
+            <div class="app-meta">iPhone, iPad · Free · Subscription</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/medviva-coach/id6766191800" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/medviva-coach/">Learn more</a>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="nmc-osce-coach-icon.png" alt="NMC OSCE AI Coach icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">NMC OSCE AI Coach</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/nmc-osce-coach/id6770335559" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/nmc-osce-coach/">Learn more</a>
+          </div>
+        </div>
+
+        <div class="app-card app-card--coming-soon" aria-label="UCAT Sprint Coach">
+          <div class="app-icon">
+            <img src="ucat-sprint-coach-icon.png" alt="UCAT Sprint Coach app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">UCAT Sprint Coach</div>
+            <div class="app-meta">iPhone, iPad, Mac · Free · Subscription</div>
+          </div>
+          <div class="app-card__ctas">
+            <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
+            <a class="app-cta" href="apps/ucat-sprint-coach/">Learn more</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="app-card app-card--coming-soon" aria-label="UCAT Sprint Coach">
-        <div class="app-icon">
-          <img src="ucat-sprint-coach-icon.png" alt="UCAT Sprint Coach app icon">
+    <section class="app-group" aria-labelledby="group-accessibility">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-accessibility">Accessibility &amp; Reading</h2>
+        <p class="app-group__desc">Calmer reading tools for everyday documents and books.</p>
+      </div>
+      <div class="apps">
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="dyslexia-reading-lens-icon.png" alt="Dyslexia Reading Lens app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Dyslexia Reading Lens</div>
+            <div class="app-meta">iPhone · Free · Subscription</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/dyslexia-reading-lens/">Learn more</a>
+          </div>
         </div>
-        <div class="app-body">
-          <div class="app-name">UCAT Sprint Coach</div>
-          <div class="app-meta">iPhone, iPad, Mac · Free · Subscription</div>
+      </div>
+    </section>
+
+    <section class="app-group" aria-labelledby="group-creative">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-creative">Creativity &amp; Games</h2>
+        <p class="app-group__desc">Colouring, play and light distraction for iPhone and iPad.</p>
+      </div>
+      <div class="apps">
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="coloring-book-icon.png" alt="BoomColor app icon">
+          </div>
+          <div class="app-body">
+            <div class="app-name">BoomColor</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/coloring-book/">Learn more</a>
+          </div>
         </div>
-        <div class="app-card__ctas">
-          <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-          <a class="app-cta" href="apps/ucat-sprint-coach/">Learn more</a>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="keepie-yuppie-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Keepie Yuppie</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/keepie-yuppie/">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-group" aria-labelledby="group-utilities">
+      <div class="app-group__header">
+        <h2 class="app-group__title" id="group-utilities">Utilities</h2>
+        <p class="app-group__desc">Focused tools for driving and lighting checks.</p>
+      </div>
+      <div class="apps">
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="car-hud-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Car HUD Display</div>
+            <div class="app-meta">iPhone · $9.99</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/car-hud-display/id6758107542" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/car-hud-display/">Learn more</a>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon">
+            <img src="lighting-check-icon.png" alt="">
+          </div>
+          <div class="app-body">
+            <div class="app-name">Lighting Check</div>
+            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
+          </div>
+          <div class="app-card__ctas">
+            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/lighting-check/id1317618609" target="_blank" rel="noopener">View on App Store →</a>
+            <a class="app-cta" href="apps/lighting-check/">Learn more</a>
+          </div>
         </div>
       </div>
     </section>
