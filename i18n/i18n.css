@@ -1,0 +1,43 @@
+html[data-pending-lang] body {
+  visibility: hidden;
+}
+
+html.i18n-ready body {
+  visibility: visible;
+}
+
+.lang-switch {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 80;
+}
+
+.lang-switch select {
+  font: 600 0.85rem/1.2 Outfit, system-ui, sans-serif;
+  color: #f4f4f5;
+  background: #18181c;
+  border: 1px solid #3f3f46;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  max-width: 11rem;
+}
+
+.i18n-banner {
+  max-width: 46rem;
+  margin: 0 auto 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+  background: #18181c;
+  color: #e4e4e7;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.app-langs {
+  margin: 0.35rem 0 0;
+  color: #a1a1aa;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
