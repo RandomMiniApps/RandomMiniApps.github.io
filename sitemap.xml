@@ -97,6 +97,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://randomminiapps.github.io/scamlens/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://randomminiapps.github.io/scamlens/privacy/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://randomminiapps.github.io/scamlens/terms/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://randomminiapps.github.io/privacy.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>

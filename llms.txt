@@ -17,6 +17,7 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [MsgSecret](https://randomminiapps.github.io/apps/msgsecret/): message encoding and decoding app for sharing ciphertext through email, SMS, chat and social apps.
 - [NMC OSCE AI Coach](https://randomminiapps.github.io/apps/nmc-osce-coach/): OSCE-style voice practice for UK adult nursing students with timed stations, AI patient conversations, checklist feedback and exam plans.
 - [Natural Text](https://randomminiapps.github.io/apps/natural-text/): secret-key text transformation app that encrypts messages into natural-looking text.
+- [ScamLens](https://randomminiapps.github.io/scamlens/): completely free, privacy-first scam checker for iPhone and iPad, with unlimited checks and text-only sharing. Check links, QR codes, texts and screenshots on-device, with UK reporting routes.
 - [UCAT Sprint Coach](https://randomminiapps.github.io/apps/ucat-sprint-coach/): privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks and progress analytics for iPhone, iPad and Mac.
 
 ## Important pages
@@ -37,6 +38,9 @@ Random Mini Apps publishes focused apps for Apple devices, including educational
 - [MsgSecret App Page](https://randomminiapps.github.io/apps/msgsecret/)
 - [NMC OSCE AI Coach App Page](https://randomminiapps.github.io/apps/nmc-osce-coach/)
 - [Natural Text App Page](https://randomminiapps.github.io/apps/natural-text/)
+- [ScamLens App Page](https://randomminiapps.github.io/scamlens/)
+- [ScamLens Privacy Policy](https://randomminiapps.github.io/scamlens/privacy/)
+- [ScamLens Terms of Use](https://randomminiapps.github.io/scamlens/terms/)
 - [UCAT Sprint Coach App Page](https://randomminiapps.github.io/apps/ucat-sprint-coach/)
 - [UCAT Sprint Coach Privacy Policy](https://randomminiapps.github.io/ucat-sprint-coach-privacy.html)
 - [Dyslexia Reading Lens App Store Listing](https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853)
@@ -62,3 +66,5 @@ NMC OSCE AI Coach is an independent educational practice tool and is not affilia
 HotspotCheck is an educational Wi-Fi safety advisor. It checks visible indicators only, does not guarantee network safety, and is not a professional security audit or penetration test.
 
 UCAT Sprint Coach is an independent UCAT preparation tool and is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university. Practice questions are original; estimated scores are not official UCAT scores.
+
+ScamLens is an educational safety tool. It helps spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe. It is not affiliated with HMRC, Royal Mail, Evri, DVLA, the NHS, or any bank.
