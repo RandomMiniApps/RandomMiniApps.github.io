@@ -1,0 +1,82 @@
+{
+  "id": "dyslexia",
+  "sources": [
+    {
+      "role": "stringCatalog",
+      "path": "Dyslexia Reading Lens/Dyslexia Reading Lens/Dyslexia Reading Lens/Localizable.xcstrings",
+      "locales": ["en", "es-ES", "fr-FR", "de-DE", "pt-BR"]
+    },
+    {
+      "role": "infoPlist",
+      "path": "Dyslexia Reading Lens/Dyslexia Reading Lens/Dyslexia Reading Lens/InfoPlist.xcstrings",
+      "locales": ["en", "es-ES", "fr-FR", "de-DE", "pt-BR"]
+    },
+    {
+      "role": "shareExtensionCatalog",
+      "path": "Dyslexia Reading Lens/Dyslexia Reading Lens/ShareExtension/Localizable.xcstrings",
+      "locales": ["en", "es-ES", "fr-FR", "de-DE", "pt-BR"]
+    },
+    {
+      "role": "knownRegions",
+      "path": "Dyslexia Reading Lens/Dyslexia Reading Lens/Dyslexia Reading Lens.xcodeproj/project.pbxproj",
+      "locales": ["en", "es-ES", "fr", "de", "pt-BR"]
+    }
+  ],
+  "card": {
+    "locales": [
+      {
+        "code": "en",
+        "label": {
+          "en": "English",
+          "es": "Inglés",
+          "pt": "Inglês",
+          "de": "Englisch",
+          "fr": "Anglais"
+        }
+      },
+      {
+        "code": "es-ES",
+        "label": {
+          "en": "Spanish (Spain)",
+          "es": "Español (España)",
+          "pt": "Espanhol (Espanha)",
+          "de": "Spanisch (Spanien)",
+          "fr": "Espagnol (Espagne)"
+        }
+      },
+      {
+        "code": "fr-FR",
+        "knownRegion": "fr",
+        "label": {
+          "en": "French",
+          "es": "Francés",
+          "pt": "Francês",
+          "de": "Französisch",
+          "fr": "Français"
+        }
+      },
+      {
+        "code": "de-DE",
+        "knownRegion": "de",
+        "label": {
+          "en": "German",
+          "es": "Alemán",
+          "pt": "Alemão",
+          "de": "Deutsch",
+          "fr": "Allemand"
+        }
+      },
+      {
+        "code": "pt-BR",
+        "label": {
+          "en": "Portuguese (Brazil)",
+          "es": "Portugués (Brasil)",
+          "pt": "Português (Brasil)",
+          "de": "Portugiesisch (Brasilien)",
+          "fr": "Portugais (Brésil)"
+        }
+      }
+    ],
+    "moreComing": false
+  }
+}

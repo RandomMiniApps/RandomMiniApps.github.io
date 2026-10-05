@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,7 @@
   <meta name="description" content="Cardiac Aftercare is an invite-only prototype for cardiac specialists and junior doctors: governed RAG, deterministic clinical triage, and on-device LLM development for UK/NHS post-discharge recovery questions. Not for patient or public distribution.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://randomminiapps.github.io/apps/cardiac-aftercare/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -512,7 +510,13 @@
     }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/apps/cardiac-aftercare/">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/apps/cardiac-aftercare/?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/apps/cardiac-aftercare/?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/apps/cardiac-aftercare/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/apps/cardiac-aftercare/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/apps/cardiac-aftercare/">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>
@@ -618,7 +622,7 @@
       <section class="section" aria-labelledby="pipeline-title">
         <h2 id="pipeline-title">Runtime answer pipeline</h2>
         <p>Every patient-style message follows the same fail-closed path. Generation is optional; escalation and templates are not.</p>
-        <div class="pipeline" aria-label="Answer pipeline steps">
+        <div class="pipeline">
           <div class="pipeline-step"><strong>01 profile</strong><span>Build pathway-aware patient context (recovery day, procedure, device status).</span></div>
           <div class="pipeline-step"><strong>02 triage</strong><span>Layer 0 deterministic rules → Layer 1 semantic similarity → Layer 2 on-device LLM classifier (escalate-only).</span></div>
           <div class="pipeline-step"><strong>03 overrides</strong><span>Medication safety and safeguarding rules can only raise severity, never suppress a deterministic hit.</span></div>

@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Mini Apps</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <style>
     :root {
       --bg: #0f0f12;
@@ -274,7 +272,14 @@
     }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="canonical" href="https://randomminiapps.github.io/">
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>
@@ -293,7 +298,7 @@
         <p class="app-group__desc">Invite-only clinician research prototypes. Not for patients or public distribution.</p>
       </div>
       <div class="apps">
-        <div class="app-card app-card--coming-soon" aria-label="Cardiac Aftercare">
+        <div class="app-card app-card--coming-soon">
           <div class="app-icon">
             <img src="cardiac-aftercare-icon.png" alt="Cardiac Aftercare app icon">
           </div>
@@ -307,7 +312,7 @@
           </div>
         </div>
 
-        <div class="app-card app-card--coming-soon" aria-label="FractureFlow AI">
+        <div class="app-card app-card--coming-soon">
           <div class="app-icon">
             <img src="fractureflow-ai-icon.png" alt="FractureFlow AI app icon">
           </div>
@@ -371,7 +376,7 @@
           </div>
         </div>
 
-        <div class="app-card app-card--coming-soon" aria-label="ScamLens">
+        <div class="app-card app-card--coming-soon">
           <div class="app-icon">
             <img src="scamlens-uk-icon.png" alt="ScamLens app icon">
           </div>
@@ -409,7 +414,7 @@
         </div>
 
         <!-- When Daily Bias is live: use a normal app-card div, App Store href, and app-card__cta-btn app-store-btn like the other apps. -->
-        <div class="app-card app-card--coming-soon" aria-label="Daily Bias">
+        <div class="app-card app-card--coming-soon">
           <div class="app-icon">
             <img src="daily-bias-icon.png" alt="Daily Bias icon">
           </div>
@@ -448,7 +453,7 @@
           </div>
         </div>
 
-        <div class="app-card app-card--coming-soon" aria-label="UCAT Sprint Coach">
+        <div class="app-card app-card--coming-soon">
           <div class="app-icon">
             <img src="ucat-sprint-coach-icon.png" alt="UCAT Sprint Coach app icon">
           </div>

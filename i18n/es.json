@@ -2,7 +2,10 @@
   "_ui": {
     "language": "Idioma",
     "appLanguages": "Idiomas de la app",
-    "banner": "Esta página sigue en inglés. La página de inicio, ScamLens y Dyslexia Reading Lens están disponibles en este idioma. Las demás apps se añadirán cuando se publiquen en más idiomas."
+    "banner": "Esta página sigue en inglés. La página de inicio, ScamLens y Dyslexia Reading Lens están disponibles en este idioma. Las demás apps se añadirán cuando se publiquen en más idiomas.",
+    "legalBefore": "Esta es una traducción para su comodidad. Si difiere de la",
+    "legalLink": "versión en inglés",
+    "legalAfter": ", se aplica la versión en inglés."
   },
   "strings": {
     "Handcrafted, individually perfected apps for your Apple devices.": "Apps hechas a mano y cuidadas una a una para tus dispositivos Apple.",
@@ -269,6 +272,16 @@
     "Privacy": "Privacidad",
     "See the": "Consulta la",
     "Disclaimer": "Aviso",
-    "The app is provided \"as is\" without warranties. Random Mini Apps is not liable for damages arising from use of the app or reliance on AI output.": "La app se ofrece «tal cual», sin garantías. Random Mini Apps no es responsable de los daños derivados del uso de la app o de confiar en los resultados de la IA."
+    "The app is provided \"as is\" without warranties. Random Mini Apps is not liable for damages arising from use of the app or reliance on AI output.": "La app se ofrece «tal cual», sin garantías. Random Mini Apps no es responsable de los daños derivados del uso de la app o de confiar en los resultados de la IA.",
+    "1 October 2026 ·": "1 de octubre de 2026 ·",
+    "1 October 2026": "1 de octubre de 2026",
+    "Signed scam-pattern updates.": "Actualizaciones firmadas de patrones de estafa.",
+    "The app may download a small set of content files (scam patterns, official domain lists, reporting routes) from our static website. The download is checked with a signature and file hashes. It contains no account, no identifier, and nothing about you or your checks. It uses an ephemeral connection with no cookies. If an update does not validate, the previous complete set or the copy shipped in the app is kept.": "La app puede descargar un pequeño conjunto de archivos de contenido (patrones de estafa, listas de dominios oficiales, vías de denuncia) desde nuestro sitio estático. La descarga se comprueba con una firma y con hashes de los archivos. No contiene cuenta, ni identificador, ni nada sobre ti o tus revisiones. Usa una conexión efímera sin cookies. Si una actualización no se valida, se conserva el conjunto completo anterior o la copia incluida en la app.",
+    "Your check history is stored only on your iPhone, in an App Group shared by the app, the Share Extension, and widgets. Widgets do not show your personal history. By default only a short preview of each checked item is kept, plus the verdict and the explanations available at the time. You can choose to keep full text in Settings. You can delete everything at any time. If you delete the app, this data is gone. We have no copy.": "Tu historial de revisiones se guarda solo en tu iPhone, en un App Group compartido por la app, la extensión de compartir y los widgets. Los widgets no muestran tu historial personal. De forma predeterminada solo se conserva una vista previa corta de cada elemento, más el veredicto y las explicaciones disponibles en ese momento. Puedes elegir guardar el texto completo en Ajustes. Puedes borrar todo en cualquier momento. Si eliminas la app, esos datos desaparecen. No tenemos copia.",
+    "If you share a result, you start that share. The text is the summary on screen. It does not include message text you did not choose to keep.": "Si compartes un resultado, tú inicias ese envío. El texto es el resumen que está en pantalla. No incluye texto del mensaje que no hayas elegido conservar.",
+    "If you choose \"Open anyway\" on a result, or tap a reporting link (such as reportfraud.police.uk), your device connects to that website in the usual way. ScamLens never opens any link by itself. A shortened link is shown as it is written. The app does not look up where it redirects.": "Si eliges «Abrir de todos modos» en un resultado, o tocas un enlace de denuncia (como reportfraud.police.uk), tu dispositivo se conecta a ese sitio de la forma habitual. ScamLens nunca abre un enlace por su cuenta. Un enlace acortado se muestra tal como está escrito. La app no consulta a dónde redirige.",
+    "ScamLens UK — Privacy Policy": "ScamLens UK — Política de privacidad",
+    "ScamLens UK is built so that checking a suspicious message never turns your private messages into someone's data. The honest summary:": "ScamLens UK está hecho para que revisar un mensaje sospechoso no convierta tus mensajes privados en datos de otra persona. El resumen honesto:",
+    "ScamLens UK does not offer in-app purchases or subscriptions. If you choose to leave an App Store review or visit an optional external support page the developer may link to later, that happens outside the app’s checking features and does not unlock functionality. We do not receive payment details.": "ScamLens UK no ofrece compras dentro de la app ni suscripciones. Si decides dejar una reseña en el App Store o visitar una página externa de apoyo opcional que el desarrollador pueda enlazar más adelante, eso ocurre fuera de las funciones de revisión de la app y no desbloquea ninguna función. No recibimos datos de pago."
   }
 }

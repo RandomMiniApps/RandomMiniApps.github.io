@@ -1,22 +1,27 @@
 /* Site languages.
    Add a language: append it here and add i18n/<code>.json.
-   Add an app: put its id in APP_LANGUAGES (only the languages that app ships)
-   and a <p class="app-langs" data-app-langs="id"> on its homepage card.
+   Add an app card line: add i18n/apps/<id>.json from that app's source
+   catalogs, and a <p class="app-langs" data-app-langs="id"> on its card.
    Translate a page: add its path to TRANSLATED_PATHS and its visible English
-   sentences to each language file under "strings". */
+   sentences to each language file under "strings".
+   The language choice is stored in localStorage under "siteLang". It is not a cookie. */
 (function () {
   var LANGUAGES = [
-    { code: "en", label: "English", htmlLang: "en" },
+    { code: "en", label: "English", htmlLang: "en-GB" },
     { code: "es", label: "Español", htmlLang: "es" },
     { code: "pt", label: "Português", htmlLang: "pt-BR" },
     { code: "de", label: "Deutsch", htmlLang: "de" },
     { code: "fr", label: "Français", htmlLang: "fr" }
   ];
 
-  var APP_LANGUAGES = {
-    scamlens: ["en", "es", "pt", "de", "fr"],
-    dyslexia: ["en", "es", "pt", "de", "fr"]
-  };
+  var HREFLANGS = [
+    { hreflang: "en-GB", code: "en" },
+    { hreflang: "es", code: "es" },
+    { hreflang: "pt-BR", code: "pt" },
+    { hreflang: "de", code: "de" },
+    { hreflang: "fr", code: "fr" },
+    { hreflang: "x-default", code: "en" }
+  ];
 
   var TRANSLATED_PATHS = {
     "/": true,
@@ -32,6 +37,17 @@
     "/dyslexia-reading-lens-privacy.html": true,
     "/dyslexia-reading-lens-terms.html": true
   };
+
+  var LEGAL_PATHS = {
+    "/scamlens/privacy/": true,
+    "/scamlens/privacy/index.html": true,
+    "/scamlens/terms/": true,
+    "/scamlens/terms/index.html": true,
+    "/dyslexia-reading-lens-privacy.html": true,
+    "/dyslexia-reading-lens-terms.html": true
+  };
+
+  var appPacks = {};
 
   var originalText = new WeakMap();
   var originalAttrs = new WeakMap();
@@ -50,17 +66,13 @@
     try {
       fromQuery = new URLSearchParams(location.search).get("lang") || "";
     } catch (e) {}
+    if (languageByCode(fromQuery)) return fromQuery;
+    if (fromQuery) return "en";
     var fromStore = "";
     try {
       fromStore = localStorage.getItem("siteLang") || "";
     } catch (e) {}
-    var candidate = fromQuery || fromStore;
-    if (languageByCode(candidate)) return candidate;
-    var nav = (navigator.language || "en").toLowerCase();
-    if (nav.indexOf("pt") === 0) return "pt";
-    if (nav.indexOf("es") === 0) return "es";
-    if (nav.indexOf("de") === 0) return "de";
-    if (nav.indexOf("fr") === 0) return "fr";
+    if (languageByCode(fromStore)) return fromStore;
     return "en";
   }
 
@@ -68,7 +80,10 @@
     var fallback = {
       language: "Language",
       banner: "This page is still in English. The homepage, ScamLens, and Dyslexia Reading Lens are available in this language. Other apps will be added as they ship in more languages.",
-      appLanguages: "App languages"
+      appLanguages: "App languages",
+      legalBefore: "This is a translation for convenience. If it differs from the",
+      legalLink: "English version",
+      legalAfter: ", the English version applies."
     };
     if (pack && pack._ui && pack._ui[key]) return pack._ui[key];
     return fallback[key];
@@ -134,21 +149,86 @@
     }
   }
 
+  function labelFor(entry) {
+    var labels = entry && entry.label ? entry.label : {};
+    return labels[current] || labels.en || entry.code;
+  }
+
   function fillAppLanguages() {
     var nodes = document.querySelectorAll("[data-app-langs]");
     for (var i = 0; i < nodes.length; i++) {
       var id = nodes[i].getAttribute("data-app-langs");
-      var codes = APP_LANGUAGES[id];
-      if (!codes) {
+      var app = appPacks[id];
+      var locales = app && app.card && app.card.locales;
+      if (!locales || !locales.length) {
         nodes[i].textContent = "";
         continue;
       }
       var names = [];
-      for (var c = 0; c < codes.length; c++) {
-        var lang = languageByCode(codes[c]);
-        names.push(lang ? lang.label : codes[c]);
+      for (var c = 0; c < locales.length; c++) names.push(labelFor(locales[c]));
+      var line = ui("appLanguages") + ": " + names.join(" · ");
+      if (app.card.moreComing && app.card.moreComingLabel) {
+        var more = app.card.moreComingLabel[current] || app.card.moreComingLabel.en;
+        if (more) line += " · " + more;
       }
-      nodes[i].textContent = ui("appLanguages") + ": " + names.join(" · ");
+      nodes[i].textContent = line;
+    }
+  }
+
+  function loadAppPacks() {
+    var nodes = document.querySelectorAll("[data-app-langs]");
+    var jobs = [];
+    for (var i = 0; i < nodes.length; i++) {
+      var id = nodes[i].getAttribute("data-app-langs");
+      if (!id || appPacks[id]) continue;
+      jobs.push(
+        fetch("/i18n/apps/" + id + ".json")
+          .then(function (response) {
+            if (!response.ok) throw new Error("missing app languages");
+            return response.json();
+          })
+          .then(function (json) {
+            if (json && json.id) appPacks[json.id] = json;
+          })
+          .catch(function () {})
+      );
+    }
+    return Promise.all(jobs);
+  }
+
+  function canonicalBase() {
+    var link = document.querySelector('link[rel="canonical"]');
+    if (link && link.href) return link.href.split("?")[0];
+    var path = location.pathname;
+    if (path.endsWith("/index.html")) path = path.slice(0, -"index.html".length);
+    return location.origin + path;
+  }
+
+  function languageUrl(code) {
+    var base = canonicalBase();
+    if (!code || code === "en") return base;
+    return base + "?lang=" + code;
+  }
+
+  function applyLanguageLinks(lang) {
+    var base = canonicalBase();
+    var canon = document.querySelector('link[rel="canonical"]');
+    if (!canon) {
+      canon = document.createElement("link");
+      canon.rel = "canonical";
+      document.head.appendChild(canon);
+    }
+    canon.href = lang === "en" ? base : base + "?lang=" + lang;
+    for (var i = 0; i < HREFLANGS.length; i++) {
+      var item = HREFLANGS[i];
+      var alt = document.querySelector('link[rel="alternate"][hreflang="' + item.hreflang + '"]');
+      if (!alt) {
+        alt = document.createElement("link");
+        alt.rel = "alternate";
+        alt.hreflang = item.hreflang;
+        document.head.appendChild(alt);
+      }
+      alt.href = languageUrl(item.code);
     }
   }
 
@@ -184,6 +264,22 @@
     document.body.appendChild(wrap);
   }
 
+  function mountLegalNotice() {
+    var old = document.querySelector(".legal-notice");
+    if (old) old.remove();
+    if (current === "en" || !LEGAL_PATHS[location.pathname]) return;
+    var notice = document.createElement("p");
+    notice.className = "legal-notice";
+    notice.appendChild(document.createTextNode(ui("legalBefore") + " "));
+    var link = document.createElement("a");
+    link.href = languageUrl("en");
+    link.textContent = ui("legalLink");
+    notice.appendChild(link);
+    notice.appendChild(document.createTextNode(ui("legalAfter")));
+    var page = document.querySelector(".page") || document.body;
+    page.insertBefore(notice, page.firstChild);
+  }
+
   function mountBanner() {
     var old = document.querySelector(".i18n-banner");
     if (old) old.remove();
@@ -205,11 +301,14 @@
     current = lang;
     var chosen = languageByCode(lang) || LANGUAGES[0];
     document.documentElement.lang = chosen.htmlLang;
+    document.documentElement.dir = "ltr";
     var dict = lang !== "en" && isTranslatedPage() && pack && pack.strings ? pack.strings : null;
     applyText(dict);
     fillAppLanguages();
     mountSwitcher();
+    mountLegalNotice();
     mountBanner();
+    applyLanguageLinks(lang);
     document.documentElement.classList.add("i18n-ready");
     document.documentElement.removeAttribute("data-pending-lang");
   }
@@ -245,7 +344,28 @@
       });
   }
 
+  document.addEventListener("click", function (event) {
+    if (current === "en") return;
+    var node = event.target;
+    while (node && node.tagName !== "A") node = node.parentNode;
+    if (!node || !node.getAttribute("href")) return;
+    if (node.getAttribute("href").indexOf("mailto:") === 0) return;
+    var url;
+    try {
+      url = new URL(node.href, location.href);
+    } catch (e) {
+      return;
+    }
+    if (url.origin !== location.origin) return;
+    if (url.searchParams.get("lang") === current) return;
+    url.searchParams.set("lang", current);
+    node.href = url.pathname + url.search + url.hash;
+  }, true);
+
   document.addEventListener("DOMContentLoaded", function () {
-    setLanguage(requestedLanguage(), false);
+    var lang = requestedLanguage();
+    loadAppPacks().then(function () {
+      setLanguage(lang, false);
+    });
   });
 })();

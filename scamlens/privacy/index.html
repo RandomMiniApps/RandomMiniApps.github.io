@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ScamLens Privacy Policy</title>
+  <title>ScamLens UK — Privacy Policy</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #1d1d1f; background: #fff; }
     h1 { font-size: 1.75rem; }
@@ -12,44 +12,62 @@
     a { color: #0066cc; }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="canonical" href="https://randomminiapps.github.io/scamlens/privacy/">
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/scamlens/privacy/">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/scamlens/privacy/?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/scamlens/privacy/?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/scamlens/privacy/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/scamlens/privacy/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/scamlens/privacy/">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>
-  <h1>ScamLens — Privacy Policy</h1>
-  <p><strong>Effective:</strong> July 2026 · <strong>Contact:</strong> <a href="mailto:support@randomminiapps.com">support@randomminiapps.com</a></p>
+  <h1>ScamLens UK — Privacy Policy</h1>
 
-  <p>ScamLens is built so that checking a suspicious message never turns your private messages into someone's data. The honest summary: <strong>we do not collect any data. At all.</strong></p>
+  <p><strong>Effective:</strong> 1 October 2026 · <strong>Contact:</strong> <a href="mailto:support@randomminiapps.com">support@randomminiapps.com</a></p>
+
+  <p>ScamLens UK is built so that checking a suspicious message never turns your private messages into someone's data. The honest summary: <strong>we do not collect any data. At all.</strong></p>
 
   <h2>What happens when you check something</h2>
+
   <p>Everything ScamLens does — reading a pasted message, scanning a QR code, reading a screenshot, and generating the explanation — happens on your iPhone. The messages, links, images and results are never uploaded, transmitted, logged or shared with us or anyone else. The on-device intelligence that writes plain-English explanations is Apple's Foundation Models framework, which also runs entirely on your device.</p>
 
   <h2>What we store (on your device only)</h2>
-  <p>Your check history is stored only on your iPhone. By default only a short preview of each checked item is kept; you can choose to keep full text in Settings, and you can delete everything at any time with one tap. If you delete the app, this data is gone. We have no copy — we never did.</p>
+
+  <p>Your check history is stored only on your iPhone, in an App Group shared by the app, the Share Extension, and widgets. Widgets do not show your personal history. By default only a short preview of each checked item is kept, plus the verdict and the explanations available at the time. You can choose to keep full text in Settings. You can delete everything at any time. If you delete the app, this data is gone. We have no copy.</p>
+
+  <p>If you share a result, you start that share. The text is the summary on screen. It does not include message text you did not choose to keep.</p>
 
   <h2>The complete list of network connections</h2>
+
   <ol>
-    <li><strong>Scam-pattern updates.</strong> The app periodically downloads a small set of content files (scam patterns, official domain lists, reporting routes) from our static website. This is a plain file download: it contains no account, no identifier, and nothing about you or your checks. It uses an ephemeral connection with no cookies.</li>
-    <li><strong>Links you explicitly open.</strong> If you choose "Open anyway" on a result, or tap a reporting link (such as reportfraud.police.uk), your device connects to that website in the usual way. ScamLens never opens any link by itself.</li>
+    <li><strong>Signed scam-pattern updates.</strong> The app may download a small set of content files (scam patterns, official domain lists, reporting routes) from our static website. The download is checked with a signature and file hashes. It contains no account, no identifier, and nothing about you or your checks. It uses an ephemeral connection with no cookies. If an update does not validate, the previous complete set or the copy shipped in the app is kept.</li>
+    <li><strong>Links you explicitly open.</strong> If you choose "Open anyway" on a result, or tap a reporting link (such as reportfraud.police.uk), your device connects to that website in the usual way. ScamLens never opens any link by itself. A shortened link is shown as it is written. The app does not look up where it redirects.</li>
   </ol>
+
   <p>There are no analytics, no advertising SDKs, no crash-reporting services, no third-party SDKs of any kind, and no account system.</p>
 
   <h2>Purchases</h2>
-  <p>ScamLens does not offer in-app purchases, subscriptions, or a lifetime unlock. Checks are unlimited and nothing is paid to unlock. If you share a result, that share is a text summary you send yourself. ScamLens does not create or export PDFs, and we do not receive the text. If you choose to leave an App Store review or visit an optional external support page the developer may link to later, that happens outside the app’s checking features and does not unlock functionality. We do not receive payment details.</p>
+
+  <p>ScamLens UK does not offer in-app purchases or subscriptions. If you choose to leave an App Store review or visit an optional external support page the developer may link to later, that happens outside the app’s checking features and does not unlock functionality. We do not receive payment details.</p>
 
   <h2>App Store privacy label</h2>
+
   <p><strong>Data Not Collected.</strong> Keeping this true is a design constraint of the app, not a marketing line: features that would require collecting data are rejected at design time.</p>
 
   <h2>Children</h2>
+
   <p>ScamLens is an educational safety tool suitable for general audiences. It collects no data from anyone, including children.</p>
 
   <h2>Changes</h2>
+
   <p>If a future feature ever changed any of the above, we would update this policy, the App Store privacy label, and explain the change in the app before it took effect.</p>
 
   <h2>Contact</h2>
+
   <p>Questions or concerns: <a href="mailto:support@randomminiapps.com">support@randomminiapps.com</a><br>
   Random Mini Apps, United Kingdom.</p>
-
   <p><a href="../">← ScamLens</a> · <a href="https://randomminiapps.github.io/">Random Mini Apps</a></p>
 </body>
 </html>

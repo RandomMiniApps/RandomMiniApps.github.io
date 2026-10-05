@@ -1,0 +1,42 @@
+{
+  "id": "scamlens",
+  "sources": [
+    {
+      "role": "stringCatalog",
+      "path": "ScamLensUK/App/Resources/Localizable.xcstrings",
+      "locales": ["en-GB", "de", "fr", "es", "pt-BR", "pl", "it", "ar"]
+    },
+    {
+      "role": "infoPlist",
+      "path": "ScamLensUK/App/InfoPlist.xcstrings",
+      "locales": ["en-GB", "de", "fr", "es", "pt-BR", "pl", "it", "ar"]
+    },
+    {
+      "role": "knownRegions",
+      "path": "ScamLensUK/ScamLensUK.xcodeproj/project.pbxproj",
+      "locales": ["en-GB", "de", "fr", "es", "pt-BR", "pl", "it", "ar"]
+    }
+  ],
+  "card": {
+    "locales": [
+      {
+        "code": "en-GB",
+        "label": {
+          "en": "English (UK)",
+          "es": "Inglés (Reino Unido)",
+          "pt": "Inglês (Reino Unido)",
+          "de": "Englisch (Vereinigtes Königreich)",
+          "fr": "Anglais (Royaume-Uni)"
+        }
+      }
+    ],
+    "moreComing": true,
+    "moreComingLabel": {
+      "en": "More languages coming",
+      "es": "Más idiomas próximamente",
+      "pt": "Mais idiomas em breve",
+      "de": "Weitere Sprachen folgen",
+      "fr": "D’autres langues arrivent"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,7 @@
   <meta name="description" content="Dyslexia Reading Lens is a calm reading workspace for iPhone: dyslexia-friendly text, read-aloud with highlighting, document scanning, and AI simplify and summary tools.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -387,7 +385,13 @@
     }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/apps/dyslexia-reading-lens/">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>

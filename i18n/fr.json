@@ -2,7 +2,10 @@
   "_ui": {
     "language": "Langue",
     "appLanguages": "Langues de l’app",
-    "banner": "Cette page est encore en anglais. La page d’accueil, ScamLens et Dyslexia Reading Lens sont disponibles dans cette langue. Les autres apps seront ajoutées lorsqu’elles seront proposées dans d’autres langues."
+    "banner": "Cette page est encore en anglais. La page d’accueil, ScamLens et Dyslexia Reading Lens sont disponibles dans cette langue. Les autres apps seront ajoutées lorsqu’elles seront proposées dans d’autres langues.",
+    "legalBefore": "Ceci est une traduction fournie à titre de commodité. En cas de divergence avec la",
+    "legalLink": "version anglaise",
+    "legalAfter": ", la version anglaise prévaut."
   },
   "strings": {
     "Handcrafted, individually perfected apps for your Apple devices.": "Des apps faites main, peaufinées une par une, pour vos appareils Apple.",
@@ -33,7 +36,7 @@
     "Utilities": "Utilitaires",
     "Focused tools for driving and lighting checks.": "Des outils ciblés pour la conduite et le contrôle de l’éclairage.",
     "iPhone · $9.99": "iPhone · 9,99 $",
-    "Contact": "Contact",
+    "Contact": "Nous contacter",
     "For feature requests, app development requests, or promotional code requests:": "Pour demander une fonction, un développement d’app ou un code promotionnel :",
     "Privacy Policy": "Politique de confidentialité",
     "· Built for GitHub Pages": "· Conçu pour GitHub Pages",
@@ -269,6 +272,16 @@
     "Privacy": "Confidentialité",
     "See the": "Voir la",
     "Disclaimer": "Avertissement",
-    "The app is provided \"as is\" without warranties. Random Mini Apps is not liable for damages arising from use of the app or reliance on AI output.": "L’app est fournie « en l’état », sans garantie. Random Mini Apps n’est pas responsable des dommages liés à l’utilisation de l’app ou au fait de s’appuyer sur les résultats de l’IA."
+    "The app is provided \"as is\" without warranties. Random Mini Apps is not liable for damages arising from use of the app or reliance on AI output.": "L’app est fournie « en l’état », sans garantie. Random Mini Apps n’est pas responsable des dommages liés à l’utilisation de l’app ou au fait de s’appuyer sur les résultats de l’IA.",
+    "1 October 2026 ·": "1 octobre 2026 ·",
+    "1 October 2026": "1 octobre 2026",
+    "Signed scam-pattern updates.": "Mises à jour signées des schémas d’arnaque.",
+    "The app may download a small set of content files (scam patterns, official domain lists, reporting routes) from our static website. The download is checked with a signature and file hashes. It contains no account, no identifier, and nothing about you or your checks. It uses an ephemeral connection with no cookies. If an update does not validate, the previous complete set or the copy shipped in the app is kept.": "L’app peut télécharger un petit ensemble de fichiers (schémas d’arnaque, listes de domaines officiels, voies de signalement) depuis notre site statique. Le téléchargement est vérifié par une signature et par les empreintes des fichiers. Il ne contient pas de compte, pas d’identifiant, et rien sur vous ni sur vos contrôles. Il utilise une connexion éphémère sans cookies. Si une mise à jour n’est pas validée, l’ensemble complet précédent ou la copie fournie avec l’app est conservé.",
+    "Your check history is stored only on your iPhone, in an App Group shared by the app, the Share Extension, and widgets. Widgets do not show your personal history. By default only a short preview of each checked item is kept, plus the verdict and the explanations available at the time. You can choose to keep full text in Settings. You can delete everything at any time. If you delete the app, this data is gone. We have no copy.": "Votre historique de contrôles n’est stocké que sur votre iPhone, dans un App Group partagé par l’app, l’extension de partage et les widgets. Les widgets n’affichent pas votre historique personnel. Par défaut, seul un court aperçu de chaque élément est conservé, ainsi que le verdict et les explications disponibles à ce moment-là. Vous pouvez choisir de garder le texte complet dans Réglages. Vous pouvez tout effacer à tout moment. Si vous supprimez l’app, ces données disparaissent. Nous n’en avons pas de copie.",
+    "If you share a result, you start that share. The text is the summary on screen. It does not include message text you did not choose to keep.": "Si vous partagez un résultat, c’est vous qui lancez ce partage. Le texte est le résumé affiché à l’écran. Il n’inclut pas le texte du message que vous n’avez pas choisi de conserver.",
+    "If you choose \"Open anyway\" on a result, or tap a reporting link (such as reportfraud.police.uk), your device connects to that website in the usual way. ScamLens never opens any link by itself. A shortened link is shown as it is written. The app does not look up where it redirects.": "Si vous choisissez « Ouvrir quand même » sur un résultat, ou si vous touchez un lien de signalement (comme reportfraud.police.uk), votre appareil se connecte à ce site de la façon habituelle. ScamLens n’ouvre jamais un lien de lui-même. Un lien raccourci est affiché tel qu’il est écrit. L’app ne recherche pas vers où il redirige.",
+    "ScamLens UK — Privacy Policy": "ScamLens UK — Politique de confidentialité",
+    "ScamLens UK is built so that checking a suspicious message never turns your private messages into someone's data. The honest summary:": "ScamLens UK est conçu pour qu’examiner un message suspect ne transforme jamais vos messages privés en données pour quelqu’un d’autre. Le résumé honnête :",
+    "ScamLens UK does not offer in-app purchases or subscriptions. If you choose to leave an App Store review or visit an optional external support page the developer may link to later, that happens outside the app’s checking features and does not unlock functionality. We do not receive payment details.": "ScamLens UK ne propose ni achats intégrés ni abonnements. Si vous laissez un avis sur l’App Store ou si vous consultez une page d’assistance externe facultative que le développeur pourra indiquer plus tard, cela se passe en dehors des fonctions de vérification de l’app et ne débloque aucune fonction. Nous ne recevons aucune donnée de paiement."
   }
 }

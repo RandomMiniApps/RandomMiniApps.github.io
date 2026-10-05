@@ -1,3 +1,5 @@
+@import url("/assets/fonts/fonts.css");
+
 html[data-pending-lang] body {
   visibility: hidden;
 }
@@ -23,6 +25,11 @@ html.i18n-ready body {
   max-width: 11rem;
 }
 
+.lang-switch select:focus {
+  outline: 3px solid #22d3ee;
+  outline-offset: 3px;
+}
+
 .i18n-banner {
   max-width: 46rem;
   margin: 0 auto 1.25rem;
@@ -40,4 +47,18 @@ html.i18n-ready body {
   color: #a1a1aa;
   font-size: 0.72rem;
   line-height: 1.35;
+}
+
+.legal-notice {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.legal-notice a {
+  color: inherit;
+  text-decoration: underline;
 }
