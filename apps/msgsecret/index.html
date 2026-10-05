@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -410,7 +410,13 @@
     }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/apps/msgsecret/">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/apps/msgsecret/?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/apps/msgsecret/?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/apps/msgsecret/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/apps/msgsecret/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/apps/msgsecret/">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var locked={"/scamlens/":1,"/scamlens/index.html":1,"/scamlens/privacy/":1,"/scamlens/privacy/index.html":1,"/scamlens/terms/":1,"/scamlens/terms/index.html":1};var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&!locked[location.pathname]&&stored&&codes[stored])active=stored;else if(!q&&!locked[location.pathname]){var nav=(navigator.language||"").toLowerCase();if(nav.indexOf("pt")===0)active="pt";else if(nav.indexOf("es")===0)active="es";else if(nav.indexOf("de")===0)active="de";else if(nav.indexOf("fr")===0)active="fr"}document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>
@@ -555,7 +561,7 @@
     </main>
 
     <footer>
-      <p><a href="../../privacy.html">Privacy Policy</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
+      <p><a href="privacy/">Privacy Policy</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
     </footer>
   </div>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,167 +162,177 @@
     }
   </style>
 <link rel="stylesheet" href="/i18n/i18n.css">
-<script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("siteLang");if(l&&l!=="en")document.documentElement.dataset.pendingLang=l}catch(e){}</script>
+<link rel="canonical" href="https://randomminiapps.github.io/privacy.html">
+<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/privacy.html">
+<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/privacy.html?lang=es">
+<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/privacy.html?lang=pt">
+<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/privacy.html?lang=de">
+<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/privacy.html?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/privacy.html">
+<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var locked={"/scamlens/":1,"/scamlens/index.html":1,"/scamlens/privacy/":1,"/scamlens/privacy/index.html":1,"/scamlens/terms/":1,"/scamlens/terms/index.html":1};var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&!locked[location.pathname]&&stored&&codes[stored])active=stored;else if(!q&&!locked[location.pathname]){var nav=(navigator.language||"").toLowerCase();if(nav.indexOf("pt")===0)active="pt";else if(nav.indexOf("es")===0)active="es";else if(nav.indexOf("de")===0)active="de";else if(nav.indexOf("fr")===0)active="fr"}document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
 <script src="/i18n/i18n.js" defer></script>
 </head>
 <body>
-  <div class="page">
+  <div class="page" lang="en" translate="no">
     <a class="back" href="index.html">← Back to Random Mini Apps</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last updated:</strong> August 7, 2026</p>
+    <p class="updated"><strong>Last updated:</strong> 4 October 2026</p>
 
     <nav class="toc" aria-label="Policy contents">
       <h2>On this page</h2>
       <ul>
-        <li><a href="#scope">Scope</a></li>
-        <li><a href="#lighting-check">Lighting Check</a></li>
-        <li><a href="#local-data">Information stored locally</a></li>
-        <li><a href="#camera-photos">Camera and photos</a></li>
-        <li><a href="#reports-sharing">Reports and user-initiated sharing</a></li>
-        <li><a href="#google-ads">Google Mobile Ads and rewarded advertising</a></li>
-        <li><a href="#consent-ads">Advertising consent and non-tracking policy</a></li>
-        <li><a href="#storekit">Apple StoreKit purchases</a></li>
-        <li><a href="#website-hosting">Website and hosting</a></li>
-        <li><a href="#retention">Data retention</a></li>
-        <li><a href="#user-choices">User choices and controls</a></li>
-        <li><a href="#children">Children</a></li>
+        <li><a href="#scope">Scope and app-specific notices</a></li>
+        <li><a href="#local-data">Content and information stored locally</a></li>
+        <li><a href="#permissions">Camera, photos, speech, location and sensors</a></li>
+        <li><a href="#connected-services">AI, speech and connected features</a></li>
+        <li><a href="#reports-sharing">Sharing and support</a></li>
+        <li><a href="#google-ads">Advertising and privacy choices</a></li>
+        <li><a href="#storekit">Purchases and subscriptions</a></li>
+        <li><a href="#diagnostics">Usage information and diagnostics</a></li>
+        <li><a href="#research">Research prototypes and review tools</a></li>
+        <li><a href="#website-hosting">Website, hosting and browser storage</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#user-choices">Your choices and privacy rights</a></li>
+        <li><a href="#children">Age suitability and children</a></li>
         <li><a href="#third-parties">Third-party services</a></li>
-        <li><a href="#privacy-rights">Privacy rights</a></li>
-        <li><a href="#policy-changes">Policy changes</a></li>
+        <li><a href="#policy-changes">Changes to this policy</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <section class="policy-section" id="scope">
-      <h2>Scope</h2>
-      <p>This privacy policy describes how Random Mini Apps (“we”, “us”) handles information in connection with:</p>
+      <h2>Scope and app-specific notices</h2>
+      <p>This policy describes how Random Mini Apps (“we”, “us”) handles information across our apps and the website at <a href="https://randomminiapps.github.io/">randomminiapps.github.io</a>. It is the shared policy for apps that link to this page. The information used depends on the app, its version, the features you choose and the permissions you grant.</p>
+      <p>Our portfolio currently includes MsgSecret, Lighting Check, Car HUD Display, Natural Text, HotspotCheck, ScamLens, Dyslexia Reading Lens, ClinSpeak OET, MedViva Coach, NMC OSCE AI Coach, UCAT Sprint Coach, Daily Bias, BoomColor and Keepie Yuppie, together with the Cardiac Aftercare and FractureFlow AI research prototypes. This policy also covers our website and the shared practices of other Random Mini Apps apps that use this policy.</p>
+      <p>A section about a feature applies when the app actually provides that feature. It does not mean every app uses advertising, accesses your location, processes speech or collects the same information. An app-specific notice provides the more precise description for that app and takes precedence where it differs from this shared policy.</p>
+      <h3>Find an app-specific notice</h3>
       <ul>
-        <li>the Random Mini Apps website hosted at <a href="https://randomminiapps.github.io/">randomminiapps.github.io</a>; and</li>
-        <li>the <strong>Lighting Check</strong> iOS app, including its production behavior for Google Mobile Ads (non-personalized rewarded ads), UMP consent, local storage, and StoreKit purchases.</li>
+        <li><a href="apps/msgsecret/privacy/">MsgSecret privacy notice</a></li>
+        <li><a href="hotspotcheck-privacy.html">HotspotCheck privacy notice</a></li>
+        <li><a href="dyslexia-reading-lens-privacy.html">Dyslexia Reading Lens privacy notice</a></li>
+        <li><a href="ucat-sprint-coach-privacy.html">UCAT Sprint Coach privacy notice</a></li>
+        <li><a href="scamlens/privacy/">ScamLens privacy notice</a></li>
+        <li><a href="xray-review/docs/privacy.html">X-ray research review tool data-flow notice</a></li>
       </ul>
-      <p>Some other apps published under Random Mini Apps may have additional or different notices (for example dedicated app privacy pages linked from those apps). Where a separate notice exists for another app, that notice applies to that app.</p>
-      <p>This policy does <strong>not</strong> claim that no information is ever processed by third parties. Lighting Check includes optional Google advertising, and third-party providers process information as described below.</p>
-    </section>
-
-    <section class="policy-section" id="lighting-check">
-      <h2>Lighting Check</h2>
-      <p>Lighting Check is an iPhone and iPad app that estimates ambient light levels using the device camera, compares readings with practical guidance, and helps you save audits, notes, photos, and exportable reports on your device.</p>
-      <p>Lighting Check does <strong>not</strong> operate a developer-owned user account system, analytics server, or cloud database for your lighting audits. Core measurement and documentation features are designed to work with data stored on your device.</p>
-      <p>The sections that follow explain local data, camera and photos, sharing, Google Mobile Ads, advertising consent, StoreKit purchases, and related choices for Lighting Check.</p>
+      <p>Also check the Privacy or About section inside the app. Invite-only research projects have additional participant, access and data-governance arrangements, as explained <a href="#research">below</a>.</p>
     </section>
 
     <section class="policy-section" id="local-data">
-      <h2>Information stored locally</h2>
-      <p>On your device, Lighting Check may store information you create or configure while using the app, including:</p>
-      <ul>
-        <li>lighting measurements and saved audits;</li>
-        <li>notes and custom lighting standards;</li>
-        <li>calibration settings and app preferences;</li>
-        <li>attached photos you choose to add to an audit; and</li>
-        <li>credits or Full Access purchase state managed with Apple’s frameworks on the device.</li>
-      </ul>
-      <p>This information remains on your device unless you deliberately export or share it, or unless you delete the app or clear the relevant data through iOS controls.</p>
+      <h2>Content and information stored locally</h2>
+      <p>Apps process the content needed for the feature you use. Examples include text entered for encoding or reading; documents selected for reading assistance; drawings and game progress; practice answers, recordings, transcripts and study progress; or measurements, notes and reports created in a utility app.</p>
+      <p>Apps that save this information locally use device storage to let you resume work, view history, personalise settings or export your results. Settings can include tutorial completion, preferences, credit balances, daily allowances, purchase access and the timing of optional App Store review requests.</p>
+      <p>For example, MsgSecret transforms message text on your device and keeps its credit, allowance and app preferences locally. Lighting Check stores saved audits, notes, photos and settings locally. The dedicated notices describe document handling in Dyslexia Reading Lens and local study progress in UCAT Sprint Coach.</p>
+      <p>Device backups, iCloud or other system-managed storage can retain copies depending on the app and your device settings. Local storage does not by itself guarantee that information is excluded from backups. Keep sensitive material out of features that are not designed to protect it; MsgSecret’s classic ciphers are for puzzles and learning, not secure protection of confidential information.</p>
     </section>
 
-    <section class="policy-section" id="camera-photos">
-      <h2>Camera and photos</h2>
-      <p>Lighting Check uses the camera to estimate ambient light levels. Camera frames used for measurement are processed on-device and are <strong>not</strong> uploaded by Lighting Check to a developer-operated server.</p>
-      <p>Audit photos are stored only when you deliberately add them. Those photos remain in the app’s local storage on your device unless you choose to include them in a report you export or share.</p>
+    <section class="policy-section" id="permissions">
+      <h2>Camera, photos, speech, location and sensors</h2>
+      <p>Permissions are specific to the feature you use. The device’s permission prompt explains the requested access, and you can manage access in Settings.</p>
+      <ul>
+        <li><strong>Camera and photos:</strong> Lighting Check uses camera frames for light estimation and lets you attach photos to audits. Reading and document features can use content you select or capture. Sharing or exporting a photo sends it to the destination you choose.</li>
+        <li><strong>Microphone and speech:</strong> voice-practice features process speech to produce transcripts, practise conversations or provide educational feedback. Recordings and transcripts are handled according to that app’s notice; speech processing can involve Apple services as described below.</li>
+        <li><strong>Location and network information:</strong> Car HUD Display uses location for driving-related display features. HotspotCheck can request permissions needed to display Wi-Fi details and inspect the local network. Its dedicated notice explains what stays on-device.</li>
+        <li><strong>Device sensors:</strong> utility and game features can use the device inputs needed for their controls or measurements. Granting access for one feature does not give every Random Mini Apps app access to that information.</li>
+      </ul>
+      <p>Declining or revoking a permission can make the dependent feature unavailable. Other features remain subject to their own requirements and settings.</p>
+    </section>
+
+    <section class="policy-section" id="connected-services">
+      <h2>AI, speech and connected features</h2>
+      <p>Processing arrangements depend on the feature. Dyslexia Reading Lens’s dedicated notice describes on-device document and AI processing. The current educational voice apps use device or Apple speech capabilities rather than a single shared Random Mini Apps AI account service.</p>
+      <p>In ClinSpeak OET, speech recognition can use Apple processing depending on device support, language and settings. Audio or speech content needed for recognition can therefore be handled by Apple’s speech service. Other voice apps can require on-device recognition instead. Check the notice and permission explanation for the particular app before using speech with sensitive content.</p>
+      <p>Car HUD Display includes network-dependent weather information. Games such as Keepie Yuppie can offer optional Apple Game Center features, which handle your Game Center profile and game activity under Apple’s settings and privacy policy. These connected features are specific to the app you use.</p>
+      <p>Connected features can also download content without uploading your work. For example, ScamLens downloads updated scam-pattern and reporting information; its dedicated notice explains the limited connection and local checks.</p>
+      <p>This shared policy does not make a portfolio-wide promise about accounts or cloud storage. Existing app-specific notices explain where no account is required. If a feature introduces an account, cloud synchronisation or an external AI service, its notice must identify the information sent, purpose, provider and available controls before that feature is used. Invite-only research access is governed separately.</p>
     </section>
 
     <section class="policy-section" id="reports-sharing">
-      <h2>Reports and user-initiated sharing</h2>
-      <p>Reports and related files leave your device only when you deliberately use features such as Preview, Share, AirDrop, Files, Mail, Messages, or another destination provided by iOS.</p>
-      <p>When you share, the destination you choose (and that destination’s privacy practices) governs what happens next. Lighting Check does not automatically upload your audits, notes, photos, or reports to a Random Mini Apps cloud service.</p>
+      <h2>Sharing and support</h2>
+      <p>When you choose Share, Export, AirDrop, Mail, Messages or another destination, the content you select leaves the app through that destination. The receiving service or person controls its subsequent handling under their own practices. Check an export before sending it, especially if it includes personal information, recordings or photos.</p>
+      <p>If you contact us by email, we receive the address you use, your message and any attachments you send. We use that correspondence to answer your request and provide support. Please send only what is needed and avoid including patient records, passwords or other unnecessary sensitive information.</p>
     </section>
 
     <section class="policy-section" id="google-ads">
-      <h2>Google Mobile Ads and rewarded advertising</h2>
-      <p>Lighting Check offers optional rewarded advertising through <strong>Google Mobile Ads</strong>. Watching an ad may grant in-app credits. You can avoid rewarded advertising by not selecting the Watch Ad option, or by unlocking Full Access.</p>
-      <p>Lighting Check is configured for <strong>non-personalized</strong> ads from the publisher side (including Google’s non-personalized ads signal). The app does <strong>not</strong> request App Tracking Transparency permission and does <strong>not</strong> include an App Tracking Transparency usage description.</p>
-      <p>When ads are requested or shown, Google and its advertising partners may still process information needed to deliver and measure ads, such as:</p>
-      <ul>
-        <li>IP-derived approximate location;</li>
-        <li>device and technical information;</li>
-        <li>advertising interactions and product interactions;</li>
-        <li>crash information, performance information, and other diagnostic information.</li>
-      </ul>
-      <p>Possible purposes include providing ads, advertising measurement, fraud prevention, and related advertising services under Google’s policies.</p>
-      <p class="note">We do <strong>not</strong> promise that Google collects no information. Google’s processing is governed by Google’s own policies and your regional consent choices where UMP applies.</p>
-    </section>
-
-    <section class="policy-section" id="consent-ads">
-      <h2>Advertising consent and non-tracking policy</h2>
-      <p>Lighting Check uses Google’s <strong>User Messaging Platform (UMP)</strong> to collect required privacy choices for advertising where those choices apply (for example in certain regions).</p>
-      <p>Where UMP reports that a privacy-options entry point is required, Lighting Check provides an in-app <strong>Privacy Choices</strong> control.</p>
-      <p>Under the current product policy, Lighting Check does <strong>not</strong> use Apple’s App Tracking Transparency prompt and does <strong>not</strong> enable publisher advertising personalization or first-party advertising ID features for tracking.</p>
-      <p>You may decline UMP consent prompts and continue using Lighting Check. Rewarded-ad availability may be limited if ads cannot be requested under your consent state.</p>
+      <h2>Advertising and privacy choices</h2>
+      <p>Some apps, including MsgSecret and Lighting Check, offer optional rewarded advertising through Google Mobile Ads. A completed ad can grant in-app credits. Available paid upgrades can remove rewarded-ad requirements; the relevant app explains its offer. Apps whose dedicated notices exclude advertising do not inherit advertising merely because this shared policy describes it.</p>
+      <p>When ads are requested or displayed, Google and the selected advertising partners can process information such as IP-derived approximate location, device and technical information, identifiers available under your permissions and settings, ad interactions, and crash or performance information. Uses include ad delivery, measurement and fraud prevention. Even non-personalised ads can involve this processing.</p>
+      <p>Advertising configuration and personalisation differ by app, region and consent state. We do not claim that all our apps use the same ad settings or that an advertising provider collects no information.</p>
+      <p>Apps using Google’s User Messaging Platform (UMP) present applicable advertising privacy choices and offer a Privacy Choices control when required. The consent flow identifies applicable providers and purposes. You can revisit available choices, decline optional consent or avoid requesting a rewarded ad. Availability of ads can be limited by those choices. Any Apple App Tracking Transparency permission is separate and controlled through iOS Settings.</p>
     </section>
 
     <section class="policy-section" id="storekit">
-      <h2>Apple StoreKit purchases</h2>
-      <p>Lighting Check offers <strong>Full Access</strong> as a non-consumable In-App Purchase processed by Apple through StoreKit.</p>
-      <p>Payment credentials are not provided to or stored by the Lighting Check developer. Apple may process purchase and device information under Apple’s own privacy policy.</p>
+      <h2>Purchases and subscriptions</h2>
+      <p>Apps can offer a one-time purchase or a subscription through Apple’s App Store and StoreKit. Apple processes payment and purchase information under its own privacy policy. We do not receive your payment card details from these App Store transactions.</p>
+      <p>The app uses purchase and entitlement information to verify access, restore purchases and apply the benefits you bought. Pricing, renewal terms and cancellation options are shown in the purchase flow. Manage subscriptions through your Apple Account; deleting an app does not cancel a subscription.</p>
+    </section>
+
+    <section class="policy-section" id="diagnostics">
+      <h2>Usage information and diagnostics</h2>
+      <p>Study statistics, game progress or review-request timing can be stored locally to provide feedback and manage the app experience. This does not necessarily mean those events are sent to an analytics service.</p>
+      <p>App-specific notices identify analytics or diagnostic services where used. Several dedicated notices explicitly exclude off-device analytics. Advertising SDKs and platform services can still process their own technical diagnostics. Apple can provide app diagnostics or usage reports under your platform settings. Do not assume one app’s analytics policy applies to all our apps.</p>
+    </section>
+
+    <section class="policy-section" id="research">
+      <h2>Research prototypes and review tools</h2>
+      <p>Cardiac Aftercare and FractureFlow AI are invite-only clinician research prototypes. Their public portfolio pages describe research work; they are not public patient services or permission to use the prototypes for live patient care.</p>
+      <p>Testing access, permitted datasets, participant information and any handling of clinical or research records are subject to the project’s separate notices and approved arrangements. This shared website policy does not authorise submitting identifiable patient information or bypass those controls.</p>
+      <p>The X-ray review tool has a <a href="xray-review/docs/privacy.html">specific data-flow notice</a>: it serves password-encrypted public-source research images, keeps annotations in the browser and uses user-initiated feedback exports. That deployment must not be reused for private clinical/PACS images. Its convenience encryption is not a clinical confidentiality control.</p>
     </section>
 
     <section class="policy-section" id="website-hosting">
-      <h2>Website and hosting</h2>
-      <p>This website is hosted through <strong>GitHub Pages</strong>. Hosting providers may process ordinary technical request information such as IP addresses, timestamps, and browser or device information needed to deliver the site.</p>
-      <p>This privacy policy page uses system fonts only and does not load Google Fonts. Other pages on this site (for example the home page) currently load Google Fonts from Google’s servers when you visit them. Those font requests may allow Google to receive your IP address and related technical information.</p>
-      <p>Based on the current static HTML implementation, the site itself does <strong>not</strong> set any developer-controlled cookies. Third-party services used by some pages (such as Google Fonts on those pages) may set or read their own cookies or similar technologies under their policies.</p>
+      <h2>Website, hosting and browser storage</h2>
+      <p>This website is hosted through GitHub Pages. Hosting and network providers can process ordinary technical information, including IP addresses, request times and browser details, to deliver and protect the site.</p>
+      <p>This policy page uses system fonts. Some other pages load Google Fonts, which sends a request and technical information such as your IP address to Google. External links open services with their own privacy practices.</p>
+      <p>The site’s language selector stores your language preference in browser local storage and loads the selected language files. Some research tools also store their work in the browser as described in their notices. These are separate from cookies. The current shared static pages do not set developer-controlled cookies; third-party services have their own storage practices. Clearing browser site data removes locally stored preferences and can remove locally stored research annotations.</p>
     </section>
 
     <section class="policy-section" id="retention">
-      <h2>Data retention</h2>
-      <p>Local Lighting Check data remains on your device until you delete it within the app (where available), remove associated content, or delete the app. Temporary export files created for Preview or Share are intended for short-lived use on your device.</p>
-      <p>Information processed by Google, Apple, or GitHub is retained according to those providers’ policies and your account or device settings with them.</p>
+      <h2>Retention and deletion</h2>
+      <p>Locally saved content is retained for the app feature until you remove it using available controls or remove the app’s storage. Device backups, exported copies, system-managed secure storage and restored purchase records can remain separately. Deleting an app does not necessarily remove these copies or information already shared with another service.</p>
+      <p>Support correspondence is kept while needed to respond to and follow up your request and to meet applicable obligations. Research information follows the project’s specific retention arrangements. Information held by Apple, Google, GitHub or other identified providers follows the relevant service’s policies and controls. There is no single retention period for all apps or data types.</p>
     </section>
 
     <section class="policy-section" id="user-choices">
-      <h2>User choices and controls</h2>
+      <h2>Your choices and privacy rights</h2>
       <ul>
-        <li>Decline or limit advertising consent choices presented through UMP where available.</li>
-        <li>Open Privacy Choices in the app when that control is available.</li>
-        <li>Skip Watch Ad to avoid rewarded advertising, or unlock Full Access.</li>
-        <li>Control camera and photo access in iOS Settings.</li>
-        <li>Choose whether to add photos, export reports, or share files.</li>
-        <li>Manage App Store purchases and Apple ID privacy settings through Apple.</li>
-        <li>Delete the app to remove its local on-device storage (subject to iOS backup behavior you configure).</li>
+        <li>Manage camera, microphone, speech, photos, location and tracking permissions in device Settings.</li>
+        <li>Revisit the app’s advertising privacy choices where available, or skip optional rewarded ads.</li>
+        <li>Use in-app deletion and history controls, and manage device backups or browser site storage separately.</li>
+        <li>Choose what to export and who receives it; exported copies need to be managed at their destination.</li>
+        <li>Manage purchases and subscriptions through your Apple Account.</li>
+        <li>Contact us about information you supplied directly or to find the notice and controls for a specific app.</li>
       </ul>
+      <p>Depending on your location and the processing involved, you can have rights to access, correct, delete, restrict or object to processing of personal information, request portability, or withdraw consent. Contact us with the app name and the request. Where information is held by a platform or service provider, its privacy controls can be relevant too. Research participants should also use the project’s designated contact and notice.</p>
     </section>
 
     <section class="policy-section" id="children">
-      <h2>Children</h2>
-      <p>Lighting Check is intended for general audiences who need practical light estimates and documentation tools. It is not directed at children under 13 (or the equivalent minimum age in your region). If you believe a child has provided information in a way that concerns you, contact us using the email below.</p>
+      <h2>Age suitability and children</h2>
+      <p>Our portfolio includes games, reading tools, student practice apps, utilities and professional research prototypes with different intended audiences. Check each app’s age rating, intended audience and specific privacy notice. This shared policy does not assign every app an adult-only audience or make a blanket claim about children’s information.</p>
+      <p>Parents and guardians can manage device permissions, purchases and suitable content through platform controls. If you are concerned about a child’s information being provided through one of our apps or support channels, contact us with the app name so we can investigate and identify the relevant controls.</p>
     </section>
 
     <section class="policy-section" id="third-parties">
       <h2>Third-party services</h2>
-      <p>Lighting Check and this website may involve the following third parties. Linking to their policies does not transfer legal responsibility away from Random Mini Apps for the practices we describe here; it helps you understand how those providers handle information.</p>
+      <p>The services relevant to an app depend on its features. The following providers are described above; dedicated notices and advertising consent flows identify additional applicable services and partners.</p>
       <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
-        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use Google services</a></li>
-        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
-        <li>GitHub / GitHub Pages (website hosting)</li>
+        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> — platform features, speech services, App Store purchases and system-managed storage.</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">information about partner sites and apps</a> — Google advertising and website fonts where used.</li>
+        <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a> — website hosting.</li>
       </ul>
-    </section>
-
-    <section class="policy-section" id="privacy-rights">
-      <h2>Privacy rights</h2>
-      <p>Depending on where you live, you may have rights to access, correct, delete, or restrict certain processing of personal information, or to object to certain processing. Because Lighting Check’s audit and measurement data are stored on your device, many requests are best handled by using in-app and iOS controls.</p>
-      <p>For advertising or purchase data held by Google or Apple, you may also need to use those companies’ tools and account settings. Contact us if you need help understanding which controls apply.</p>
+      <p>Linking to a provider’s policy helps explain its practices and does not remove our responsibility for the information handling in our apps.</p>
     </section>
 
     <section class="policy-section" id="policy-changes">
-      <h2>Policy changes</h2>
-      <p>We may update this privacy policy from time to time. When we do, we will revise the “Last updated” date at the top of this page. Continued use of Lighting Check or this website after an update means you should review the revised policy.</p>
+      <h2>Changes to this policy</h2>
+      <p>We update this policy when relevant practices change and revise the date above. App-specific notices can change separately. Review the notice for your app, particularly when using a new connected feature or permission.</p>
     </section>
 
     <section class="policy-section" id="contact">
       <h2>Contact</h2>
-      <p>For privacy questions about Lighting Check or this website, contact:</p>
+      <p>For privacy questions about any Random Mini Apps app, our website or the appropriate research contact, email:</p>
       <p><a href="mailto:bleep.minted4c@icloud.com">bleep.minted4c@icloud.com</a></p>
+      <p>Please include the app name and version where possible, and only the information needed to explain your request.</p>
     </section>
 
     <section class="policy-section" id="disclaimer">
