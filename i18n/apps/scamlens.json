@@ -28,9 +28,79 @@
           "de": "Englisch (Vereinigtes Königreich)",
           "fr": "Anglais (Royaume-Uni)"
         }
+      },
+      {
+        "code": "de",
+        "label": {
+          "en": "German",
+          "es": "Alemán",
+          "pt": "Alemão",
+          "de": "Deutsch",
+          "fr": "Allemand"
+        }
+      },
+      {
+        "code": "fr",
+        "label": {
+          "en": "French",
+          "es": "Francés",
+          "pt": "Francês",
+          "de": "Französisch",
+          "fr": "Français"
+        }
+      },
+      {
+        "code": "es",
+        "label": {
+          "en": "Spanish",
+          "es": "Español",
+          "pt": "Espanhol",
+          "de": "Spanisch",
+          "fr": "Espagnol"
+        }
+      },
+      {
+        "code": "pt-BR",
+        "label": {
+          "en": "Portuguese (Brazil)",
+          "es": "Portugués (Brasil)",
+          "pt": "Português (Brasil)",
+          "de": "Portugiesisch (Brasilien)",
+          "fr": "Portugais (Brésil)"
+        }
+      },
+      {
+        "code": "pl",
+        "label": {
+          "en": "Polish",
+          "es": "Polaco",
+          "pt": "Polonês",
+          "de": "Polnisch",
+          "fr": "Polonais"
+        }
+      },
+      {
+        "code": "it",
+        "label": {
+          "en": "Italian",
+          "es": "Italiano",
+          "pt": "Italiano",
+          "de": "Italienisch",
+          "fr": "Italien"
+        }
+      },
+      {
+        "code": "ar",
+        "label": {
+          "en": "Arabic",
+          "es": "Árabe",
+          "pt": "Árabe",
+          "de": "Arabisch",
+          "fr": "Arabe"
+        }
       }
     ],
-    "moreComing": true,
+    "moreComing": false,
     "moreComingLabel": {
       "en": "More languages coming",
       "es": "Más idiomas próximamente",
