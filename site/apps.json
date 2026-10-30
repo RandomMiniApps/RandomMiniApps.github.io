@@ -1,0 +1,1445 @@
+[
+  {
+    "slug": "car-hud-display",
+    "name": "Car HUD Display",
+    "brand": "logiq",
+    "description": "Car HUD Display turns your iPhone into a professional heads-up display with GPS speed, trip widgets, mirror mode, weather, compass and smart brightness.",
+    "icon": "/assets/brand/icons/car-hud-display.png",
+    "store": "https://apps.apple.com/us/app/car-hud-display/id6758107542",
+    "status": "available",
+    "old": "/apps/car-hud-display/",
+    "features": [
+      {
+        "title": "Large GPS speed display",
+        "text": "A prominent speedometer shows real-time GPS speed in MPH or km/h."
+      },
+      {
+        "title": "Custom widget system",
+        "text": "Choose up to four widgets from speed, clock, temperature, compass, trip and device data."
+      },
+      {
+        "title": "HUD mirror mode",
+        "text": "Mirror the display for windshield reflection and use full brightness when needed."
+      },
+      {
+        "title": "Smart brightness",
+        "text": "The app can adjust brightness using ambient camera readings for better visibility."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Car HUD Display does",
+        "html": "<p>Car HUD Display projects essential driving information in a clear landscape interface designed for windshield reflection or direct in-car viewing.</p><p>The app combines real-time GPS speed with configurable widgets including clock, temperature, wind, compass, bearing, altitude, trip distance, average speed, max speed, trip time and battery level.</p>"
+      },
+      {
+        "title": "Who is Car HUD Display for?",
+        "html": "<p>Car HUD Display is designed for drivers who want essential trip and speed information in a simple, high-contrast interface.</p>\n        <ul class=\"list\">\n          <li>Daily commuters</li>\n          <li>Road trip drivers</li>\n          <li>Drivers who prefer HUD-style displays</li>\n          <li>People who want speed and trip data at a glance</li>\n          <li>iPhone users who want a dedicated driving display</li>\n          <li>Drivers who need imperial and metric unit support</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Large GPS speed display</h3>\n            <p>A prominent speedometer shows real-time GPS speed in MPH or km/h.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Custom widget system</h3>\n            <p>Choose up to four widgets from speed, clock, temperature, compass, trip and device data.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>HUD mirror mode</h3>\n            <p>Mirror the display for windshield reflection and use full brightness when needed.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Smart brightness</h3>\n            <p>The app can adjust brightness using ambient camera readings for better visibility.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How Car HUD Display works",
+        "html": "<ol class=\"steps\">\n          <li>Open the app before starting your trip.</li>\n          <li>Choose your preferred units and widgets.</li>\n          <li>Place the iPhone safely for direct viewing or windshield reflection.</li>\n          <li>Monitor speed, heading, weather and trip data while driving.</li>\n          <li>Reset trip tracking when you want a fresh journey summary.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>Car HUD Display is useful in common driving situations where fast, readable trip data matters.</p>\n        <ul class=\"list\">\n          <li>Speed monitoring</li>\n          <li>Road trips</li>\n          <li>Commuting</li>\n          <li>Trip distance tracking</li>\n          <li>Compass and bearing checks</li>\n          <li>Windshield reflection mode</li>\n          <li>High-contrast night driving display</li>\n          <li>Metric and imperial driving data</li>\n        </ul>"
+      },
+      {
+        "title": "Why use Car HUD Display?",
+        "html": "<p>Car HUD Display keeps important driving data visible in one focused interface, reducing the need to switch between multiple apps or screens.</p><p>It is designed as a utility for glanceable information. Drivers should always follow local laws, mount devices safely and keep attention on the road.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is Car HUD Display?</summary>\n            <p>Car HUD Display is an iPhone app that shows GPS speed, trip information and configurable widgets in a heads-up display style.</p>\n          </details>\n          <details>\n            <summary>Does Car HUD Display support MPH and km/h?</summary>\n            <p>Yes. The app supports both Imperial and Metric units.</p>\n          </details>\n          <details>\n            <summary>Can I use Car HUD Display on my windshield?</summary>\n            <p>Yes. The app includes a mirror display mode designed for windshield reflection.</p>\n          </details>\n          <details>\n            <summary>What widgets are available?</summary>\n            <p>Widgets include clocks, temperature, wind speed, compass, bearing, altitude, trip distance, average speed, max speed, trip time and battery level.</p>\n          </details>\n          <details>\n            <summary>Does Car HUD Display require location access?</summary>\n            <p>Yes. Location access is required for accurate GPS speed and trip information.</p>\n          </details>\n          <details>\n            <summary>Is Car HUD Display a replacement for my car dashboard?</summary>\n            <p>No. It is an auxiliary display tool. Always rely on your vehicle instruments and drive safely.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Car HUD Display requires location access for speed and GPS information. Weather data depends on network availability.</p><p>Use the app only when it is safe and legal to do so. Secure your device properly and do not interact with the app while driving.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is Car HUD Display?",
+        "a": "Car HUD Display is an iPhone app that shows GPS speed, trip information and configurable widgets in a heads-up display style."
+      },
+      {
+        "q": "Does Car HUD Display support MPH and km/h?",
+        "a": "Yes. The app supports both Imperial and Metric units."
+      },
+      {
+        "q": "Can I use Car HUD Display on my windshield?",
+        "a": "Yes. The app includes a mirror display mode designed for windshield reflection."
+      },
+      {
+        "q": "What widgets are available?",
+        "a": "Widgets include clocks, temperature, wind speed, compass, bearing, altitude, trip distance, average speed, max speed, trip time and battery level."
+      },
+      {
+        "q": "Does Car HUD Display require location access?",
+        "a": "Yes. Location access is required for accurate GPS speed and trip information."
+      },
+      {
+        "q": "Is Car HUD Display a replacement for my car dashboard?",
+        "a": "No. It is an auxiliary display tool. Always rely on your vehicle instruments and drive safely."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "cardiac-aftercare",
+    "name": "Cardiac Aftercare",
+    "brand": "cliniq",
+    "description": "Cardiac Aftercare is an invite-only prototype for cardiac specialists and junior doctors: governed RAG, deterministic clinical triage, and on-device LLM development for UK/NHS post-discharge recovery questions. Not for patient or public distribution.",
+    "icon": "/assets/brand/icons/cardiac-aftercare.png",
+    "store": "",
+    "status": "research",
+    "old": "/apps/cardiac-aftercare/",
+    "features": [
+      {
+        "title": "Invite-only testers",
+        "text": "Cardiac specialists, cardiology trainees and junior doctors interested in reviewing triage behaviour, retrieval grounding and answer quality."
+      },
+      {
+        "title": "Not available to",
+        "text": "Patients, carers, the general public, or any App Store / open distribution channel until Clinical Safety Officer sign-off and regulatory readiness."
+      },
+      {
+        "title": "Knowledge pipeline",
+        "text": "Source register, ingestion, cleaning, clinical metadata, chunking, indexing and retrieval testing across a curated NHS/BHF/NICE-first corpus."
+      },
+      {
+        "title": "Safety layer first",
+        "text": "Red / amber / yellow / green / blue triage rules, medication and safeguarding overlays, escalation wording and local audit before any generative path."
+      },
+      {
+        "title": "Governed RAG assistant",
+        "text": "Question handling, BM25 retrieval over approved chunks only, prompt construction from retrieved evidence, answer validation and source traceability."
+      },
+      {
+        "title": "Evaluation & clinician review",
+        "text": "Retrieval and red-flag evaluations, clarification-depth evidence packages, CARE-RAG review portals and clinician assessment workflows."
+      },
+      {
+        "title": "On-device redesign",
+        "text": "Moved from networked server RAG to a privacy-first on-device pack: no patient free text leaves the phone; template fallback if the local LLM fails."
+      },
+      {
+        "title": "Constrained LLM roles",
+        "text": "llama.cpp + Qwen2.5-1.5B-Instruct (Q4_K_M), temperature 0 / seed 0, used only for escalate-only safety classification, clinical interpretation and grounded composition."
+      },
+      {
+        "title": "Retrieval, not fine-tuning",
+        "text": "The corpus is a governed retrieval pack. Patient answers cite approved chunks; the assistant is not trained to invent cardiac advice."
+      },
+      {
+        "title": "Escalate-only LLM safety",
+        "text": "Layer 2 returns a triage category only. It never writes patient-facing text and cannot downgrade a deterministic red flag."
+      },
+      {
+        "title": "Deterministic decoding",
+        "text": "Composer and interpreter run greedy decoding (temp 0, seed 0) with timeouts, JSON repair, closed taxonomies and template fallback."
+      },
+      {
+        "title": "Fail-closed gating",
+        "text": "Pathway / topic tags and approval gates block unapproved content. Incomplete profiles block personalised green-path answers."
+      },
+      {
+        "title": "Evidence packages",
+        "text": "Phased clarification-depth evaluation, CARE-RAG governance portals and clinician research tooling support review before any patient release."
+      },
+      {
+        "title": "Privacy posture",
+        "text": "Current architecture is on-device: no networked LLM for patient answers, no server-side patient free-text store, local audit only."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Cardiac Aftercare is",
+        "html": "<p>Cardiac Aftercare helps adults recovering after a cardiac event or procedure ask free-text recovery questions and receive plain-English answers grounded only in approved NHS / BHF / NICE-derived sources.</p>\n        <p>Before any answer is composed, every message passes a safety-first triage engine. Red-flag results stop generation and return vetted escalation wording. The system never tells a patient they are “safe,” and it does not diagnose, prescribe or interpret ECGs.</p>\n        <ul class=\"list\">\n          <li>Heart attack / MI recovery</li>\n          <li>PCI / coronary stent aftercare</li>\n          <li>CABG and cardiac surgery recovery</li>\n          <li>Heart failure pathway support</li>\n          <li>Valve disease / TAVI recovery</li>\n          <li>Pacemaker, ICD, CRT and ILR pathways</li>\n          <li>LVAD escalation-only scope</li>\n          <li>Cardiac rehab and secondary prevention</li>\n        </ul>"
+      },
+      {
+        "title": "Who can test it now",
+        "html": "<p>Distribution is intentionally narrow while clinical safety and governance work continues.</p>\n        <div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Invite-only testers</h3>\n            <p>Cardiac specialists, cardiology trainees and junior doctors interested in reviewing triage behaviour, retrieval grounding and answer quality.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Not available to</h3>\n            <p>Patients, carers, the general public, or any App Store / open distribution channel until Clinical Safety Officer sign-off and regulatory readiness.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "RAG & LLM development phases",
+        "html": "<p>This page is written as an AI / modelling portfolio piece. The build order was deliberate: govern the knowledge, lock safety rules, then add constrained generation — not “train a chatbot on PDFs.”</p>\n\n        <div class=\"grid\" style=\"margin-top:1.25rem;\">\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 1</span>\n            <h3>Knowledge pipeline</h3>\n            <p>Source register, ingestion, cleaning, clinical metadata, chunking, indexing and retrieval testing across a curated NHS/BHF/NICE-first corpus.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 2</span>\n            <h3>Safety layer first</h3>\n            <p>Red / amber / yellow / green / blue triage rules, medication and safeguarding overlays, escalation wording and local audit before any generative path.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 3</span>\n            <h3>Governed RAG assistant</h3>\n            <p>Question handling, BM25 retrieval over approved chunks only, prompt construction from retrieved evidence, answer validation and source traceability.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 4</span>\n            <h3>Evaluation &amp; clinician review</h3>\n            <p>Retrieval and red-flag evaluations, clarification-depth evidence packages, CARE-RAG review portals and clinician assessment workflows.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 5</span>\n            <h3>On-device redesign</h3>\n            <p>Moved from networked server RAG to a privacy-first on-device pack: no patient free text leaves the phone; template fallback if the local LLM fails.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 6</span>\n            <h3>Constrained LLM roles</h3>\n            <p>llama.cpp + Qwen2.5-1.5B-Instruct (Q4_K_M), temperature 0 / seed 0, used only for escalate-only safety classification, clinical interpretation and grounded composition.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "Runtime answer pipeline",
+        "html": "<p>Every patient-style message follows the same fail-closed path. Generation is optional; escalation and templates are not.</p>\n        <div class=\"pipeline\">\n          <div class=\"pipeline-step\"><strong>01 profile</strong><span>Build pathway-aware patient context (recovery day, procedure, device status).</span></div>\n          <div class=\"pipeline-step\"><strong>02 triage</strong><span>Layer 0 deterministic rules → Layer 1 semantic similarity → Layer 2 on-device LLM classifier (escalate-only).</span></div>\n          <div class=\"pipeline-step\"><strong>03 overrides</strong><span>Medication safety and safeguarding rules can only raise severity, never suppress a deterministic hit.</span></div>\n          <div class=\"pipeline-step\"><strong>04 stop gate</strong><span>Red / stop-answer paths return vetted escalation wording and skip retrieval entirely.</span></div>\n          <div class=\"pipeline-step\"><strong>05 dialogue</strong><span>Bounded clarification turns resolve uncertainty before retrieval; exhausted budget triggers a safety net.</span></div>\n          <div class=\"pipeline-step\"><strong>06 retrieve</strong><span>BM25 over the approved on-device knowledge pack (pathway-aware, top-k), with sufficiency checks.</span></div>\n          <div class=\"pipeline-step\"><strong>07 compose</strong><span>On-device LLM writes from approved snippets only; fixed headings and reading-age constraints.</span></div>\n          <div class=\"pipeline-step\"><strong>08 validate</strong><span>Structural / safety validator; any failure falls back to a byte-identical template answer.</span></div>\n        </div>"
+      },
+      {
+        "title": "Modelling choices that matter for hiring conversations",
+        "html": "<p>The modelling story is about <em>constraint</em>, evaluation and clinical governance — not unconstrained chat.</p>\n        <div class=\"grid-3\">\n          <article class=\"mini-card\">\n            <h3>Retrieval, not fine-tuning</h3>\n            <p>The corpus is a governed retrieval pack. Patient answers cite approved chunks; the assistant is not trained to invent cardiac advice.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Escalate-only LLM safety</h3>\n            <p>Layer 2 returns a triage category only. It never writes patient-facing text and cannot downgrade a deterministic red flag.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Deterministic decoding</h3>\n            <p>Composer and interpreter run greedy decoding (temp 0, seed 0) with timeouts, JSON repair, closed taxonomies and template fallback.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Fail-closed gating</h3>\n            <p>Pathway / topic tags and approval gates block unapproved content. Incomplete profiles block personalised green-path answers.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Evidence packages</h3>\n            <p>Phased clarification-depth evaluation, CARE-RAG governance portals and clinician research tooling support review before any patient release.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Privacy posture</h3>\n            <p>Current architecture is on-device: no networked LLM for patient answers, no server-side patient free-text store, local audit only.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "Technical stack snapshot",
+        "html": "<table class=\"stack-table\">\n          <tbody>\n            <tr>\n              <th>Client</th>\n              <td>Flutter (iOS + Android) with shared Dart triage / RAG services</td>\n            </tr>\n            <tr>\n              <th>On-device LLM</th>\n              <td>llama.cpp · Qwen2.5-1.5B-Instruct Q4_K_M · MethodChannel bridge</td>\n            </tr>\n            <tr>\n              <th>Retrieval</th>\n              <td>BM25 over approved knowledge pack (~966 chunks from clinician-gated sources)</td>\n            </tr>\n            <tr>\n              <th>Triage</th>\n              <td>51+ deterministic rules + semantic escalate layer + constrained LLM classifier</td>\n            </tr>\n            <tr>\n              <th>Corpus governance</th>\n              <td>191 registered sources → approved / withheld split → pathway-tagged chunks</td>\n            </tr>\n            <tr>\n              <th>Reference / parity</th>\n              <td>Python triage engine, pytest suites, CARE-RAG review + governance portals</td>\n            </tr>\n            <tr>\n              <th>Earlier server path</th>\n              <td>FastAPI + PostgreSQL / pgvector prototype retained as historical architecture context</td>\n            </tr>\n          </tbody>\n        </table>"
+      },
+      {
+        "title": "How invite-only testing works",
+        "html": "<ol class=\"steps\">\n          <li>A cardiac specialist or junior doctor requests access and confirms they understand this is not for live patients.</li>\n          <li>Invited testers exercise triage, clarification, retrieval grounding and answer quality on synthetic / non-patient scenarios.</li>\n          <li>Feedback feeds clinician review workflows and CARE-RAG governance packages.</li>\n          <li>Patient or public release remains blocked until Clinical Safety Officer sign-off and regulatory readiness.</li>\n        </ol>\n        <p style=\"margin-top:1rem;\">Related internal review surface (unlisted): CARE-RAG governance review portal.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>Is Cardiac Aftercare available to patients?</summary>\n            <p>No. The app is not available for patient or public distribution. Access is limited to invited cardiac specialists and junior doctors evaluating the prototype.</p>\n          </details>\n          <details>\n            <summary>What AI techniques does Cardiac Aftercare use?</summary>\n            <p>It combines deterministic clinical triage rules, BM25 retrieval over a clinician-governed knowledge pack, escalate-only semantic similarity, and constrained on-device LLM roles for safety classification, clinical interpretation and grounded answer composition.</p>\n          </details>\n          <details>\n            <summary>Does the app diagnose or prescribe?</summary>\n            <p>No. It does not diagnose, prescribe, change medication, interpret ECGs or images, or replace emergency care or clinician judgement.</p>\n          </details>\n          <details>\n            <summary>Who can request access?</summary>\n            <p>Cardiac specialists, cardiology trainees and junior doctors interested in testing the governed RAG and on-device LLM prototype may request invite-only access.</p>\n          </details>\n          <details>\n            <summary>Is this affiliated with the NHS?</summary>\n            <p>No. Cardiac Aftercare is an independent development prototype. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BHF or any hospital trust.</p>\n          </details>\n          <details>\n            <summary>Why show this on a public website if it is invite-only?</summary>\n            <p>The public page documents the AI / RAG / modelling approach for portfolio and collaboration purposes. The product binary and patient distribution remain closed.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Cardiac Aftercare is an independent development prototype by Random Mini Apps. It is not affiliated with, endorsed by, or approved by the NHS, NICE, the British Heart Foundation, MHRA, Apple, Google, or any hospital trust.</p>\n        <p>Content grounded in publicly available guidance remains subject to licence, clinical review and local trust variation. Do not use this prototype for real patient advice. In an emergency, call 999.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is Cardiac Aftercare available to patients?",
+        "a": "No. The app is not available for patient or public distribution. Access is limited to invited cardiac specialists and junior doctors who want to evaluate the prototype."
+      },
+      {
+        "q": "What AI techniques does Cardiac Aftercare use?",
+        "a": "It combines deterministic clinical triage rules, BM25 retrieval over a clinician-governed knowledge pack, escalate-only semantic similarity, and constrained on-device LLM roles for safety classification, clinical interpretation and grounded answer composition."
+      },
+      {
+        "q": "Does the app diagnose or prescribe?",
+        "a": "No. It does not diagnose, prescribe, change medication, interpret ECGs or images, or replace emergency care or clinician judgement."
+      },
+      {
+        "q": "Who can request access?",
+        "a": "Cardiac specialists, cardiology trainees and junior doctors interested in testing the governed RAG and on-device LLM prototype may request invite-only access."
+      },
+      {
+        "q": "Is this affiliated with the NHS?",
+        "a": "No. Cardiac Aftercare is an independent development prototype. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BHF or any hospital trust."
+      }
+    ],
+    "platform": "iOS, Android"
+  },
+  {
+    "slug": "clinspeak-oet",
+    "name": "ClinSpeak OET",
+    "brand": "cliniq",
+    "description": "ClinSpeak OET helps nurses practise OET-style speaking with timed role plays, transcript replay and structured feedback on clarity, empathy, organisation and language.",
+    "icon": "/assets/brand/icons/clinspeak-oet.png",
+    "store": "https://apps.apple.com/us/app/clinspeak-oet/id6763942393",
+    "status": "available",
+    "old": "/apps/clinspeak-oet/",
+    "features": [
+      {
+        "title": "Nurse-first scenario library",
+        "text": "Practice clinical role plays built around nursing communication tasks."
+      },
+      {
+        "title": "Timed preparation and recording",
+        "text": "Follow an exam-style flow with preparation time and spoken response recording."
+      },
+      {
+        "title": "Transcript and audio replay",
+        "text": "Review what you said and listen back after a session."
+      },
+      {
+        "title": "Structured feedback",
+        "text": "Get feedback on clarity, organisation, empathy, relevance and language."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What ClinSpeak OET does",
+        "html": "<p>ClinSpeak OET is an independent OET Speaking preparation app for nurses. It gives candidates a structured way to practise clinical role plays, record answers and review feedback.</p><p>The app focuses on preparation and communication practice. It does not claim to provide an official OET score.</p>"
+      },
+      {
+        "title": "Who is ClinSpeak OET for?",
+        "html": "<p>ClinSpeak OET is designed for nurses preparing for OET-style speaking practice.</p>\n        <ul class=\"list\">\n          <li>International nurses preparing for OET Speaking</li>\n          <li>Nurses who want timed role-play practice</li>\n          <li>Learners who want transcript and audio replay</li>\n          <li>Candidates building confidence before speaking exams</li>\n          <li>Busy healthcare professionals practising in short sessions</li>\n          <li>Students who want structured feedback and example answers</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Nurse-first scenario library</h3>\n            <p>Practice clinical role plays built around nursing communication tasks.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Timed preparation and recording</h3>\n            <p>Follow an exam-style flow with preparation time and spoken response recording.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Transcript and audio replay</h3>\n            <p>Review what you said and listen back after a session.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Structured feedback</h3>\n            <p>Get feedback on clarity, organisation, empathy, relevance and language.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How ClinSpeak OET works",
+        "html": "<ol class=\"steps\">\n          <li>Choose an OET-style role-play scenario.</li>\n          <li>Use the timed preparation step.</li>\n          <li>Record your speaking response.</li>\n          <li>Review transcript, audio replay and feedback.</li>\n          <li>Practise again with a clearer structure and stronger communication.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>ClinSpeak OET supports common speaking-practice needs for nurses.</p>\n        <ul class=\"list\">\n          <li>Clinical role-play flow</li>\n          <li>Patient communication</li>\n          <li>Empathy and reassurance</li>\n          <li>Clarity and organisation</li>\n          <li>Healthcare English</li>\n          <li>Transcript review</li>\n          <li>Example answer review</li>\n          <li>Weakness themes over time</li>\n        </ul>"
+      },
+      {
+        "title": "Why use ClinSpeak OET?",
+        "html": "<p>OET Speaking preparation often needs repeated spoken practice, not just reading model answers. ClinSpeak OET gives nurses a private, repeatable way to rehearse clinical communication.</p><p>The app is a preparation tool and works best alongside official OET guidance, teacher feedback and real speaking practice.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is ClinSpeak OET?</summary>\n            <p>ClinSpeak OET is an independent OET-style speaking practice app for nurses.</p>\n          </details>\n          <details>\n            <summary>Is ClinSpeak OET affiliated with OET?</summary>\n            <p>No. ClinSpeak OET is not endorsed by or affiliated with the official OET test.</p>\n          </details>\n          <details>\n            <summary>Does ClinSpeak OET provide an official score?</summary>\n            <p>No. It provides practice feedback and does not claim to provide an official OET score.</p>\n          </details>\n          <details>\n            <summary>Can I replay my answer?</summary>\n            <p>Yes. The app supports transcript and audio replay after practice sessions.</p>\n          </details>\n          <details>\n            <summary>Who is ClinSpeak OET for?</summary>\n            <p>It is designed for nurses who want focused OET-style speaking practice.</p>\n          </details>\n          <details>\n            <summary>Is clinical content medical advice?</summary>\n            <p>No. Scenarios are fictional practice examples and are not medical advice, diagnosis, treatment instructions or professional clinical guidance.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>ClinSpeak OET is a preparation tool only. It is not endorsed by or affiliated with the official OET test.</p><p>The clinical scenarios are fictional practice examples and are not medical advice, diagnosis, treatment instructions or professional clinical guidance.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is ClinSpeak OET?",
+        "a": "ClinSpeak OET is an independent OET-style speaking practice app for nurses."
+      },
+      {
+        "q": "Is ClinSpeak OET affiliated with OET?",
+        "a": "No. ClinSpeak OET is not endorsed by or affiliated with the official OET test."
+      },
+      {
+        "q": "Does ClinSpeak OET provide an official score?",
+        "a": "No. It provides practice feedback and does not claim to provide an official OET score."
+      },
+      {
+        "q": "Can I replay my answer?",
+        "a": "Yes. The app supports transcript and audio replay after practice sessions."
+      },
+      {
+        "q": "Who is ClinSpeak OET for?",
+        "a": "It is designed for nurses who want focused OET-style speaking practice."
+      },
+      {
+        "q": "Is clinical content medical advice?",
+        "a": "No. Scenarios are fictional practice examples and are not medical advice, diagnosis, treatment instructions or professional clinical guidance."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "coloring-book",
+    "name": "BoomColor",
+    "brand": "logiq",
+    "description": "BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.",
+    "icon": "/assets/brand/icons/coloring-book.png",
+    "store": "https://apps.apple.com/us/app/boomcolor/id6761337820",
+    "status": "available",
+    "old": "/apps/coloring-book/",
+    "features": [
+      {
+        "title": "Large coloring gallery",
+        "text": "50 starter pages plus hundreds more outlines across ten categories, with on-demand download for hosted packs."
+      },
+      {
+        "title": "Tap-to-fill painting",
+        "text": "Flood-fill engine respects outline boundaries so each tap stays inside the region you want to color."
+      },
+      {
+        "title": "Creative fill effects",
+        "text": "Go beyond flat color with gradients, glitter, metallic, patterns, glow, watercolor and more unlockable tools."
+      },
+      {
+        "title": "Daily challenges",
+        "text": "Featured challenge pages with coverage, color and effect goals, live progress feedback and credit rewards."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What BoomColor does",
+        "html": "<p>BoomColor is a coloring book app that turns outline art into relaxing tap-to-fill sessions on iPhone and iPad. Pick a page from the gallery, choose colors or effects, and paint region by region with undo and redo support.</p><p>The app ships with starter pages in the download and expands through Apple-hosted gallery packs organized into ten browse categories. A daily challenge page appears at the top of Explore with progress goals and bonus credits when you complete them.</p>"
+      },
+      {
+        "title": "Who is BoomColor for?",
+        "html": "<p>BoomColor is for anyone who wants a calm creative app without complex drawing tools.</p>\n        <ul class=\"list\">\n          <li>Adults looking for a relaxing coloring break</li>\n          <li>Parents and kids sharing simple tap-to-fill play</li>\n          <li>Commuters who want short creative sessions</li>\n          <li>Fans of animals, anime, vehicles and themed art packs</li>\n          <li>People who want to color their own photos</li>\n          <li>iPhone and iPad users who prefer portrait or landscape</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Large coloring gallery</h3>\n            <p>50 starter pages plus hundreds more outlines across ten categories, with on-demand download for hosted packs.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Tap-to-fill painting</h3>\n            <p>Flood-fill engine respects outline boundaries so each tap stays inside the region you want to color.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Creative fill effects</h3>\n            <p>Go beyond flat color with gradients, glitter, metallic, patterns, glow, watercolor and more unlockable tools.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Daily challenges</h3>\n            <p>Featured challenge pages with coverage, color and effect goals, live progress feedback and credit rewards.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "Gallery categories",
+        "html": "<p>Explore pages by theme so you can jump straight to the art styles you enjoy most.</p>\n        <ul class=\"list\">\n          <li>Animals &amp; Wildlife</li>\n          <li>Nature &amp; Seasons</li>\n          <li>Vehicles &amp; Transport</li>\n          <li>Places &amp; Daily Life</li>\n          <li>Food &amp; Markets</li>\n          <li>People, Sports &amp; Music</li>\n          <li>Anime &amp; Chibi</li>\n          <li>Art &amp; Masterpieces</li>\n          <li>Fantasy &amp; Sci‑Fi</li>\n          <li>Objects, Fashion &amp; Shapes</li>\n        </ul>"
+      },
+      {
+        "title": "How BoomColor works",
+        "html": "<ol class=\"steps\">\n          <li>Open Explore and browse categories, difficulty, favorites or search.</li>\n          <li>Pick a page—or start with today’s daily challenge at the top of the grid.</li>\n          <li>Choose a color or unlockable fill effect from the editor palette.</li>\n          <li>Tap regions to fill them; use undo and redo as you refine your artwork.</li>\n          <li>Save finished pages to Photos or return later—your progress is remembered.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>BoomColor supports different ways to unwind and create on Apple devices.</p>\n        <ul class=\"list\">\n          <li>Stress relief and mindful breaks</li>\n          <li>Short daily creative habits</li>\n          <li>Themed coloring by category</li>\n          <li>Photo-to-outline personal pages</li>\n          <li>Experimenting with fill effects</li>\n          <li>Challenge goals and star progress</li>\n          <li>Favorites and gallery search</li>\n          <li>Offline-friendly starter pages</li>\n        </ul>"
+      },
+      {
+        "title": "Why use BoomColor?",
+        "html": "<p>Many coloring apps offer small libraries or basic fills. BoomColor combines a large themed gallery, expressive fill effects and structured daily challenges in one place.</p><p>Credits and optional unlocks let you pace access to pages and tools while keeping the core coloring flow simple: browse, tap, enjoy.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is BoomColor?</summary>\n            <p>BoomColor is a coloring book app for iPhone and iPad. It is published on the App Store under the BoomColor name and presents a Coloring Book experience in the app.</p>\n          </details>\n          <details>\n            <summary>How do I color a page?</summary>\n            <p>Open a page in the editor, select a color or effect, and tap inside outline regions. The app fills the tapped area while respecting line boundaries.</p>\n          </details>\n          <details>\n            <summary>How many pages are in the gallery?</summary>\n            <p>The app includes 50 starter pages in the app download plus more than 650 additional hosted gallery pages across category packs, with new packs delivered through Apple Background Assets.</p>\n          </details>\n          <details>\n            <summary>What are daily challenges?</summary>\n            <p>Each day highlights a challenge page with goals for coverage, color use and effects. Progress is shown in the editor and on Explore, and completing all goals earns bonus credits.</p>\n          </details>\n          <details>\n            <summary>Can I color my own pictures?</summary>\n            <p>Yes. You can import photos from your library to use as coloring pages and save finished artwork to Photos when you are done.</p>\n          </details>\n          <details>\n            <summary>Do I need internet for every page?</summary>\n            <p>Starter pages work offline. Hosted gallery packs download on demand when you open them, so an internet connection helps for those pages.</p>\n          </details>\n          <details>\n            <summary>Is BoomColor free?</summary>\n            <p>BoomColor is free to download. Credits, optional unlocks and ads help support access to additional pages and creative effects.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>BoomColor is a casual creative app for entertainment and relaxation. Gallery artwork is original outline content for coloring practice, not licensed reproductions of third-party brands unless stated in-app.</p><p>Photo import and save features use your device photo library with your permission. Parental guidance is recommended for younger children using in-app purchases or ads.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is BoomColor?",
+        "a": "BoomColor is a coloring book app for iPhone and iPad with a large gallery of outline pages, tap-to-fill painting, creative effects and daily challenges."
+      },
+      {
+        "q": "How do you color in BoomColor?",
+        "a": "Choose a page, pick colors or effects, and tap regions to fill them. The app uses flood-fill painting with undo and redo support."
+      },
+      {
+        "q": "How many coloring pages are included?",
+        "a": "The app includes 50 starter pages in the download plus hundreds more gallery pages delivered through Apple-hosted asset packs across ten browse categories."
+      },
+      {
+        "q": "Can I use my own photos?",
+        "a": "Yes. You can import photos from your library to use as coloring pages and save finished artwork back to Photos."
+      },
+      {
+        "q": "What are daily challenges?",
+        "a": "Each day features a featured challenge page with goals for coverage, color and effects. Meeting all goals earns bonus credits in the app."
+      },
+      {
+        "q": "Is BoomColor free?",
+        "a": "BoomColor is free to download. Credits, optional unlocks and ads support access to additional pages and creative tools."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "dyslexia-reading-lens",
+    "name": "Dyslexia Reading Lens",
+    "brand": "logiq",
+    "description": "Dyslexia Reading Lens is a calm reading workspace for iPhone: dyslexia-friendly text, read-aloud with highlighting, document scanning, and AI simplify and summary tools.",
+    "icon": "/assets/brand/icons/dyslexia-reading-lens.png",
+    "store": "https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853",
+    "status": "available",
+    "old": "/apps/dyslexia-reading-lens/",
+    "features": [
+      {
+        "title": "Comfortable reading view",
+        "text": "Adjust fonts, spacing, themes, focus line, and chunk mode. Reading profiles remember what works for you."
+      },
+      {
+        "title": "Listen with highlighting",
+        "text": "Text-to-speech follows the words on screen so you can read and listen at the same pace."
+      },
+      {
+        "title": "Scan and import documents",
+        "text": "Camera OCR for printed pages, plus PDF, text, and image import into your on-device library."
+      },
+      {
+        "title": "AI comprehension tools",
+        "text": "Simplify dense passages, summarise long readings, and explain words you are stuck on."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Dyslexia Reading Lens does",
+        "html": "<p>Dyslexia Reading Lens is a personal reading and comprehension workspace for people who find text visually overwhelming, tiring, or hard to understand. It is practical and respectful — designed to support reading comfort, not to claim a cure for dyslexia.</p><p>Paste text, scan printed pages, or import PDFs and images into a local library. Open any document in a dyslexia-friendly reader with focus tools, listen with text-to-speech highlighting, and use AI to simplify, summarise, or explain difficult words when you need help.</p>"
+      },
+      {
+        "title": "Who is Dyslexia Reading Lens for?",
+        "html": "<p>The app is built for learners and adults who want scan, read, listen, and AI comprehension in one calm place instead of juggling several apps.</p>\n        <ul class=\"list\">\n          <li>University and sixth-form students with dyslexia</li>\n          <li>Adults managing emails, PDFs, and work documents</li>\n          <li>Parents supporting children with reading difficulties</li>\n          <li>People with ADHD or reading fatigue</li>\n          <li>Non-native English readers working through dense text</li>\n          <li>Anyone who prefers listening while following highlighted text</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Comfortable reading view</h3>\n            <p>Adjust fonts, spacing, themes, focus line, and chunk mode. Reading profiles remember what works for you.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Listen with highlighting</h3>\n            <p>Text-to-speech follows the words on screen so you can read and listen at the same pace.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Scan and import documents</h3>\n            <p>Camera OCR for printed pages, plus PDF, text, and image import into your on-device library.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>AI comprehension tools</h3>\n            <p>Simplify dense passages, summarise long readings, and explain words you are stuck on.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How Dyslexia Reading Lens works",
+        "html": "<ol class=\"steps\">\n          <li>Add text by pasting, scanning a page, or importing a file.</li>\n          <li>Open the document and tune your reading style in one tap.</li>\n          <li>Read with focus tools or tap Listen to hear it aloud.</li>\n          <li>Use Simplify, Summarise, or Explain when comprehension gets hard.</li>\n          <li>Save progress in your library and pick up where you left off.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>Dyslexia Reading Lens supports everyday reading tasks that usually need multiple separate tools.</p>\n        <ul class=\"list\">\n          <li>Assignment briefs copied from the web</li>\n          <li>Printed worksheets and handouts</li>\n          <li>Lecture slides and PDF readings</li>\n          <li>Long emails and work documents</li>\n          <li>Letters, forms, and official paperwork</li>\n          <li>Revising with read-aloud and shorter summaries</li>\n          <li>Organising documents with folders and tags</li>\n          <li>Sharing text in through the iOS share sheet</li>\n        </ul>"
+      },
+      {
+        "title": "Why use Dyslexia Reading Lens?",
+        "html": "<p>Many readers stitch together a scanner app, a customisable reader, a TTS app, and an AI tool. Dyslexia Reading Lens brings those steps into one focused iOS workspace with privacy-first defaults: your library and AI processing stay on your device.</p><p>The free tier is genuinely useful for trying the core loop. Pro subscriptions unlock higher limits for scanning, listening, and AI when you need them every day.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is Dyslexia Reading Lens?</summary>\n            <p>It is a personal reading and comprehension app that combines comfortable text presentation, text-to-speech, scanning, file import, and AI tools in one calm workspace.</p>\n          </details>\n          <details>\n            <summary>Does it cure or treat dyslexia?</summary>\n            <p>No. It is not medical software and does not diagnose or treat dyslexia or any condition. It offers tools for reading comfort, focus, listening, and comprehension.</p>\n          </details>\n          <details>\n            <summary>Where is my data stored?</summary>\n            <p>Documents, folders, tags, and reading preferences stay on your device. AI tools run on your device and do not send your document text to our servers. Subscriptions and restore purchases are handled by Apple.</p>\n          </details>\n          <details>\n            <summary>What do the subscriptions include?</summary>\n            <p>Pro unlocks unlimited documents, full text-to-speech, OCR, PDF import, export, folders, and unlimited AI tools. See in-app plans for current pricing.</p>\n          </details>\n          <details>\n            <summary>Are AI answers always correct?</summary>\n            <p>No. Simplify, summary, and word explanations may be inaccurate. Verify important information and follow your school's academic integrity rules for coursework.</p>\n          </details>\n          <details>\n            <summary>Is there a free version?</summary>\n            <p>Yes. You can paste text, use basic reading settings, limited monthly scanning and listening, and a small number of AI actions before upgrading.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Dyslexia Reading Lens is designed to support reading comfort and comprehension. It does not guarantee specific educational outcomes. Fonts and display settings are personal preferences, not clinical treatments.</p><p>AI tools run on your device. Analytics, if enabled, collects optional anonymous usage events without document contents. You can delete all app data from Profile → Privacy.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is Dyslexia Reading Lens?",
+        "a": "Dyslexia Reading Lens is a personal reading and comprehension workspace that combines comfortable text presentation, text-to-speech, scanning, and AI tools in one app."
+      },
+      {
+        "q": "Does Dyslexia Reading Lens cure or treat dyslexia?",
+        "a": "No. It is not medical software. It supports reading comfort, listening, and comprehension but does not diagnose or treat dyslexia or any medical condition."
+      },
+      {
+        "q": "Where is my data stored?",
+        "a": "Documents and reading preferences stay on your device. AI tools run on your device and do not send your document text to our servers. Subscriptions are handled by Apple."
+      },
+      {
+        "q": "Who is Dyslexia Reading Lens for?",
+        "a": "It is designed for students and adults who find text visually overwhelming or tiring, including people with dyslexia, ADHD-related reading fatigue, visual stress, or language-learning needs."
+      },
+      {
+        "q": "Are AI responses always accurate?",
+        "a": "No. AI simplify, summary, and word explanations may be wrong or incomplete. Verify important information, especially for coursework and work documents."
+      },
+      {
+        "q": "Is there a free tier?",
+        "a": "Yes. The free tier includes paste, basic reading, limited scanning, text-to-speech, and a small number of AI actions. Pro subscriptions unlock higher limits."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "fractureflow-ai",
+    "name": "FractureFlow AI",
+    "brand": "cliniq",
+    "description": "FractureFlow AI is an invite-only research MVP for MIU, ED and Virtual Fracture Clinic clinicians: safety-before-RAG decision support, governed UK evidence retrieval, evaluation harnesses, and X-ray detection research. Not for patient or public distribution.",
+    "icon": "/assets/brand/icons/fractureflow-ai.png",
+    "store": "",
+    "status": "research",
+    "old": "/apps/fractureflow-ai/",
+    "features": [
+      {
+        "title": "Invite-only testers",
+        "text": "MIU, ED, orthopaedic and VFC clinicians, plus junior doctors interested in reviewing safety-before-RAG behaviour, retrieval grounding and fracture-detection research."
+      },
+      {
+        "title": "Not available to",
+        "text": "Patients, carers, the general public, or any App Store / open distribution channel until governance sign-off and Trust-local pathways are in place."
+      },
+      {
+        "title": "Evidence pipeline",
+        "text": "Source register, ingestion rounds, chunking and governance metadata across national guidance, VFC examples, red-flag packs and immobilisation material."
+      },
+      {
+        "title": "Safety-before-RAG",
+        "text": "Deterministic red-flag rules run first. Escalation bypasses retrieval entirely so generation never softens an emergency pathway."
+      },
+      {
+        "title": "Governed retrieval",
+        "text": "Token-overlap retrieval with authority weighting, priority boosts and a cds_only filter so routine clinician recommendations cite approved sources only."
+      },
+      {
+        "title": "Recommendation validation",
+        "text": "A validator gates routine outputs and returns an insufficient-source fallback when evidence support is missing — the optional LLM cannot bypass this gate."
+      },
+      {
+        "title": "Evaluation harness",
+        "text": "Shared vignette schema, Python/Flutter parity tests, RealCaseStudy de-identified cases, and clinician review workflows before any live deployment."
+      },
+      {
+        "title": "X-ray detection research",
+        "text": "Separate ML track: ensemble screening (EfficientNet / SigLIP / ViT), Grad-CAM overlays, triage grading research, and double-review human labelling packages."
+      },
+      {
+        "title": "Safety before retrieval",
+        "text": "Red flags are rule-based and run before RAG. Escalation cannot be softened by a generative model."
+      },
+      {
+        "title": "CDS source gating",
+        "text": "Only a small approved subset may drive clinician disposition suggestions; patient-education material stays discharge/safety-netting only."
+      },
+      {
+        "title": "LLM deferred by default",
+        "text": "The LLM provider exists but is off until tracing, approval and validation gates are strong enough for research demos."
+      },
+      {
+        "title": "Offline knowledge pack",
+        "text": "Flutter ships a bundled retrieval pack so MIU/ED evaluation can run without depending on a live networked model."
+      },
+      {
+        "title": "Parity evaluation",
+        "text": "Shared vignettes keep Python engine and Flutter safety logic aligned; RealCaseStudy adds de-identified ED/MIU cases."
+      },
+      {
+        "title": "Imaging as a separate track",
+        "text": "X-ray ensemble research and human double-review labelling are explicit modelling workstreams, not silent auto-diagnosis."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What FractureFlow AI is",
+        "html": "<p>FractureFlow AI helps trained clinicians capture structured injury information, apply deterministic red-flag checks, retrieve source-linked UK guidance, and review immobilisation / referral / safety-netting suggestions before acting.</p>\n        <p>It is clinical decision support, not autonomous diagnosis. Local Trust guidance and senior clinical judgement always override the app. Routine recommendations must cite clinician-CDS-approved sources only.</p>\n        <ul class=\"list\">\n          <li>MIU and urgent treatment centre workflows</li>\n          <li>ED musculoskeletal triage support</li>\n          <li>Orthopaedic triage and VFC referral</li>\n          <li>Deterministic red-flag escalation</li>\n          <li>Source-linked UK guidance retrieval</li>\n          <li>Immobilisation and discharge wording aids</li>\n          <li>Offline bundled knowledge pack</li>\n          <li>X-ray detection research track</li>\n        </ul>"
+      },
+      {
+        "title": "Who can test it now",
+        "html": "<p>Distribution is intentionally narrow while clinical safety, Trust localisation and evidence governance continue.</p>\n        <div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Invite-only testers</h3>\n            <p>MIU, ED, orthopaedic and VFC clinicians, plus junior doctors interested in reviewing safety-before-RAG behaviour, retrieval grounding and fracture-detection research.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Not available to</h3>\n            <p>Patients, carers, the general public, or any App Store / open distribution channel until governance sign-off and Trust-local pathways are in place.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "RAG, safety & modelling phases",
+        "html": "<p>This page is written as an AI / modelling portfolio piece. The build order was deliberate: register evidence, lock red flags, gate CDS sources, then consider generation and imaging models.</p>\n\n        <div class=\"grid\" style=\"margin-top:1.25rem;\">\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 1</span>\n            <h3>Evidence pipeline</h3>\n            <p>Source register, ingestion rounds, chunking and governance metadata across national guidance, VFC examples, red-flag packs and immobilisation material.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 2</span>\n            <h3>Safety-before-RAG</h3>\n            <p>Deterministic red-flag rules run first. Escalation bypasses retrieval entirely so generation never softens an emergency pathway.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 3</span>\n            <h3>Governed retrieval</h3>\n            <p>Token-overlap retrieval with authority weighting, priority boosts and a <code>cds_only</code> filter so routine clinician recommendations cite approved sources only.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 4</span>\n            <h3>Recommendation validation</h3>\n            <p>A validator gates routine outputs and returns an insufficient-source fallback when evidence support is missing — the optional LLM cannot bypass this gate.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 5</span>\n            <h3>Evaluation harness</h3>\n            <p>Shared vignette schema, Python/Flutter parity tests, RealCaseStudy de-identified cases, and clinician review workflows before any live deployment.</p>\n          </article>\n          <article class=\"mini-card\">\n            <span class=\"phase-label\">Phase 6</span>\n            <h3>X-ray detection research</h3>\n            <p>Separate ML track: ensemble screening (EfficientNet / SigLIP / ViT), Grad-CAM overlays, triage grading research, and double-review human labelling packages.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "Runtime recommendation pipeline",
+        "html": "<p>Every case follows a fail-closed path. Escalation is deterministic; generation is optional and validator-gated.</p>\n        <div class=\"pipeline\">\n          <div class=\"pipeline-step\"><strong>01 capture</strong><span>Structured injury data: body region, mechanism, neurovascular status, skin integrity and red-flag prompts.</span></div>\n          <div class=\"pipeline-step\"><strong>02 screen</strong><span>Deterministic safety rules (open fracture, NV compromise, compartment, infection, safeguarding, major trauma, and more).</span></div>\n          <div class=\"pipeline-step\"><strong>03 escalate</strong><span>Red-flag hits return escalation prompts and bypass retrieval / generation entirely.</span></div>\n          <div class=\"pipeline-step\"><strong>04 retrieve</strong><span>Offline / engine retrieval over the governed chunk index with CDS-only filtering for routine recommendations.</span></div>\n          <div class=\"pipeline-step\"><strong>05 compose</strong><span>Template or optional LLM draft from retrieved evidence — LLM disabled by default in research builds.</span></div>\n          <div class=\"pipeline-step\"><strong>06 validate</strong><span>Recommendation validator blocks unsupported output and forces an insufficient-source fallback.</span></div>\n          <div class=\"pipeline-step\"><strong>07 present</strong><span>Clinician reviews source-linked suggestions, immobilisation notes, referral checklist and safety-netting wording.</span></div>\n          <div class=\"pipeline-step\"><strong>08 override</strong><span>Local Trust pathways and senior judgement remain authoritative; the app never claims autonomous diagnosis.</span></div>\n        </div>"
+      },
+      {
+        "title": "Modelling choices that matter for hiring conversations",
+        "html": "<p>The modelling story is about constraint, evaluation and clinical governance — not unconstrained chat or black-box imaging claims.</p>\n        <div class=\"grid-3\">\n          <article class=\"mini-card\">\n            <h3>Safety before retrieval</h3>\n            <p>Red flags are rule-based and run before RAG. Escalation cannot be softened by a generative model.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>CDS source gating</h3>\n            <p>Only a small approved subset may drive clinician disposition suggestions; patient-education material stays discharge/safety-netting only.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>LLM deferred by default</h3>\n            <p>The LLM provider exists but is off until tracing, approval and validation gates are strong enough for research demos.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Offline knowledge pack</h3>\n            <p>Flutter ships a bundled retrieval pack so MIU/ED evaluation can run without depending on a live networked model.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Parity evaluation</h3>\n            <p>Shared vignettes keep Python engine and Flutter safety logic aligned; RealCaseStudy adds de-identified ED/MIU cases.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Imaging as a separate track</h3>\n            <p>X-ray ensemble research and human double-review labelling are explicit modelling workstreams, not silent auto-diagnosis.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "Technical stack snapshot",
+        "html": "<table class=\"stack-table\">\n          <tbody>\n            <tr>\n              <th>Client</th>\n              <td>Flutter (iOS + Android) — Assess, History, Sources, Settings</td>\n            </tr>\n            <tr>\n              <th>Safety engine</th>\n              <td>Python <code>RecommendationEngine</code> with deterministic red-flag screening before RAG</td>\n            </tr>\n            <tr>\n              <th>Retrieval</th>\n              <td>Token overlap + authority weight + priority boost; CDS-only filter for routine outputs</td>\n            </tr>\n            <tr>\n              <th>Corpus</th>\n              <td>~150 registered sources / ~845 chunks (runtime pack sync tracked separately)</td>\n            </tr>\n            <tr>\n              <th>LLM</th>\n              <td>Optional provider, disabled by default, cannot bypass recommendation validation</td>\n            </tr>\n            <tr>\n              <th>Evaluation</th>\n              <td>16 vignette harness (expanding), Flutter parity tests, 41 RealCaseStudy cases</td>\n            </tr>\n            <tr>\n              <th>X-ray ML research</th>\n              <td>Ensemble + Grad-CAM prototype; human double-review packages; review wizard at xray-review</td>\n            </tr>\n          </tbody>\n        </table>"
+      },
+      {
+        "title": "How invite-only testing works",
+        "html": "<ol class=\"steps\">\n          <li>A clinician or junior doctor requests access and confirms this is research-only, not live care.</li>\n          <li>Invited testers exercise red-flag screening, retrieval grounding, recommendation validation and optional imaging research tools on non-live scenarios.</li>\n          <li>Feedback feeds evaluation vignettes, source-approval decisions and Trust-localisation planning.</li>\n          <li>Patient, public or live clinical release remains blocked until governance sign-off and local pathway approval.</li>\n        </ol>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>Is FractureFlow AI available to patients?</summary>\n            <p>No. The app is not for patient self-triage or public distribution. Access is limited to invited clinicians and junior doctors evaluating the research MVP.</p>\n          </details>\n          <details>\n            <summary>What AI techniques does FractureFlow AI use?</summary>\n            <p>It uses deterministic red-flag escalation before retrieval, offline governed RAG over UK guidance chunks, recommendation validation, an optional LLM provider disabled by default, evaluation vignettes, and a separate X-ray detection research track with ensemble models and Grad-CAM.</p>\n          </details>\n          <details>\n            <summary>Does the app diagnose fractures autonomously?</summary>\n            <p>No. FractureFlow AI is clinical decision support. It does not replace clinician judgement, local Trust pathways, or radiology reporting.</p>\n          </details>\n          <details>\n            <summary>Who can request access?</summary>\n            <p>MIU, ED, orthopaedic triage and Virtual Fracture Clinic clinicians, plus junior doctors interested in testing the safety-before-RAG and fracture-detection research prototype, may request invite-only access.</p>\n          </details>\n          <details>\n            <summary>Is this affiliated with the NHS?</summary>\n            <p>No. FractureFlow AI is an independent research MVP. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, or any hospital trust.</p>\n          </details>\n          <details>\n            <summary>Why show this on a public website if it is invite-only?</summary>\n            <p>The public page documents the AI / RAG / modelling approach for portfolio and collaboration purposes. The product binary and clinical distribution remain closed.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>FractureFlow AI is an independent research MVP by Random Mini Apps. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, MHRA, Apple, Google, or any hospital trust.</p>\n        <p>Example pathways are not Trust-local protocols. Do not use this prototype for live patient care or patient self-triage. In an emergency, follow local escalation pathways and call 999 when required.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is FractureFlow AI available to patients?",
+        "a": "No. The app is not for patient self-triage or public distribution. Access is limited to invited clinicians and junior doctors evaluating the research MVP."
+      },
+      {
+        "q": "What AI techniques does FractureFlow AI use?",
+        "a": "It uses deterministic red-flag escalation before retrieval, offline governed RAG over UK guidance chunks, recommendation validation, an optional LLM provider disabled by default, evaluation vignettes, and a separate X-ray detection research track with ensemble models and Grad-CAM."
+      },
+      {
+        "q": "Does the app diagnose fractures autonomously?",
+        "a": "No. FractureFlow AI is clinical decision support. It does not replace clinician judgement, local Trust pathways, or radiology reporting."
+      },
+      {
+        "q": "Who can request access?",
+        "a": "MIU, ED, orthopaedic triage and Virtual Fracture Clinic clinicians, plus junior doctors interested in testing the safety-before-RAG and fracture-detection research prototype, may request invite-only access."
+      },
+      {
+        "q": "Is this affiliated with the NHS?",
+        "a": "No. FractureFlow AI is an independent research MVP. It is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, or any hospital trust."
+      }
+    ],
+    "platform": "iOS, Android"
+  },
+  {
+    "slug": "hotspot-check",
+    "name": "HotspotCheck",
+    "brand": "logiq",
+    "description": "HotspotCheck helps you understand whether the Wi-Fi you are using looks safe, risky, or worth avoiding. Check visible network risks, gateway warnings, and public hotspot safety indicators before sensitive logins.",
+    "icon": "/assets/brand/icons/hotspot-check.png",
+    "store": "https://apps.apple.com/gb/app/hotspotcheck/id6783085771",
+    "status": "available",
+    "old": "/apps/hotspot-check/",
+    "features": [
+      {
+        "title": "Context-aware safety score",
+        "text": "Choose home, cafe, hotel, airport, or other contexts so risk scoring matches how you are using the network."
+      },
+      {
+        "title": "Visible risk indicators",
+        "text": "Review gateway, DNS, TLS, captive-portal, and connectivity checks with confidence levels and clear limitations."
+      },
+      {
+        "title": "Device discovery",
+        "text": "See visible devices and services on the Wi-Fi you are connected to when you grant Local Network permission at scan time."
+      },
+      {
+        "title": "Plain-English recommendations",
+        "text": "Get practical next steps such as switching to mobile data, using a VPN, or avoiding banking until conditions improve."
+      },
+      {
+        "title": "Local scan history and export",
+        "text": "Keep reports on your iPhone, export PDFs when you need them, and delete all scan data from Settings."
+      },
+      {
+        "title": "Privacy-first by design",
+        "text": "No analytics SDK, no developer backend, and no upload of SSIDs, device names, or scan history."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What HotspotCheck does",
+        "html": "<p>HotspotCheck is a defensive Wi-Fi safety advisor. When you tap <strong>Check this Wi-Fi</strong>, it reviews visible safety indicators on the network you are currently using — gateway warnings, DNS behaviour, captive-portal clues, local device discovery, and other signals iOS allows — then scores risk for your context and explains what to do next.</p><p>It is calm, honest, and educational. HotspotCheck does not crack passwords, exploit routers, scan nearby networks in the background, or claim to guarantee safety.</p>"
+      },
+      {
+        "title": "Who is HotspotCheck for?",
+        "html": "<p>HotspotCheck is built for anyone who connects to Wi-Fi outside a fully trusted home network and wants practical guidance before sensitive logins.</p>\n        <ul class=\"list\">\n          <li>Travellers using cafe, hotel, and airport Wi-Fi</li>\n          <li>Students on university or shared accommodation networks</li>\n          <li>Remote workers checking work-from-anywhere hotspots</li>\n          <li>Families reviewing Airbnb or holiday-rental Wi-Fi</li>\n          <li>Anyone improving home router hygiene</li>\n          <li>People who want plain-English safety advice, not jargon</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Context-aware safety score</h3>\n            <p>Choose home, cafe, hotel, airport, or other contexts so risk scoring matches how you are using the network.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Visible risk indicators</h3>\n            <p>Review gateway, DNS, TLS, captive-portal, and connectivity checks with confidence levels and clear limitations.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Device discovery</h3>\n            <p>See visible devices and services on the Wi-Fi you are connected to when you grant Local Network permission at scan time.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Plain-English recommendations</h3>\n            <p>Get practical next steps such as switching to mobile data, using a VPN, or avoiding banking until conditions improve.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Local scan history and export</h3>\n            <p>Keep reports on your iPhone, export PDFs when you need them, and delete all scan data from Settings.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Privacy-first by design</h3>\n            <p>No analytics SDK, no developer backend, and no upload of SSIDs, device names, or scan history.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How HotspotCheck works",
+        "html": "<ol class=\"steps\">\n          <li>Choose where you are connecting — cafe, hotel, home, or another context.</li>\n          <li>Tap <strong>Check this Wi-Fi</strong> when you are ready. Permissions are requested only at scan time.</li>\n          <li>Review your safety score, findings, discovered devices, and limitations.</li>\n          <li>Follow recommendations for banking, work logins, VPN use, or mobile data.</li>\n          <li>Save or export the report locally, or delete history whenever you want.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>HotspotCheck supports everyday Wi-Fi safety decisions that are hard to judge from the Wi-Fi name alone.</p>\n        <ul class=\"list\">\n          <li>Checking cafe or restaurant Wi-Fi before online banking</li>\n          <li>Reviewing hotel or Airbnb networks on arrival</li>\n          <li>Understanding whether a captive portal looks suspicious</li>\n          <li>Spotting visible gateway or DNS warning signs</li>\n          <li>Seeing what devices are visible on a shared network</li>\n          <li>Improving home router exposure awareness</li>\n          <li>Keeping a local record of past checks while travelling</li>\n          <li>Learning Wi-Fi safety basics in the Learn tab</li>\n        </ul>"
+      },
+      {
+        "title": "Why use HotspotCheck?",
+        "html": "<p>Many network tools feel technical, aggressive, or surveillance-oriented. HotspotCheck is different: user-initiated, educational, and honest about what iPhone apps can and cannot see.</p><p>You get three full scans for free — including export, recommendations, and local history. Unlock unlimited checks with an annual subscription or lifetime purchase when you need the app regularly.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is HotspotCheck?</summary>\n            <p>HotspotCheck is a defensive Wi-Fi safety advisor for iPhone. It checks visible safety indicators on the network you are currently using and explains the results in plain English.</p>\n          </details>\n          <details>\n            <summary>Does it guarantee my Wi-Fi is safe?</summary>\n            <p>No. HotspotCheck is an educational tool. It checks visible indicators only and cannot guarantee that a network is safe or detect every device or risk.</p>\n          </details>\n          <details>\n            <summary>What permissions does it need?</summary>\n            <p>Local Network permission is requested only when you start a scan. Location (When In Use) may be needed so iOS can show the current Wi-Fi name and security details where required. Coordinates are not collected or stored.</p>\n          </details>\n          <details>\n            <summary>Is my scan data uploaded?</summary>\n            <p>No. Scan data stays on your iPhone unless you export or share a report yourself. The app has no analytics SDK and no developer-operated backend for scan history.</p>\n          </details>\n          <details>\n            <summary>Is there a free version?</summary>\n            <p>Yes. You receive three full scans for free. After that you can unlock unlimited scans with an annual subscription or a one-time lifetime purchase through Apple.</p>\n          </details>\n          <details>\n            <summary>Who is HotspotCheck for?</summary>\n            <p>It is designed for travellers, students, remote workers, families, and anyone who regularly uses shared or public Wi-Fi and wants practical guidance before sensitive logins.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>HotspotCheck is an educational Wi-Fi safety advisor. It is not a security guarantee, penetration test, or professional audit service. Results reflect visible indicators on the network you are connected to and may be incomplete if permissions are denied or iOS withholds Wi-Fi details.</p><p>The app does not use private APIs, crack passwords, exploit routers, or run hidden background scans. Always use your own judgement for banking, work, and personal accounts.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is HotspotCheck?",
+        "a": "HotspotCheck is a defensive Wi-Fi safety advisor for iPhone. It performs user-initiated checks of visible safety indicators on the Wi-Fi network you are currently using."
+      },
+      {
+        "q": "Does HotspotCheck guarantee my Wi-Fi is safe?",
+        "a": "No. HotspotCheck checks visible indicators only. It cannot guarantee that a network is safe and may not detect every device or risk."
+      },
+      {
+        "q": "What permissions does HotspotCheck need?",
+        "a": "Local Network permission is requested only when you start a scan. Location (When In Use) may be needed so iOS can show the current Wi-Fi name and security details where the platform requires it."
+      },
+      {
+        "q": "Is my scan data uploaded?",
+        "a": "No. Scan data stays on your iPhone unless you choose to export a report. The app has no analytics SDK and no developer-operated backend for scan history."
+      },
+      {
+        "q": "Is there a free version?",
+        "a": "Yes. You receive three full scans for free, including the full report, export, recommendations, and local history. After that you can unlock unlimited scans with an annual subscription or lifetime purchase."
+      },
+      {
+        "q": "Who is HotspotCheck for?",
+        "a": "HotspotCheck is for travellers, students, remote workers, families, and anyone who regularly connects to shared or public Wi-Fi and wants plain-English guidance before sensitive logins."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "keepie-yuppie",
+    "name": "Keepie Yuppie",
+    "brand": "logiq",
+    "description": "Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.",
+    "icon": "/assets/brand/icons/keepie-yuppie.png",
+    "store": "https://apps.apple.com/us/app/keepie-yuppie/id6758394887",
+    "status": "available",
+    "old": "/apps/keepie-yuppie/",
+    "features": [
+      {
+        "title": "99-level progression",
+        "text": "Work through a long sequence of levels with increasing challenge."
+      },
+      {
+        "title": "Physics-based ball control",
+        "text": "Tap to keep the ball airborne and react to motion, speed and position."
+      },
+      {
+        "title": "Dynamic weather",
+        "text": "Wind, rain, snow and storm conditions change how the game feels."
+      },
+      {
+        "title": "Multiple modes",
+        "text": "Play level challenges, survival mode and target practice."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Keepie Yuppie does",
+        "html": "<p>Keepie Yuppie turns simple tap-to-juggle gameplay into a 99-level challenge with physics, weather, obstacles and different ways to play.</p><p>The game is free to download, with a Premium option for unlimited lives and no ads.</p>"
+      },
+      {
+        "title": "Who is Keepie Yuppie for?",
+        "html": "<p>Keepie Yuppie is for players who enjoy quick skill games with physics and replayable challenges.</p>\n        <ul class=\"list\">\n          <li>Casual arcade players</li>\n          <li>Fans of tap timing games</li>\n          <li>Players who like physics-based challenges</li>\n          <li>People who want short mobile game sessions</li>\n          <li>Game Center score chasers</li>\n          <li>Players who enjoy level progression and survival modes</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>99-level progression</h3>\n            <p>Work through a long sequence of levels with increasing challenge.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Physics-based ball control</h3>\n            <p>Tap to keep the ball airborne and react to motion, speed and position.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Dynamic weather</h3>\n            <p>Wind, rain, snow and storm conditions change how the game feels.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Multiple modes</h3>\n            <p>Play level challenges, survival mode and target practice.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How Keepie Yuppie works",
+        "html": "<ol class=\"steps\">\n          <li>Launch the game and choose a level or mode.</li>\n          <li>Tap to keep the ball airborne.</li>\n          <li>Adapt to weather, obstacles and changing physics.</li>\n          <li>Complete levels or chase a survival score.</li>\n          <li>Use Game Center and Premium options if you want more competition or unlimited lives.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>Keepie Yuppie is useful for quick arcade sessions and skill-based challenges.</p>\n        <ul class=\"list\">\n          <li>Timing practice</li>\n          <li>99-level progression</li>\n          <li>Survival runs</li>\n          <li>Target practice</li>\n          <li>Weather challenges</li>\n          <li>Obstacle avoidance</li>\n          <li>Game Center competition</li>\n          <li>Short play sessions</li>\n        </ul>"
+      },
+      {
+        "title": "Why use Keepie Yuppie?",
+        "html": "<p>Keepie Yuppie is built around immediate gameplay: tap, react and improve. The physics and weather keep each session from feeling identical.</p><p>Premium is optional and is intended for players who want unlimited lives and no ads.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is Keepie Yuppie?</summary>\n            <p>Keepie Yuppie is a physics-based ball juggling game for iPhone and iPad.</p>\n          </details>\n          <details>\n            <summary>How many levels does Keepie Yuppie have?</summary>\n            <p>The game includes 99 levels.</p>\n          </details>\n          <details>\n            <summary>What weather effects are included?</summary>\n            <p>The game includes dynamic weather such as wind, rain, snow and storm conditions.</p>\n          </details>\n          <details>\n            <summary>Does Keepie Yuppie have Game Center?</summary>\n            <p>Yes. The game includes Game Center support.</p>\n          </details>\n          <details>\n            <summary>Is Keepie Yuppie free?</summary>\n            <p>Yes. It is free to download with in-app purchases.</p>\n          </details>\n          <details>\n            <summary>What does Premium unlock?</summary>\n            <p>Premium offers unlimited lives and no ads.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Keepie Yuppie is a casual game. Some features may require Game Center, ads or in-app purchases depending on how you choose to play.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is Keepie Yuppie?",
+        "a": "Keepie Yuppie is a physics-based ball juggling game for iPhone and iPad."
+      },
+      {
+        "q": "How many levels does Keepie Yuppie have?",
+        "a": "The game includes 99 levels."
+      },
+      {
+        "q": "What weather effects are included?",
+        "a": "The game includes dynamic weather such as wind, rain, snow and storm conditions."
+      },
+      {
+        "q": "Does Keepie Yuppie have Game Center?",
+        "a": "Yes. The game includes Game Center support."
+      },
+      {
+        "q": "Is Keepie Yuppie free?",
+        "a": "Yes. It is free to download with in-app purchases."
+      },
+      {
+        "q": "What does Premium unlock?",
+        "a": "Premium offers unlimited lives and no ads."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "lighting-check",
+    "name": "Lighting Check",
+    "brand": "logiq",
+    "description": "Lighting Check estimates lux with your iPhone camera, compares practical guidance, calibrates against a trusted meter, saves on-device audits, and exports PDF or CSV reports.",
+    "icon": "/assets/brand/icons/lighting-check.png",
+    "store": "https://apps.apple.com/us/app/lighting-check/id1317618609",
+    "status": "available",
+    "old": "/apps/lighting-check/",
+    "features": [
+      {
+        "title": "Camera-based lux estimate",
+        "text": "Use your device camera to sample light and estimate lux over a chosen duration."
+      },
+      {
+        "title": "Guidance and custom standards",
+        "text": "Compare readings against bundled environments or standards you create on device."
+      },
+      {
+        "title": "Calibration",
+        "text": "Run a one-point calibration against a trusted lux meter to improve consistency on your device."
+      },
+      {
+        "title": "History and exports",
+        "text": "Save sites, rooms, and audits with notes and photos, then export PDF or CSV reports."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Lighting Check does",
+        "html": "<p>Lighting Check measures approximate light level in lux using your device camera. It is designed to help you understand whether a space is bright enough for common settings.</p>\n        <p>Choose bundled environment guidance or create custom standards, run a measurement, review the result, save audits on your device, and export PDF or CSV reports when you need to share or archive a check.</p>"
+      },
+      {
+        "title": "Who is Lighting Check for?",
+        "html": "<p>Lighting Check is for people who want a quick, camera-based light level estimate and light documentation workflow.</p>\n        <ul class=\"list\">\n          <li>People checking room, workplace, or study lighting</li>\n          <li>Facility and farm location checks</li>\n          <li>People comparing spaces against practical lux guidance</li>\n          <li>Users who want on-device history, notes, and photos</li>\n          <li>Students learning about light levels</li>\n          <li>iPhone and iPad users who need a simple light measurement tool</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Camera-based lux estimate</h3>\n            <p>Use your device camera to sample light and estimate lux over a chosen duration.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Guidance and custom standards</h3>\n            <p>Compare readings against bundled environments or standards you create on device.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Calibration</h3>\n            <p>Run a one-point calibration against a trusted lux meter to improve consistency on your device.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>History and exports</h3>\n            <p>Save sites, rooms, and audits with notes and photos, then export PDF or CSV reports.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How Lighting Check works",
+        "html": "<ol class=\"steps\">\n          <li>Choose the environment or custom standard you want to compare against.</li>\n          <li>Point the rear camera at the area you want to measure.</li>\n          <li>Tap Start and hold the device steady during sampling.</li>\n          <li>Review the estimated lux, guidance comparison, and result details.</li>\n          <li>Save the audit, add notes or photos, and export a PDF or CSV when needed.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>Lighting Check supports practical light checks and lightweight documentation.</p>\n        <ul class=\"list\">\n          <li>Room light estimates</li>\n          <li>Workplace and facility checks</li>\n          <li>Farm or housing location checks</li>\n          <li>Target lux comparison</li>\n          <li>One-point calibration workflows</li>\n          <li>On-device audit history</li>\n          <li>PDF and CSV report sharing</li>\n          <li>Learning about light intensity</li>\n        </ul>"
+      },
+      {
+        "title": "Why use Lighting Check?",
+        "html": "<p>Lighting Check gives a quick way to estimate lighting without dedicated hardware, which can be useful for informal checks, comparisons, and simple documentation.</p>\n        <p>Camera-based readings depend on device camera quality and conditions. Newer iPhones typically provide more consistent results. Calibration can improve consistency for your device, but it does not turn the phone into laboratory equipment.</p>"
+      },
+      {
+        "title": "Credits, ads, and Full Access",
+        "html": "<p>You start with free measurement credits. When credits run out, you can watch an optional rewarded ad when one is available, or unlock Full Access with a one-time In-App Purchase for unlimited measurements while the entitlement is active.</p>\n        <p>Rewarded ads are configured as non-personalized from the publisher side. Ad availability can vary, so rewarded credits are not guaranteed. Full Access does not erase your remaining credit balance.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is Lighting Check?</summary>\n            <p>Lighting Check is an iPhone and iPad app that estimates light intensity in lux using your device camera, compares practical guidance, and helps you document checks on device.</p>\n          </details>\n          <details>\n            <summary>How do I measure light with Lighting Check?</summary>\n            <p>Choose an environment, point the camera at the area, tap Start, and hold the device steady during the measurement.</p>\n          </details>\n          <details>\n            <summary>Does Lighting Check use the rear camera?</summary>\n            <p>Yes. The rear camera is used for best accuracy.</p>\n          </details>\n          <details>\n            <summary>Are the readings as accurate as a professional lux meter?</summary>\n            <p>No. Readings depend on your device camera and should be treated as estimates, not certified measurements. You can run a one-point calibration if you already have a trusted meter.</p>\n          </details>\n          <details>\n            <summary>Can Lighting Check compare readings with standards?</summary>\n            <p>Yes. It includes bundled environment guidance and lets you create custom standards on device.</p>\n          </details>\n          <details>\n            <summary>Is Lighting Check free?</summary>\n            <p>Yes. It is free to download with measurement credits, optional non-personalized rewarded ads for more credits, and a one-time Full Access purchase for unlimited measurements.</p>\n          </details>\n          <details>\n            <summary>Does Lighting Check track me for ads?</summary>\n            <p>Lighting Check is configured for non-personalized rewarded ads and does not request App Tracking Transparency. Regional advertising consent may still appear through Google’s User Messaging Platform where required. See the <a href=\"/privacy.html\">Privacy Policy</a>.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Lighting Check provides camera-based estimates and is not a replacement for calibrated professional measurement equipment.</p><p>Accuracy depends on device hardware, camera exposure, lighting conditions and how steadily the device is held.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is Lighting Check?",
+        "a": "Lighting Check is an iPhone and iPad app that estimates light intensity in lux using your device camera, compares practical guidance, and helps you document checks on device."
+      },
+      {
+        "q": "How do I measure light with Lighting Check?",
+        "a": "Choose an environment, point the camera at the area, tap Start, and hold the device steady during the measurement."
+      },
+      {
+        "q": "Does Lighting Check use the rear camera?",
+        "a": "Yes. The rear camera is used for best accuracy."
+      },
+      {
+        "q": "Are the readings as accurate as a professional lux meter?",
+        "a": "No. Readings depend on your device camera and should be treated as estimates, not certified measurements. You can run a one-point calibration if you already have a trusted meter."
+      },
+      {
+        "q": "Can Lighting Check compare readings with standards?",
+        "a": "Yes. It includes bundled environment guidance and lets you create custom standards on device."
+      },
+      {
+        "q": "Is Lighting Check free?",
+        "a": "Yes. It is free to download with measurement credits, optional non-personalized rewarded ads for more credits, and a one-time Full Access purchase for unlimited measurements."
+      },
+      {
+        "q": "Does Lighting Check track me for ads?",
+        "a": "Lighting Check is configured for non-personalized rewarded ads and does not request App Tracking Transparency. Regional advertising consent may still appear through Google’s User Messaging Platform where required."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "medviva-coach",
+    "name": "MedViva Coach",
+    "brand": "cliniq",
+    "description": "MedViva Coach helps A-level students and aspiring medical students practise medicine mock interviews aloud and receive structured AI feedback on communication, confidence, reflection and answer structure.",
+    "icon": "/assets/brand/icons/medviva-coach.png",
+    "store": "https://apps.apple.com/us/app/medviva-coach/id6766191800",
+    "status": "available",
+    "old": "/apps/medviva-coach/",
+    "features": [
+      {
+        "title": "Practise medicine interview questions aloud",
+        "text": "Students practise answering medicine interview-style questions verbally, rather than only reading or writing answers."
+      },
+      {
+        "title": "Receive structured AI feedback",
+        "text": "Feedback helps students improve communication, confidence, clarity, reflection, answer structure and relevance to the question."
+      },
+      {
+        "title": "Build confidence before interviews",
+        "text": "Private, repeatable practice helps students prepare before speaking with teachers, tutors, mentors or interview panels."
+      },
+      {
+        "title": "Prepare anywhere",
+        "text": "Students can practise on iPhone or iPad at home, during revision breaks, or whenever they want to improve interview readiness."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What MedViva Coach does",
+        "html": "<p>MedViva Coach is an AI-powered mock interview app designed for students applying to study medicine. It gives applicants a simple way to practise interview-style questions aloud and receive feedback on communication, clarity, reflection, confidence and answer structure.</p>\n        <p>The app is especially useful for students preparing for UK medical school interviews, including MMI-style and panel-style practice.</p>"
+      },
+      {
+        "title": "Who is MedViva Coach for?",
+        "html": "<p>MedViva Coach is designed for students and supporters preparing for medicine interviews.</p>\n        <ul class=\"list\">\n          <li>A-level students applying to study medicine</li>\n          <li>UK medical school applicants preparing for interviews</li>\n          <li>Students who want to practise speaking answers aloud</li>\n          <li>Applicants who feel nervous about medicine interviews</li>\n          <li>Students who want structured feedback before a real interview</li>\n          <li>Parents, teachers and tutors supporting medicine applicants</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Practise medicine interview questions aloud</h3>\n            <p>Students practise answering medicine interview-style questions verbally, rather than only reading or writing answers.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Receive structured AI feedback</h3>\n            <p>Feedback helps students improve communication, confidence, clarity, reflection, answer structure and relevance to the question.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Build confidence before interviews</h3>\n            <p>Private, repeatable practice helps students prepare before speaking with teachers, tutors, mentors or interview panels.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Prepare anywhere</h3>\n            <p>Students can practise on iPhone or iPad at home, during revision breaks, or whenever they want to improve interview readiness.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How MedViva Coach works",
+        "html": "<ol class=\"steps\">\n          <li>Choose a medicine interview-style question.</li>\n          <li>Answer aloud as if you were in a real interview.</li>\n          <li>Receive structured feedback on your answer.</li>\n          <li>Review suggested improvements.</li>\n          <li>Practise again to build confidence and clarity.</li>\n        </ol>"
+      },
+      {
+        "title": "Practice areas",
+        "html": "<p>MedViva Coach can support practice around common medicine interview themes.</p>\n        <ul class=\"list\">\n          <li>Motivation for studying medicine</li>\n          <li>Communication and empathy</li>\n          <li>Reflection on experience</li>\n          <li>Ethical reasoning</li>\n          <li>Teamwork and leadership</li>\n          <li>Understanding the role of doctors</li>\n          <li>Confidence in speaking aloud</li>\n          <li>Structuring answers clearly</li>\n        </ul>"
+      },
+      {
+        "title": "Why use MedViva Coach?",
+        "html": "<p>Medicine interviews can feel intimidating, especially for students who do not have regular access to mock interview practice. MedViva Coach gives applicants a low-pressure way to practise speaking aloud, reflect on their answers, and improve through repeated feedback.</p>\n        <p>It is not a replacement for teachers, tutors, mentors or official university guidance. Instead, it is a practice tool that helps students prepare more actively and confidently.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is MedViva Coach?</summary>\n            <p>MedViva Coach is an AI-powered mock interview app that helps aspiring medical students practise medicine interview-style questions aloud and receive structured feedback.</p>\n          </details>\n          <details>\n            <summary>Is MedViva Coach for UK medicine applicants?</summary>\n            <p>Yes. MedViva Coach is especially designed for A-level students and UK medical school applicants preparing for medicine interviews.</p>\n          </details>\n          <details>\n            <summary>Can I practise MMI-style questions with MedViva Coach?</summary>\n            <p>MedViva Coach can help students practise common medicine interview themes, including MMI-style communication, reflection, ethical reasoning and motivation questions.</p>\n          </details>\n          <details>\n            <summary>Does MedViva Coach give feedback on my answers?</summary>\n            <p>Yes. The app gives structured feedback to help students improve their communication, confidence, clarity, reflection and answer structure.</p>\n          </details>\n          <details>\n            <summary>Is MedViva Coach a replacement for a tutor?</summary>\n            <p>No. MedViva Coach is a practice tool. It can support interview preparation, but it should not replace teachers, tutors, mentors, official university guidance or real mock interview practice.</p>\n          </details>\n          <details>\n            <summary>Who should use MedViva Coach?</summary>\n            <p>MedViva Coach is suitable for A-level students, aspiring medical students, UK medicine applicants, and students who want to improve their confidence before medical school interviews.</p>\n          </details>\n          <details>\n            <summary>Is MedViva Coach available on Android?</summary>\n            <p>At the moment, MedViva Coach is available on the App Store for iPhone and iPad. If an Android version becomes available, this page will be updated.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Educational disclaimer",
+        "html": "<p>MedViva Coach is an educational practice tool. It is not affiliated with UCAS, any medical school, the NHS, or any official admissions body. The app does not guarantee interview invitations, offers, or admission outcomes. Students should always check official university and admissions guidance when preparing for medical school applications.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is MedViva Coach?",
+        "a": "MedViva Coach is an AI-powered mock interview app that helps aspiring medical students practise medicine interview-style questions aloud and receive structured feedback."
+      },
+      {
+        "q": "Is MedViva Coach for UK medicine applicants?",
+        "a": "Yes. MedViva Coach is especially designed for A-level students and UK medical school applicants preparing for medicine interviews."
+      },
+      {
+        "q": "Can I practise MMI-style questions with MedViva Coach?",
+        "a": "MedViva Coach can help students practise common medicine interview themes, including MMI-style communication, reflection, ethical reasoning and motivation questions."
+      },
+      {
+        "q": "Does MedViva Coach give feedback on my answers?",
+        "a": "Yes. The app gives structured feedback to help students improve their communication, confidence, clarity, reflection and answer structure."
+      },
+      {
+        "q": "Is MedViva Coach a replacement for a tutor?",
+        "a": "No. MedViva Coach is a practice tool. It can support interview preparation, but it should not replace teachers, tutors, mentors, official university guidance or real mock interview practice."
+      },
+      {
+        "q": "Who should use MedViva Coach?",
+        "a": "MedViva Coach is suitable for A-level students, aspiring medical students, UK medicine applicants, and students who want to improve their confidence before medical school interviews."
+      },
+      {
+        "q": "Is MedViva Coach available on Android?",
+        "a": "At the moment, MedViva Coach is available on the App Store for iPhone and iPad. If an Android version becomes available, this page will be updated."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "msgsecret",
+    "name": "MsgSecret",
+    "brand": "logiq",
+    "description": "MsgSecret helps you encode and decode messages with classic cipher methods, then share ciphertext through email, SMS, WhatsApp, social apps and more.",
+    "icon": "/assets/brand/icons/msgsecret.png",
+    "store": "https://apps.apple.com/us/app/msgsecret/id958618403",
+    "status": "available",
+    "old": "/apps/msgsecret/",
+    "features": [
+      {
+        "title": "Encode and decode text",
+        "text": "Transform plaintext into ciphertext and decode incoming text in one focused app."
+      },
+      {
+        "title": "Multiple classic ciphers",
+        "text": "Choose from different methods with explanations so setup stays straightforward."
+      },
+      {
+        "title": "Share anywhere",
+        "text": "Copy ciphertext to email, SMS, WhatsApp, social apps or any text field."
+      },
+      {
+        "title": "Tutorial and cipher reference",
+        "text": "A built-in tutorial and About ciphers section help users get started."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What MsgSecret does",
+        "html": "<p>MsgSecret helps keep the meaning of your messages out of plain form before the text leaves your device. You set up your cipher, encrypt on device and share ciphertext through any app or pasteboard.</p><p>Separate plaintext and ciphertext fields make it easier to switch between encoding and decoding without overwriting your last step.</p>"
+      },
+      {
+        "title": "Who is MsgSecret for?",
+        "html": "<p>MsgSecret is for people who want a simple cipher-based way to encode and decode text.</p>\n        <ul class=\"list\">\n          <li>People sharing encoded messages</li>\n          <li>Users who want classic cipher tools</li>\n          <li>Students learning about ciphers</li>\n          <li>People sending ciphertext through messaging apps</li>\n          <li>Users who want a focused encode/decode utility</li>\n          <li>iPhone users who prefer on-device text transformation</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Encode and decode text</h3>\n            <p>Transform plaintext into ciphertext and decode incoming text in one focused app.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Multiple classic ciphers</h3>\n            <p>Choose from different methods with explanations so setup stays straightforward.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Share anywhere</h3>\n            <p>Copy ciphertext to email, SMS, WhatsApp, social apps or any text field.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Tutorial and cipher reference</h3>\n            <p>A built-in tutorial and About ciphers section help users get started.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How MsgSecret works",
+        "html": "<ol class=\"steps\">\n          <li>Choose whether to encrypt or decrypt.</li>\n          <li>Enter your text and cipher settings.</li>\n          <li>Run the transformation on device.</li>\n          <li>Copy the result into email, SMS, chat or social apps.</li>\n          <li>Decode incoming ciphertext with MsgSecret and the same settings.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>MsgSecret supports everyday text encoding and cipher learning use cases.</p>\n        <ul class=\"list\">\n          <li>Encoding messages</li>\n          <li>Decoding incoming ciphertext</li>\n          <li>Classic cipher exploration</li>\n          <li>Copy and paste workflows</li>\n          <li>Email and SMS sharing</li>\n          <li>Chat and social app sharing</li>\n          <li>Tutorial-guided setup</li>\n          <li>On-device text transformation</li>\n        </ul>"
+      },
+      {
+        "title": "Why use MsgSecret?",
+        "html": "<p>MsgSecret reduces what service providers and platforms can infer from message text alone because they carry ciphertext instead of the original wording.</p><p>It is a cipher utility, not a guarantee of military-grade or end-to-end security. Use it for privacy-minded encoding and learning, not for high-risk secrets.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is MsgSecret?</summary>\n            <p>MsgSecret is an app for encoding and decoding messages with classic cipher methods.</p>\n          </details>\n          <details>\n            <summary>Can I send encoded text through other apps?</summary>\n            <p>Yes. You can copy ciphertext from MsgSecret and paste it into email, SMS, chat or social apps.</p>\n          </details>\n          <details>\n            <summary>Does the recipient need MsgSecret?</summary>\n            <p>To decode the message easily, the recipient needs MsgSecret and the same cipher settings.</p>\n          </details>\n          <details>\n            <summary>Does MsgSecret encrypt on device?</summary>\n            <p>Yes. The text transformation happens on device.</p>\n          </details>\n          <details>\n            <summary>Is MsgSecret free?</summary>\n            <p>Yes. MsgSecret is free to use.</p>\n          </details>\n          <details>\n            <summary>Is MsgSecret a replacement for secure messaging?</summary>\n            <p>No. It is a cipher and encoding utility, not a full secure messaging system.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>MsgSecret is a text encoding and cipher utility. It should not be treated as a replacement for audited secure messaging or professional security tools.</p><p>Recipients need the correct method and settings to decode the text.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is MsgSecret?",
+        "a": "MsgSecret is an app for encoding and decoding messages with classic cipher methods."
+      },
+      {
+        "q": "Can I send encoded text through other apps?",
+        "a": "Yes. You can copy ciphertext from MsgSecret and paste it into email, SMS, chat or social apps."
+      },
+      {
+        "q": "Does the recipient need MsgSecret?",
+        "a": "To decode the message easily, the recipient needs MsgSecret and the same cipher settings."
+      },
+      {
+        "q": "Does MsgSecret encrypt on device?",
+        "a": "Yes. The text transformation happens on device."
+      },
+      {
+        "q": "Is MsgSecret free?",
+        "a": "Yes. MsgSecret is free to use."
+      },
+      {
+        "q": "Is MsgSecret a replacement for secure messaging?",
+        "a": "No. It is a cipher and encoding utility, not a full secure messaging system."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "natural-text",
+    "name": "Natural Text",
+    "brand": "logiq",
+    "description": "Natural Text encrypts your text into natural-looking text using a secret key, with support for multiple languages and sharing through email, SMS and messaging apps.",
+    "icon": "/assets/brand/icons/natural-text.png",
+    "store": "https://apps.apple.com/us/app/natural-text/id1323616521",
+    "status": "available",
+    "old": "/apps/natural-text/",
+    "features": [
+      {
+        "title": "Secret-key transformation",
+        "text": "Encrypt and decrypt text using a secret key."
+      },
+      {
+        "title": "Natural-looking output",
+        "text": "Generate output intended to look more like natural language than ordinary ciphertext."
+      },
+      {
+        "title": "Multi-language support",
+        "text": "Use the app with support for multiple languages."
+      },
+      {
+        "title": "Share through other apps",
+        "text": "Use transformed text in email, SMS, WhatsApp, Telegram and more."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What Natural Text does",
+        "html": "<p>Natural Text transforms messages into natural-looking text using your secret key. The result is designed to look less like broken ciphertext while still being reversible with the right key.</p><p>The app supports multiple languages and can be used alongside common messaging and sharing apps.</p>"
+      },
+      {
+        "title": "Who is Natural Text for?",
+        "html": "<p>Natural Text is for people who want a different style of text privacy and message transformation.</p>\n        <ul class=\"list\">\n          <li>People who want natural-looking encrypted text</li>\n          <li>Users sharing transformed messages through chat apps</li>\n          <li>People who use email, SMS, WhatsApp or Telegram</li>\n          <li>Users who want a secret-key workflow</li>\n          <li>Learners interested in text transformation</li>\n          <li>iPhone and iPad users who want a focused privacy utility</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Secret-key transformation</h3>\n            <p>Encrypt and decrypt text using a secret key.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Natural-looking output</h3>\n            <p>Generate output intended to look more like natural language than ordinary ciphertext.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Multi-language support</h3>\n            <p>Use the app with support for multiple languages.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Share through other apps</h3>\n            <p>Use transformed text in email, SMS, WhatsApp, Telegram and more.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How Natural Text works",
+        "html": "<ol class=\"steps\">\n          <li>Enter your message.</li>\n          <li>Enter your secret key.</li>\n          <li>Choose whether to encrypt or decrypt.</li>\n          <li>Copy the transformed text.</li>\n          <li>Share or decode the text with the same key when needed.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>Natural Text supports privacy-minded text transformation and sharing workflows.</p>\n        <ul class=\"list\">\n          <li>Secret-key text encryption</li>\n          <li>Natural-looking message output</li>\n          <li>Email sharing</li>\n          <li>SMS sharing</li>\n          <li>WhatsApp and Telegram workflows</li>\n          <li>Multiple language use</li>\n          <li>Encrypt/decrypt practice</li>\n          <li>Optional unlimited-character upgrade</li>\n        </ul>"
+      },
+      {
+        "title": "Why use Natural Text?",
+        "html": "<p>Natural Text offers a distinctive way to transform messages before sharing them through ordinary communication apps.</p><p>It is best used as a personal privacy and text transformation tool. Do not rely on it as a replacement for audited security systems when safety-critical secrecy is required.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is Natural Text?</summary>\n            <p>Natural Text is an app that encrypts your text into natural-looking text using a secret key.</p>\n          </details>\n          <details>\n            <summary>Where can I use the output?</summary>\n            <p>You can use the transformed text in email, SMS, WhatsApp, Telegram and other apps that accept text.</p>\n          </details>\n          <details>\n            <summary>Does Natural Text support multiple languages?</summary>\n            <p>Yes. Natural Text supports multiple languages.</p>\n          </details>\n          <details>\n            <summary>Do I need a secret key?</summary>\n            <p>Yes. The secret key is used for encryption and decryption.</p>\n          </details>\n          <details>\n            <summary>Is Natural Text free?</summary>\n            <p>Yes. It is free with optional in-app purchases for unlimited characters and no ads.</p>\n          </details>\n          <details>\n            <summary>Is Natural Text a replacement for audited security tools?</summary>\n            <p>No. It is a privacy-minded text transformation app, not a replacement for audited secure communication systems.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>Natural Text is a text transformation utility. Keep your secret key private and do not use the app as your only protection for safety-critical information.</p><p>Availability of features may depend on optional in-app purchases.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is Natural Text?",
+        "a": "Natural Text is an app that encrypts your text into natural-looking text using a secret key."
+      },
+      {
+        "q": "Where can I use the output?",
+        "a": "You can use the transformed text in email, SMS, WhatsApp, Telegram and other apps that accept text."
+      },
+      {
+        "q": "Does Natural Text support multiple languages?",
+        "a": "Yes. Natural Text supports multiple languages."
+      },
+      {
+        "q": "Do I need a secret key?",
+        "a": "Yes. The secret key is used for encryption and decryption."
+      },
+      {
+        "q": "Is Natural Text free?",
+        "a": "Yes. It is free with optional in-app purchases for unlimited characters and no ads."
+      },
+      {
+        "q": "Is Natural Text a replacement for audited security tools?",
+        "a": "No. It is a privacy-minded text transformation app, not a replacement for audited secure communication systems."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "nmc-osce-coach",
+    "name": "NMC OSCE AI Coach",
+    "brand": "cliniq",
+    "description": "NMC OSCE AI Coach helps internationally educated nurses practise OSCE-style stations aloud with timed scenarios, AI patient voice, checklist feedback and exam plans.",
+    "icon": "/assets/brand/icons/nmc-osce-coach.png",
+    "store": "https://apps.apple.com/us/app/nmc-osce-coach/id6770335559",
+    "status": "available",
+    "old": "/apps/nmc-osce-coach/",
+    "features": [
+      {
+        "title": "Timed OSCE-style stations",
+        "text": "Practise adult nursing stations with door notes, preparation time and timed station flow."
+      },
+      {
+        "title": "AI patient voice practice",
+        "text": "Speak aloud with patient and examiner-style voice interaction during practice."
+      },
+      {
+        "title": "Checklist feedback",
+        "text": "Review transcript capture, checklist-style feedback and missed safety-point detection."
+      },
+      {
+        "title": "Plans, viva rescue and phrase bank",
+        "text": "Use weakness tracking, 7-day and 14-day exam plans, viva rescue drills and a UK clinical communication phrase bank."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What NMC OSCE AI Coach does",
+        "html": "<p>NMC OSCE AI Coach is an independent educational practice tool for internationally educated nurses preparing for UK adult nursing OSCE-style communication exams.</p><p>It provides original practice stations with timed flow, voice interaction, transcripts and checklist-style feedback. It does not provide official OSCE marking or guarantee any exam result.</p>"
+      },
+      {
+        "title": "Who is NMC OSCE AI Coach for?",
+        "html": "<p>NMC OSCE AI Coach is designed for nurses who want focused, repeatable OSCE-style voice practice on iPhone and iPad.</p>\n        <ul class=\"list\">\n          <li>Internationally educated nurses preparing for UK registration</li>\n          <li>Adult nursing candidates practising OSCE communication stations</li>\n          <li>Learners who want timed door-note and station flow</li>\n          <li>Candidates building confidence speaking aloud under exam pressure</li>\n          <li>Busy students fitting short practice sessions into a study plan</li>\n          <li>Nurses who want structured feedback and weakness tracking</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Timed OSCE-style stations</h3>\n            <p>Practise adult nursing stations with door notes, preparation time and timed station flow.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>AI patient voice practice</h3>\n            <p>Speak aloud with patient and examiner-style voice interaction during practice.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Checklist feedback</h3>\n            <p>Review transcript capture, checklist-style feedback and missed safety-point detection.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Plans, viva rescue and phrase bank</h3>\n            <p>Use weakness tracking, 7-day and 14-day exam plans, viva rescue drills and a UK clinical communication phrase bank.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How NMC OSCE AI Coach works",
+        "html": "<ol class=\"steps\">\n          <li>Choose an adult nursing practice station.</li>\n          <li>Read the door note and use the preparation timer.</li>\n          <li>Complete the timed station aloud with voice interaction.</li>\n          <li>Review your transcript and checklist-style feedback.</li>\n          <li>Track weaknesses, follow an exam plan and practise again.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>NMC OSCE AI Coach supports common OSCE preparation needs for adult nursing candidates.</p>\n        <ul class=\"list\">\n          <li>OSCE station communication flow</li>\n          <li>Patient interaction and reassurance</li>\n          <li>Safety-critical communication points</li>\n          <li>Viva rescue practice</li>\n          <li>Transcript review after attempts</li>\n          <li>Structured checklist feedback</li>\n          <li>7-day and 14-day study plans</li>\n          <li>UK clinical phrase practice</li>\n        </ul>"
+      },
+      {
+        "title": "Why use NMC OSCE AI Coach?",
+        "html": "<p>OSCE preparation often needs repeated spoken practice under time pressure, not just reading notes. NMC OSCE AI Coach gives nurses a private, repeatable way to rehearse exam-style communication.</p><p>The app is a preparation tool and works best alongside official NMC preparation materials, university guidance and real-world speaking practice.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is NMC OSCE AI Coach?</summary>\n            <p>NMC OSCE AI Coach is an independent OSCE-style voice practice app for UK adult nursing exam preparation.</p>\n          </details>\n          <details>\n            <summary>Is NMC OSCE AI Coach affiliated with the NMC?</summary>\n            <p>No. It is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council.</p>\n          </details>\n          <details>\n            <summary>Does the app provide official OSCE marking?</summary>\n            <p>No. Feedback and estimated outcomes are local educational practice only and are not official OSCE marking.</p>\n          </details>\n          <details>\n            <summary>Is the clinical content medical advice?</summary>\n            <p>No. Scenarios and feedback are for exam communication practice only and must not be used for real patient care.</p>\n          </details>\n          <details>\n            <summary>Who is NMC OSCE AI Coach for?</summary>\n            <p>It is designed for internationally educated nurses preparing for UK adult nursing OSCE-style communication practice.</p>\n          </details>\n          <details>\n            <summary>Does the app guarantee exam success?</summary>\n            <p>No. The app does not guarantee any exam result, pass, or registration outcome.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>NMC OSCE AI Coach is an independent educational practice tool. It is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council. Always use official NMC preparation materials and guidance when preparing for your exam.</p><p>Scenarios and feedback are for exam communication practice only. They are not clinical guidance and must not be used for real patient care. Practice results shown in the app are local educational feedback only and do not guarantee any exam outcome.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is NMC OSCE AI Coach?",
+        "a": "NMC OSCE AI Coach is an independent OSCE-style voice practice app for UK adult nursing exam preparation."
+      },
+      {
+        "q": "Is NMC OSCE AI Coach affiliated with the NMC?",
+        "a": "No. It is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council."
+      },
+      {
+        "q": "Does the app provide official OSCE marking?",
+        "a": "No. Feedback and estimated outcomes are local educational practice only and are not official OSCE marking."
+      },
+      {
+        "q": "Is the clinical content medical advice?",
+        "a": "No. Scenarios and feedback are for exam communication practice only and must not be used for real patient care."
+      },
+      {
+        "q": "Who is NMC OSCE AI Coach for?",
+        "a": "It is designed for internationally educated nurses preparing for UK adult nursing OSCE-style communication practice."
+      },
+      {
+        "q": "Does the app guarantee exam success?",
+        "a": "No. The app does not guarantee any exam result, pass, or registration outcome."
+      }
+    ],
+    "platform": "iOS"
+  },
+  {
+    "slug": "ucat-sprint-coach",
+    "name": "UCAT Sprint Coach",
+    "brand": "cliniq",
+    "description": "UCAT Sprint Coach is a privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks, progress analytics and study planning for iPhone, iPad and Mac.",
+    "icon": "/assets/brand/icons/ucat-sprint-coach.png",
+    "store": "",
+    "status": "upcoming",
+    "old": "/apps/ucat-sprint-coach/",
+    "features": [
+      {
+        "title": "1,444 original questions",
+        "text": "Practice across VR, DM, QR and SJT with explanations after each question."
+      },
+      {
+        "title": "Timed drills and full mocks",
+        "text": "Use untimed learning, timed mini-drills and full mock flow with flagging, navigator and calculator tools."
+      },
+      {
+        "title": "Progress and study planning",
+        "text": "Track accuracy trends, readiness guidance, subtest balance and next-practice recommendations."
+      },
+      {
+        "title": "Privacy-first by design",
+        "text": "Works offline after install. Practice data stays on your device. No account and no tracking SDKs."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What UCAT Sprint Coach does",
+        "html": "<p>UCAT Sprint Coach is an independent preparation tool for medicine and dentistry applicants practising Verbal Reasoning, Decision Making, Quantitative Reasoning and Situational Judgement.</p>\n        <p>It includes original practice items, timed mini-drills, a full mock workflow with official-style subtest timing, explanations, a review notebook and local progress analytics. Estimated scores are practice guidance only.</p>"
+      },
+      {
+        "title": "Who is UCAT Sprint Coach for?",
+        "html": "<p>UCAT Sprint Coach is designed for students who want focused, repeatable UCAT-style practice on Apple devices.</p>\n        <ul class=\"list\">\n          <li>Medicine and dentistry applicants preparing for the UCAT</li>\n          <li>Students who want timed drills that fit short study sessions</li>\n          <li>Candidates practising full mock exam workflow</li>\n          <li>Learners who prefer privacy-first apps with no account</li>\n          <li>Users who want progress trends and study recommendations</li>\n          <li>Students who need dyslexia-friendly reading options</li>\n        </ul>"
+      },
+      {
+        "title": "Key features",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>1,444 original questions</h3>\n            <p>Practice across VR, DM, QR and SJT with explanations after each question.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Timed drills and full mocks</h3>\n            <p>Use untimed learning, timed mini-drills and full mock flow with flagging, navigator and calculator tools.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Progress and study planning</h3>\n            <p>Track accuracy trends, readiness guidance, subtest balance and next-practice recommendations.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Privacy-first by design</h3>\n            <p>Works offline after install. Practice data stays on your device. No account and no tracking SDKs.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "How UCAT Sprint Coach works",
+        "html": "<ol class=\"steps\">\n          <li>Choose a subtest and practice mode (untimed, timed drill or mock).</li>\n          <li>Answer questions with exam-style tools such as flagging, navigator and calculator where relevant.</li>\n          <li>Review explanations and save incorrect or flagged items to your notebook.</li>\n          <li>Check your dashboard for accuracy trends and readiness guidance.</li>\n          <li>Follow study recommendations and official UCAT cycle dates as you prepare.</li>\n        </ol>"
+      },
+      {
+        "title": "Useful for",
+        "html": "<p>UCAT Sprint Coach supports common preparation needs for medicine and dentistry applicants.</p>\n        <ul class=\"list\">\n          <li>Verbal Reasoning passage practice</li>\n          <li>Decision Making logic and multi-statement items</li>\n          <li>Quantitative Reasoning tables and charts</li>\n          <li>Situational Judgement scenarios</li>\n          <li>Timed mini-drills under exam pressure</li>\n          <li>Full mock exam workflow</li>\n          <li>Review of incorrect and flagged questions</li>\n          <li>Local study planning and progress tracking</li>\n        </ul>"
+      },
+      {
+        "title": "Why use UCAT Sprint Coach?",
+        "html": "<p>UCAT preparation benefits from repeated, timed practice with clear feedback — not just reading theory. UCAT Sprint Coach gives students a private, offline-friendly way to rehearse exam-style workflow on iPhone, iPad and Mac.</p>\n        <p>The app is a preparation tool and works best alongside official UCAT preparation resources and guidance from the UCAT Consortium.</p>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is UCAT Sprint Coach?</summary>\n            <p>UCAT Sprint Coach is an independent UCAT preparation app with original practice questions, timed drills, full mocks and progress analytics for medicine and dentistry applicants.</p>\n          </details>\n          <details>\n            <summary>Is UCAT Sprint Coach affiliated with the UCAT Consortium?</summary>\n            <p>No. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university.</p>\n          </details>\n          <details>\n            <summary>Are the practice questions official UCAT questions?</summary>\n            <p>No. All practice questions are original UCAT-style items created for this app. They are not official UCAT questions.</p>\n          </details>\n          <details>\n            <summary>Does the app give official UCAT scores?</summary>\n            <p>No. Estimated scores and readiness metrics are for practice guidance only and are not official UCAT scores.</p>\n          </details>\n          <details>\n            <summary>Is an account required?</summary>\n            <p>No. Practice data stays on your device. No account is required.</p>\n          </details>\n          <details>\n            <summary>Is there a free version?</summary>\n            <p>Yes. The free tier includes 50 questions and one diagnostic mini-drill. Premium unlocks the full bank, mocks, analytics and study plan via subscription or lifetime purchase.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>UCAT Sprint Coach is an independent preparation tool. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the General Medical Council, the Medical Schools Council, Apple, or any university. UCAT is used only to describe the examination for which users may be preparing.</p>\n        <p>All practice questions in this app are original unless otherwise stated. Estimated scores are for practice guidance only and are not official UCAT scores. Always use official UCAT preparation materials when preparing for your exam.</p>"
+      },
+      {
+        "title": "Get UCAT Sprint Coach",
+        "html": "<p>UCAT Sprint Coach is coming soon to the App Store for iPhone, iPad and Mac.</p>\n        <div class=\"cta-row\" style=\"justify-content: center;\">\n          <a class=\"cta-btn\" href=\"/ucat-sprint-coach-privacy.html\">Read the Privacy Policy</a>\n          <a class=\"secondary-link\" href=\"/\">View all Random Mini Apps</a>\n        </div>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is UCAT Sprint Coach?",
+        "a": "UCAT Sprint Coach is an independent UCAT preparation app with original practice questions, timed drills, full mocks and progress analytics for medicine and dentistry applicants."
+      },
+      {
+        "q": "Is UCAT Sprint Coach affiliated with the UCAT Consortium?",
+        "a": "No. It is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university."
+      },
+      {
+        "q": "Are the practice questions official UCAT questions?",
+        "a": "No. All practice questions are original UCAT-style items created for this app. They are not official UCAT questions."
+      },
+      {
+        "q": "Does the app give official UCAT scores?",
+        "a": "No. Estimated scores and readiness metrics are for practice guidance only and are not official UCAT scores."
+      },
+      {
+        "q": "Is an account required?",
+        "a": "No. Practice data stays on your device. No account is required."
+      },
+      {
+        "q": "Is there a free version?",
+        "a": "Yes. The free tier includes 50 questions and one diagnostic mini-drill. Premium unlocks the full bank, mocks, analytics and study plan via subscription or lifetime purchase."
+      }
+    ],
+    "platform": "iOS, macOS"
+  },
+  {
+    "slug": "scamlens",
+    "name": "ScamLens",
+    "brand": "logiq",
+    "description": "ScamLens is a completely free, privacy-first scam checker for iPhone and iPad. Check links, QR codes, texts and screenshots on your device — nothing is ever uploaded.",
+    "icon": "/assets/brand/icons/scamlens.png",
+    "store": "",
+    "status": "upcoming",
+    "old": "/scamlens/",
+    "features": [
+      {
+        "title": "Paste a link or message",
+        "text": "Delivery texts, HMRC \"refunds\", bank alerts and marketplace messages — get a clear risk level with reasons in plain English."
+      },
+      {
+        "title": "Scan a QR code safely",
+        "text": "See exactly where a QR code leads before anything opens. Built for parking meters, menus and mystery stickers."
+      },
+      {
+        "title": "Share from Safari or Messages",
+        "text": "Send a suspicious link straight from Safari, Mail, Messages or WhatsApp into ScamLens via the share extension."
+      },
+      {
+        "title": "Check a screenshot",
+        "text": "Import a screenshot of a dodgy text or email. ScamLens reads it on your device and highlights the red flags."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What ScamLens does",
+        "html": "<p>ScamLens gives you a calm second opinion before you tap, pay, or reply. It reviews links, QR codes, pasted messages and screenshots using a rule engine and on-device intelligence, then shows a clear risk level with the reasons in plain English.</p>\n        <p>You see the real destination domain before anything opens, exactly why it looks suspicious, the safer next step, and one-tap UK reporting guidance. It is educational and honest — ScamLens cannot guarantee safety and never opens links by itself.</p>"
+      },
+      {
+        "title": "Four ways to check",
+        "html": "<div class=\"grid\">\n          <article class=\"mini-card\">\n            <h3>Paste a link or message</h3>\n            <p>Delivery texts, HMRC \"refunds\", bank alerts and marketplace messages — get a clear risk level with reasons in plain English.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Scan a QR code safely</h3>\n            <p>See exactly where a QR code leads before anything opens. Built for parking meters, menus and mystery stickers.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Share from Safari or Messages</h3>\n            <p>Send a suspicious link straight from Safari, Mail, Messages or WhatsApp into ScamLens via the share extension.</p>\n          </article>\n          <article class=\"mini-card\">\n            <h3>Check a screenshot</h3>\n            <p>Import a screenshot of a dodgy text or email. ScamLens reads it on your device and highlights the red flags.</p>\n          </article>\n        </div>"
+      },
+      {
+        "title": "What you see",
+        "html": "<ul class=\"list\">\n          <li>A clear risk level: Low risk, Caution, High risk or Critical</li>\n          <li>The real destination domain, shown before anything opens</li>\n          <li>Why it looks suspicious — look-alike addresses, hidden destinations, urgent payment language</li>\n          <li>The safer next step, such as using the official app instead</li>\n          <li>One-tap UK reporting: 7726, NCSC, 159, Report Fraud and more</li>\n          <li>Plain-English guides to scams circulating in the UK right now</li>\n        </ul>"
+      },
+      {
+        "title": "Built for the UK",
+        "html": "<p>ScamLens knows the scams Britons actually receive: parcel redelivery fees, HMRC \"refunds\", bank impersonation and safe-account fraud, parking QR stickers, Winter Fuel Payment texts, eVisa fee demands, marketplace courier tricks, and more — with the correct current UK reporting route for each.</p>\n        <p>Scam text? Forward it free to <strong>7726</strong>. Suspicious email? Send it to <strong>report@phishing.gov.uk</strong>. A call about your bank account? Hang up and dial <strong>159</strong>. Lost money? Report to <strong>Report Fraud</strong> (reportfraud.police.uk) — or Police Scotland on <strong>101</strong>.</p>"
+      },
+      {
+        "title": "Private by design",
+        "html": "<ul class=\"list\">\n          <li>Checks run entirely on your iPhone or iPad — messages and screenshots are never uploaded</li>\n          <li>No account, no ads, no analytics, no third-party SDKs</li>\n          <li>History stays on your device; delete it any time</li>\n          <li>App Store privacy label: Data Not Collected</li>\n          <li>On-device AI explanations on supported devices; fully functional without it</li>\n          <li>Only network use: optional scam-pattern content updates (no identifiers sent)</li>\n        </ul>"
+      },
+      {
+        "title": "Completely free",
+        "html": "<p>Every feature is free. There are no ads, subscriptions, or in-app purchases.</p>\n        <p>Checks are unlimited. That includes QR previews, screenshot checking, full history with search, technical details, Helper mode for explaining a result to family, verdicts, safer next steps, UK reporting guidance, and the full scam library.</p>\n        <p>Sharing a result is a text summary only. ScamLens does not export PDFs.</p>"
+      },
+      {
+        "title": "How ScamLens works",
+        "html": "<ol class=\"steps\">\n          <li>Paste a message, scan a QR code, share a link, or import a screenshot.</li>\n          <li>ScamLens analyses it on your device using UK scam patterns and URL rules.</li>\n          <li>Review your risk level, evidence, safer next step and reporting options.</li>\n          <li>Use Helper mode to explain a result clearly to someone else, if needed.</li>\n          <li>Browse the Learn tab for guides to current UK scams and how to report them.</li>\n        </ol>"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "html": "<div class=\"faq\">\n          <details>\n            <summary>What is ScamLens?</summary>\n            <p>ScamLens is a completely free, on-device educational scam checker for iPhone and iPad. It reviews suspicious links, QR codes, messages and screenshots and explains warning signs in plain English before you tap, pay or reply.</p>\n          </details>\n          <details>\n            <summary>Does it upload my messages?</summary>\n            <p>No. Checks run entirely on your iPhone. Messages, links, screenshots and results are never uploaded, transmitted or logged. Our App Store privacy label is Data Not Collected.</p>\n          </details>\n          <details>\n            <summary>Can it guarantee a link is safe?</summary>\n            <p>No. ScamLens is an educational safety tool. A \"Low risk\" result means no obvious warning signs were found — it is not a promise of safety. Always verify through official channels before sharing personal or payment details.</p>\n          </details>\n          <details>\n            <summary>Is ScamLens free?</summary>\n            <p>Yes. ScamLens is completely free, with unlimited checks. There are no ads, subscriptions, or in-app purchases. QR previews, screenshot checking, history with search, technical details, Helper mode, verdicts, reporting guidance and the scam library are all included. Sharing a result is a text summary only. ScamLens does not export PDFs.</p>\n          </details>\n          <details>\n            <summary>What permissions does it need?</summary>\n            <p>Camera is used only while you scan a QR code — nothing is recorded or uploaded. Photos access is via the system picker for screenshot checking; images are processed on-device and never stored unless you save a check to history.</p>\n          </details>\n          <details>\n            <summary>Who is ScamLens for?</summary>\n            <p>Anyone in the UK who receives suspicious texts, emails, QR codes or links — and anyone helping family members who need a calm, plain-English second opinion before they tap.</p>\n          </details>\n        </div>"
+      },
+      {
+        "title": "Important notes",
+        "html": "<p>ScamLens is an educational safety tool. It helps you spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe. HMRC, Royal Mail, Evri, DVLA, NHS, bank names and other organisations mentioned are referenced for identification only — ScamLens is independent and not affiliated with them.</p>\n        <p>Reporting shortcuts connect you to third-party services we do not operate. You remain responsible for your own decisions, including any link you choose to open.</p>"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is ScamLens?",
+        "a": "ScamLens is a completely free, on-device educational scam checker for iPhone and iPad. It reviews suspicious links, QR codes, messages and screenshots and explains warning signs in plain English."
+      },
+      {
+        "q": "Does ScamLens upload my messages?",
+        "a": "No. Checks run entirely on your iPhone. Messages, links, screenshots and results are never uploaded. The App Store privacy label is Data Not Collected."
+      },
+      {
+        "q": "Can ScamLens guarantee a link is safe?",
+        "a": "No. ScamLens is an educational safety tool. It helps you spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe."
+      },
+      {
+        "q": "Is ScamLens free?",
+        "a": "Yes. ScamLens is completely free, with unlimited checks. There are no ads, subscriptions, or in-app purchases. Sharing a result is a text summary only. ScamLens does not export PDFs."
+      },
+      {
+        "q": "Is ScamLens built for UK scams?",
+        "a": "Yes. ScamLens knows the scams Britons actually receive — parcel redelivery fees, HMRC refunds, bank impersonation, parking QR stickers, NHS and DVLA impersonation — with the correct UK reporting routes such as 7726, NCSC, 159 and Report Fraud."
+      }
+    ],
+    "platform": "iOS"
+  }
+]

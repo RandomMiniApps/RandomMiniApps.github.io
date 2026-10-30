@@ -1,584 +1,106 @@
-<!DOCTYPE html>
-<html lang="en-GB" dir="ltr">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BoomColor - Coloring Book for iPhone and iPad</title>
-  <meta name="description" content="BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://randomminiapps.github.io/apps/coloring-book/">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "BoomColor",
-  "alternateName": "Coloring Book",
-  "applicationCategory": "GameApplication",
-  "operatingSystem": "iOS",
-  "description": "BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.",
-  "url": "https://randomminiapps.github.io/apps/coloring-book/",
-  "downloadUrl": "https://apps.apple.com/us/app/boomcolor/id6761337820",
-  "image": "https://randomminiapps.github.io/coloring-book-icon.png",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Random Mini Apps",
-    "url": "https://randomminiapps.github.io/"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock",
-    "url": "https://apps.apple.com/us/app/boomcolor/id6761337820"
-  }
-}
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is BoomColor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "BoomColor is a coloring book app for iPhone and iPad with a large gallery of outline pages, tap-to-fill painting, creative effects and daily challenges."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you color in BoomColor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Choose a page, pick colors or effects, and tap regions to fill them. The app uses flood-fill painting with undo and redo support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many coloring pages are included?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The app includes 50 starter pages in the download plus hundreds more gallery pages delivered through Apple-hosted asset packs across ten browse categories."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use my own photos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can import photos from your library to use as coloring pages and save finished artwork back to Photos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are daily challenges?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Each day features a featured challenge page with goals for coverage, color and effects. Meeting all goals earns bonus credits in the app."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is BoomColor free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "BoomColor is free to download. Credits, optional unlocks and ads support access to additional pages and creative tools."
-      }
-    }
-  ]
-}
-  </script>
-  <style>
-    :root {
-      --bg: #0f0f12;
-      --surface: #18181c;
-      --surface-hover: #222228;
-      --text: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --accent: #22d3ee;
-      --accent-dim: rgba(34, 211, 238, 0.15);
-      --border: #27272a;
-      --radius: 18px;
-      --radius-sm: 12px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Outfit', system-ui, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
-        var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; }
-
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .site-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 4rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .site-nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .site-nav a:hover { text-decoration: underline; }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
-      gap: 2rem;
-      align-items: center;
-      margin-bottom: 3rem;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 4.6rem);
-      line-height: 1;
-      letter-spacing: -0.05em;
-      margin-bottom: 1rem;
-    }
-
-    .hero-lede {
-      color: var(--text);
-      font-size: clamp(1.15rem, 2vw, 1.35rem);
-      max-width: 720px;
-      margin-bottom: 0.85rem;
-    }
-
-    .hero-copy {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-      max-width: 700px;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      align-items: center;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.8rem 1.1rem;
-      border-radius: 10px;
-      background: var(--accent);
-      color: var(--bg);
-      text-decoration: none;
-      font-weight: 700;
-      transition: opacity 0.15s, transform 0.15s;
-    }
-
-    .cta-btn:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .secondary-link {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .secondary-link:hover { text-decoration: underline; }
-
-    .app-visual {
-      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 2rem;
-      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
-      text-align: center;
-    }
-
-    .app-visual img {
-      width: min(220px, 60vw);
-      height: min(220px, 60vw);
-      border-radius: 48px;
-      display: block;
-      margin: 0 auto 1rem;
-      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
-      object-fit: cover;
-    }
-
-    .app-visual strong {
-      display: block;
-      font-size: 1.35rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .app-visual span {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .section {
-      margin-top: 2rem;
-      padding: 2rem;
-      background: rgba(24, 24, 28, 0.82);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .section h2 {
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      letter-spacing: -0.03em;
-      margin-bottom: 0.8rem;
-    }
-
-    .section p {
-      color: var(--text-muted);
-      margin-bottom: 0.85rem;
-    }
-
-    .section p:last-child { margin-bottom: 0; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.1rem;
-    }
-
-    .mini-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.2rem;
-    }
-
-    .mini-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .mini-card p {
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    .list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem 1rem;
-      margin-top: 1rem;
-      list-style: none;
-    }
-
-    .list li {
-      color: var(--text-muted);
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    .list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.72em;
-      width: 0.4rem;
-      height: 0.4rem;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .steps {
-      counter-reset: steps;
-      display: grid;
-      gap: 0.8rem;
-      margin-top: 1rem;
-      list-style: none;
-    }
-
-    .steps li {
-      counter-increment: steps;
-      display: grid;
-      grid-template-columns: 2.25rem minmax(0, 1fr);
-      gap: 0.8rem;
-      align-items: start;
-      color: var(--text-muted);
-    }
-
-    .steps li::before {
-      content: counter(steps);
-      width: 2.25rem;
-      height: 2.25rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      background: var(--accent-dim);
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .faq {
-      display: grid;
-      gap: 0.9rem;
-      margin-top: 1rem;
-    }
-
-    details {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.1rem;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    details p {
-      margin-top: 0.7rem;
-      margin-bottom: 0;
-    }
-
-    .final-cta {
-      text-align: center;
-      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
-    }
-
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 760px) {
-      .page { padding: 1.25rem 1rem 3rem; }
-      .site-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 2.75rem;
-      }
-      .hero,
-      .grid,
-      .list { grid-template-columns: 1fr; }
-      .section { padding: 1.4rem; }
-    }
-  </style>
-<link rel="stylesheet" href="/i18n/i18n.css">
-<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/apps/coloring-book/">
-<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/apps/coloring-book/?lang=es">
-<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/apps/coloring-book/?lang=pt">
-<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/apps/coloring-book/?lang=de">
-<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/apps/coloring-book/?lang=fr">
-<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/apps/coloring-book/">
-<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
-<script src="/i18n/i18n.js" defer></script>
-</head>
-<body>
-  <div class="page">
-    <nav class="site-nav" aria-label="Site navigation">
-      <a href="../../">Random Mini Apps</a>
-      <a href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">Download on the App Store</a>
-    </nav>
-
-    <main>
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Relaxing coloring book</p>
-          <h1>BoomColor: Coloring Book for iPhone and iPad</h1>
-          <p class="hero-lede">Fill beautiful outline pages with tap-to-paint tools, creative effects and a growing gallery built for calm, focused coloring sessions.</p>
-          <p class="hero-copy">Browse animals, nature, vehicles, anime, art and more. Complete daily challenges, import your own photos and save finished pages to Photos.</p>
-          <div class="cta-row">
-            <a class="cta-btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">Download BoomColor on the App Store</a>
-            <a class="secondary-link" href="#faq">Read the FAQ</a>
-          </div>
-        </div>
-        <aside class="app-visual" aria-label="BoomColor app summary">
-          <img src="../../coloring-book-icon.png" alt="BoomColor app icon">
-          <strong>BoomColor</strong>
-          <span>700+ pages, tap-to-fill, effects and daily challenges.</span>
-        </aside>
-      </section>
-
-      <section class="section" aria-labelledby="summary-title">
-        <h2 id="summary-title">What BoomColor does</h2>
-        <p>BoomColor is a coloring book app that turns outline art into relaxing tap-to-fill sessions on iPhone and iPad. Pick a page from the gallery, choose colors or effects, and paint region by region with undo and redo support.</p><p>The app ships with starter pages in the download and expands through Apple-hosted gallery packs organized into ten browse categories. A daily challenge page appears at the top of Explore with progress goals and bonus credits when you complete them.</p>
-      </section>
-
-      <section class="section" aria-labelledby="audience-title">
-        <h2 id="audience-title">Who is BoomColor for?</h2>
-        <p>BoomColor is for anyone who wants a calm creative app without complex drawing tools.</p>
-        <ul class="list">
-          <li>Adults looking for a relaxing coloring break</li>
-          <li>Parents and kids sharing simple tap-to-fill play</li>
-          <li>Commuters who want short creative sessions</li>
-          <li>Fans of animals, anime, vehicles and themed art packs</li>
-          <li>People who want to color their own photos</li>
-          <li>iPhone and iPad users who prefer portrait or landscape</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="features-title">
-        <h2 id="features-title">Key features</h2>
-        <div class="grid">
-          <article class="mini-card">
-            <h3>Large coloring gallery</h3>
-            <p>50 starter pages plus hundreds more outlines across ten categories, with on-demand download for hosted packs.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Tap-to-fill painting</h3>
-            <p>Flood-fill engine respects outline boundaries so each tap stays inside the region you want to color.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Creative fill effects</h3>
-            <p>Go beyond flat color with gradients, glitter, metallic, patterns, glow, watercolor and more unlockable tools.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Daily challenges</h3>
-            <p>Featured challenge pages with coverage, color and effect goals, live progress feedback and credit rewards.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="categories-title">
-        <h2 id="categories-title">Gallery categories</h2>
-        <p>Explore pages by theme so you can jump straight to the art styles you enjoy most.</p>
-        <ul class="list">
-          <li>Animals &amp; Wildlife</li>
-          <li>Nature &amp; Seasons</li>
-          <li>Vehicles &amp; Transport</li>
-          <li>Places &amp; Daily Life</li>
-          <li>Food &amp; Markets</li>
-          <li>People, Sports &amp; Music</li>
-          <li>Anime &amp; Chibi</li>
-          <li>Art &amp; Masterpieces</li>
-          <li>Fantasy &amp; Sci‑Fi</li>
-          <li>Objects, Fashion &amp; Shapes</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="how-title">
-        <h2 id="how-title">How BoomColor works</h2>
-        <ol class="steps">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>BoomColor — Logiq Labs</title>
+<meta name="description" content="BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.">
+<link rel="canonical" href="https://randomminiapps.github.io/logiq-labs/coloring-book/">
+<meta name="theme-color" content="#f7f8f4">
+<link rel="icon" href="/assets/brand/logiq-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/brand/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BoomColor — Logiq Labs">
+<meta property="og:description" content="BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.">
+<meta property="og:url" content="https://randomminiapps.github.io/logiq-labs/coloring-book/">
+<meta property="og:image" content="https://randomminiapps.github.io/assets/brand/icons/coloring-book.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6761337820">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BoomColor", "url": "https://randomminiapps.github.io/logiq-labs/coloring-book/", "description": "BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.", "operatingSystem": "iOS", "image": "https://randomminiapps.github.io/assets/brand/icons/coloring-book.png", "publisher": {"@type": "Person", "name": "Hassan Chizari"}, "downloadUrl": "https://apps.apple.com/us/app/boomcolor/id6761337820"}</script>
+<script src="/assets/brand/site.js" defer></script></head><body class="logiq"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner"><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav class="nav-links" id="primary-nav" aria-label="Main navigation"><a href="/logiq-labs/#apps">Our apps</a><a href="/logiq-labs/about/">Our story</a><a href="/logiq-labs/support/">Support</a><a class="nav-contact" href="/logiq-labs/support/">Get in touch <span aria-hidden="true">↗</span></a></nav></div></header>
+<div class="app-subnav">
+<div class="wrap"><a class="sub-name" href="/logiq-labs/coloring-book/"><img src="/assets/brand/icons/coloring-book.png" alt="" width="27" height="27">BoomColor</a>
+<nav aria-label="App navigation"><a href="/logiq-labs/coloring-book/" aria-current="page">Overview</a><a href="/logiq-labs/coloring-book/how-it-works/">How it works</a><a href="/logiq-labs/coloring-book/details/">Details</a><a href="/logiq-labs/coloring-book/pricing/">Pricing</a><a href="/logiq-labs/coloring-book/support/">Support</a></nav></div></div>
+<main id="main">
+<div class="wrap">
+<div class="breadcrumbs"><a href="/logiq-labs/">Logiq Labs</a><span aria-hidden="true">/</span><span>BoomColor</span></div>
+<section class="hero product-hero split-hero">
+<div>
+<div class="product-name"><img src="/assets/brand/icons/coloring-book.png" alt="" width="43" height="43"><span>BoomColor · Logiq Labs</span></div>
+<h1>A little colour.<br><em>A moment for you.</em></h1>
+<p class="intro">BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.</p>
+<div class="actions"><a class="btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820">View on the App Store <span aria-hidden="true">↗</span></a><a class="btn secondary" href="/logiq-labs/coloring-book/how-it-works/">Explore how it works <span aria-hidden="true">↗</span></a></div>
+<p class="microcopy">Explore the features, limitations and privacy details before you choose.</p></div>
+<div class="icon-hero"><img src="/assets/brand/icons/coloring-book.png" alt="BoomColor app icon" width="150" height="150"><span>A focused tool for your day</span></div></section>
+<section class="feature-row" aria-label="Key features">
+<article>
+<div class="feature-number">01</div>
+<h3>Large coloring gallery</h3>
+<p>50 starter pages plus hundreds more outlines across ten categories, with on-demand download for hosted packs.</p></article>
+<article>
+<div class="feature-number">02</div>
+<h3>Tap-to-fill painting</h3>
+<p>Flood-fill engine respects outline boundaries so each tap stays inside the region you want to color.</p></article>
+<article>
+<div class="feature-number">03</div>
+<h3>Creative fill effects</h3>
+<p>Go beyond flat color with gradients, glitter, metallic, patterns, glow, watercolor and more unlockable tools.</p></article>
+<article>
+<div class="feature-number">04</div>
+<h3>Daily challenges</h3>
+<p>Featured challenge pages with coverage, color and effect goals, live progress feedback and credit rewards.</p></article></section>
+<section class="section two-col">
+<div>
+<div class="eyebrow">A simple place to begin</div>
+<h2>A little structure.<br><em>Your own pace.</em></h2>
+<p class="lead">BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad.</p><a class="arrow-link" href="/logiq-labs/coloring-book/details/">Explore the full details <span aria-hidden="true">↗</span></a></div>
+<div>
+<ol class="steps">
           <li>Open Explore and browse categories, difficulty, favorites or search.</li>
           <li>Pick a page—or start with today’s daily challenge at the top of the grid.</li>
           <li>Choose a color or unlockable fill effect from the editor palette.</li>
           <li>Tap regions to fill them; use undo and redo as you refine your artwork.</li>
           <li>Save finished pages to Photos or return later—your progress is remembered.</li>
-        </ol>
-      </section>
-
-      <section class="section" aria-labelledby="practice-title">
-        <h2 id="practice-title">Useful for</h2>
-        <p>BoomColor supports different ways to unwind and create on Apple devices.</p>
-        <ul class="list">
-          <li>Stress relief and mindful breaks</li>
-          <li>Short daily creative habits</li>
-          <li>Themed coloring by category</li>
-          <li>Photo-to-outline personal pages</li>
-          <li>Experimenting with fill effects</li>
-          <li>Challenge goals and star progress</li>
-          <li>Favorites and gallery search</li>
-          <li>Offline-friendly starter pages</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="benefits-title">
-        <h2 id="benefits-title">Why use BoomColor?</h2>
-        <p>Many coloring apps offer small libraries or basic fills. BoomColor combines a large themed gallery, expressive fill effects and structured daily challenges in one place.</p><p>Credits and optional unlocks let you pace access to pages and tools while keeping the core coloring flow simple: browse, tap, enjoy.</p>
-      </section>
-
-      <section class="section" id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Frequently Asked Questions</h2>
-        <div class="faq">
-          <details>
-            <summary>What is BoomColor?</summary>
-            <p>BoomColor is a coloring book app for iPhone and iPad. It is published on the App Store under the BoomColor name and presents a Coloring Book experience in the app.</p>
-          </details>
-          <details>
-            <summary>How do I color a page?</summary>
-            <p>Open a page in the editor, select a color or effect, and tap inside outline regions. The app fills the tapped area while respecting line boundaries.</p>
-          </details>
-          <details>
-            <summary>How many pages are in the gallery?</summary>
-            <p>The app includes 50 starter pages in the app download plus more than 650 additional hosted gallery pages across category packs, with new packs delivered through Apple Background Assets.</p>
-          </details>
-          <details>
-            <summary>What are daily challenges?</summary>
-            <p>Each day highlights a challenge page with goals for coverage, color use and effects. Progress is shown in the editor and on Explore, and completing all goals earns bonus credits.</p>
-          </details>
-          <details>
-            <summary>Can I color my own pictures?</summary>
-            <p>Yes. You can import photos from your library to use as coloring pages and save finished artwork to Photos when you are done.</p>
-          </details>
-          <details>
-            <summary>Do I need internet for every page?</summary>
-            <p>Starter pages work offline. Hosted gallery packs download on demand when you open them, so an internet connection helps for those pages.</p>
-          </details>
-          <details>
-            <summary>Is BoomColor free?</summary>
-            <p>BoomColor is free to download. Credits, optional unlocks and ads help support access to additional pages and creative effects.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="disclaimer-title">
-        <h2 id="disclaimer-title">Important notes</h2>
-        <p>BoomColor is a casual creative app for entertainment and relaxation. Gallery artwork is original outline content for coloring practice, not licensed reproductions of third-party brands unless stated in-app.</p><p>Photo import and save features use your device photo library with your permission. Parental guidance is recommended for younger children using in-app purchases or ads.</p>
-      </section>
-
-      <section class="section final-cta" aria-labelledby="download-title">
-        <h2 id="download-title">Download BoomColor</h2>
-        <p>BoomColor is available on the App Store for iPhone and iPad.</p>
-        <div class="cta-row" style="justify-content: center;">
-          <a class="cta-btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">Download BoomColor on the App Store</a>
-          <a class="secondary-link" href="../../">View all Random Mini Apps</a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p><a href="../../privacy.html">Privacy Policy</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
-    </footer>
-  </div>
-</body>
-</html>
+        </ol></div></section>
+<section class="section two-col">
+<div>
+<div class="eyebrow">Before you decide</div>
+<h2>Clear answers.<br><em>No guesswork.</em></h2>
+<p class="lead">Understand what the app offers, how your information is handled and where to find help.</p><a class="arrow-link" href="/logiq-labs/coloring-book/support/">Visit app support <span aria-hidden="true">↗</span></a></div>
+<div class="faq">
+<details>
+<summary>What is BoomColor?</summary>
+<p>BoomColor is a coloring book app for iPhone and iPad with a large gallery of outline pages, tap-to-fill painting, creative effects and daily challenges.</p></details>
+<details>
+<summary>How do you color in BoomColor?</summary>
+<p>Choose a page, pick colors or effects, and tap regions to fill them. The app uses flood-fill painting with undo and redo support.</p></details>
+<details>
+<summary>How many coloring pages are included?</summary>
+<p>The app includes 50 starter pages in the download plus hundreds more gallery pages delivered through Apple-hosted asset packs across ten browse categories.</p></details>
+<details>
+<summary>Can I use my own photos?</summary>
+<p>Yes. You can import photos from your library to use as coloring pages and save finished artwork back to Photos.</p></details>
+<details>
+<summary>What are daily challenges?</summary>
+<p>Each day features a featured challenge page with goals for coverage, color and effects. Meeting all goals earns bonus credits in the app.</p></details>
+<details>
+<summary>Is BoomColor free?</summary>
+<p>BoomColor is free to download. Credits, optional unlocks and ads support access to additional pages and creative tools.</p></details></div></section></div>
+<div class="wrap final-cta">
+<div>
+<h2>Explore at your own pace.</h2>
+<p>See the current app details, compatibility and purchase options before downloading.</p></div><a class="btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820">View on the App Store <span aria-hidden="true">↗</span></a></div></main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a>
+<p>Independent apps, thoughtfully made.<br>Cliniq Labs and Logiq Labs are the new homes for apps previously presented as Random Mini Apps.</p></div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links"><a class="arrow-link" href="/cliniq-labs/">Cliniq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/logiq-labs/">Logiq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/cliniq-labs/research/">Research projects <span aria-hidden="true">↗</span></a></div></div>
+<div>
+<h3>Here to help</h3>
+<div class="footer-links"><a class="arrow-link" href="/logiq-labs/about/">About the maker <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/logiq-labs/support/">Contact & support <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/privacy.html">Privacy policy <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/international/">Other languages <span aria-hidden="true">↗</span></a></div></div></div>
+<div class="footer-bottom"><span>© 2026 Hassan Chizari. Cliniq Labs & Logiq Labs.</span><span>Made with care. Built to be useful.</span></div></div></footer></body></html>

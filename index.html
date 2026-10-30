@@ -1,577 +1,88 @@
-<!DOCTYPE html>
-<html lang="en-GB" dir="ltr">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Mini Apps</title>
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>
-    :root {
-      --bg: #0f0f12;
-      --surface: #18181c;
-      --surface-hover: #222228;
-      --text: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --accent: #22d3ee;
-      --accent-dim: rgba(34, 211, 238, 0.15);
-      --border: #27272a;
-      --radius: 16px;
-      --radius-sm: 10px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Outfit', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .site-logo {
-      margin-bottom: 1.25rem;
-    }
-
-    .site-logo img {
-      display: block;
-      margin: 0 auto;
-      max-width: min(280px, 85vw);
-      max-height: 120px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-
-    h1 {
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      font-weight: 400;
-    }
-
-    .app-group {
-      margin-bottom: 2.75rem;
-    }
-
-    .app-group__header {
-      margin-bottom: 1rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .app-group__title {
-      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.3rem;
-    }
-
-    .app-group__desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 46rem;
-    }
-
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-      gap: 0.875rem;
-    }
-
-    .app-card {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      height: 100%;
-      min-height: 0;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-
-    .app-card:hover {
-      background: var(--surface-hover);
-      border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    }
-
-    .app-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 0.625rem;
-      border-radius: var(--radius-sm);
-      background: var(--accent-dim);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .app-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .app-body {
-      flex: 1;
-      min-width: 0;
-      text-align: center;
-    }
-
-    .app-name {
-      font-weight: 600;
-      font-size: 0.95rem;
-      line-height: 1.25;
-      margin-bottom: 0.35rem;
-    }
-
-    .app-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      line-height: 1.4;
-      color: var(--text-muted);
-    }
-
-    .app-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 0.2rem 0;
-    }
-
-    .app-cta::after {
-      content: '→';
-    }
-
-    .app-card--coming-soon {
-      cursor: default;
-    }
-
-    .app-card--coming-soon:hover {
-      transform: none;
-      box-shadow: none;
-      border-color: var(--border);
-      background: var(--surface);
-    }
-
-    .app-cta--soon {
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: auto;
-      padding-top: 0.75rem;
-    }
-
-    .app-cta--soon::after {
-      content: none;
-    }
-
-    footer {
-      margin-top: 1.5rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-contact {
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
-    }
-
-    .app-card__ctas {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.4rem;
-      flex-shrink: 0;
-      width: 100%;
-      margin-top: 0.75rem;
-      padding-top: 0.625rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .app-card__cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.45rem 0.5rem;
-      border-radius: 8px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      line-height: 1.25;
-      text-align: center;
-      text-decoration: none;
-      transition: opacity 0.15s, transform 0.15s;
-    }
-
-    .app-card__cta-btn:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .app-store-btn {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    @media (max-width: 519px) {
-      .page {
-        padding: 2rem 1rem 3rem;
-      }
-
-      header {
-        margin-bottom: 2.25rem;
-      }
-
-      .apps {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-  </style>
-<link rel="stylesheet" href="/i18n/i18n.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Cliniq Labs &amp; Logiq Labs — Apps made with purpose</title>
+<meta name="description" content="Explore independent apps for healthcare learning, reading and everyday life from Cliniq Labs and Logiq Labs.">
 <link rel="canonical" href="https://randomminiapps.github.io/">
-<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/">
-<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/?lang=es">
-<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/?lang=pt">
-<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/?lang=de">
-<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/?lang=fr">
-<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/">
-<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
-<script src="/i18n/i18n.js" defer></script>
-</head>
-<body>
-  <div class="page">
-    <header>
-      <div class="site-logo">
-        <img src="./logo.png" alt="Random Mini Apps">
-      </div>
-      <h1>Random Mini Apps</h1>
-      <p class="tagline">Handcrafted, individually perfected apps for your Apple devices.</p>
-    </header>
-
-    <section class="app-group" aria-labelledby="group-health-research">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-health-research">Health Research Apps</h2>
-        <p class="app-group__desc">Invite-only clinician research prototypes. Not for patients or public distribution.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card app-card--coming-soon">
-          <div class="app-icon">
-            <img src="cardiac-aftercare-icon.png" alt="Cardiac Aftercare app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Cardiac Aftercare</div>
-            <div class="app-meta">iPhone, Android · Invite-only clinician testing</div>
-          </div>
-          <div class="app-card__ctas">
-            <span class="app-cta app-cta--soon">Not for patients · specialists only</span>
-            <a class="app-cta" href="apps/cardiac-aftercare/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card app-card--coming-soon">
-          <div class="app-icon">
-            <img src="fractureflow-ai-icon.png" alt="FractureFlow AI app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">FractureFlow AI</div>
-            <div class="app-meta">iPhone, Android · Invite-only clinician testing</div>
-          </div>
-          <div class="app-card__ctas">
-            <span class="app-cta app-cta--soon">Not for patients · clinicians only</span>
-            <a class="app-cta" href="apps/fractureflow-ai/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-group" aria-labelledby="group-security">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-security">Security &amp; Privacy</h2>
-        <p class="app-group__desc">Tools for safer messaging, Wi‑Fi checks and scam awareness.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="hotspot-check-icon.png" alt="HotspotCheck app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">HotspotCheck</div>
-            <div class="app-meta">iPhone · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/gb/app/hotspotcheck/id6783085771" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/hotspot-check/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="msgsecret-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">MsgSecret</div>
-            <div class="app-meta">iPhone · Free</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/msgsecret/id958618403" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/msgsecret/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="natural-text-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Natural Text</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/natural-text/id1323616521" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/natural-text/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card app-card--coming-soon">
-          <div class="app-icon">
-            <img src="scamlens-uk-icon.png" alt="ScamLens app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name" translate="no">ScamLens</div>
-            <div class="app-meta">iPhone, iPad · Free</div>
-            <p class="app-langs" data-app-langs="scamlens"></p>
-          </div>
-          <div class="app-card__ctas">
-            <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-            <a class="app-cta" href="scamlens/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-group" aria-labelledby="group-education">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-education">Education &amp; Exam Prep</h2>
-        <p class="app-group__desc">Practice tools for medicine, nursing and admissions pathways.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="clinspeek-oet-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">ClinSpeak OET</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/clinspeak-oet/id6763942393" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/clinspeak-oet/">Learn more</a>
-          </div>
-        </div>
-
-        <!-- When Daily Bias is live: use a normal app-card div, App Store href, and app-card__cta-btn app-store-btn like the other apps. -->
-        <div class="app-card app-card--coming-soon">
-          <div class="app-icon">
-            <img src="daily-bias-icon.png" alt="Daily Bias icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Daily Bias</div>
-            <div class="app-meta">iPhone, iPad, Apple Watch, Apple TV · Free · One-Time Purchase</div>
-          </div>
-          <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="medviva-coach-icon.png" alt="MedViva Coach icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">MedViva Coach</div>
-            <div class="app-meta">iPhone, iPad · Free · Subscription</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/medviva-coach/id6766191800" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/medviva-coach/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="nmc-osce-coach-icon.png" alt="NMC OSCE AI Coach icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">NMC OSCE AI Coach</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/nmc-osce-coach/id6770335559" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/nmc-osce-coach/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card app-card--coming-soon">
-          <div class="app-icon">
-            <img src="ucat-sprint-coach-icon.png" alt="UCAT Sprint Coach app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">UCAT Sprint Coach</div>
-            <div class="app-meta">iPhone, iPad, Mac · Free · Subscription</div>
-          </div>
-          <div class="app-card__ctas">
-            <span class="app-cta app-cta--soon">Coming soon on the App Store</span>
-            <a class="app-cta" href="apps/ucat-sprint-coach/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-group" aria-labelledby="group-accessibility">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-accessibility">Accessibility &amp; Reading</h2>
-        <p class="app-group__desc">Calmer reading tools for everyday documents and books.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="dyslexia-reading-lens-icon.png" alt="Dyslexia Reading Lens app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name" translate="no">Dyslexia Reading Lens</div>
-            <div class="app-meta">iPhone · Free · Subscription</div>
-            <p class="app-langs" data-app-langs="dyslexia"></p>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/dyslexia-reading-lens/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-group" aria-labelledby="group-creative">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-creative">Creativity &amp; Games</h2>
-        <p class="app-group__desc">Colouring, play and light distraction for iPhone and iPad.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="coloring-book-icon.png" alt="BoomColor app icon">
-          </div>
-          <div class="app-body">
-            <div class="app-name">BoomColor</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/boomcolor/id6761337820" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/coloring-book/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="keepie-yuppie-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Keepie Yuppie</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/keepie-yuppie/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="app-group" aria-labelledby="group-utilities">
-      <div class="app-group__header">
-        <h2 class="app-group__title" id="group-utilities">Utilities</h2>
-        <p class="app-group__desc">Focused tools for driving and lighting checks.</p>
-      </div>
-      <div class="apps">
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="car-hud-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Car HUD Display</div>
-            <div class="app-meta">iPhone · $9.99</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/car-hud-display/id6758107542" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/car-hud-display/">Learn more</a>
-          </div>
-        </div>
-
-        <div class="app-card">
-          <div class="app-icon">
-            <img src="lighting-check-icon.png" alt="">
-          </div>
-          <div class="app-body">
-            <div class="app-name">Lighting Check</div>
-            <div class="app-meta">iPhone, iPad · Free · In‑App Purchases</div>
-          </div>
-          <div class="app-card__ctas">
-            <a class="app-card__cta-btn app-store-btn" href="https://apps.apple.com/us/app/lighting-check/id1317618609" target="_blank" rel="noopener">View on App Store →</a>
-            <a class="app-cta" href="apps/lighting-check/">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p class="footer-contact">
-        <strong>Contact</strong><br>
-        For feature requests, app development requests, or promotional code requests:<br>
-        <a href="mailto:bleep.minted4c@icloud.com">bleep.minted4c@icloud.com</a>
-      </p>
-      <p><a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/RandomMiniApps/RandomMiniApps.github.io">GitHub</a> · Built for GitHub Pages</p>
-    </footer>
-  </div>
-</body>
-</html>
+<meta name="theme-color" content="#f7f8f4">
+<link rel="icon" href="/assets/brand/cliniq-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/brand/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cliniq Labs &amp; Logiq Labs — Apps made with purpose">
+<meta property="og:description" content="Explore independent apps for healthcare learning, reading and everyday life from Cliniq Labs and Logiq Labs.">
+<meta property="og:url" content="https://randomminiapps.github.io/">
+<meta property="og:image" content="https://randomminiapps.github.io/assets/brand/studio-social.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Cliniq Labs & Logiq Labs \u2014 Apps made with purpose", "url": "https://randomminiapps.github.io/", "description": "Explore independent apps for healthcare learning, reading and everyday life from Cliniq Labs and Logiq Labs."}</script>
+<script src="/assets/brand/site.js" defer></script></head><body class="studio"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<div class="brand-pair"><a class="wordmark" href="/cliniq-labs/" aria-label="Cliniq Labs home"><span class="mark " aria-hidden="true">+</span><span>Cliniq <small>Labs</small></span></a><span class="brand-divider" aria-hidden="true"></span><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a></div><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav class="nav-links" id="primary-nav" aria-label="Main navigation"><a href="/#brands">Our brands</a><a href="/#apps">Explore apps</a><a href="/about/">Our story</a><a class="nav-contact" href="/support/">Get in touch <span aria-hidden="true">↗</span></a></nav></div></header>
+<main id="main">
+<div class="wrap">
+<section class="hero gateway-hero">
+<div>
+<div class="eyebrow">Two families. One thoughtful approach.</div>
+<h1>Small tools.<br><em>Meaningful possibilities.</em></h1></div>
+<div>
+<p class="intro">For the next step in your career.<br>For a little more ease in your day.<br>Find the tools that fit your world.</p>
+<div class="edition">INDEPENDENT APPS · MADE WITH PURPOSE</div></div></section>
+<section class="brand-grid" id="brands" aria-label="Our two brands">
+<article class="brand-panel ">
+<div class="panel-top"><a class="wordmark" href="/cliniq-labs/" aria-label="Cliniq Labs home"><span class="mark " aria-hidden="true">+</span><span>Cliniq <small>Labs</small></span></a><span class="tag">Healthcare & learning</span></div><span class="orb" aria-hidden="true"></span>
+<h2>Practice for your<br>next chapter.</h2>
+<p>Focused tools for healthcare communication, exam preparation and the journey into medicine.</p>
+<div class="mini-apps"><img src="/assets/brand/icons/clinspeak-oet.png" alt="ClinSpeak OET" width="46" height="46"><img src="/assets/brand/icons/nmc-osce-coach.png" alt="NMC OSCE AI Coach" width="46" height="46"><img src="/assets/brand/icons/medviva-coach.png" alt="MedViva Coach" width="46" height="46"></div>
+<div class="panel-bottom"><span>Learn. Practise. Reflect.</span><a class="arrow-link" href="/cliniq-labs/">Explore Cliniq Labs <span aria-hidden="true">↗</span></a></div></article>
+<article class="brand-panel logiq-panel">
+<div class="panel-top"><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a><span class="tag">Everyday & useful</span></div><span class="orb" aria-hidden="true"></span>
+<h2>A little less friction.<br>A little more possibility.</h2>
+<p>Thoughtful apps for reading, digital confidence and the small things that make a day easier.</p>
+<div class="mini-apps"><img src="/assets/brand/icons/dyslexia-reading-lens.png" alt="Dyslexia Reading Lens" width="46" height="46"><img src="/assets/brand/icons/hotspot-check.png" alt="HotspotCheck" width="46" height="46"><img src="/assets/brand/icons/msgsecret.png" alt="MsgSecret" width="46" height="46"></div>
+<div class="panel-bottom"><span>Read. Explore. Simplify.</span><a class="arrow-link" href="/logiq-labs/">Explore Logiq Labs <span aria-hidden="true">↗</span></a></div></article></section>
+<div class="principles"><span><b aria-hidden="true">↗</b> Independent by design</span><span><b aria-hidden="true">◎</b> A clear purpose for every app</span><span><b aria-hidden="true">✳</b> Support from the person who builds it</span></div>
+<section class="section" id="apps">
+<div class="section-head">
+<div>
+<div class="eyebrow">Find your starting point</div>
+<h2>Made for real moments.</h2>
+<p>Focused apps, each with a purpose of its own.</p></div></div>
+<div class="app-grid">
+<article class="app-card" data-category="learning">
+<div class="card-top"><img src="/assets/brand/icons/nmc-osce-coach.png" width="56" height="56" alt="" loading="lazy"><span class="card-brand">Cliniq Labs</span></div>
+<h3>NMC OSCE AI Coach</h3>
+<p>Rehearse adult nursing OSCE-style stations aloud, then reflect with transcripts and checklist feedback.</p>
+<div class="card-meta">Available on iOS</div><a class="arrow-link" href="/cliniq-labs/nmc-osce-coach/">Explore NMC OSCE AI Coach <span aria-hidden="true">↗</span></a></article>
+<article class="app-card" data-category="learning">
+<div class="card-top"><img src="/assets/brand/icons/clinspeak-oet.png" width="56" height="56" alt="" loading="lazy"><span class="card-brand">Cliniq Labs</span></div>
+<h3>ClinSpeak OET</h3>
+<p>A focused space for nurses to rehearse OET-style speaking and reflect on their communication.</p>
+<div class="card-meta">Available on iOS</div><a class="arrow-link" href="/cliniq-labs/clinspeak-oet/">Explore ClinSpeak OET <span aria-hidden="true">↗</span></a></article>
+<article class="app-card" data-category="reading">
+<div class="card-top"><img src="/assets/brand/icons/dyslexia-reading-lens.png" width="56" height="56" alt="" loading="lazy"><span class="card-brand">Logiq Labs</span></div>
+<h3>Dyslexia Reading Lens</h3>
+<p>Make text more comfortable. Read, listen and explore ideas in a calm space on your iPhone.</p>
+<div class="card-meta">Available on iOS</div><a class="arrow-link" href="/logiq-labs/dyslexia-reading-lens/">Explore Dyslexia Reading Lens <span aria-hidden="true">↗</span></a></article></div></section>
+<section class="section">
+<div class="editorial">
+<div>
+<div class="eyebrow">A familiar maker. A clearer home.</div>
+<h2>Good tools begin<br>with a clear purpose.</h2><a class="arrow-link" href="/about/">Meet the maker <span aria-hidden="true">↗</span></a></div>
+<div>
+<p class="note">Useful software should make its purpose clear—and help you decide whether it belongs in your day.</p>
+<p>Our apps now live in two focused families. The names are new; the commitment to making practical, understandable tools stays the same.</p></div></div></section></div></main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="brand-pair"><a class="wordmark" href="/cliniq-labs/" aria-label="Cliniq Labs home"><span class="mark " aria-hidden="true">+</span><span>Cliniq <small>Labs</small></span></a><span class="brand-divider" aria-hidden="true"></span><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a></div>
+<p>Independent apps, thoughtfully made.<br>Cliniq Labs and Logiq Labs are the new homes for apps previously presented as Random Mini Apps.</p></div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links"><a class="arrow-link" href="/cliniq-labs/">Cliniq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/logiq-labs/">Logiq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/cliniq-labs/research/">Research projects <span aria-hidden="true">↗</span></a></div></div>
+<div>
+<h3>Here to help</h3>
+<div class="footer-links"><a class="arrow-link" href="/about/">About the maker <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/support/">Contact & support <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/privacy.html">Privacy policy <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/international/">Other languages <span aria-hidden="true">↗</span></a></div></div></div>
+<div class="footer-bottom"><span>© 2026 Hassan Chizari. Cliniq Labs & Logiq Labs.</span><span>Made with care. Built to be useful.</span></div></div></footer></body></html>

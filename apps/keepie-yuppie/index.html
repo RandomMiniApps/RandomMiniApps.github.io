@@ -1,566 +1,106 @@
-<!DOCTYPE html>
-<html lang="en-GB" dir="ltr">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keepie Yuppie - 99-Level Ball Juggling Game for iPhone and iPad</title>
-  <meta name="description" content="Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://randomminiapps.github.io/apps/keepie-yuppie/">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Keepie Yuppie",
-  "applicationCategory": "GameApplication",
-  "operatingSystem": "iOS",
-  "description": "Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.",
-  "url": "https://randomminiapps.github.io/apps/keepie-yuppie/",
-  "downloadUrl": "https://apps.apple.com/us/app/keepie-yuppie/id6758394887",
-  "image": "https://randomminiapps.github.io/keepie-yuppie-icon.png",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Random Mini Apps",
-    "url": "https://randomminiapps.github.io/"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "GBP",
-    "availability": "https://schema.org/InStock",
-    "url": "https://apps.apple.com/us/app/keepie-yuppie/id6758394887"
-  }
-}
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Keepie Yuppie?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Keepie Yuppie is a physics-based ball juggling game for iPhone and iPad."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many levels does Keepie Yuppie have?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The game includes 99 levels."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What weather effects are included?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The game includes dynamic weather such as wind, rain, snow and storm conditions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Keepie Yuppie have Game Center?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The game includes Game Center support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Keepie Yuppie free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. It is free to download with in-app purchases."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does Premium unlock?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Premium offers unlimited lives and no ads."
-      }
-    }
-  ]
-}
-  </script>
-  <style>
-    :root {
-      --bg: #0f0f12;
-      --surface: #18181c;
-      --surface-hover: #222228;
-      --text: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --accent: #22d3ee;
-      --accent-dim: rgba(34, 211, 238, 0.15);
-      --border: #27272a;
-      --radius: 18px;
-      --radius-sm: 12px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Outfit', system-ui, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 32rem),
-        var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; }
-
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .site-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 4rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .site-nav a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .site-nav a:hover { text-decoration: underline; }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
-      gap: 2rem;
-      align-items: center;
-      margin-bottom: 3rem;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 4.6rem);
-      line-height: 1;
-      letter-spacing: -0.05em;
-      margin-bottom: 1rem;
-    }
-
-    .hero-lede {
-      color: var(--text);
-      font-size: clamp(1.15rem, 2vw, 1.35rem);
-      max-width: 720px;
-      margin-bottom: 0.85rem;
-    }
-
-    .hero-copy {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-      max-width: 700px;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      align-items: center;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.8rem 1.1rem;
-      border-radius: 10px;
-      background: var(--accent);
-      color: var(--bg);
-      text-decoration: none;
-      font-weight: 700;
-      transition: opacity 0.15s, transform 0.15s;
-    }
-
-    .cta-btn:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .product-hunt-btn {
-      background: rgb(255, 97, 84);
-      color: #fff;
-    }
-
-    .secondary-link {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .secondary-link:hover { text-decoration: underline; }
-
-    .app-visual {
-      background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(24, 24, 28, 0.95));
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 2rem;
-      box-shadow: rgba(0, 0, 0, 0.25) 0 20px 60px;
-      text-align: center;
-    }
-
-    .app-visual img {
-      width: min(220px, 60vw);
-      height: min(220px, 60vw);
-      border-radius: 48px;
-      display: block;
-      margin: 0 auto 1rem;
-      box-shadow: rgba(0, 0, 0, 0.35) 0 18px 45px;
-      object-fit: cover;
-    }
-
-    .app-visual strong {
-      display: block;
-      font-size: 1.35rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .app-visual span {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .section {
-      margin-top: 2rem;
-      padding: 2rem;
-      background: rgba(24, 24, 28, 0.82);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .section h2 {
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      letter-spacing: -0.03em;
-      margin-bottom: 0.8rem;
-    }
-
-    .section p {
-      color: var(--text-muted);
-      margin-bottom: 0.85rem;
-    }
-
-    .section p:last-child { margin-bottom: 0; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.1rem;
-    }
-
-    .mini-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.2rem;
-    }
-
-    .mini-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .mini-card p {
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    .list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem 1rem;
-      margin-top: 1rem;
-      list-style: none;
-    }
-
-    .list li {
-      color: var(--text-muted);
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    .list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.72em;
-      width: 0.4rem;
-      height: 0.4rem;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .steps {
-      counter-reset: steps;
-      display: grid;
-      gap: 0.8rem;
-      margin-top: 1rem;
-      list-style: none;
-    }
-
-    .steps li {
-      counter-increment: steps;
-      display: grid;
-      grid-template-columns: 2.25rem minmax(0, 1fr);
-      gap: 0.8rem;
-      align-items: start;
-      color: var(--text-muted);
-    }
-
-    .steps li::before {
-      content: counter(steps);
-      width: 2.25rem;
-      height: 2.25rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      background: var(--accent-dim);
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .faq {
-      display: grid;
-      gap: 0.9rem;
-      margin-top: 1rem;
-    }
-
-    details {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.1rem;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    details p {
-      margin-top: 0.7rem;
-      margin-bottom: 0;
-    }
-
-    .final-cta {
-      text-align: center;
-      background: linear-gradient(145deg, rgba(34, 211, 238, 0.16), rgba(24, 24, 28, 0.9));
-    }
-
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 760px) {
-      .page { padding: 1.25rem 1rem 3rem; }
-      .site-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 2.75rem;
-      }
-      .hero,
-      .grid,
-      .list { grid-template-columns: 1fr; }
-      .section { padding: 1.4rem; }
-    }
-  </style>
-<link rel="stylesheet" href="/i18n/i18n.css">
-<link rel="alternate" hreflang="en-GB" href="https://randomminiapps.github.io/apps/keepie-yuppie/">
-<link rel="alternate" hreflang="es" href="https://randomminiapps.github.io/apps/keepie-yuppie/?lang=es">
-<link rel="alternate" hreflang="pt-BR" href="https://randomminiapps.github.io/apps/keepie-yuppie/?lang=pt">
-<link rel="alternate" hreflang="de" href="https://randomminiapps.github.io/apps/keepie-yuppie/?lang=de">
-<link rel="alternate" hreflang="fr" href="https://randomminiapps.github.io/apps/keepie-yuppie/?lang=fr">
-<link rel="alternate" hreflang="x-default" href="https://randomminiapps.github.io/apps/keepie-yuppie/">
-<script>try{var codes={en:"en-GB",es:"es",pt:"pt-BR",de:"de",fr:"fr"};var q=new URLSearchParams(location.search).get("lang");var stored=localStorage.getItem("siteLang");var active="en";if(q&&codes[q])active=q;else if(!q&&stored&&codes[stored])active=stored;document.documentElement.lang=codes[active];document.documentElement.dir="ltr";if(active!=="en")document.documentElement.dataset.pendingLang=active}catch(e){}</script>
-<script src="/i18n/i18n.js" defer></script>
-</head>
-<body>
-  <div class="page">
-    <nav class="site-nav" aria-label="Site navigation">
-      <a href="../../">Random Mini Apps</a>
-      <a href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">Download on the App Store</a>
-    </nav>
-
-    <main>
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Physics juggling game</p>
-          <h1>Keepie Yuppie: 99 Levels of Ball Juggling</h1>
-          <p class="hero-lede">Keepie Yuppie is a physics-based juggling game where every tap keeps the ball alive through levels, weather and obstacles.</p>
-          <p class="hero-copy">Play level challenges, survival mode and target practice with changing wind, rain, snow and storm conditions.</p>
-          <div class="cta-row">
-            <a class="cta-btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">Download Keepie Yuppie on the App Store</a>
-            <a class="secondary-link" href="#faq">Read the FAQ</a>
-          </div>
-        </div>
-        <aside class="app-visual" aria-label="Keepie Yuppie app summary">
-          <img src="../../keepie-yuppie-icon.png" alt="Keepie Yuppie app icon">
-          <strong>Keepie Yuppie</strong>
-          <span>Tap, juggle, survive and climb 99 levels.</span>
-        </aside>
-      </section>
-
-      <section class="section" aria-labelledby="summary-title">
-        <h2 id="summary-title">What Keepie Yuppie does</h2>
-        <p>Keepie Yuppie turns simple tap-to-juggle gameplay into a 99-level challenge with physics, weather, obstacles and different ways to play.</p><p>The game is free to download, with a Premium option for unlimited lives and no ads.</p>
-      </section>
-
-      <section class="section" aria-labelledby="audience-title">
-        <h2 id="audience-title">Who is Keepie Yuppie for?</h2>
-        <p>Keepie Yuppie is for players who enjoy quick skill games with physics and replayable challenges.</p>
-        <ul class="list">
-          <li>Casual arcade players</li>
-          <li>Fans of tap timing games</li>
-          <li>Players who like physics-based challenges</li>
-          <li>People who want short mobile game sessions</li>
-          <li>Game Center score chasers</li>
-          <li>Players who enjoy level progression and survival modes</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="features-title">
-        <h2 id="features-title">Key features</h2>
-        <div class="grid">
-          <article class="mini-card">
-            <h3>99-level progression</h3>
-            <p>Work through a long sequence of levels with increasing challenge.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Physics-based ball control</h3>
-            <p>Tap to keep the ball airborne and react to motion, speed and position.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Dynamic weather</h3>
-            <p>Wind, rain, snow and storm conditions change how the game feels.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Multiple modes</h3>
-            <p>Play level challenges, survival mode and target practice.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="how-title">
-        <h2 id="how-title">How Keepie Yuppie works</h2>
-        <ol class="steps">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Keepie Yuppie — Logiq Labs</title>
+<meta name="description" content="Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.">
+<link rel="canonical" href="https://randomminiapps.github.io/logiq-labs/keepie-yuppie/">
+<meta name="theme-color" content="#f7f8f4">
+<link rel="icon" href="/assets/brand/logiq-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/brand/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keepie Yuppie — Logiq Labs">
+<meta property="og:description" content="Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.">
+<meta property="og:url" content="https://randomminiapps.github.io/logiq-labs/keepie-yuppie/">
+<meta property="og:image" content="https://randomminiapps.github.io/assets/brand/icons/keepie-yuppie.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6758394887">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Keepie Yuppie", "url": "https://randomminiapps.github.io/logiq-labs/keepie-yuppie/", "description": "Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.", "operatingSystem": "iOS", "image": "https://randomminiapps.github.io/assets/brand/icons/keepie-yuppie.png", "publisher": {"@type": "Person", "name": "Hassan Chizari"}, "downloadUrl": "https://apps.apple.com/us/app/keepie-yuppie/id6758394887"}</script>
+<script src="/assets/brand/site.js" defer></script></head><body class="logiq"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner"><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav class="nav-links" id="primary-nav" aria-label="Main navigation"><a href="/logiq-labs/#apps">Our apps</a><a href="/logiq-labs/about/">Our story</a><a href="/logiq-labs/support/">Support</a><a class="nav-contact" href="/logiq-labs/support/">Get in touch <span aria-hidden="true">↗</span></a></nav></div></header>
+<div class="app-subnav">
+<div class="wrap"><a class="sub-name" href="/logiq-labs/keepie-yuppie/"><img src="/assets/brand/icons/keepie-yuppie.png" alt="" width="27" height="27">Keepie Yuppie</a>
+<nav aria-label="App navigation"><a href="/logiq-labs/keepie-yuppie/" aria-current="page">Overview</a><a href="/logiq-labs/keepie-yuppie/how-it-works/">How it works</a><a href="/logiq-labs/keepie-yuppie/details/">Details</a><a href="/logiq-labs/keepie-yuppie/pricing/">Pricing</a><a href="/logiq-labs/keepie-yuppie/support/">Support</a></nav></div></div>
+<main id="main">
+<div class="wrap">
+<div class="breadcrumbs"><a href="/logiq-labs/">Logiq Labs</a><span aria-hidden="true">/</span><span>Keepie Yuppie</span></div>
+<section class="hero product-hero split-hero">
+<div>
+<div class="product-name"><img src="/assets/brand/icons/keepie-yuppie.png" alt="" width="43" height="43"><span>Keepie Yuppie · Logiq Labs</span></div>
+<h1>One more touch.<br><em>One more try.</em></h1>
+<p class="intro">Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.</p>
+<div class="actions"><a class="btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887">View on the App Store <span aria-hidden="true">↗</span></a><a class="btn secondary" href="/logiq-labs/keepie-yuppie/how-it-works/">Explore how it works <span aria-hidden="true">↗</span></a></div>
+<p class="microcopy">Explore the features, limitations and privacy details before you choose.</p></div>
+<div class="icon-hero"><img src="/assets/brand/icons/keepie-yuppie.png" alt="Keepie Yuppie app icon" width="150" height="150"><span>A focused tool for your day</span></div></section>
+<section class="feature-row" aria-label="Key features">
+<article>
+<div class="feature-number">01</div>
+<h3>99-level progression</h3>
+<p>Work through a long sequence of levels with increasing challenge.</p></article>
+<article>
+<div class="feature-number">02</div>
+<h3>Physics-based ball control</h3>
+<p>Tap to keep the ball airborne and react to motion, speed and position.</p></article>
+<article>
+<div class="feature-number">03</div>
+<h3>Dynamic weather</h3>
+<p>Wind, rain, snow and storm conditions change how the game feels.</p></article>
+<article>
+<div class="feature-number">04</div>
+<h3>Multiple modes</h3>
+<p>Play level challenges, survival mode and target practice.</p></article></section>
+<section class="section two-col">
+<div>
+<div class="eyebrow">A simple place to begin</div>
+<h2>A little structure.<br><em>Your own pace.</em></h2>
+<p class="lead">Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives.</p><a class="arrow-link" href="/logiq-labs/keepie-yuppie/details/">Explore the full details <span aria-hidden="true">↗</span></a></div>
+<div>
+<ol class="steps">
           <li>Launch the game and choose a level or mode.</li>
           <li>Tap to keep the ball airborne.</li>
           <li>Adapt to weather, obstacles and changing physics.</li>
           <li>Complete levels or chase a survival score.</li>
           <li>Use Game Center and Premium options if you want more competition or unlimited lives.</li>
-        </ol>
-      </section>
-
-      <section class="section" aria-labelledby="practice-title">
-        <h2 id="practice-title">Useful for</h2>
-        <p>Keepie Yuppie is useful for quick arcade sessions and skill-based challenges.</p>
-        <ul class="list">
-          <li>Timing practice</li>
-          <li>99-level progression</li>
-          <li>Survival runs</li>
-          <li>Target practice</li>
-          <li>Weather challenges</li>
-          <li>Obstacle avoidance</li>
-          <li>Game Center competition</li>
-          <li>Short play sessions</li>
-        </ul>
-      </section>
-
-      <section class="section" aria-labelledby="benefits-title">
-        <h2 id="benefits-title">Why use Keepie Yuppie?</h2>
-        <p>Keepie Yuppie is built around immediate gameplay: tap, react and improve. The physics and weather keep each session from feeling identical.</p><p>Premium is optional and is intended for players who want unlimited lives and no ads.</p>
-      </section>
-
-      <section class="section" id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Frequently Asked Questions</h2>
-        <div class="faq">
-          <details>
-            <summary>What is Keepie Yuppie?</summary>
-            <p>Keepie Yuppie is a physics-based ball juggling game for iPhone and iPad.</p>
-          </details>
-          <details>
-            <summary>How many levels does Keepie Yuppie have?</summary>
-            <p>The game includes 99 levels.</p>
-          </details>
-          <details>
-            <summary>What weather effects are included?</summary>
-            <p>The game includes dynamic weather such as wind, rain, snow and storm conditions.</p>
-          </details>
-          <details>
-            <summary>Does Keepie Yuppie have Game Center?</summary>
-            <p>Yes. The game includes Game Center support.</p>
-          </details>
-          <details>
-            <summary>Is Keepie Yuppie free?</summary>
-            <p>Yes. It is free to download with in-app purchases.</p>
-          </details>
-          <details>
-            <summary>What does Premium unlock?</summary>
-            <p>Premium offers unlimited lives and no ads.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="disclaimer-title">
-        <h2 id="disclaimer-title">Important notes</h2>
-        <p>Keepie Yuppie is a casual game. Some features may require Game Center, ads or in-app purchases depending on how you choose to play.</p>
-      </section>
-
-      <section class="section final-cta" aria-labelledby="download-title">
-        <h2 id="download-title">Download Keepie Yuppie</h2>
-        <p>Keepie Yuppie is available on the App Store for iPhone and iPad.</p>
-        <div class="cta-row" style="justify-content: center;">
-          <a class="cta-btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887" target="_blank" rel="noopener">Download Keepie Yuppie on the App Store</a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p><a href="../../privacy.html">Privacy Policy</a> · <a href="../../">All Apps</a> · Built by Random Mini Apps</p>
-    </footer>
-  </div>
-</body>
-</html>
+        </ol></div></section>
+<section class="section two-col">
+<div>
+<div class="eyebrow">Before you decide</div>
+<h2>Clear answers.<br><em>No guesswork.</em></h2>
+<p class="lead">Understand what the app offers, how your information is handled and where to find help.</p><a class="arrow-link" href="/logiq-labs/keepie-yuppie/support/">Visit app support <span aria-hidden="true">↗</span></a></div>
+<div class="faq">
+<details>
+<summary>What is Keepie Yuppie?</summary>
+<p>Keepie Yuppie is a physics-based ball juggling game for iPhone and iPad.</p></details>
+<details>
+<summary>How many levels does Keepie Yuppie have?</summary>
+<p>The game includes 99 levels.</p></details>
+<details>
+<summary>What weather effects are included?</summary>
+<p>The game includes dynamic weather such as wind, rain, snow and storm conditions.</p></details>
+<details>
+<summary>Does Keepie Yuppie have Game Center?</summary>
+<p>Yes. The game includes Game Center support.</p></details>
+<details>
+<summary>Is Keepie Yuppie free?</summary>
+<p>Yes. It is free to download with in-app purchases.</p></details>
+<details>
+<summary>What does Premium unlock?</summary>
+<p>Premium offers unlimited lives and no ads.</p></details></div></section></div>
+<div class="wrap final-cta">
+<div>
+<h2>Explore at your own pace.</h2>
+<p>See the current app details, compatibility and purchase options before downloading.</p></div><a class="btn" href="https://apps.apple.com/us/app/keepie-yuppie/id6758394887">View on the App Store <span aria-hidden="true">↗</span></a></div></main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div><a class="wordmark" href="/logiq-labs/" aria-label="Logiq Labs home"><span class="mark logiq-mark" aria-hidden="true"></span><span>Logiq <small>Labs</small></span></a>
+<p>Independent apps, thoughtfully made.<br>Cliniq Labs and Logiq Labs are the new homes for apps previously presented as Random Mini Apps.</p></div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links"><a class="arrow-link" href="/cliniq-labs/">Cliniq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/logiq-labs/">Logiq Labs <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/cliniq-labs/research/">Research projects <span aria-hidden="true">↗</span></a></div></div>
+<div>
+<h3>Here to help</h3>
+<div class="footer-links"><a class="arrow-link" href="/logiq-labs/about/">About the maker <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/logiq-labs/support/">Contact & support <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/privacy.html">Privacy policy <span aria-hidden="true">↗</span></a><a class="arrow-link" href="/international/">Other languages <span aria-hidden="true">↗</span></a></div></div></div>
+<div class="footer-bottom"><span>© 2026 Hassan Chizari. Cliniq Labs & Logiq Labs.</span><span>Made with care. Built to be useful.</span></div></div></footer></body></html>

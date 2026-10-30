@@ -24,6 +24,12 @@
   ];
 
   var TRANSLATED_PATHS = {
+    "/international/": true,
+    "/international/index.html": true,
+    "/international/dyslexia-reading-lens/": true,
+    "/international/dyslexia-reading-lens/index.html": true,
+    "/international/scamlens/": true,
+    "/international/scamlens/index.html": true,
     "/": true,
     "/index.html": true,
     "/scamlens/": true,

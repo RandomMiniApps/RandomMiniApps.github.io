@@ -1,70 +1,32 @@
-# Random Mini Apps
+# Cliniq Labs and Logiq Labs
 
-Random Mini Apps publishes focused apps for Apple devices, including educational and productivity tools.
+Independent apps by Hassan Chizari, previously presented as Random Mini Apps.
+
+## Brands
+
+- [Cliniq Labs](https://randomminiapps.github.io/cliniq-labs/): Healthcare education, with research separately labelled.
+- [Logiq Labs](https://randomminiapps.github.io/logiq-labs/): Reading, digital confidence and everyday tools.
 
 ## Apps
 
-- [BoomColor](https://randomminiapps.github.io/apps/coloring-book/): relaxing coloring book app with 700+ pages, tap-to-fill painting, creative effects, daily challenges and photo imports for iPhone and iPad.
-- [Cardiac Aftercare](https://randomminiapps.github.io/apps/cardiac-aftercare/): invite-only cardiac recovery prototype with governed RAG, deterministic triage and on-device LLMs for cardiac specialists and junior doctors; not for patient or public distribution.
-- [Car HUD Display](https://randomminiapps.github.io/apps/car-hud-display/): iPhone heads-up display app with GPS speed, trip widgets, mirror mode and smart brightness.
-- [ClinSpeak OET](https://randomminiapps.github.io/apps/clinspeak-oet/): OET-style speaking practice app for nurses with timed clinical role plays, transcript replay and structured feedback.
-- [Dyslexia Reading Lens](https://randomminiapps.github.io/apps/dyslexia-reading-lens/): calm reading workspace for iPhone with dyslexia-friendly text, read-aloud highlighting, document scanning, and AI simplify and summary tools.
-- [FractureFlow AI](https://randomminiapps.github.io/apps/fractureflow-ai/): invite-only clinician research MVP for MIU/ED/VFC fracture workflows with safety-before-RAG retrieval, recommendation validation and X-ray detection research; not for patient or public distribution.
-- [HotspotCheck](https://randomminiapps.github.io/apps/hotspot-check/): privacy-first Wi-Fi safety advisor for iPhone that checks visible risk indicators, scores networks by context, and gives plain-English guidance before sensitive logins.
-- [Keepie Yuppie](https://randomminiapps.github.io/apps/keepie-yuppie/): physics-based ball juggling game with 99 levels, weather effects, obstacles, survival mode and Game Center.
-- [Lighting Check](https://randomminiapps.github.io/apps/lighting-check/): camera-based lux estimates with guidance, calibration, on-device audits, PDF/CSV export, non-personalized rewarded ads, and one-time Full Access.
-- [MedViva Coach](https://randomminiapps.github.io/apps/medviva-coach/): AI mock interview practice app for A-level students and UK medicine applicants preparing for medical school interviews.
-- [MsgSecret](https://randomminiapps.github.io/apps/msgsecret/): message encoding and decoding app for sharing ciphertext through email, SMS, chat and social apps.
-- [NMC OSCE AI Coach](https://randomminiapps.github.io/apps/nmc-osce-coach/): OSCE-style voice practice for UK adult nursing students with timed stations, AI patient conversations, checklist feedback and exam plans.
-- [Natural Text](https://randomminiapps.github.io/apps/natural-text/): secret-key text transformation app that encrypts messages into natural-looking text.
-- [ScamLens](https://randomminiapps.github.io/scamlens/): completely free, privacy-first scam checker for iPhone and iPad, with unlimited checks and text-only sharing. Check links, QR codes, texts and screenshots on-device, with UK reporting routes.
-- [UCAT Sprint Coach](https://randomminiapps.github.io/apps/ucat-sprint-coach/): privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks and progress analytics for iPhone, iPad and Mac.
+- [Car HUD Display](https://randomminiapps.github.io/logiq-labs/car-hud-display/): Car HUD Display turns your iPhone into a professional heads-up display with GPS speed, trip widgets, mirror mode, weather, compass and smart brightness. Status: available.
+- [Cardiac Aftercare](https://randomminiapps.github.io/cliniq-labs/cardiac-aftercare/): Cardiac Aftercare is an invite-only prototype for cardiac specialists and junior doctors: governed RAG, deterministic clinical triage, and on-device LLM development for UK/NHS post-discharge recovery questions. Not for patient or public distribution. Status: research.
+- [ClinSpeak OET](https://randomminiapps.github.io/cliniq-labs/clinspeak-oet/): ClinSpeak OET helps nurses practise OET-style speaking with timed role plays, transcript replay and structured feedback on clarity, empathy, organisation and language. Status: available.
+- [BoomColor](https://randomminiapps.github.io/logiq-labs/coloring-book/): BoomColor is a relaxing coloring book app with 700+ pages, tap-to-fill painting, creative fill effects, daily challenges, photo imports and a browsable gallery for iPhone and iPad. Status: available.
+- [Dyslexia Reading Lens](https://randomminiapps.github.io/logiq-labs/dyslexia-reading-lens/): Dyslexia Reading Lens is a calm reading workspace for iPhone: dyslexia-friendly text, read-aloud with highlighting, document scanning, and AI simplify and summary tools. Status: available.
+- [FractureFlow AI](https://randomminiapps.github.io/cliniq-labs/fractureflow-ai/): FractureFlow AI is an invite-only research MVP for MIU, ED and Virtual Fracture Clinic clinicians: safety-before-RAG decision support, governed UK evidence retrieval, evaluation harnesses, and X-ray detection research. Not for patient or public distribution. Status: research.
+- [HotspotCheck](https://randomminiapps.github.io/logiq-labs/hotspot-check/): HotspotCheck helps you understand whether the Wi-Fi you are using looks safe, risky, or worth avoiding. Check visible network risks, gateway warnings, and public hotspot safety indicators before sensitive logins. Status: available.
+- [Keepie Yuppie](https://randomminiapps.github.io/logiq-labs/keepie-yuppie/): Keepie Yuppie is a physics-based ball juggling game with 99 levels, weather effects, obstacles, Game Center, survival mode and premium unlimited lives. Status: available.
+- [Lighting Check](https://randomminiapps.github.io/logiq-labs/lighting-check/): Lighting Check estimates lux with your iPhone camera, compares practical guidance, calibrates against a trusted meter, saves on-device audits, and exports PDF or CSV reports. Status: available.
+- [MedViva Coach](https://randomminiapps.github.io/cliniq-labs/medviva-coach/): MedViva Coach helps A-level students and aspiring medical students practise medicine mock interviews aloud and receive structured AI feedback on communication, confidence, reflection and answer structure. Status: available.
+- [MsgSecret](https://randomminiapps.github.io/logiq-labs/msgsecret/): MsgSecret helps you encode and decode messages with classic cipher methods, then share ciphertext through email, SMS, WhatsApp, social apps and more. Status: available.
+- [Natural Text](https://randomminiapps.github.io/logiq-labs/natural-text/): Natural Text encrypts your text into natural-looking text using a secret key, with support for multiple languages and sharing through email, SMS and messaging apps. Status: available.
+- [NMC OSCE AI Coach](https://randomminiapps.github.io/cliniq-labs/nmc-osce-coach/): NMC OSCE AI Coach helps internationally educated nurses practise OSCE-style stations aloud with timed scenarios, AI patient voice, checklist feedback and exam plans. Status: available.
+- [UCAT Sprint Coach](https://randomminiapps.github.io/cliniq-labs/ucat-sprint-coach/): UCAT Sprint Coach is a privacy-first UCAT practice app with 1,444 original questions, timed drills, full mocks, progress analytics and study planning for iPhone, iPad and Mac. Status: upcoming.
+- [ScamLens](https://randomminiapps.github.io/logiq-labs/scamlens/): ScamLens is a completely free, privacy-first scam checker for iPhone and iPad. Check links, QR codes, texts and screenshots on your device — nothing is ever uploaded. Status: upcoming.
 
-## Important pages
+## Important context
 
-- [BoomColor App Page](https://randomminiapps.github.io/apps/coloring-book/)
-- [BoomColor App Store Listing](https://apps.apple.com/us/app/boomcolor/id6761337820)
-- [Cardiac Aftercare App Page](https://randomminiapps.github.io/apps/cardiac-aftercare/)
-- [Car HUD Display App Page](https://randomminiapps.github.io/apps/car-hud-display/)
-- [ClinSpeak OET App Page](https://randomminiapps.github.io/apps/clinspeak-oet/)
-- [Dyslexia Reading Lens App Page](https://randomminiapps.github.io/apps/dyslexia-reading-lens/)
-- [FractureFlow AI App Page](https://randomminiapps.github.io/apps/fractureflow-ai/)
-- [HotspotCheck App Page](https://randomminiapps.github.io/apps/hotspot-check/)
-- [HotspotCheck App Store Listing](https://apps.apple.com/gb/app/hotspotcheck/id6783085771)
-- [HotspotCheck Privacy Policy](https://randomminiapps.github.io/hotspotcheck-privacy.html)
-- [Keepie Yuppie App Page](https://randomminiapps.github.io/apps/keepie-yuppie/)
-- [Lighting Check App Page](https://randomminiapps.github.io/apps/lighting-check/)
-- [MedViva Coach App Page](https://randomminiapps.github.io/apps/medviva-coach/)
-- [MsgSecret App Page](https://randomminiapps.github.io/apps/msgsecret/)
-- [NMC OSCE AI Coach App Page](https://randomminiapps.github.io/apps/nmc-osce-coach/)
-- [Natural Text App Page](https://randomminiapps.github.io/apps/natural-text/)
-- [ScamLens App Page](https://randomminiapps.github.io/scamlens/)
-- [ScamLens Privacy Policy](https://randomminiapps.github.io/scamlens/privacy/)
-- [ScamLens Terms of Use](https://randomminiapps.github.io/scamlens/terms/)
-- [UCAT Sprint Coach App Page](https://randomminiapps.github.io/apps/ucat-sprint-coach/)
-- [UCAT Sprint Coach Privacy Policy](https://randomminiapps.github.io/ucat-sprint-coach-privacy.html)
-- [Dyslexia Reading Lens App Store Listing](https://apps.apple.com/us/app/dyslexia-reading-lens/id6776156853)
-- [NMC OSCE AI Coach App Store Listing](https://apps.apple.com/us/app/nmc-osce-coach/id6770335559)
-- [MedViva Coach App Store Listing](https://apps.apple.com/us/app/medviva-coach/id6766191800)
-- [MedViva Coach Product Hunt Listing](https://www.producthunt.com/products/medviva-coach)
-- [ClinSpeak OET Product Hunt Listing](https://www.producthunt.com/products/clinspeakoet)
-- [Privacy Policy](https://randomminiapps.github.io/privacy.html)
-- [All Apps](https://randomminiapps.github.io/)
+Educational apps do not provide official scores or guarantee outcomes. Research prototypes are invite-only and not for patient use or live care. Website practice examples are illustrations, not screenshots, live AI or official exam material. Prices and compatibility should be checked in the App Store.
 
-## Notes
-
-Cardiac Aftercare is an independent development prototype and is not affiliated with, endorsed by, or approved by the NHS, NICE, BHF, MHRA, or any hospital trust. It is invite-only for cardiac specialists and junior doctors and is not for patient or public use.
-
-FractureFlow AI is an independent research MVP and is not affiliated with, endorsed by, or approved by the NHS, NICE, BOAST, MHRA, or any hospital trust. It is invite-only for clinicians and junior doctors and is not for patient self-triage or public use.
-
-MedViva Coach is an educational practice tool and is not affiliated with UCAS, any medical school, the NHS, or any official admissions body. It does not guarantee interview invitations, offers, or admission outcomes.
-
-ClinSpeak OET is an independent preparation tool and is not endorsed by or affiliated with the official OET test. Its clinical scenarios are fictional practice examples and are not medical advice.
-
-NMC OSCE AI Coach is an independent educational practice tool and is not affiliated with, endorsed by, or approved by the Nursing and Midwifery Council. Scenarios and feedback are for exam communication practice only and are not clinical guidance.
-
-HotspotCheck is an educational Wi-Fi safety advisor. It checks visible indicators only, does not guarantee network safety, and is not a professional security audit or penetration test.
-
-UCAT Sprint Coach is an independent UCAT preparation tool and is not affiliated with, endorsed by, or sponsored by the UCAT Consortium, Pearson VUE, the GMC, the Medical Schools Council, or any university. Practice questions are original; estimated scores are not official UCAT scores.
-
-ScamLens is an educational safety tool. It helps spot common scam warning signs but cannot guarantee that any link, QR code, message or website is safe. It is not affiliated with HMRC, Royal Mail, Evri, DVLA, the NHS, or any bank.
+[Support](https://randomminiapps.github.io/support/) · [Privacy](https://randomminiapps.github.io/privacy.html)
