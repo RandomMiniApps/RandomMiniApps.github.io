@@ -3,8 +3,8 @@
 A static, multi-page website for independent apps by Hassan Chizari, hosted on the existing GitHub Pages site.
 
 - `/` — two-brand gateway
-- `/cliniq-labs/` — healthcare education catalogue
-- `/logiq-labs/` — reading, digital confidence, utilities and creative apps
+- `/cliniq-labs/` — healthcare education and reading accessibility catalogue
+- `/logiq-labs/` — digital confidence, utilities and creative apps
 - `/<brand>/<app>/` — app overview, workflow, details, purchase information, support and privacy summary
 - `/cliniq-labs/research/` — research summaries, separate from public apps
 - `/international/` — retained earlier translated edition
@@ -21,6 +21,7 @@ Edit the source rather than individual generated pages:
 | --- | --- |
 | `site/apps.json` | App facts, links, availability, features, original detail content and FAQs |
 | `site/build.py` | Shared templates, brand pages and app-specific introductory copy |
+| `site/health.py` | Professional Cliniq product layouts and app-specific scope information |
 | `assets/brand/site.css` | Responsive shared design and brand themes |
 | `assets/brand/site.js` | Navigation, catalogue filters, reading controls and practice examples |
 | `assets/brand/icons/` | Optimised copies of the original app icons |

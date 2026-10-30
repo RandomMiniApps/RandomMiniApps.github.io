@@ -5,6 +5,7 @@
     '/': '/international/', '/index.html': '/international/',
     '/apps/dyslexia-reading-lens/': '/international/dyslexia-reading-lens/',
     '/apps/dyslexia-reading-lens/index.html': '/international/dyslexia-reading-lens/',
+    '/cliniq-labs/dyslexia-reading-lens/': '/international/dyslexia-reading-lens/',
     '/logiq-labs/dyslexia-reading-lens/': '/international/dyslexia-reading-lens/',
     '/scamlens/': '/international/scamlens/', '/scamlens/index.html': '/international/scamlens/',
     '/logiq-labs/scamlens/': '/international/scamlens/'

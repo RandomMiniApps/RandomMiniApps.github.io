@@ -38,3 +38,11 @@ Do not change the research origin casually: browser-local drafts and annotations
 ## Checks
 
 `check.py` verifies generated local links and anchors, page headings, metadata, protected paths and absence of unverified rating schema. `check-interactions.cjs` checks the menu, filters, reader preferences/reset, sample selection and language routing using a small DOM test double. It is not a substitute for browser layout or assistive-technology testing.
+
+## Cliniq product-page refinement
+
+`site/health.py` owns the dedicated health-product presentation: audience and workflow profiles, feature summaries, intended use, app-specific privacy context and named developer support. The seven Cliniq app sites use a restrained blue/teal product layout across their overview and supporting pages. No clinical credentials, endorsements, validation or user outcomes were added.
+
+Dyslexia Reading Lens now belongs to Cliniq's reading accessibility collection. All six former `/logiq-labs/dyslexia-reading-lens/` routes still serve the equivalent page with the new Cliniq canonical URL. Original `/apps/` and privacy URLs are unchanged. The sitemap lists the new canonical routes.
+
+The local HTTP preview returned 200 during this refinement. Chrome headless exited before rendering, so visual browser verification remains outstanding. Link, migration, interaction and protected-path checks pass.
